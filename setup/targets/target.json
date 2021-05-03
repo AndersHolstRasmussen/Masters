@@ -1,0 +1,28 @@
+{
+  "center": {
+    "x": "0mm",
+    "y": "0mm",
+    "z": "-0.5mm"
+  },
+  "orientation": {
+    "x": "0mm",
+    "y": "1mm",
+    "z": "0mm"
+  },
+  "normal": {
+    "x": "0mm",
+    "y": "0mm",
+    "z": "-1mm"
+  },
+  "transverseLength": "12mm",
+  "upLength": "12mm",
+  "size": "12mm",
+  "shape": "circle",
+  "layers": [
+    {
+      "material": "Carbon",
+      "thickness": "226nm",
+      "active": true
+    }
+  ]
+}

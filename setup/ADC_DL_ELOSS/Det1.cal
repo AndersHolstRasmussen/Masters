@@ -1,0 +1,42 @@
+# AUSAlib version: 16.6-773-g77e94584-dirty
+# Calibrator version: 16.6-93-gaef47da
+# Calibrator arguments: ./Calibrator -s /home/andreasgad/i257/setup/setup.json -t /home/andreasgad/i257/setup/targets/target_cali.json -k /home/andreasgad/i257/setup/old_source.json -d Det1 -l 500 --eloss --gui -o /home/andreasgad/i257/setup/ADC_DL_ELOSS/
+# Input files: 
+#	/home/andreasgad/i257/data/unpacked/283_000.root
+# Calibration of Det1
+# Performed @ 2021-01-19 18:12
+# Performed by andreasgad on andreasgad-XPS-15-9560
+# Front
+-69.4631 3.04599
+-47.8493 3.06865
+-57.6539 2.92273
+-72.9253 2.89533
+-57.3352 2.68708
+-62.4578 3.01396
+-42.8529 2.95095
+-57.9462 2.96961
+-49.4283 2.9069
+-48.8172 2.95029
+-55.1212 2.96334
+-52.8794 2.98464
+-64.767 2.78442
+-69.4301 3.03284
+-57.9213 2.87454
+-73.2968 3.00502
+# Back
+-72.8428 2.8801
+-64.7884 2.62746
+-75.9749 3.09945
+-76.0446 2.9763
+-67.2315 3.07556
+-77.5767 2.99233
+-59.2734 2.92236
+-54.9758 2.94698
+-50.2864 2.90212
+-59.4979 3.15695
+-59.6307 2.91662
+-59.7327 3.00156
+-54.9964 2.97777
+-63.4376 2.96317
+-65.7605 2.93733
+-48.4261 3.03291

@@ -1,0 +1,10 @@
+# AUSAlib version: 16.6-770-ged523d8f
+# Calibrator version: 16.6-93-gaef47da
+# Calibrator arguments: /home/andreas/tools/calibrator/build/Calibrator -s setup.json -o ADC_PRE/ -k old_source.json -d PD
+# Input files: 
+#	../data/unpacked/75_000.root
+# Calibration of PD
+# Performed @ 2020-10-27 12:50
+# Performed by andreas on blackbear
+# SSD
+110.643 1.70314

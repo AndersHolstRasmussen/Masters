@@ -1,0 +1,7 @@
+cmake-build*
+.vscode
+*~
+*.root
+data/*
+build/
+

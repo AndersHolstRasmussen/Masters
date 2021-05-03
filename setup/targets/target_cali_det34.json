@@ -1,0 +1,28 @@
+{
+  "center": {
+    "x": "-5mm",
+    "y": "0mm",
+    "z": "0mm"
+  },
+  "orientation": {
+    "x": "0mm",
+    "y": "1mm",
+    "z": "0mm"
+  },
+  "normal": {
+    "x": "-1mm",
+    "y": "0mm",
+    "z": "0mm"
+  },
+  "transverseLength": "12mm",
+  "upLength": "12mm",
+  "size": "12mm",
+  "shape": "circle",
+  "layers": [
+    {
+      "material": "Aluminum",
+      "thickness": "130nm",
+      "active": true
+    }
+  ]
+}

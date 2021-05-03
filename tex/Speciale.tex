@@ -1,0 +1,50 @@
+\documentclass[onecolumn, a4paper, oneside, article, 12pt]{article}
+\usepackage[utf8]{inputenc}
+\usepackage{graphicx}
+\usepackage{float}
+\usepackage[hidelinks]{hyperref}
+\usepackage{listings}
+\usepackage{color}
+\usepackage{mathtools}
+\usepackage{amsmath}
+\usepackage{siunitx}
+\usepackage{amssymb} % extra math symbols
+\usepackage{hyperref}
+\usepackage[labelfont=bf]{caption}
+\usepackage[table,xcdraw]{xcolor}
+\usepackage{wrapfig}
+\usepackage{enumitem}
+\usepackage{amsmath}
+\usepackage{mathtools}
+\DeclarePairedDelimiter{\abs}{\lvert}{\rvert}
+\DeclarePairedDelimiter{\ceil}{\lceil}{\rceil}
+
+\hypersetup{colorlinks=true, linkcolor=blue, urlcolor=blue, citecolor=blue}
+\setlength{\parindent}{0pt}
+\newcommand{\note}{\textcolor{red}}
+
+\DeclarePairedDelimiter{\p}{(}{)}
+\DeclarePairedDelimiter{\kp}{[}{]}
+\DeclarePairedDelimiter{\set}{\{}{\}}
+
+\makeatletter
+\renewcommand{\@seccntformat}[1]{}
+\makeatother
+
+
+\title{SPECIALE TITEL HER!}
+\author{Anders Holst Rasmussen}
+\begin{document}
+	\maketitle
+	
+	\input{Intro.tex}
+	\input{Theory.tex}
+	\input{ExperimentalMethods.tex}
+	\input{DataReduction.tex}
+	\input{Conclution.tex}
+
+
+
+	
+	
+\end{document}

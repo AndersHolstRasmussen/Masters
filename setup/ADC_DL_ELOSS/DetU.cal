@@ -1,0 +1,43 @@
+# AUSAlib version: 16.6-773-g77e94584-dirty
+# Calibrator version: 16.6-93-gaef47da
+# Calibrator arguments: ./Calibrator -s /home/andreasgad/i257/setup/setup.json -t /home/andreasgad/i257/setup/targets/target_cali.json -k /home/andreasgad/i257/setup/old_source.json -d DetU -l 500 --eloss --gui -o /home/andreasgad/i257/setup/ADC_DL_ELOSS/
+# Input files: 
+#	/home/andreasgad/i257/data/unpacked/279_000.root
+# Calibration of DetU
+# Performed @ 2021-01-19 18:24
+# Performed by andreasgad on andreasgad-XPS-15-9560
+# Front
+-22.8972 6.07093
+-49.5283 3.12819
+-29.3774 2.92554
+-48.2619 3.00806
+-34.807 3.00763
+-46.354 2.95255
+-36.3328 3.21951
+-45.9787 3.06522
+-47.8437 2.96896
+-24.8137 2.93703
+# Slope or offset was either NaN or Inf and has been set to 0.0!
+0.0 0.0
+-31.0108 2.92035
+-36.2421 2.99349
+-32.5874 3.12453
+-43.472 3.04107
+-26.8561 2.95261
+# Back
+-31.6879 2.99453
+-54.4569 3.11523
+-42.0144 2.97948
+-83.122 3.01582
+-53.2385 2.90683
+-58.9457 3.00402
+-75.5725 3.06005
+-58.5987 2.97307
+-68.246 6.11912
+6308.06 -0.811231
+-49.5502 2.91495
+-32.97 3.07382
+-46.4011 2.98791
+-36.7922 2.97346
+-52.7094 3.00504
+-32.8741 3.05567

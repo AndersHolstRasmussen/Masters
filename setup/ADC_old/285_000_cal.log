@@ -1,0 +1,41 @@
+# AUSAlib version: 16.6-760-g75c6ccd9-dirty
+# Calibrator version: 16.6-93-gaef47da
+# Calibrator arguments: /home/andreas/tools/calibrator/build/Calibrator -s setup_setup.json -o ADC_Final/ -k old_source.json -d PU --gui
+# Input files: 
+#	../data/unpacked/285_000.root
+Current time is: 2020-10-20 11:25
+======================================================
+
+Starting calibration of PU
+Source: 
+	{(5105.5, 0.12), (5144.3, 0.171), (5156.59, 0.709)}
+	{(5442.8, 0.134), (5485.56, 0.866)}
+	{(5762.64, 0.231), (5804.77, 0.769)}
+======================================================
+
+Calibrating SSD
+======================================================
+
+--------------------------------
+Strip 1
+--------------------------------
+Deadlayer corrected source 
+	{(5105.5, 0.12), (5144.3, 0.171), (5156.59, 0.709)}
+	{(5442.8, 0.134), (5485.56, 0.866)}
+	{(5762.64, 0.231), (5804.77, 0.769)}
+Peaks:
+	Energy: 5105.5  Channel: 2929.09  Uncertaincy: 0.446636
+	Energy: 5144.3  Channel: 2951.84  Uncertaincy: 0.446636
+	Energy: 5156.59  Channel: 2959.04  Uncertaincy: 0.446636
+	Energy: 5442.8  Channel: 3128.5  Uncertaincy: 0.368852
+	Energy: 5485.56  Channel: 3153.57  Uncertaincy: 0.368852
+	Energy: 5762.64  Channel: 3313.81  Uncertaincy: 0.509046
+	Energy: 5804.77  Channel: 3338.51  Uncertaincy: 0.509046
+Results: 
+	Offset: 105.983 ± 9.59648
+	Slope:  1.70657 ± 0.00308609
+	Chi^2/ndf:  10.439/5 = 2.0878
+Covariance matrix
+	92.0925	-0.0295796
+	-0.0295796	9.52393e-06
+======================================================

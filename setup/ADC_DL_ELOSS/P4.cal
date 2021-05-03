@@ -1,0 +1,10 @@
+# AUSAlib version: 16.6-760-g75c6ccd9-dirty
+# Calibrator version: 16.6-93-gaef47da
+# Calibrator arguments: /home/andreas/tools/calibrator/build/Calibrator -s setup_setup.json -o ADC_Final/ -k old_source.json -d P4 --eloss --gui
+# Input files: 
+#	../data/unpacked/286_000.root
+# Calibration of P4
+# Performed @ 2020-10-20 11:22
+# Performed by andreas on blackbear
+# SSD
+-73.3694 1.69498

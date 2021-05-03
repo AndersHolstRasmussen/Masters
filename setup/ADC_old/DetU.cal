@@ -1,0 +1,43 @@
+# AUSAlib version: 16.6-760-g75c6ccd9-dirty
+# Calibrator version: 16.6-93-gaef47da
+# Calibrator arguments: /home/andreas/tools/calibrator/build/Calibrator -s setup_setup.json -o ADC_Final/ -k old_source.json -d DetU --eloss --gui
+# Input files: 
+#	../data/unpacked/279_000.root
+# Calibration of DetU
+# Performed @ 2020-10-20 11:19
+# Performed by andreas on blackbear
+# Front
+-18.8484 6.06916
+-45.7815 3.12743
+-25.6222 2.92479
+-44.5558 3.00734
+-30.9378 3.00687
+-41.9709 2.95159
+-31.9065 3.21854
+-41.3893 3.06432
+-42.362 2.96774
+-19.8258 2.93624
+# Slope or offset was either NaN or Inf and has been set to 0.0!
+0.0 0.0
+-23.3595 2.91857
+-28.4515 2.99181
+-24.2931 3.12273
+-34.2719 3.03908
+-17.7055 2.95093
+# Back
+-27.6906 2.9937
+-50.4789 3.11434
+-38.4573 2.97883
+-79.3188 3.01505
+-49.2243 2.90601
+-55.023 3.00328
+-71.128 3.05911
+-53.8512 2.9721
+-63.053 6.11691
+4004.6 4.13404
+-43.2729 2.91368
+-26.1612 3.07238
+-38.9746 2.98642
+-28.5299 2.97176
+-43.9147 3.00328
+-23.0385 3.05357

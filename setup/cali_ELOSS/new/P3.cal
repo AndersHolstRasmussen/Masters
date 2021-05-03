@@ -1,0 +1,10 @@
+# AUSAlib version: 16.6-773-g77e94584
+# Calibrator version: 16.6-94-ga4043ab
+# Calibrator arguments: /home/anders/tools/calibrator/build/Calibrator -s setup.json -k old_source.json -d P3 -l 500 --eloss --gui -o cali_ELOSS/new/
+# Input files: 
+#	../califiles/286_000.root
+# Calibration of P3
+# Performed @ 2021-03-08 15:29
+# Performed by anders on holst
+# SSD
+-62.4725 1.66621

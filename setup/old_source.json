@@ -1,0 +1,20 @@
+{
+  "normal" : {"x": "-1mm", "y": "0mm", "z": "0mm"},
+  "position" : {"x": "-5mm", "y": "0mm", "z": "0mm"},
+  "thickness" : "0mm",
+  "transverse_size" : "0mm",
+  "isotopes" : [
+    {
+      "energies" : [5105.5,5144.3,5156.59],
+      "intensities" : [0.120,0.171,0.709]
+    },
+    {
+      "energies" : [5442.80,5485.56],
+      "intensities" : [0.134,0.866]
+    },
+    {
+      "energies" : [5762.64,5804.77],
+      "intensities" : [0.231,0.769]
+    }
+  ]
+}

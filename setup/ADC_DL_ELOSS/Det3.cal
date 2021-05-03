@@ -1,0 +1,43 @@
+# AUSAlib version: 16.6-773-g77e94584-dirty
+# Calibrator version: 16.6-93-gaef47da
+# Calibrator arguments: ./Calibrator -s /home/andreasgad/i257/setup/setup.json -t /home/andreasgad/i257/setup/targets/target_cali.json -k /home/andreasgad/i257/setup/old_source.json -d Det3 -l 500 --eloss --gui -o /home/andreasgad/i257/setup/ADC_DL_ELOSS/
+# Input files: 
+#	/home/andreasgad/i257/data/unpacked/281_000.root
+# Calibration of Det3
+# Performed @ 2021-01-19 18:17
+# Performed by andreasgad on andreasgad-XPS-15-9560
+# Front
+-79.4599 2.61628
+-89.1868 2.7046
+-67.7382 2.74361
+-99.8981 2.72087
+-91.6044 2.39804
+-102.265 2.73747
+-78.6149 2.7659
+-83.2604 2.71232
+-74.1507 2.74114
+-67.7294 2.72173
+-75.6134 2.49079
+-77.5267 2.63537
+-79.0525 2.70432
+-67.457 2.73659
+-90.0071 2.74296
+-95.2747 2.58976
+# Back
+-81.1034 2.56875
+-80.7118 2.66173
+-92.7943 2.81943
+-102.255 2.79345
+-64.5101 2.56128
+-95.3115 2.72506
+-70.5134 2.76526
+-81.6763 2.79517
+# Slope or offset was either NaN or Inf and has been set to 0.0!
+0.0 0.0
+-70.6675 2.69099
+-81.8361 2.69
+-78.3597 2.5487
+-98.6263 2.67991
+-71.4252 2.74782
+-93.7805 2.76575
+-80.1188 2.66248

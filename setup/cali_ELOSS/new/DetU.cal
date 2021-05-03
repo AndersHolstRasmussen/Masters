@@ -1,0 +1,43 @@
+# AUSAlib version: 16.6-773-g77e94584
+# Calibrator version: 16.6-94-ga4043ab
+# Calibrator arguments: /home/anders/tools/calibrator/build/Calibrator -s setup.json -t targets/target_cali.json -k old_source.json -d DetU -l 500 --eloss --gui -o cali_ELOSS/new/
+# Input files: 
+#	../califiles/279_000.root
+# Calibration of DetU
+# Performed @ 2021-03-08 15:23
+# Performed by anders on holst
+# Front
+-15.2519 6.06769
+-42.1598 3.12658
+-22.2635 2.92408
+-41.3298 3.0066
+-28.0175 3.0062
+-39.6337 2.95117
+-29.6326 3.21801
+-39.2238 3.06378
+-40.975 2.96753
+-17.7814 2.93559
+# Slope or offset was either NaN or Inf and has been set to 0.0!
+0.0 0.0
+-23.4508 2.91881
+-28.3393 2.99184
+-24.3004 3.12272
+-34.7527 3.03922
+-17.6864 2.95072
+# Back
+-24.0373 2.99293
+-47.0853 3.11363
+-34.8921 2.97799
+-76.1741 3.01436
+-46.4412 2.90545
+-52.2205 3.00261
+-68.8548 3.05862
+-51.8381 2.97167
+-61.3671 6.11619
+2924.73 4.26005
+-42.2708 2.91347
+-25.4095 3.07219
+-38.4924 2.98627
+-28.5033 2.97174
+-43.9856 3.00322
+-23.7021 3.05372

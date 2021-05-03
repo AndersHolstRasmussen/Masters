@@ -1,0 +1,43 @@
+# AUSAlib version: 16.6-770-ged523d8f
+# Calibrator version: 16.6-93-gaef47da
+# Calibrator arguments: /home/andreas/tools/calibrator/build/Calibrator -s setup.json --eloss -o ADC_PRE/ -k old_source.json -d Det4
+# Input files: 
+#	../data/unpacked/78_000.root
+# Calibration of Det4
+# Performed @ 2020-10-27 12:44
+# Performed by andreas on blackbear
+# Front
+-295.422 2.79852
+-281.436 2.92419
+-279.528 2.75296
+-288.775 2.89464
+-278.552 2.75649
+-265.298 2.87771
+-306.135 2.97573
+-260.403 2.86123
+-288.85 2.78325
+-320.061 2.91593
+-290.635 3.02054
+-288.54 2.53972
+-268.826 2.792
+-306.519 2.79948
+-306.502 2.88793
+# Slope or offset was either NaN or Inf and has been set to 0.0!
+0.0 0.0
+# Back
+-263.543 2.80128
+-250.362 2.73255
+-287.874 2.9624
+-271.847 2.86491
+-251.076 2.70945
+-277.567 2.93271
+-268.914 3.02471
+-266.107 2.94121
+-258.332 2.74492
+-302.408 2.91543
+-273.066 2.96485
+-272.658 2.8189
+-282.787 2.86021
+-290.289 3.00002
+-292.136 2.92167
+-259.397 2.77225

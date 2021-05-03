@@ -1,0 +1,88 @@
+{
+  "DSD": {
+    "__GLOBAL__": {
+      "tolerance": 100,
+      "low_cut": 50
+    },
+    "Det1": {
+      "front": {
+        "disable": [],
+        "tdc_offset": "TDC_Align/TDC_Det1F.dat"
+      },
+      "back": {
+        "disable": [],
+        "tdc_offset": "TDC_Align/TDC_Det1B.dat"
+      }
+    },
+    "Det2": {
+      "front": {
+        "disable": [],
+        "tdc_offset": "TDC_Align/TDC_Det2F.dat"
+      },
+      "back": {
+        "disable": [
+          9
+        ],
+        "tdc_offset": "TDC_Align/TDC_Det2B.dat"
+      }
+    },
+    "Det3": {
+      "front": {
+        "disable": [],
+        "tdc_offset": "TDC_Align/TDC_Det3F.dat"
+      },
+      "back": {
+        "disable": [
+          9
+        ],
+        "tdc_offset": "TDC_Align/TDC_Det3B.dat"
+      }
+    },
+    "Det4": {
+      "front": {
+        "disable": [
+          1,
+          16
+        ],
+        "tdc_offset": "TDC_Align/TDC_Det4F.dat"
+      },
+      "back": {
+        "disable": [],
+        "tdc_offset": "TDC_Align/TDC_Det4B.dat"
+      }
+    },
+    "DetU": {
+      "front": {
+        "disable": [
+          11
+        ],
+        "tdc_offset": "TDC_Align/TDC_Det5F.dat"
+      },
+      "back": {
+        "disable": [
+          10
+        ],
+        "tdc_offset": "TDC_Align/TDC_Det5B.dat"
+      }
+    },
+    "DetD": {
+      "front": {
+        "disable": [
+          6,7
+        ],
+        "tdc_offset": "TDC_Align/TDC_Det6F.dat"
+      },
+      "back": {
+        "disable": [
+          15
+        ],
+        "tdc_offset": "TDC_Align/TDC_Det6B.dat"
+      }
+    }
+  },
+  "SSD": {
+    "__GLOBAL__": {
+      "low_cut": 100
+    }
+  }
+}

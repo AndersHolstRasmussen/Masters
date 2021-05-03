@@ -1,0 +1,44 @@
+# AUSAlib version: 16.6-773-g77e94584-dirty
+# Calibrator version: 16.6-93-gaef47da
+# Calibrator arguments: /home/andreasgad/tools/calibrator/build/Calibrator -s /home/andreasgad/i257/setup/setup.json -t /home/andreasgad/i257/setup/targets/target_cali_det34.json -k /home/andreasgad/i257/setup/old_source.json -d Det4 -l 500 --eloss --gui -o /home/andreasgad/i257/setup/ADC_feb/ -r 1
+# Input files: 
+#	/home/andreasgad/i257/data/unpacked/281_000.root
+# Calibration of Det4
+# Performed @ 2021-02-08 14:18
+# Performed by andreasgad on andreasgad-XPS-15-9560
+# Front
+# Slope or offset was either NaN or Inf and has been set to 0.0!
+0.0 0.0
+-314.367 2.93636
+-299.723 2.76664
+-305.351 2.89961
+-299.377 2.76214
+-284.121 2.88235
+-331.363 2.98438
+-282.858 2.86704
+-317.461 2.79092
+-342.353 2.92069
+-317.073 3.03087
+-305.462 2.54213
+-306.049 2.80204
+-314.236 2.79276
+-296.848 2.87029
+# Slope or offset was either NaN or Inf and has been set to 0.0!
+0.0 0.0
+# Back
+-342.787 2.83059
+-277.914 2.73871
+-302.057 2.96416
+-280.156 2.86274
+-272.162 2.71316
+-284.17 2.92775
+-288.956 3.02657
+-278.342 2.94177
+-288.246 2.75293
+-316.691 2.91949
+-309.522 2.9753
+-315.754 2.83338
+-308.989 2.86525
+-318.34 3.00508
+-306.363 2.92009
+-298.859 2.78795

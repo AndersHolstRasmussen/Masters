@@ -1,0 +1,43 @@
+# AUSAlib version: 16.6-760-g75c6ccd9-dirty
+# Calibrator version: 16.6-93-gaef47da
+# Calibrator arguments: /home/andreas/tools/calibrator/build/Calibrator -s setup_setup.json -o ADC_Final/ -k old_source.json -d Det2 --eloss --gui
+# Input files: 
+#	../data/unpacked/283_000.root
+# Calibration of Det2
+# Performed @ 2020-10-20 11:15
+# Performed by andreas on blackbear
+# Front
+-188.224 3.02397
+-167.652 2.97102
+-173.178 2.84338
+-179.654 2.96728
+-196.06 3.06473
+-171.103 2.93896
+-228.6 3.18788
+-169.535 2.932
+-192.013 2.96217
+-216.359 2.92408
+-180.828 2.82903
+-205.819 2.96138
+-172.935 2.78839
+-197.723 2.8916
+-167.907 2.80635
+-195.133 2.9068
+# Back
+-222.667 2.91851
+-139.934 2.89444
+-249.976 2.88055
+-167.623 2.9988
+-243.911 2.91808
+-145.245 2.97746
+-244.164 2.95501
+-152.724 2.99065
+# Slope or offset was either NaN or Inf and has been set to 0.0!
+0.0 0.0
+-216.562 2.99864
+-171.36 2.88743
+-201.543 2.89561
+-181.109 2.92914
+-209.873 2.82741
+-163.302 2.95406
+-187.274 2.84953

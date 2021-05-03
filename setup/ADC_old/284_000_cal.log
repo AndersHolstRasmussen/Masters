@@ -1,0 +1,41 @@
+# AUSAlib version: 16.6-760-g75c6ccd9-dirty
+# Calibrator version: 16.6-93-gaef47da
+# Calibrator arguments: /home/andreas/tools/calibrator/build/Calibrator -s setup_setup.json -o ADC_Final/ -k old_source.json -d P2 --eloss --gui
+# Input files: 
+#	../data/unpacked/284_000.root
+Current time is: 2020-10-20 11:21
+======================================================
+
+Starting calibration of P2
+Source: 
+	{(5105.5, 0.12), (5144.3, 0.171), (5156.59, 0.709)}
+	{(5442.8, 0.134), (5485.56, 0.866)}
+	{(5762.64, 0.231), (5804.77, 0.769)}
+======================================================
+
+Calibrating SSD
+======================================================
+
+--------------------------------
+Strip 1
+--------------------------------
+Deadlayer corrected source 
+	{(5004.77, 0.12), (5044.02, 0.171), (5056.46, 0.709)}
+	{(5345.89, 0.134), (5389.11, 0.866)}
+	{(5669.07, 0.231), (5711.62, 0.769)}
+Peaks:
+	Energy: 5004.77  Channel: 2982.95  Uncertaincy: 0.233519
+	Energy: 5044.02  Channel: 3006.14  Uncertaincy: 0.233519
+	Energy: 5056.46  Channel: 3013.49  Uncertaincy: 0.233519
+	Energy: 5345.89  Channel: 3186.11  Uncertaincy: 0.314235
+	Energy: 5389.11  Channel: 3211.65  Uncertaincy: 0.314235
+	Energy: 5669.07  Channel: 3374.99  Uncertaincy: 0.329454
+	Energy: 5711.62  Channel: 3400.14  Uncertaincy: 0.329454
+Results: 
+	Offset: -46.4801 ± 8.27625
+	Slope:  1.69315 ± 0.00261647
+	Chi^2/ndf:  10.7878/5 = 2.15756
+Covariance matrix
+	68.4962	-0.0216267
+	-0.0216267	6.8459e-06
+======================================================

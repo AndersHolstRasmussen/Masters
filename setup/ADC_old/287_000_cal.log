@@ -1,0 +1,41 @@
+# AUSAlib version: 16.6-760-g75c6ccd9-dirty
+# Calibrator version: 16.6-93-gaef47da
+# Calibrator arguments: /home/andreas/tools/calibrator/build/Calibrator -s setup_setup.json -o ADC_Final/ -k old_source.json -d PD --gui
+# Input files: 
+#	../data/unpacked/287_000.root
+Current time is: 2020-10-20 11:25
+======================================================
+
+Starting calibration of PD
+Source: 
+	{(5105.5, 0.12), (5144.3, 0.171), (5156.59, 0.709)}
+	{(5442.8, 0.134), (5485.56, 0.866)}
+	{(5762.64, 0.231), (5804.77, 0.769)}
+======================================================
+
+Calibrating SSD
+======================================================
+
+--------------------------------
+Strip 1
+--------------------------------
+Deadlayer corrected source 
+	{(5105.5, 0.12), (5144.3, 0.171), (5156.59, 0.709)}
+	{(5442.8, 0.134), (5485.56, 0.866)}
+	{(5762.64, 0.231), (5804.77, 0.769)}
+Peaks:
+	Energy: 5105.5  Channel: 2856.15  Uncertaincy: 0.178631
+	Energy: 5144.3  Channel: 2878.35  Uncertaincy: 0.178631
+	Energy: 5156.59  Channel: 2885.38  Uncertaincy: 0.178631
+	Energy: 5442.8  Channel: 3050.14  Uncertaincy: 0.204697
+	Energy: 5485.56  Channel: 3074.61  Uncertaincy: 0.204697
+	Energy: 5762.64  Channel: 3231.81  Uncertaincy: 0.253927
+	Energy: 5804.77  Channel: 3255.92  Uncertaincy: 0.253927
+Results: 
+	Offset: 111.244 ± 7.92711
+	Slope:  1.74843 ± 0.00261474
+	Chi^2/ndf:  5.14472/5 = 1.02894
+Covariance matrix
+	62.8391	-0.0207006
+	-0.0207006	6.83685e-06
+======================================================

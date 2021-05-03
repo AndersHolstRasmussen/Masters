@@ -1,0 +1,43 @@
+# AUSAlib version: 16.6-773-g77e94584
+# Calibrator version: 16.6-94-ga4043ab
+# Calibrator arguments: /home/anders/tools/calibrator/build/Calibrator -s setup.json -t targets/target_cali_det34.json -k old_source.json -d Det3 -l 500 --eloss --gui -o cali_ELOSS/new/
+# Input files: 
+#	../califiles/281_000.root
+# Calibration of Det3
+# Performed @ 2021-03-08 15:20
+# Performed by anders on holst
+# Front
+-90.7329 2.61833
+-100.619 2.70675
+-79.2671 2.74582
+-111.53 2.72307
+-103.266 2.39999
+-113.932 2.73969
+-90.2195 2.76813
+-94.7872 2.7145
+-85.5489 2.74333
+-78.9511 2.72386
+-86.5966 2.49271
+-88.1336 2.63733
+-89.0252 2.70621
+-76.2552 2.73828
+-96.4884 2.74421
+-96.6749 2.59003
+# Back
+-91.0925 2.57054
+-90.8344 2.66361
+-103.052 2.82145
+-112.641 2.79548
+-74.9668 2.56315
+-105.872 2.72707
+-81.1114 2.76731
+-92.3078 2.79724
+# Slope or offset was either NaN or Inf and has been set to 0.0!
+0.0 0.0
+-81.2518 2.69298
+-92.3669 2.69198
+-88.8012 2.55056
+-108.975 2.68184
+-81.6338 2.74979
+-103.876 2.7677
+-90.0702 2.66434

@@ -1,0 +1,388 @@
+{
+  "name": "i257",
+  "detectors": [
+    {
+      "name": "Det1",
+      "file": "Detectors/AUW1_60_2881-1.json",
+      "calibration": "ADC_feb/Det1.cal",
+      "position": {
+        "x": "-28.7mm",
+        "y": "-0.4mm",
+        "z": "-28.7mm"
+      },
+      "normal": {
+        "x": "1mm",
+        "y": "0mm",
+        "z": "1mm"
+      },
+      "orientation": {
+        "x": "0mm",
+        "y": "1mm",
+        "z": "0mm"
+      },
+      "frontMapping": {
+        "multiplicity": "",
+        "prefix": "DET1F",
+        "segment": "I",
+        "adc": "_E",
+        "tdc": "_T"
+      },
+      "backMapping": {
+        "multiplicity": "",
+        "prefix": "DET1B",
+        "segment": "I",
+        "adc": "_E",
+        "tdc": "_T"
+      }
+    },
+    {
+      "name": "Det2",
+      "file": "Detectors/AUW1_1000_2541-7.json",
+      "calibration": "ADC_feb/Det2.cal",
+      "position": {
+        "x": "-28.7mm",
+        "y": "-0.4mm",
+        "z": "28.7mm"
+      },
+      "normal": {
+        "x": "1mm",
+        "y": "0mm",
+        "z": "-1mm"
+      },
+      "orientation": {
+        "x": "0mm",
+        "y": "1mm",
+        "z": "0mm"
+      },
+      "frontMapping": {
+        "multiplicity": "",
+        "prefix": "DET2F",
+        "segment": "I",
+        "adc": "_E",
+        "tdc": "_T"
+      },
+      "backMapping": {
+        "multiplicity": "",
+        "prefix": "DET2B",
+        "segment": "I",
+        "adc": "_E",
+        "tdc": "_T"
+      }
+    },
+    {
+      "name": "Det3",
+      "file": "Detectors/AUW1_60_2887-4.json",
+      "calibration": "ADC_feb/Det3.cal",
+      "position": {
+        "x": "28.7mm",
+        "y": "-0.4mm",
+        "z": "28.7mm"
+      },
+      "normal": {
+        "x": "-1mm",
+        "y": "0mm",
+        "z": "-1mm"
+      },
+      "orientation": {
+        "x": "0mm",
+        "y": "1mm",
+        "z": "0mm"
+      },
+      "frontMapping": {
+        "multiplicity": "",
+        "prefix": "DET3F",
+        "segment": "I",
+        "adc": "_E",
+        "tdc": "_T"
+      },
+      "backMapping": {
+        "multiplicity": "",
+        "prefix": "DET3B",
+        "segment": "I",
+        "adc": "_E",
+        "tdc": "_T"
+      }
+    },
+    {
+      "name": "Det4",
+      "file": "Detectors/AUW1_60_3187-5.json",
+      "calibration": "ADC_feb/Det4.cal",
+      "position": {
+        "x": "28.7mm",
+        "y": "-0.9mm",
+        "z": "-28.7mm"
+      },
+      "normal": {
+        "x": "-1mm",
+        "y": "0mm",
+        "z": "1mm"
+      },
+      "orientation": {
+        "x": "0mm",
+        "y": "-1mm",
+        "z": "0mm"
+      },
+      "frontMapping": {
+        "multiplicity": "",
+        "prefix": "DET4F",
+        "segment": "I",
+        "adc": "_E",
+        "tdc": "_T"
+      },
+      "backMapping": {
+        "multiplicity": "",
+        "prefix": "DET4B",
+        "segment": "I",
+        "adc": "_E",
+        "tdc": "_T"
+      }
+    },
+    {
+      "name": "DetU",
+      "file": "Detectors/AUW1_60_DSSSD-7.json",
+      "calibration": "ADC_DL_ELOSS/DetU.cal",
+      "position": {
+        "x": "0mm",
+        "y": "45mm",
+        "z": "0mm"
+      },
+      "normal": {
+        "x": "0mm",
+        "y": "-1mm",
+        "z": "0mm"
+      },
+      "orientation": {
+        "x": "1.0mm",
+        "y": "0.0mm",
+        "z": "-1.0mm"
+      },
+      "frontMapping": {
+        "multiplicity": "",
+        "prefix": "DET5F",
+        "segment": "I",
+        "adc": "_E",
+        "tdc": "_T"
+      },
+      "backMapping": {
+        "multiplicity": "",
+        "prefix": "DET5B",
+        "segment": "I",
+        "adc": "_E",
+        "tdc": "_T"
+      }
+    },
+    {
+      "name": "DetD",
+      "file": "Detectors/AUW1_1000_2947-4.json",
+      "calibration": "ADC_DL_ELOSS/DetD.cal",
+      "position": {
+        "x": "0mm",
+        "y": "-45mm",
+        "z": "0mm"
+      },
+      "normal": {
+        "x": "0mm",
+        "y": "1mm",
+        "z": "0mm"
+      },
+      "orientation": {
+        "x": "-1.0mm",
+        "y": "0.0mm",
+        "z": "1.0mm"
+      },
+      "frontMapping": {
+        "multiplicity": "",
+        "prefix": "DET6F",
+        "segment": "I",
+        "adc": "_E",
+        "tdc": "_T"
+      },
+      "backMapping": {
+        "multiplicity": "",
+        "prefix": "DET6B",
+        "segment": "I",
+        "adc": "_E",
+        "tdc": "_T"
+      }
+    },
+    {
+      "name": "P1",
+      "file": "Detectors/AUPAD_1000_3112-16.json",
+      "calibration": "PDummy.cal",
+      "position": {
+        "x": "-31.9mm",
+        "y": "-0.4mm",
+        "z": "-31.9mm"
+      },
+      "normal": {
+        "x": "1mm",
+        "y": "0mm",
+        "z": "1mm"
+      },
+      "orientation": {
+        "x": "0 mm",
+        "y": "1 mm",
+        "z": "0 mm"
+      },
+      "mapping": {
+        "adc": "-DEAD-",
+        "tdc": "-DEAD-"
+      }
+    },
+    {
+      "name": "P2",
+      "file": "Detectors/AUPAD_1000_3112-16.json",
+      "calibration": "ADC_DL_ELOSS/P2.cal",
+      "position": {
+        "x": "-31.9mm",
+        "y": "-0.4mm",
+        "z": "31.9mm"
+      },
+      "normal": {
+        "x": "1mm",
+        "y": "0mm",
+        "z": "-1mm"
+      },
+      "orientation": {
+        "x": "0 mm",
+        "y": "1 mm",
+        "z": "0 mm"
+      },
+      "mapping": {
+        "adc": "PAD2E",
+        "tdc": "PAD2T"
+      }
+    },
+    {
+      "name": "P3",
+      "file": "Detectors/AUPAD_1500_3289-4.json",
+      "calibration": "ADC_DL_ELOSS/P3.cal",
+      "position": {
+        "x": "31.9mm",
+        "y": "-0.4mm",
+        "z": "31.9mm"
+      },
+      "normal": {
+        "x": "-1mm",
+        "y": "0mm",
+        "z": "-1mm"
+      },
+      "orientation": {
+        "x": "0 mm",
+        "y": "1 mm",
+        "z": "0 mm"
+      },
+      "mapping": {
+        "adc": "PAD3E",
+        "tdc": "PAD3T"
+      }
+    },
+    {
+      "name": "P4",
+      "file": "Detectors/AUPAD_1500_3289-5.json",
+      "calibration": "ADC_DL_ELOSS/P4.cal",
+      "position": {
+        "x": "31.9mm",
+        "y": "-0.9mm",
+        "z": "-31.9mm"
+      },
+      "normal": {
+        "x": "-1mm",
+        "y": "0mm",
+        "z": "1mm"
+      },
+      "orientation": {
+        "x": "0 mm",
+        "y": "-1 mm",
+        "z": "0 mm"
+      },
+      "mapping": {
+        "adc": "PAD4E",
+        "tdc": "PAD4T"
+      }
+    },
+    {
+      "name": "PU",
+      "file": "Detectors/AUPAD_1500_E11.json",
+      "calibration": "ADC_DL_ELOSS/PU.cal",
+      "position": {
+        "x": "0mm",
+        "y": "49mm",
+        "z": "0mm"
+      },
+      "normal": {
+        "x": "0mm",
+        "y": "-1mm",
+        "z": "0mm"
+      },
+      "orientation": {
+        "x": "1.0mm",
+        "y": "0.0mm",
+        "z": "-1.0mm"
+      },
+      "mapping": {
+        "adc": "PAD5E",
+        "tdc": "PAD5T"
+      }
+    },
+    {
+      "name": "PD",
+      "file": "Detectors/AUPAD_1000_3112-14.json",
+      "calibration": "ADC_DL_ELOSS/PD.cal",
+      "position": {
+        "x": "0mm",
+        "y": "-49mm",
+        "z": "0mm"
+      },
+      "normal": {
+        "x": "0mm",
+        "y": "1mm",
+        "z": "0mm"
+      },
+      "orientation": {
+        "x": "-1.0mm",
+        "y": "0.0mm",
+        "z": "1.0mm"
+      },
+      "mapping": {
+        "adc": "PAD6E",
+        "tdc": "PAD6T"
+      }
+    }
+  ],
+  "telescopes": [
+    {
+      "front": "Det1",
+      "dn": "4.8mm",
+      "back": "P1"
+    },
+    {
+      "front": "Det2",
+      "dn": "4.8mm",
+      "back": "P2"
+    },
+    {
+      "front": "Det3",
+      "dn": "4.8mm",
+      "back": "P3"
+    },
+    {
+      "front": "Det4",
+      "dn": "4.8mm",
+      "back": "P4"
+    },
+    {
+      "front": "DetU",
+      "dn": "4mm",
+      "back": "PU"
+    },
+    {
+      "front": "DetD",
+      "dn": "4mm",
+      "back": "PD"
+    }
+  ],
+  "signals": [
+    "CLOCK"
+  ]
+}
