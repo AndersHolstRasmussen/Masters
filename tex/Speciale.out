@@ -1,3 +1,6 @@
-\BOOKMARK [1][-]{section.1}{Introduction}{}% 1
-\BOOKMARK [1][-]{section.2}{Experimental Methods}{}% 2
-\BOOKMARK [2][-]{subsection.2.1}{Detector setup}{section.2}% 3
+\BOOKMARK [0][-]{chapter.1}{Introduction}{}% 1
+\BOOKMARK [0][-]{chapter.2}{Experimental Methods}{}% 2
+\BOOKMARK [1][-]{subsection.2.0.1}{Detector setup}{chapter.2}% 3
+\BOOKMARK [1][-]{section.2.1}{Experimental setup}{chapter.2}% 4
+\BOOKMARK [1][-]{section.2.2}{The detectors}{chapter.2}% 5
+\BOOKMARK [1][-]{section.2.3}{AUSAlib and ROOT}{chapter.2}% 6
