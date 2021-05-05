@@ -1,9 +1,10 @@
-\documentclass[onecolumn, a4paper, oneside, article, 12pt]{article}
+\documentclass[onecolumn, a4paper, oneside, article, 12pt]{report}
 \usepackage[utf8]{inputenc}
 \usepackage{graphicx}
 \usepackage{float}
 \usepackage[hidelinks]{hyperref}
 \usepackage{listings}
+\usepackage{isotope}
 \usepackage{color}
 \usepackage{mathtools}
 \usepackage{amsmath}
@@ -17,7 +18,15 @@
 \usepackage{amsmath}
 \usepackage{mathtools}
 \DeclarePairedDelimiter{\abs}{\lvert}{\rvert}
-\DeclarePairedDelimiter{\ceil}{\lceil}{\rceil}
+\usepackage{titlesec}
+
+\titleformat{\chapter}[block]
+{\normalfont\huge\bfseries}{\thechapter}{20pt}{}
+\titlespacing*{\chapter}
+{0pt}{20pt}{20pt}
+
+\setcounter{tocdepth}{5}
+\setcounter{secnumdepth}{5}
 
 \hypersetup{colorlinks=true, linkcolor=blue, urlcolor=blue, citecolor=blue}
 \setlength{\parindent}{0pt}
@@ -28,7 +37,7 @@
 \DeclarePairedDelimiter{\set}{\{}{\}}
 
 \makeatletter
-\renewcommand{\@seccntformat}[1]{}
+%\renewcommand{\@seccntformat}[1]{}
 \makeatother
 
 
@@ -43,8 +52,5 @@
 	\input{DataReduction.tex}
 	\input{Conclution.tex}
 
-
-
-	
 	
 \end{document}
