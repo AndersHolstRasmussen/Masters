@@ -84,8 +84,8 @@ public:
         determineTypes();  
         if (numberOfAlphas < 2) return;
         doAnalysis();
-        if (moment > 35000) return;
-        if(cosang > -0.99) return;
+        if (moment > 40000) return;
+        // if(cosang > -0.99) return;
         CLOCK = output.getScalerOutput("CLOCK").getValue();
         tree->Fill();
         NUM++;
@@ -271,7 +271,7 @@ public:
             if (!hit->canBeBeta) continue;
             if (hit == a0) continue;
             if (hit == a1) continue;
-            v_betaAlpaAngle->add(angleBetweenTwoHits(hit, a0));
+            v_betaAlpaAngle->add(angleBetweenTwoHits(hit, a1));
             v_ibeta->add(static_cast<short>(hit->index));
             v_Ebeta->add(hit->EBeta);
             v_bPhi->add(hit->phi);

@@ -27,37 +27,35 @@ using namespace ROOT;
 
 
 void EEfigure(RDataFrame *df){
-    
-    auto c = new TCanvas("c", "k", 200, 110, 700, 700);
+    // auto c = new TCanvas("c", "k", 200, 110, 800, 800);
+    auto c = new TCanvas();
     c->SetTitle("EE");
     c->SetGridx();
     c->SetGridy();
-    double x_axis[3] = {300, 0, 7000}; // bins, xmin, xmax
-    
-    auto p1 = df->Define("p1", "E._E[0]").Take<double>("p1").GetValue();
-    auto p2 = df->Define("p2", "E._E[1]").Take<double>("p2").GetValue();
+    gStyle->SetPalette(kStarryNight);
+    gStyle->SetOptTitle(0);
+    gStyle->SetOptStat(0);
 
-    Int_t n = p2.size();
-    cout << n << endl;
-    cout << p1.size() << endl;
-    TGraph *g = new TGraph (n, &p1[0], &p2[0]);
-    TAxis *xaxis = g->GetXaxis();
-    xaxis->SetLimits(10, 8000);
-    g->GetHistogram()->SetMaximum(8000);
-    g->GetHistogram()->SetMinimum(10);
+    auto a1 = df->Define("a1", "E._E[0]").Define("a2", "E._E[1]");
+
+    auto h = a1.Histo2D({"stats", "Energy vs energy", 200, 0, 8000, 200, 0, 8000}, "a1", "a2");
+    auto xaxis = h->GetXaxis();
+    auto yaxis = h->GetYaxis();
+    auto zaxis = h->GetZaxis();
+    // h->SetContour(1000);
+    c->SetLogz();
+    xaxis->SetTitle(" E_{\\alpha1} [keV]");
+    xaxis->CenterTitle();
+    yaxis->CenterTitle();
+    yaxis->SetTitle(" E_{\\alpha2} [keV]");
+    h->DrawClone("contz");
 
 
-
-    g->SetMarkerStyle(1);
-    // g->SetMarkerColorAlpha(kBlack, 0.1);
-
-    g->SetTitle("Energy vs energy");
-    g->DrawClone("AP");
     c->Modified();
     c->Update();
     c->SaveAs("/home/anders/i257/figures/EE.png");
-    // c->WaitPrimitive();
-    // c->Close();
+    // // c->WaitPrimitive();
+    // // c->Close();
     
 }
 
@@ -80,7 +78,9 @@ void cosang(RDataFrame *df){
 void betaSpec(RDataFrame *df){
     auto c = new TCanvas();
     auto data = df->Define("x", "EPbeta._EPbeta");
-    auto h = data.Histo1D({"Stats", "Beta spectrum (from pads)", 300, 0, 8000}, "x");
+    auto h = data.Histo1D({"Stats", "Beta spectrum (from pads)", 300, 1, 2000}, "x");
+    TAxis *xaxis = h->GetXaxis();
+    xaxis->SetTitle("name");
     h->DrawClone();
     c->Modified();
     c->Update();
@@ -134,9 +134,9 @@ int main(int argc, char *argv[]) {
     chain.Add(filename);
     RDataFrame df(chain);
 
-    TFile *file = TFile::Open("/home/anders/i257/data/Li8/225_03N10mlio.root", "READ");
-    TTree *t; 
-    file->GetObject("tvec", t);
+    // TFile *file = TFile::Open("/home/anders/i257/data/Li8/225_03N10mlio.root", "READ");
+    // TTree *t; 
+    // file->GetObject("tvec", t);
 
     // start a ROOT application window such that the plots can actually be shown
     TApplication *app = new TApplication("ROOT window", 0, 0);
@@ -149,3 +149,23 @@ int main(int argc, char *argv[]) {
     app->Run(); // show all canvas
     return 0;
 }
+
+
+    // auto p1 = df->Define("p1", "E._E[0]").Take<double>("p1").GetValue();
+    // auto p2 = df->Define("p2", "E._E[1]").Take<double>("p2").GetValue();
+
+    // Int_t n = p1.size();
+    // TGraph *g = new TGraph (n, &p1[0], &p2[0]);
+    // TAxis *xaxis = g->GetXaxis();
+    // xaxis->SetLimits(10, 8000);
+    // g->GetHistogram()->SetMaximum(8000);
+    // g->GetHistogram()->SetMinimum(10);
+    // xaxis->SetTitle("name");
+
+
+
+    // g->SetMarkerStyle(1);
+    // // g->SetMarkerColorAlpha(kBlack, 0.1);
+
+    // g->SetTitle("Energy vs energy");
+    // g->DrawClone("AP");
