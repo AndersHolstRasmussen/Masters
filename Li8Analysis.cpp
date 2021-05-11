@@ -52,10 +52,12 @@ public:
         v_dE = make_unique<DynamicBranchVector<double>>(*tree, "dE", "mulAlpha");
         v_F = make_unique<DynamicBranchVector<short>>(*tree, "FI", "mulAlpha");
         v_B = make_unique<DynamicBranchVector<short>>(*tree, "BI", "mulAlpha");
+        v_i = make_unique<DynamicBranchVector<short>>(*tree, "i", "mulAlpha");
         v_ibeta = make_unique<DynamicBranchVector<short>>(*tree, "ibeta", "mulBeta");
         v_Ebeta = make_unique<DynamicBranchVector<double>>(*tree, "Ebeta", "mulBeta");
         v_EPbeta = make_unique<DynamicBranchVector<double>>(*tree, "EPbeta", "mulBeta");
-        v_betaAlpaAngle = make_unique<DynamicBranchVector<double>>(*tree, "betaAlphaAngle", "1");
+        v_betaAlpaAngle0 = make_unique<DynamicBranchVector<double>>(*tree, "betaAlphaAngle0", "1");
+        v_betaAlpaAngle1 = make_unique<DynamicBranchVector<double>>(*tree, "betaAlphaAngle1", "1");
         v_bTheta = make_unique<DynamicBranchVector<double>>(*tree, "bTheta", "mulBeta");
         v_bPhi = make_unique<DynamicBranchVector<double>>(*tree, "bPhi", "mulBeta");
         v_ptot = make_unique<DynamicBranchVector<double>>(*tree, "ptot", "1");
@@ -262,8 +264,9 @@ public:
             v_Edep->add(hit->deposited);
             v_F->add(hit->fseg);
             v_B->add(hit->bseg);
+            v_i->add(static_cast<short>(hit->index));
             v_dE->add(hit->dE);
-
+            
         }
         double betaAng;
         for (int in = 0; in < hits.size(); in++) {
@@ -271,7 +274,8 @@ public:
             if (!hit->canBeBeta) continue;
             if (hit == a0) continue;
             if (hit == a1) continue;
-            v_betaAlpaAngle->add(angleBetweenTwoHits(hit, a1));
+            v_betaAlpaAngle0->add(angleBetweenTwoHits(hit, a0));
+            v_betaAlpaAngle1->add(angleBetweenTwoHits(hit, a1));
             v_ibeta->add(static_cast<short>(hit->index));
             v_Ebeta->add(hit->EBeta);
             v_bPhi->add(hit->phi);
@@ -301,15 +305,15 @@ public:
         cosang = 0;
         moment = 0;
         hits.clear();
-         AUSA::clear(
-                *v_E, *v_Edep,
-                *v_F, *v_B,
-                *v_Ebeta, *v_ibeta, *v_EPbeta, 
-                *v_dE,
-                *cosA,
-                *v_ptot, *v_Etot,
-                *v_betaAlpaAngle,
-                *v_bPhi, *v_bTheta
+        AUSA::clear(
+            *v_E, *v_Edep,
+            *v_F, *v_B,
+            *v_Ebeta, *v_ibeta, *v_EPbeta, 
+            *v_dE,
+            *cosA,
+            *v_ptot, *v_Etot,
+            *v_betaAlpaAngle1, *v_betaAlpaAngle0,
+            *v_bPhi, *v_bTheta, *v_i
         );
 
 
@@ -326,7 +330,7 @@ public:
     // unique_ptr<DynamicBranchVector<TVector3>> v_dir0, v_pos0, v_dir1, v_pos1;
     unique_ptr<DynamicBranchVector<double>> v_E, v_Edep, v_dE, v_Ebeta, v_EPbeta, cosA;
     unique_ptr<DynamicBranchVector<short>> v_F, v_B, v_i, v_ibeta;
-    unique_ptr<DynamicBranchVector<double>> v_ptot, v_Etot, v_betaAlpaAngle, v_bTheta, v_bPhi;
+    unique_ptr<DynamicBranchVector<double>> v_ptot, v_Etot, v_betaAlpaAngle0, v_betaAlpaAngle1, v_bTheta, v_bPhi;
     unique_ptr<EnergyLossRangeInverter> SiCalc;
     vector<unique_ptr<EnergyLossRangeInverter>> targetCalcs;
     double cosang, moment;

@@ -43,3 +43,4 @@ include_directories(external/jsoncons/include)
 
 add_executable(Li8 Li8Analysis.cpp)
 add_executable(plt plots.cpp)
+add_executable(eff Efficiency.cpp)

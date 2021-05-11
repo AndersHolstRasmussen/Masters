@@ -21,6 +21,8 @@
 #include <cstdio>
 #include <ctime>
 #include <TColorGradient.h>
+#include <ROOT/RCsvDS.hxx>
+#include <fstream>
 
 using namespace std;
 using namespace ROOT;
@@ -32,13 +34,13 @@ void EEfigure(RDataFrame *df){
     c->SetTitle("EE");
     c->SetGridx();
     c->SetGridy();
-    gStyle->SetPalette(kStarryNight);
+    gStyle->SetPalette(kViridis);
     gStyle->SetOptTitle(0);
     gStyle->SetOptStat(0);
 
     auto a1 = df->Define("a1", "E._E[0]").Define("a2", "E._E[1]");
 
-    auto h = a1.Histo2D({"stats", "Energy vs energy", 200, 0, 8000, 200, 0, 8000}, "a1", "a2");
+    auto h = a1.Histo2D({"stats", "Energy vs energy", 300, 0, 8000, 300, 0, 8000}, "a1", "a2");
     auto xaxis = h->GetXaxis();
     auto yaxis = h->GetYaxis();
     auto zaxis = h->GetZaxis();
@@ -53,7 +55,7 @@ void EEfigure(RDataFrame *df){
 
     c->Modified();
     c->Update();
-    c->SaveAs("/home/anders/i257/figures/EE.png");
+    c->SaveAs("/home/anders/i257/figures/EE.pdf");
     // // c->WaitPrimitive();
     // // c->Close();
     
@@ -73,6 +75,64 @@ void cosang(RDataFrame *df){
     c->SaveAs("/home/anders/i257/figures/cosang.pdf");
     // c->WaitPrimitive();
     // c->Close();
+}
+
+void betaAlphaAngle(RDataFrame *df){
+    auto c = new TCanvas();
+    // gStyle->SetOptTitle(0);
+    gStyle->SetOptStat(0);
+
+    int bins = 100;
+    double xmin = -1;
+    double xmax = 1;
+
+
+    auto d0 = df->Define("d0", "betaAlphaAngle0._betaAlphaAngle0");
+    auto h0 = d0.Histo1D({"Stats", "data / efficiency", bins, xmin, xmax}, "d0");
+
+    auto d1 = df->Define("d1", "betaAlphaAngle1._betaAlphaAngle1");
+    auto h1 = d1.Histo1D({"Stats", "\\beta-\\alpha angle", bins, xmin, xmax}, "d1");
+
+    auto eff = new TH1F("stats", "Angle efficiency", bins, xmin, xmax);
+
+
+    ifstream ifile("/home/anders/i257/build/efficiencyOutput.csv");
+    vector<double> angs;
+    if (!ifile.is_open()) {
+        std::cerr << "There was a problem opening the input file!\n";
+        exit(1);//exit or do additional error checking
+    }
+
+    double num = 0.0;
+    //keep storing values from the text file so long as data exists:
+    while (ifile >> num) {
+        eff->Fill(num);
+    }
+    h0->Add(&h1.GetValue());    
+    cout << h0->KolmogorovTest(eff) << endl;
+    cout << eff->KolmogorovTest(&h0.GetValue()) << endl;
+    h0->Divide(eff);
+    auto xaxis = h0->GetXaxis();
+    auto yaxis = h0->GetYaxis();
+    xaxis->SetTitle("cos(a)");
+    xaxis->CenterTitle();
+    yaxis->SetTitle("count");
+    yaxis->CenterTitle();
+    
+
+
+   
+    
+
+    // h0->DrawClone();
+    // eff->DrawClone("SAME");
+    // h0->Divide(eff);
+    h0->DrawClone();
+    // eff->DrawClone();
+    c->Modified();
+    c->Update();
+    c->SaveAs("/home/anders/i257/figures/dataDivEff.pdf");
+
 }
 
 void betaSpec(RDataFrame *df){
@@ -143,29 +203,10 @@ int main(int argc, char *argv[]) {
     // Call the drawing of spectrum method. Default detectorId = 0
 
     // cosang(&df);
-    EEfigure(&df);
+    // EEfigure(&df);
+    betaAlphaAngle(&df);
     // betaSpec(&df);
     // angEDiff(&df);
     app->Run(); // show all canvas
     return 0;
 }
-
-
-    // auto p1 = df->Define("p1", "E._E[0]").Take<double>("p1").GetValue();
-    // auto p2 = df->Define("p2", "E._E[1]").Take<double>("p2").GetValue();
-
-    // Int_t n = p1.size();
-    // TGraph *g = new TGraph (n, &p1[0], &p2[0]);
-    // TAxis *xaxis = g->GetXaxis();
-    // xaxis->SetLimits(10, 8000);
-    // g->GetHistogram()->SetMaximum(8000);
-    // g->GetHistogram()->SetMinimum(10);
-    // xaxis->SetTitle("name");
-
-
-
-    // g->SetMarkerStyle(1);
-    // // g->SetMarkerColorAlpha(kBlack, 0.1);
-
-    // g->SetTitle("Energy vs energy");
-    // g->DrawClone("AP");
