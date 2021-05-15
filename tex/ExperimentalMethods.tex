@@ -2,7 +2,7 @@
 The data used in this thesis stems from an experiment carried out at the IGISOL facility, at the University of Jyväskylä. Originally the experiment was scheduled for May 2020, but was postponed due to the ongoing Corona pandemic. 
 
 
-\subsection{Detector setup}
+\section{Detector setup}
 The detection setup consists of 6 double sided silicon detectors (DSSD), and 6 single sided silicon detectors (SSD). 
 The detectors are $\SI{5}{cm} \times \SI{5}{cm}$ and placed in a cube around the a target in the center, as shown on figure \ref{fig}. The setup is designed with measuring the opening angle of the $\beta$ in mind, and therefore the detectors covers 51\% of the solid angle. \\
  
@@ -46,7 +46,20 @@ AUSAlib has a lot of functionalities, but there are \textcolor{red}{XX} tools th
 
 \subsection{Calibrator}
 Since the detectors work, by measuring an electrical charge that comes from the charged particle, the detectors needs to translate a specific charge to energy deposited. \\
-To do that, a calibration is needed before any experiment can take place. 
+To do that, we use the \texttt{Calibrator}-tool, which is designed to convert a channel number into an actual energy. Assuming that the channel numbers are linearly related to the energies, a known radioactive source can be measured, and the expected spectrum can be compared to the measured. This is done for each strip in each detector.
+\\\\
 
+The \texttt{Calibrator} starts by running a peak-finding algorithm over some calibration data, to roughly identify the locations of the peaks, followed by a multi-Gaussian fit to find the most precise peak location. 
+The positions of the peaks can then be compared to the expected energies, giving an associated energy to a given channel. \\\\
 
-
+As mentioned earlier, all of the detectors have a small aluminum dead layer. All particles that pass through this layer will loses some amount of energy depending on the stopping power of the material and the effective thickness of the dead layer $\Delta x_{eff}$, which furthermore depends on the angle of incidence, $\theta$. 
+The relationship between the effective thickness and the actual thickness is described as $\Delta x_{eff} = \Delta x/ \cos(\theta)$. This gives the measured energy as 
+\begin{equation*}
+E' = E - \dfrac{dE}{dx} \dfrac{\Delta x}{\cos(\theta)},
+\end{equation*}
+where $E$ is the original energy of the particle, $dE/dx$ is the stopping power of the material and $\Delta x$ is the thickness of the dead layer. \\
+\\
+These calculations are all handled by the \texttt{Calibrator}. 
+As input it takes an unpacked measurement of a source, a file specifying the locations of the expected peaks and a file specifying the spacial locations of the detectors. 
+From this it calculates the energy loss, and creates a linear relationship between channel numbers and energies. This is then written to the disk as a seperate calibration file, which can be parsed to other moduels.\\
+It is important to note that the Calibrator does not modify any data. Therefore the energy loss is unaccoutned for. Instead it corrects the expected energy spectrum, which means that the resulting calibration is still valid. The energy loss correction is therefore still needed in the analysis, as the effect is unaccounted for in measurements. 

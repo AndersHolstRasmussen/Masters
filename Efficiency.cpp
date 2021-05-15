@@ -53,12 +53,13 @@ double angFromXYZ(double x1, double y1, double z1, double x2, double y2, double 
 }
 
 
+const int pSize = 1536; // 1536 is 6        1280 is 5
+const int pSizeSquared = 2359296; // 2359296 is 6     1638400 is 5
 
-
-double pixel_x[1536];
-double pixel_y[1536];
-double pixel_z[1536];
-double angs[2359296];
+double pixel_x[pSize];
+double pixel_y[pSize];
+double pixel_z[pSize];
+double angs[pSizeSquared];
 
 
 void createDetector1And2(double distance, double x, double y, int start){
@@ -111,7 +112,7 @@ void createDetector5And6(double distance, double x, double z, int start){
 
 ofstream outputFile;
 ofstream fs;
-std::string filename = "efficiencyOutput.csv";
+std::string filename = "my_efficiencyOutput.csv";
 
 int main(int argc, char const *argv[])
 {   
@@ -125,8 +126,8 @@ int main(int argc, char const *argv[])
     createDetector5And6(init, x, y, 1024);
     createDetector5And6(-init, x, y, 1280);
     int k = 0;
-    for(int i = 0; i < 1536; i++){
-        for(int j = 0; j < 1536; j++){
+    for(int i = 0; i < pSize; i++){
+        for(int j = 0; j < pSize; j++){
             angs[k] = angFromXYZ(pixel_x[i], pixel_y[i], pixel_z[i], pixel_x[j], pixel_y[j], pixel_z[j]);
             // cout << angs[k] << endl;
             k++;
@@ -136,7 +137,7 @@ int main(int argc, char const *argv[])
 
     outputFile.open(filename);
     // outputFile << "data" << endl;
-    for(int i = 0; i < sizeof(angs)/sizeof(*angs); i++){
+    for(int i = 0; i < pSizeSquared; i++){
         outputFile << angs[i] << endl;
     }
     outputFile.close();

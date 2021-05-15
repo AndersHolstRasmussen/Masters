@@ -94,10 +94,9 @@ void betaAlphaAngle(RDataFrame *df){
     auto h1 = d1.Histo1D({"Stats", "\\beta-\\alpha angle", bins, xmin, xmax}, "d1");
 
     auto eff = new TH1F("stats", "Angle efficiency", bins, xmin, xmax);
-
+    h0->Add(&h1.GetValue()); 
 
     ifstream ifile("/home/anders/i257/build/efficiencyOutput.csv");
-    vector<double> angs;
     if (!ifile.is_open()) {
         std::cerr << "There was a problem opening the input file!\n";
         exit(1);//exit or do additional error checking
@@ -108,31 +107,70 @@ void betaAlphaAngle(RDataFrame *df){
     while (ifile >> num) {
         eff->Fill(num);
     }
-    h0->Add(&h1.GetValue());    
-    cout << h0->KolmogorovTest(eff) << endl;
-    cout << eff->KolmogorovTest(&h0.GetValue()) << endl;
-    h0->Divide(eff);
+
+    Double_t factor = 1.;
+    eff->Scale(factor/eff->Integral(), "width");
+    h0->Scale(factor/h0->Integral(), "width"); 
+
+    // h0->Divide(eff);
     auto xaxis = h0->GetXaxis();
     auto yaxis = h0->GetYaxis();
     xaxis->SetTitle("cos(a)");
     xaxis->CenterTitle();
     yaxis->SetTitle("count");
     yaxis->CenterTitle();
-    
+    eff->SetLineColor(kRed);
+    h0->SetLineColor(kGreen);
 
-
-   
-    
-
-    // h0->DrawClone();
-    // eff->DrawClone("SAME");
+    cout << "Kolmogorov test: " << h0->KolmogorovTest(eff) << endl;
+    eff->DrawClone("HIST");
+    h0->DrawClone("HIST SAME");
     // h0->Divide(eff);
-    h0->DrawClone();
+    // h0->DrawClone("HIST");
     // eff->DrawClone();
     c->Modified();
     c->Update();
-    c->SaveAs("/home/anders/i257/figures/dataDivEff.pdf");
+    // c->SaveAs("/home/anders/i257/figures/dataDivEff.pdf");
 
+}
+
+void individualDetectorsBetaAlphaAngle(RDataFrame *df){
+    auto c = new TCanvas();
+    int bins = 100;
+    double xmin = -1;
+    double xmax = 1;
+    
+    int detectorNr = 1;
+    string x = to_string(detectorNr);
+    string title = "Angle where beta hit in detector 1 or " + to_string(detectorNr);
+    auto d0 = df->Define("d0", "betaAlphaAngle0._betaAlphaAngle0").Filter("ibeta._ibeta[0] == " + x); // + "|| ibeta._ibeta[0] == 1"
+    auto h0 = d0.Histo1D({"Stats", title.c_str() , bins, xmin, xmax}, "d0");
+
+    auto d1 = df->Define("d1", "betaAlphaAngle1._betaAlphaAngle1").Filter("ibeta._ibeta[0] == " + x); //  + "|| ibeta._ibeta[0] == 1"
+    auto h1 = d1.Histo1D({"Stats", "\\beta-\\alpha angle", bins, xmin, xmax}, "d1");
+
+    auto eff = new TH1F("stats", "Angle efficiency", bins, xmin, xmax);
+    ifstream ifile("/home/anders/i257/build/efficiencyOutput.csv");
+
+
+    if (!ifile.is_open()) {
+        std::cerr << "There was a problem opening the input file!\n";
+        exit(1);//exit or do additional error checking
+    }
+
+    double num = 0.0;
+    //keep storing values from the text file so long as data exists:
+    while (ifile >> num) {
+        eff->Fill(num);
+    }
+    h0->Add(&h1.GetValue());
+    cout << "Kolmogorov test: " << h0->KolmogorovTest(eff) << endl;
+    h0->Divide(eff);
+    
+    h0->DrawClone();
+    // eff->DrawClone();
+    // string savetitle = "/home/anders/i257/figures/betaAngles/angleWhereBetaWasInDet" + to_string(detectorNr) + ".pdf";
+    // c->SaveAs(savetitle.c_str());
 }
 
 void betaSpec(RDataFrame *df){
@@ -205,6 +243,7 @@ int main(int argc, char *argv[]) {
     // cosang(&df);
     // EEfigure(&df);
     betaAlphaAngle(&df);
+    // individualDetectorsBetaAlphaAngle(&df);
     // betaSpec(&df);
     // angEDiff(&df);
     app->Run(); // show all canvas

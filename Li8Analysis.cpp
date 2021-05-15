@@ -53,7 +53,7 @@ public:
         v_F = make_unique<DynamicBranchVector<short>>(*tree, "FI", "mulAlpha");
         v_B = make_unique<DynamicBranchVector<short>>(*tree, "BI", "mulAlpha");
         v_i = make_unique<DynamicBranchVector<short>>(*tree, "i", "mulAlpha");
-        v_ibeta = make_unique<DynamicBranchVector<short>>(*tree, "ibeta", "mulBeta");
+        v_ibeta = make_unique<DynamicBranchVector<int>>(*tree, "ibeta", "mulBeta");
         v_Ebeta = make_unique<DynamicBranchVector<double>>(*tree, "Ebeta", "mulBeta");
         v_EPbeta = make_unique<DynamicBranchVector<double>>(*tree, "EPbeta", "mulBeta");
         v_betaAlpaAngle0 = make_unique<DynamicBranchVector<double>>(*tree, "betaAlphaAngle0", "1");
@@ -87,7 +87,8 @@ public:
         if (numberOfAlphas < 2) return;
         doAnalysis();
         if (moment > 40000) return;
-        // if(cosang > -0.99) return;
+        if (mulBeta < 1) return;
+        if(cosang > -0.95) return;
         CLOCK = output.getScalerOutput("CLOCK").getValue();
         tree->Fill();
         NUM++;
@@ -152,7 +153,7 @@ public:
             hit->canBeAlpha = false;
             hit->canBeBeta = false;
             bool thickDetector = (hit->index == 1 || hit->index == 5);      // Thick detectors are the ones with id 1 or 5 (det2 and detD)
-            if(hit->paddeposited != 0 || thickDetector){                    // Can be a beta if it comes from a thick detector or a pad  
+            if(hit->paddeposited != 0 && thickDetector){                    // Can be a beta if it comes from a thick detector or a pad  
                 hit->canBeBeta = true;
                 numberOfBetas++;
                 hit->EBeta = hit->deposited + hit->paddeposited;
@@ -200,20 +201,8 @@ public:
                 
                 moment = momentumSum;
 
-                // vector<double> v1 = getXYZ(hit1->theta, hit1->phi);
-                // vector<double> v2 = getXYZ(hit2->theta, hit2->phi);
-                // double dotprod = v1[0]*v2[0] + v1[1]*v2[1] + v1[2]*v2[2];
-                // double len1 = sqrt(pow(v1[0], 2) + pow(v1[1], 2) + pow(v1[2], 2));
-                // double len2 = sqrt(pow(v2[0], 2) + pow(v2[1], 2) + pow(v2[2], 2));
-                // double cosa = dotprod / (len1 * len2);
-                
-                // if(cosa < angle){
-                //     index[0] = i;
-                //     index[1] = j;
-                //     angle = cosa;
-                // }
-                // cosA->add(angle);
-                // cosang = angle;
+                // hits[index[0]].canBeBeta = false;
+                // hits[index[1]].canBeBeta = false;
 
             }
         }
@@ -276,7 +265,7 @@ public:
             if (hit == a1) continue;
             v_betaAlpaAngle0->add(angleBetweenTwoHits(hit, a0));
             v_betaAlpaAngle1->add(angleBetweenTwoHits(hit, a1));
-            v_ibeta->add(static_cast<short>(hit->index));
+            v_ibeta->add((hit->index));
             v_Ebeta->add(hit->EBeta);
             v_bPhi->add(hit->phi);
             v_bTheta->add(hit->theta);
@@ -329,7 +318,8 @@ public:
     int NUM;
     // unique_ptr<DynamicBranchVector<TVector3>> v_dir0, v_pos0, v_dir1, v_pos1;
     unique_ptr<DynamicBranchVector<double>> v_E, v_Edep, v_dE, v_Ebeta, v_EPbeta, cosA;
-    unique_ptr<DynamicBranchVector<short>> v_F, v_B, v_i, v_ibeta;
+    unique_ptr<DynamicBranchVector<short>> v_F, v_B, v_i;
+    unique_ptr<DynamicBranchVector<int>> v_ibeta;
     unique_ptr<DynamicBranchVector<double>> v_ptot, v_Etot, v_betaAlpaAngle0, v_betaAlpaAngle1, v_bTheta, v_bPhi;
     unique_ptr<EnergyLossRangeInverter> SiCalc;
     vector<unique_ptr<EnergyLossRangeInverter>> targetCalcs;
