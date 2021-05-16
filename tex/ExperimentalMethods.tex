@@ -63,3 +63,7 @@ These calculations are all handled by the \texttt{Calibrator}.
 As input it takes an unpacked measurement of a source, a file specifying the locations of the expected peaks and a file specifying the spacial locations of the detectors. 
 From this it calculates the energy loss, and creates a linear relationship between channel numbers and energies. This is then written to the disk as a seperate calibration file, which can be parsed to other moduels.\\
 It is important to note that the Calibrator does not modify any data. Therefore the energy loss is unaccoutned for. Instead it corrects the expected energy spectrum, which means that the resulting calibration is still valid. The energy loss correction is therefore still needed in the analysis, as the effect is unaccounted for in measurements. 
+
+
+\subsection{Sorter}
+
