@@ -44,6 +44,10 @@ ASUALib is a tool that build on top of ROOT. It was created by the subatomic gro
 Before this tool was created, everyone in the group had to more or less create their own tools to get data from the detectors into a useful data structure. This meant that a lot of time was wasted just trying to access data from experiments. AUSAlib was therefore created, so the basic tasks of data extraction was automated. \\
 AUSAlib has a lot of functionalities, but there are \textcolor{red}{XX} tools that was used in this thesis, namely the \textit{Sorter}, \textit{Calibrator} and the \textit{AbstractSortedAnalyzer}.
 
+\subsection{Unpacker}
+The \texttt{Unpacker} converts raw data from the detectors into a ROOT TTree. This is done by using the unpacking program \texttt{ucesb} \textcolor{red}{ref}. This will setup the branch structure of the data. Some of these branches are \texttt{FT} and \texttt{BT}, which is a vector of the  \texttt{TDC} (time) values for each event, for the front and backside of the detector. They are vectors because they contain information for each particle hits in a given time slot, for which there can be multiple. 
+There are also the branches \texttt{FE} and \texttt{BE}, which is the \texttt{ADC} (energy) associated with the events. 
+
 \subsection{Calibrator}
 Since the detectors work, by measuring an electrical charge that comes from the charged particle, the detectors needs to translate a specific charge to energy deposited. \\
 To do that, we use the \texttt{Calibrator}-tool, which is designed to convert a channel number into an actual energy. Assuming that the channel numbers are linearly related to the energies, a known radioactive source can be measured, and the expected spectrum can be compared to the measured. This is done for each strip in each detector.
@@ -61,9 +65,16 @@ where $E$ is the original energy of the particle, $dE/dx$ is the stopping power 
 \\
 These calculations are all handled by the \texttt{Calibrator}. 
 As input it takes an unpacked measurement of a source, a file specifying the locations of the expected peaks and a file specifying the spacial locations of the detectors. 
-From this it calculates the energy loss, and creates a linear relationship between channel numbers and energies. This is then written to the disk as a seperate calibration file, which can be parsed to other moduels.\\
-It is important to note that the Calibrator does not modify any data. Therefore the energy loss is unaccoutned for. Instead it corrects the expected energy spectrum, which means that the resulting calibration is still valid. The energy loss correction is therefore still needed in the analysis, as the effect is unaccounted for in measurements. 
+From this it calculates the energy loss, and creates a linear relationship between channel numbers and energies. This is then written to the disk as a seperate calibration file, which can be parsed to other modules.\\
+It is important to note that the Calibrator does not modify any data. Therefore the energy loss is unaccounted for. Instead it corrects the expected energy spectrum, which means that the resulting calibration is still valid. The energy loss correction is therefore still needed in the analysis, as the effect is unaccounted for in measurements. 
 
 
 \subsection{Sorter}
+The sorter is used after a successful calibration. It generates a ROOT file based on the unpacked data, and applies the calibration. 
+It is also responsible for matching and combining events from the front-side to the back-side of the detector. If there where one hit in the front side and one in the back, the mathcing is fairly trivial. If there however where multiple hits in both front and back, the \texttt{Sorter} will run a matching algorithm, which pairs the hits with the lowest energy differences. \\
+\\
+When the events have been matched, the hits on the individual sides of each detector are merged into a single event. 
+Therefore each event can now be considered a multiple of particle hits. This makes it possible to to associate physical properties with each particle, such as direction and energy. 
+There has still not been done any filtering of the data, which is what we will discuss in chapter \ref{cha:dataReduction}.
+
 
