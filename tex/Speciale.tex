@@ -1,6 +1,8 @@
 \documentclass[onecolumn, a4paper, oneside, article, 12pt]{report}
 \usepackage[utf8]{inputenc}
 \usepackage{graphicx}
+%\usepackage[demo]{graphicx}
+\usepackage{subcaption}
 \usepackage{float}
 \usepackage[hidelinks]{hyperref}
 \usepackage{listings}
@@ -22,6 +24,11 @@
 \DeclarePairedDelimiter{\abs}{\lvert}{\rvert}
 \usepackage{titlesec}
 \onehalfspacing
+\newcommand{\bp}{$\beta$-particle}
+\newcommand{\be}{$\beta$}
+\newcommand{\ap}{$\alpha$-particle}
+\newcommand{\aps}{$\alpha$-particles}
+\newcommand{\al}{$\alpha$}
 
 \titleformat{\chapter}[block]
 {\normalfont\huge\bfseries}{\thechapter}{20pt}{}
@@ -52,6 +59,7 @@
 	\input{Theory.tex}
 	\input{ExperimentalMethods.tex}
 	\input{DataReduction.tex}
+	\input{Analysis.tex}
 	\input{Conclution.tex}
 
 	
