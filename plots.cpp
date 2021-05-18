@@ -68,7 +68,7 @@ void cosang(RDataFrame *df){
     }
 
     auto data = df->Define("x", "cosA._cosA");
-    auto h = data.Histo1D({"Stats", "cos(a)", 300, -1.05, 1.05}, "x");
+    auto h = data.Histo1D({"Stats", "cos(a)", 300, -1, 1}, "x");
     h->DrawClone();
     c->Modified();
     c->Update();
@@ -79,7 +79,7 @@ void cosang(RDataFrame *df){
 
 void betaAlphaAngle(RDataFrame *df){
     auto c = new TCanvas();
-    // gStyle->SetOptTitle(0);
+    gStyle->SetOptTitle(0);
     gStyle->SetOptStat(0);
 
     int bins = 100;
@@ -215,6 +215,133 @@ void angEDiff(RDataFrame *df){
 
 }
 
+void betaAlphaDifferentEnergies(RDataFrame *df){
+    auto c = new TCanvas();
+    gStyle->SetOptTitle(0);
+    gStyle->SetOptStat(0);
+
+    int bins = 100;
+    double xmin = -1;
+    double xmax = 1;
+
+
+    auto d0_1k = df->Define("d0", "betaAlphaAngle0._betaAlphaAngle0").Filter("E._E[0] < 1000");
+    auto h0_1k = d0_1k.Histo1D({"Stats", "h0_1k", bins, xmin, xmax}, "d0");
+    auto d1_1k = df->Define("d1", "betaAlphaAngle1._betaAlphaAngle1").Filter("E._E[0] < 1000");
+    auto h1_1k = d1_1k.Histo1D({"Stats", "h1_1k", bins, xmin, xmax}, "d1");
+    h0_1k->Add(&h1_1k.GetValue()); 
+
+
+    auto d0_2k = df->Define("d0", "betaAlphaAngle0._betaAlphaAngle0").Filter("E._E[0] > 1000 && E._E[0] < 2000");
+    auto h0_2k = d0_2k.Histo1D({"Stats", "h0_2k", bins, xmin, xmax}, "d0");
+    auto d1_2k = df->Define("d1", "betaAlphaAngle1._betaAlphaAngle1").Filter("E._E[0] > 1000 && E._E[0] < 2000");
+    auto h1_2k = d1_2k.Histo1D({"Stats", "h1_2k", bins, xmin, xmax}, "d1");
+    h0_2k->Add(&h1_2k.GetValue()); 
+
+
+    auto d0_3k = df->Define("d0", "betaAlphaAngle0._betaAlphaAngle0").Filter("E._E[0] > 2000 && E._E[0] < 3000");
+    auto h0_3k = d0_3k.Histo1D({"Stats", "h0_3k", bins, xmin, xmax}, "d0");
+    auto d1_3k = df->Define("d1", "betaAlphaAngle1._betaAlphaAngle1").Filter("E._E[0] > 2000 && E._E[0] < 3000");
+    auto h1_3k = d1_3k.Histo1D({"Stats", "h1_3k", bins, xmin, xmax}, "d1");
+    h0_3k->Add(&h1_3k.GetValue()); 
+
+
+    auto d0_4k = df->Define("d0", "betaAlphaAngle0._betaAlphaAngle0").Filter("E._E[0] > 3000 && E._E[0] < 4000");
+    auto h0_4k = d0_4k.Histo1D({"Stats", "h0_4k", bins, xmin, xmax}, "d0");
+    auto d1_4k = df->Define("d1", "betaAlphaAngle1._betaAlphaAngle1").Filter("E._E[0] > 3000 && E._E[0] < 4000");
+    auto h1_4k = d1_4k.Histo1D({"Stats", "h1_4k", bins, xmin, xmax}, "d1");
+    h0_4k->Add(&h1_4k.GetValue()); 
+
+
+    auto d0_5k = df->Define("d0", "betaAlphaAngle0._betaAlphaAngle0").Filter("E._E[0] > 4000 && E._E[0] < 5000");
+    auto h0_5k = d0_5k.Histo1D({"Stats", "h0_5k", bins, xmin, xmax}, "d0");
+    auto d1_5k = df->Define("d1", "betaAlphaAngle1._betaAlphaAngle1").Filter("E._E[0] > 4000 && E._E[0] < 5000");
+    auto h1_5k = d1_5k.Histo1D({"Stats", "h1_5k", bins, xmin, xmax}, "d1");
+    h0_5k->Add(&h1_5k.GetValue()); 
+
+
+    auto d0_6k = df->Define("d0", "betaAlphaAngle0._betaAlphaAngle0").Filter("E._E[0] > 5000 && E._E[0] < 6000");
+    auto h0_6k = d0_6k.Histo1D({"Stats", "h0_6k", bins, xmin, xmax}, "d0");
+    auto d1_6k = df->Define("d1", "betaAlphaAngle1._betaAlphaAngle1").Filter("E._E[0] > 5000 && E._E[0] < 6000");
+    auto h1_6k = d1_6k.Histo1D({"Stats", "h1_6k", bins, xmin, xmax}, "d1");
+    h0_6k->Add(&h1_6k.GetValue()); 
+
+    
+    auto d0_7k = df->Define("d0", "betaAlphaAngle0._betaAlphaAngle0").Filter("E._E[0] > 6000 && E._E[0] < 7000");
+    auto h0_7k = d0_7k.Histo1D({"Stats", "h0_7k", bins, xmin, xmax}, "d0");
+    auto d1_7k = df->Define("d1", "betaAlphaAngle1._betaAlphaAngle1").Filter("E._E[0] > 6000 && E._E[0] < 7000");
+    auto h1_7k = d1_7k.Histo1D({"Stats", "h1_7k", bins, xmin, xmax}, "d1");
+    h0_7k->Add(&h1_7k.GetValue()); 
+
+    auto d0_8k = df->Define("d0", "betaAlphaAngle0._betaAlphaAngle0").Filter("E._E[0] > 7000 && E._E[0] < 8000");
+    auto h0_8k = d0_8k.Histo1D({"Stats", "h0_8k", bins, xmin, xmax}, "d0");
+    auto d1_8k = df->Define("d1", "betaAlphaAngle1._betaAlphaAngle1").Filter("E._E[0] > 7000 && E._E[0] < 8000");
+    auto h1_8k = d1_8k.Histo1D({"Stats", "h1_8k", bins, xmin, xmax}, "d1");
+    h0_8k->Add(&h1_8k.GetValue()); 
+
+
+    auto d0_2_6k = df->Define("d0", "betaAlphaAngle0._betaAlphaAngle0").Filter("E._E[0] > 1000 && E._E[0] < 6000");
+    auto h0_2_6k = d0_2_6k.Histo1D({"Stats", "h0_2_6k", bins, xmin, xmax}, "d0");
+    auto d1_2_6k = df->Define("d1", "betaAlphaAngle1._betaAlphaAngle1").Filter("E._E[0] > 1000 && E._E[0] < 6000");
+    auto h1_2_6k = d1_2_6k.Histo1D({"Stats", "h1_2_6k", bins, xmin, xmax}, "d1");
+    h0_2_6k->Add(&h1_2_6k.GetValue()); 
+
+    auto eff = new TH1F("stats", "Angle efficiency", bins, xmin, xmax);
+    ifstream ifile("/home/anders/i257/build/efficiencyOutput.csv");
+    double num = 0.0;
+    while (ifile >> num) {
+        eff->Fill(num);
+    }
+    
+
+
+    Double_t factor = 1.;
+    eff->Scale(factor/eff->Integral(), "width");
+    h0_1k->Scale(factor/h0_1k->Integral(), "width"); 
+    h0_2k->Scale(factor/h0_2k->Integral(), "width");
+    h0_3k->Scale(factor/h0_3k->Integral(), "width");
+    h0_4k->Scale(factor/h0_4k->Integral(), "width");
+    h0_5k->Scale(factor/h0_5k->Integral(), "width");
+    h0_6k->Scale(factor/h0_6k->Integral(), "width");
+    h0_7k->Scale(factor/h0_7k->Integral(), "width");
+    h0_8k->Scale(factor/h0_8k->Integral(), "width");
+    h0_2_6k->Scale(factor/h0_2_6k->Integral(), "width");
+    eff->SetLineColor(kRed);
+    h0_1k->SetLineColor(kGreen);
+    h0_2k->SetLineColor(kMagenta);
+    h0_3k->SetLineColor(kBlue);
+    h0_4k->SetLineColor(kYellow);
+    h0_5k->SetLineColor(kBlack);
+    h0_6k->SetLineColor(kPink);
+    h0_7k->SetLineColor(kTeal);
+    h0_8k->SetLineColor(kGray);
+
+    h0_2_6k->SetLineColor(kBlue);
+
+    cout << "Kolmogorov test 0->1000: " << h0_1k->KolmogorovTest(eff) << endl;
+    cout << "Kolmogorov test 1000->2000: " << h0_2k->KolmogorovTest(eff) << endl;
+    cout << "Kolmogorov test 2000->3000: " << h0_3k->KolmogorovTest(eff) << endl;
+    cout << "Kolmogorov test 3000->4000: " << h0_4k->KolmogorovTest(eff) << endl;
+    cout << "Kolmogorov test 4000->5000: " << h0_5k->KolmogorovTest(eff) << endl;
+    cout << "Kolmogorov test 5000->6000: " << h0_6k->KolmogorovTest(eff) << endl;
+    cout << "Kolmogorov test 6000->7000: " << h0_7k->KolmogorovTest(eff) << endl;
+    cout << "Kolmogorov test 7000->8000: " << h0_8k->KolmogorovTest(eff) << endl;
+    cout << "Kolmogorov test 1000->6000: " << h0_2_6k->KolmogorovTest(eff) << endl;
+    
+
+    // h0_1k->DrawClone("HIST");
+    // h0_2k->DrawClone("HIST SAME");
+    // h0_3k->DrawClone("HIST SAME");
+    // h0_4k->DrawClone("HIST SAME");
+    // h0_5k->DrawClone("HIST SAME");
+    // h0_6k->DrawClone("HIST SAME");
+    // h0_7k->DrawClone("HIST SAME");
+    // h0_8k->DrawClone("HIST SAME");
+    h0_2_6k->DrawClone("HIST");
+    eff->DrawClone("HIST SAME");
+    
+}
+
 int main(int argc, char *argv[]) {
     ROOT::EnableImplicitMT(8);
     int detectorId;
@@ -227,7 +354,7 @@ int main(int argc, char *argv[]) {
     } 
 
     TChain chain("tree");
-    TString filename = "/home/anders/i257/data/Li8/225_03N10mlio.root";
+    TString filename = "/home/anders/i257/data/Li8/225_N102mlio.root";
     //const char *input_file = argv[2];
     chain.Add(filename);
     RDataFrame df(chain);
@@ -242,7 +369,8 @@ int main(int argc, char *argv[]) {
 
     // cosang(&df);
     // EEfigure(&df);
-    betaAlphaAngle(&df);
+    betaAlphaDifferentEnergies(&df);
+    // betaAlphaAngle(&df);
     // individualDetectorsBetaAlphaAngle(&df);
     // betaSpec(&df);
     // angEDiff(&df);

@@ -211,11 +211,26 @@ public:
     }
     
     double angleBetweenTwoHits(Hit *hit1, Hit *hit2){
-        vector<double> v1 = getXYZ(hit1->theta, hit1->phi);
-        vector<double> v2 = getXYZ(hit2->theta, hit2->phi);
-        double dotprod = v1[0]*v2[0] + v1[1]*v2[1] + v1[2]*v2[2];
-        double len1 = sqrt(pow(v1[0], 2) + pow(v1[1], 2) + pow(v1[2], 2));
-        double len2 = sqrt(pow(v2[0], 2) + pow(v2[1], 2) + pow(v2[2], 2));
+        // vector<double> v1 = getXYZ(hit1->theta, hit1->phi);
+        // vector<double> v2 = getXYZ(hit2->theta, hit2->phi);
+        // double dotprod = v1[0]*v2[0] + v1[1]*v2[1] + v1[2]*v2[2];
+        // double len1 = sqrt(pow(v1[0], 2) + pow(v1[1], 2) + pow(v1[2], 2));
+        // double len2 = sqrt(pow(v2[0], 2) + pow(v2[1], 2) + pow(v2[2], 2));
+        // double cosa = dotprod / (len1 * len2);
+
+
+        double x1 = hit1->direction.X();
+        double x2 = hit2->direction.X();
+
+        double y1 = hit1->direction.Y();
+        double y2 = hit2->direction.Y();
+
+        double z1 = hit1->direction.Z();
+        double z2 = hit2->direction.Z();
+
+        double dotprod = x1*x2 + y1*y2 + z1*z2;
+        double len1 = sqrt(pow(x1, 2) + pow(y1, 2) + pow(z1, 2));
+        double len2 = sqrt(pow(x2, 2) + pow(y2, 2) + pow(z2, 2));
         double cosa = dotprod / (len1 * len2);
 
         return cosa;
@@ -345,7 +360,7 @@ int main(int argc, char *argv[]) {
     auto target = JSON::readTargetFromJSON("/home/anders/i257/setup/targets/target.json");
     double targetThickness = target.getThickness() *1e6;
 
-    string file = "/home/anders/i257/data/sorted/225_03N10m.root";
+    string file = "/home/anders/i257/data/sorted/225_N102m.root";
 
     SortedReader reader(*setup);
     reader.add(file);

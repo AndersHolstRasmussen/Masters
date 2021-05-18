@@ -33,10 +33,11 @@ const int len2times6 = len2 * len6;
 double xs[len6];
 double ys[len6];
 double zs[len6];
-double angs[len6squared];
+double angs[len2times6];
+double alphaAngs[len6];
 
 ofstream outputFile;
-std::string filename = "efficiencyOutput.csv";
+std::string filename = "efficiencyOutputAlphas.csv";
 
 
 double angFromXYZ(double x1, double y1, double z1, double x2, double y2, double z2){
@@ -52,14 +53,17 @@ int main(int argc, char **argv) {
     // Read in setup configuration
     auto setup = JSON::readSetupFromJSON("/home/anders/i257/setup/setup.json");
     auto target = JSON::readTargetFromJSON("/home/anders/i257/setup/targets/target.json");
-    auto tarPos = target.getCenter();
+    double IonRange = 166 * 1e-6;
+    double targetThickness = 226 * 1e-6;
+    auto beam  = TVector3(0, 0, IonRange).Unit();
+    auto tarPos = target.getCenter() - TVector3(0, 0, targetThickness / 2.) + TVector3(0, 0, IonRange);
 
  
     int k = 0;
     int dets[6] = {1, 5, 0, 2, 3, 4};
     for(int d : dets){
-        for(int i = 1; i <= 16; i++){
-            for(int j = 1; j <= 16; j++){
+        for(int i = 1; i < 17; i++){
+            for(int j = 1; j < 17; j++){
                 auto pixPos = setup->getDSSD(d)->getPixelPosition(i, j);
                 auto direction = (pixPos - tarPos).Unit();
                 xs[k] = direction.X();
@@ -71,16 +75,24 @@ int main(int argc, char **argv) {
     }
 
     k = 0;
-    for(int i = 0; i < len2; i++){
-        for(int j = 0; j < len6; j++){
-            angs[k] = angFromXYZ(xs[i], ys[i], zs[i], xs[j], ys[j], zs[j]);
-            k++;
-        }
+    // for(int i = 0; i < len6; i++){
+    //     for(int j = 0; j < len2; j++){
+    //         angs[k] = angFromXYZ(xs[i], ys[i], zs[i], xs[j], ys[j], zs[j]);
+    //         k++;
+    //     }
+    // }
+
+
+    k = 0;
+    for (int i = 0; i < len6; i++){
+        alphaAngs[k] = angFromXYZ(xs[i], ys[i], zs[i], beam.X(), beam.Y(), beam.Z());
+        k++;
     }
+    
 
     outputFile.open(filename);
-    for(int i = 0; i < len2times6; i++){
-        outputFile << angs[i] << endl;
+    for(int i = 0; i < len6; i++){
+        outputFile << alphaAngs[i] << endl;
     }
     outputFile.close();
 

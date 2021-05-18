@@ -4,12 +4,12 @@ The data used in this thesis stems from an experiment carried out at the IGISOL 
 
 \section{Detector setup}
 The detection setup consists of 6 double sided silicon detectors (DSSD), and 6 single sided silicon detectors (SSD). 
-The detectors are $\SI{5}{cm} \times \SI{5}{cm}$ and placed in a cube around the a target in the center, as shown on figure \ref{fig}. The setup is designed with measuring the opening angle of the $\beta$ in mind, and therefore the detectors covers 51\% of the solid angle. \\
+The detectors are $\SI{5}{cm} \times \SI{5}{cm}$ and placed in a cube around the a target in the center, as shown on figure \cref{fig}. The setup is designed with measuring the opening angle of the $\beta$ in mind, and therefore the detectors covers 51\% of the solid angle. \\
  
 
 \section{Experimental setup}
 The setup is designed to measure $\beta\alpha$ angular correlations in the $\beta$-delayed particle decay of \isotope[8][]{Li}. When measuring multiple particles, the setup is highly dependent on the coverage of the solid angle. Therefore the setup is designed to have a large solid angle coverage, with high $\alpha$-particle resolution, while still being able to measure $\beta$-particles. \\
-This is has been achieved by creating a cube of six double sided silicon detectors (DSSD), all backed by a \SI{1}{mm} single sided detector (SSD). To gain the largest solid angle, the detectors where placed as close to one another as possible. A 3D printed case was designed to hold the detectors in place, and achieved a solid angle coverage of 51\% for the DSSD's. An illustration of the setup, together with the different detectors' thickness can be seen on figure \ref{fig:opstilling}. 
+This is has been achieved by creating a cube of six double sided silicon detectors (DSSD), all backed by a \SI{1}{mm} single sided detector (SSD). To gain the largest solid angle, the detectors where placed as close to one another as possible. A 3D printed case was designed to hold the detectors in place, and achieved a solid angle coverage of 51\% for the DSSD's. An illustration of the setup, together with the different detectors' thickness can be seen on \cref{fig:opstilling}. 
 Even though the setup was designed to hold 12 detectors in total, there where only 11 detectors in the actual experiment. This was due to one of the SSD's being defect, so it was removed from the setup. 
 
 \begin{figure}[h]
@@ -24,7 +24,7 @@ As the name suggests, it consists of two sides, a front layer and a back layer. 
 The strips on the front side are p-doped, while the back side are n-doped. When a charged particle hits the detector, it will ionize the atoms in the semi-conductor, and produce a electron-hole pair. The number of electron-hole pairs is proportional to the energy of the charged particle. 
 The bias voltage on the detector collects the electrons and holes on opposite sites of the strip, where the charge is collected on aluminum contacts and a signal is measured. Energy is not deposited in these contacts, and therefore they constitute to a so called dead layer. \\
 The detectors are square $5\times 5$ \SI{}{cm} and with their $16\times 16$ strips, they have an effective gird of  256 pixels of \SI{9}{mm}. 
-4 of the 6 detectors have a thickness of \SI{60}{\mu m} and a dead layer of \SI{100}{nm} dead layer. These detectectors are the ones called Det1, Det3, Det4 and DetU in the setup seen on figure \ref{fig:opstilling}. The other 2 detectors (Det2 and DetD) where both \SI{1}{mm}.
+4 of the 6 detectors have a thickness of \SI{60}{\mu m} and a dead layer of \SI{100}{nm} dead layer. These detectectors are the ones called Det1, Det3, Det4 and DetU in the setup seen on \cref{fig:opstilling}. The other 2 detectors (Det2 and DetD) where both \SI{1}{mm}.
 \\
 \\
 The other type of detector was the SSD's also known as pads. They are different from the DSSD's, in that they only have one side, and no strips. Therefore they do not contain a grid, the same way the DSSD's do, and will therefore not provide any information as to where on the detector a particle has hit. But the reason they are in this setup, is because they are thicker. They are used to measure the energy deposited by a $\beta$-particle, and to determine if a given particle is a $\beta$-particle. An $\alpha$-particle will deposit all of its energy into the first DSSD it encoutner, and be effectively stopped compleatly by it. But a $\beta$-particle will deposit allmost no energy in a thin DSSD, and travel through it, ending up depositing some energy in the SSD. \\
@@ -75,6 +75,6 @@ It is also responsible for matching and combining events from the front-side to 
 \\
 When the events have been matched, the hits on the individual sides of each detector are merged into a single event. 
 Therefore each event can now be considered a multiple of particle hits. This makes it possible to to associate physical properties with each particle, such as direction and energy. 
-There has still not been done any filtering of the data, which is what we will discuss in chapter \ref{cha:dataReduction}.
+There has still not been done any filtering of the data, which is what we will discuss in  \cref{cha:dataReduction}.
 
 
