@@ -307,14 +307,15 @@ void betaAlphaDifferentEnergies(RDataFrame *df){
     h0_8k->Scale(factor/h0_8k->Integral(), "width");
     h0_2_6k->Scale(factor/h0_2_6k->Integral(), "width");
     eff->SetLineColor(kRed);
+    eff->SetLineWidth(2);
     h0_1k->SetLineColor(kGreen);
     h0_2k->SetLineColor(kMagenta);
     h0_3k->SetLineColor(kBlue);
     h0_4k->SetLineColor(kYellow);
     h0_5k->SetLineColor(kBlack);
     h0_6k->SetLineColor(kPink);
-    h0_7k->SetLineColor(kTeal);
-    h0_8k->SetLineColor(kGray);
+    h0_7k->SetLineColor(kGreen);
+    h0_8k->SetLineColor(kBlue);
 
     h0_2_6k->SetLineColor(kBlue);
 
@@ -335,11 +336,53 @@ void betaAlphaDifferentEnergies(RDataFrame *df){
     // h0_4k->DrawClone("HIST SAME");
     // h0_5k->DrawClone("HIST SAME");
     // h0_6k->DrawClone("HIST SAME");
-    // h0_7k->DrawClone("HIST SAME");
-    // h0_8k->DrawClone("HIST SAME");
-    h0_2_6k->DrawClone("HIST");
+    h0_7k->DrawClone("Hist ");
+    h0_8k->DrawClone("HIST SAME");
+    // h0_2_6k->DrawClone("HIST");
     eff->DrawClone("HIST SAME");
     
+}
+
+void alphaEffeciency(RDataFrame *df){
+    auto c = new TCanvas();
+    gStyle->SetOptTitle(0);
+    gStyle->SetOptStat(0);
+
+    int bins = 100;
+    double xmin = -1;
+    double xmax = 1;
+
+    auto d0 = df->Define("d0", "angToBeam._angToBeam[0]");
+    auto h0 = d0.Histo1D({"Stats", "data / efficiency", bins, xmin, xmax}, "d0");
+
+    auto d1 = df->Define("d1", "angToBeam._angToBeam[1]");
+    auto h1 = d1.Histo1D({"Stats", "\\beta-\\alpha angle", bins, xmin, xmax}, "d1");
+
+    auto eff = new TH1F("stats", "Angle efficiency", bins, xmin, xmax);
+    h0->Add(&h1.GetValue()); 
+
+    ifstream ifile("/home/anders/i257/build/efficiencyOutputAlphas.csv");
+    if (!ifile.is_open()) {
+        std::cerr << "There was a problem opening the input file!\n";
+        exit(1);//exit or do additional error checking
+    }
+
+    double num = 0.0;
+    //keep storing values from the text file so long as data exists:
+    while (ifile >> num) {
+        eff->Fill(num);
+    }
+
+    Double_t factor = 1.;
+    eff->Scale(factor/eff->Integral(), "width");
+    h0->Scale(factor/h0->Integral(), "width"); 
+
+    eff->SetLineColor(kRed);
+    h0->SetLineColor(kGreen);
+
+    h0->DrawClone("HIST");
+    eff->DrawClone("HIST SAME");
+
 }
 
 int main(int argc, char *argv[]) {
@@ -367,6 +410,7 @@ int main(int argc, char *argv[]) {
     TApplication *app = new TApplication("ROOT window", 0, 0);
     // Call the drawing of spectrum method. Default detectorId = 0
 
+    // alphaEffeciency(&df);
     // cosang(&df);
     // EEfigure(&df);
     betaAlphaDifferentEnergies(&df);

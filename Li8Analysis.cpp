@@ -48,6 +48,8 @@ public:
         // v_dir0 = make_unique<DynamicBranchVector<TVector3>>(*tree, "dir0");
         v_Edep = make_unique<DynamicBranchVector<double>>(*tree, "Edep", "mulAlpha");
         v_E = make_unique<DynamicBranchVector<double>>(*tree, "E", "mulAlpha");
+        v_angToBeam = make_unique<DynamicBranchVector<double>>(*tree, "angToBeam", "mulAlpha");
+        v_ang = make_unique<DynamicBranchVector<double>>(*tree, "angle", "mulAlpha");
         cosA = make_unique<DynamicBranchVector<double>>(*tree, "cosA", "1");
         v_dE = make_unique<DynamicBranchVector<double>>(*tree, "dE", "mulAlpha");
         v_F = make_unique<DynamicBranchVector<short>>(*tree, "FI", "mulAlpha");
@@ -211,14 +213,6 @@ public:
     }
     
     double angleBetweenTwoHits(Hit *hit1, Hit *hit2){
-        // vector<double> v1 = getXYZ(hit1->theta, hit1->phi);
-        // vector<double> v2 = getXYZ(hit2->theta, hit2->phi);
-        // double dotprod = v1[0]*v2[0] + v1[1]*v2[1] + v1[2]*v2[2];
-        // double len1 = sqrt(pow(v1[0], 2) + pow(v1[1], 2) + pow(v1[2], 2));
-        // double len2 = sqrt(pow(v2[0], 2) + pow(v2[1], 2) + pow(v2[2], 2));
-        // double cosa = dotprod / (len1 * len2);
-
-
         double x1 = hit1->direction.X();
         double x2 = hit2->direction.X();
 
@@ -244,6 +238,24 @@ public:
         return v;
     }
 
+    double angleToBeam(Hit *hit){
+        auto beam  = TVector3(0, 0, IonRange).Unit();
+        double x1 = hit->direction.X();
+        double x2 = beam.X();
+
+        double y1 = hit->direction.Y();
+        double y2 = beam.Y();
+
+        double z1 = hit->direction.Z();
+        double z2 = beam.Z();
+
+        double dotprod = x1*x2 + y1*y2 + z1*z2;
+        double len1 = sqrt(pow(x1, 2) + pow(y1, 2) + pow(z1, 2));
+        double len2 = sqrt(pow(x2, 2) + pow(y2, 2) + pow(z2, 2));
+        double cosa = dotprod / (len1 * len2);
+
+        return cosa;
+    }
 
     void doAnalysis() { 
         vector<int> alphaIndex = determineDoubleAlpha();
@@ -270,7 +282,8 @@ public:
             v_B->add(hit->bseg);
             v_i->add(static_cast<short>(hit->index));
             v_dE->add(hit->dE);
-            
+            v_ang->add(hit->angle * TMath::RadToDeg());
+            v_angToBeam->add(angleToBeam(hit));
         }
         double betaAng;
         for (int in = 0; in < hits.size(); in++) {
@@ -313,7 +326,7 @@ public:
             *v_E, *v_Edep,
             *v_F, *v_B,
             *v_Ebeta, *v_ibeta, *v_EPbeta, 
-            *v_dE,
+            *v_dE, *v_angToBeam, *v_ang,
             *cosA,
             *v_ptot, *v_Etot,
             *v_betaAlpaAngle1, *v_betaAlpaAngle0,
@@ -332,7 +345,7 @@ public:
     UInt_t mul{}, CLOCK{}, mulAlpha{}, mulBeta{};
     int NUM;
     // unique_ptr<DynamicBranchVector<TVector3>> v_dir0, v_pos0, v_dir1, v_pos1;
-    unique_ptr<DynamicBranchVector<double>> v_E, v_Edep, v_dE, v_Ebeta, v_EPbeta, cosA;
+    unique_ptr<DynamicBranchVector<double>> v_E, v_Edep, v_dE, v_Ebeta, v_EPbeta, cosA, v_angToBeam, v_ang;
     unique_ptr<DynamicBranchVector<short>> v_F, v_B, v_i;
     unique_ptr<DynamicBranchVector<int>> v_ibeta;
     unique_ptr<DynamicBranchVector<double>> v_ptot, v_Etot, v_betaAlpaAngle0, v_betaAlpaAngle1, v_bTheta, v_bPhi;

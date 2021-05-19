@@ -75,12 +75,12 @@ int main(int argc, char **argv) {
     }
 
     k = 0;
-    // for(int i = 0; i < len6; i++){
-    //     for(int j = 0; j < len2; j++){
-    //         angs[k] = angFromXYZ(xs[i], ys[i], zs[i], xs[j], ys[j], zs[j]);
-    //         k++;
-    //     }
-    // }
+    for(int i = 0; i < len6; i++){
+        for(int j = 0; j < len2; j++){
+            angs[k] = angFromXYZ(xs[i], ys[i], zs[i], xs[j], ys[j], zs[j]);
+            k++;
+        }
+    }
 
 
     k = 0;
