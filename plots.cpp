@@ -94,6 +94,7 @@ void betaAlphaAngle(RDataFrame *df){
     auto h1 = d1.Histo1D({"Stats", "\\beta-\\alpha angle", bins, xmin, xmax}, "d1");
 
     auto eff = new TH1F("stats", "Angle efficiency", bins, xmin, xmax);
+    auto eff2 = new TH1F("stats", "Angle efficiency", bins, xmin, xmax);
     h0->Add(&h1.GetValue()); 
 
     ifstream ifile("/home/anders/i257/build/efficiencyOutput.csv");
@@ -104,12 +105,24 @@ void betaAlphaAngle(RDataFrame *df){
 
     double num = 0.0;
     //keep storing values from the text file so long as data exists:
-    while (ifile >> num) {
-        eff->Fill(num);
+    // while (ifile >> num) {
+    //     eff->Fill(num);
+    // }
+
+
+    while (!ifile.eof())
+    {
+        double angle, weight;
+        ifile >> angle >> weight;
+        // cout << angle << "\t " << weight << endl;
+        eff->Fill(angle);
+        eff2->Fill(angle, weight);
     }
+    
 
     Double_t factor = 1.;
     eff->Scale(factor/eff->Integral(), "width");
+    eff2->Scale(factor/eff2->Integral(), "width");
     h0->Scale(factor/h0->Integral(), "width"); 
 
     // h0->Divide(eff);
@@ -120,13 +133,16 @@ void betaAlphaAngle(RDataFrame *df){
     yaxis->SetTitle("count");
     yaxis->CenterTitle();
     eff->SetLineColor(kRed);
+    eff2->SetLineColor(kBlue);
     h0->SetLineColor(kGreen);
-
-    cout << "Kolmogorov test: " << h0->KolmogorovTest(eff) << endl;
-    eff->DrawClone("HIST");
-    h0->DrawClone("HIST SAME");
     // h0->Divide(eff);
+    cout << "Kolmogorov test: " << h0->KolmogorovTest(eff2) << endl;
     // h0->DrawClone("HIST");
+    
+    eff2->DrawClone("HIST");
+    eff->DrawClone("HIST SAME");
+    // h0->Divide(eff);
+    h0->DrawClone("HIST SAME");
     // eff->DrawClone();
     c->Modified();
     c->Update();
@@ -413,8 +429,8 @@ int main(int argc, char *argv[]) {
     // alphaEffeciency(&df);
     // cosang(&df);
     // EEfigure(&df);
-    betaAlphaDifferentEnergies(&df);
-    // betaAlphaAngle(&df);
+    // betaAlphaDifferentEnergies(&df);
+    betaAlphaAngle(&df);
     // individualDetectorsBetaAlphaAngle(&df);
     // betaSpec(&df);
     // angEDiff(&df);

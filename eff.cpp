@@ -33,11 +33,14 @@ const int len2times6 = len2 * len6;
 double xs[len6];
 double ys[len6];
 double zs[len6];
+TVector3 cords[len6];
+TVector3 norms[len6];
 double angs[len2times6];
+double weight[len2times6];
 double alphaAngs[len6];
 
 ofstream outputFile;
-std::string filename = "efficiencyOutputAlphas.csv";
+std::string filename = "efficiencyOutput.csv";
 
 
 double angFromXYZ(double x1, double y1, double z1, double x2, double y2, double z2){
@@ -46,6 +49,26 @@ double angFromXYZ(double x1, double y1, double z1, double x2, double y2, double 
     double len2 = sqrt(pow(x2, 2) + pow(y2, 2) + pow(z2, 2));
     double cosa = dotprod / (len1 * len2);
     return cosa;
+}
+
+double ang(TVector3 v1, TVector3 v2){
+    // auto dot = v1.Dot(v2);
+    return v1.Dot(v2) / (v1.Mag() * v2.Mag());
+}
+
+double efficiency(double x, double y, double z, TVector3 norm){
+    // TVector3 direction = TVector3(x, y, z);
+    // auto mag = direction.Mag();
+    // auto magnorm = norm.Mag();
+    // double theta = direction.Dot(norm) / mag*magnorm;
+    // return cos(theta) / mag*mag;
+
+    double len = sqrt(pow(x, 2) + pow(y, 2) + pow(z, 2));
+    double xn = norm.X();
+    double yn = norm.Y();
+    double zn = norm.Z();
+    double theta = angFromXYZ(x, y, z, xn, yn, zn);
+    return cos(theta) / len*len;
 }
 
 
@@ -65,10 +88,14 @@ int main(int argc, char **argv) {
         for(int i = 1; i < 17; i++){
             for(int j = 1; j < 17; j++){
                 auto pixPos = setup->getDSSD(d)->getPixelPosition(i, j);
-                auto direction = (pixPos - tarPos).Unit();
-                xs[k] = direction.X();
-                ys[k] = direction.Y();
-                zs[k] = direction.Z();
+                auto direction = (pixPos - tarPos);
+                auto norm = setup->getDSSD(d)->getNormal();
+                auto theta = direction.Theta();
+                auto phi = direction.Phi(); 
+                norms[k] = norm;          
+                xs[k] = direction.x();
+                ys[k] = direction.y();
+                zs[k] = direction.z();
                 k++;
             }
         }
@@ -78,21 +105,21 @@ int main(int argc, char **argv) {
     for(int i = 0; i < len6; i++){
         for(int j = 0; j < len2; j++){
             angs[k] = angFromXYZ(xs[i], ys[i], zs[i], xs[j], ys[j], zs[j]);
+            weight[k] = efficiency(xs[i], ys[i], zs[i], norms[i]) * efficiency(xs[j], ys[j], zs[j], norms[j]);
             k++;
         }
     }
 
-
-    k = 0;
-    for (int i = 0; i < len6; i++){
-        alphaAngs[k] = angFromXYZ(xs[i], ys[i], zs[i], beam.X(), beam.Y(), beam.Z());
-        k++;
-    }
+    // k = 0;
+    // for (int i = 0; i < len6; i++){
+    //     alphaAngs[k] = angFromXYZ(xs[i], ys[i], zs[i], beam.X(), beam.Y(), beam.Z());
+    //     k++;
+    // }
     
 
     outputFile.open(filename);
-    for(int i = 0; i < len6; i++){
-        outputFile << alphaAngs[i] << endl;
+    for(int i = 0; i < len2times6; i++){
+        outputFile << angs[i] << "\t" << weight[i] << endl; // 
     }
     outputFile.close();
 
