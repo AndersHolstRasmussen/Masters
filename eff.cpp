@@ -53,6 +53,7 @@ double angFromXYZ(double x1, double y1, double z1, double x2, double y2, double 
 
 double ang(TVector3 v1, TVector3 v2){
     // auto dot = v1.Dot(v2);
+    v1.Angle(v2);
     return v1.Dot(v2) / (v1.Mag() * v2.Mag());
 }
 
@@ -64,11 +65,11 @@ double efficiency(double x, double y, double z, TVector3 norm){
     // return cos(theta) / mag*mag;
 
     double len = sqrt(pow(x, 2) + pow(y, 2) + pow(z, 2));
-    double xn = norm.X();
-    double yn = norm.Y();
-    double zn = norm.Z();
-    double theta = angFromXYZ(x, y, z, xn, yn, zn);
-    return cos(theta) / len*len;
+    double xn = -norm.X();
+    double yn = -norm.Y();
+    double zn = -norm.Z();
+    double costheta = angFromXYZ(x, y, z, xn, yn, zn);
+    return costheta / pow(len, 2);
 }
 
 

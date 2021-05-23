@@ -63,12 +63,18 @@ void EEfigure(RDataFrame *df){
 
 void cosang(RDataFrame *df){
     auto c = new TCanvas();
+    gStyle->SetOptTitle(0);
+    gStyle->SetOptStat(0);
     for(int i = 0; i < df->GetColumnNames().size(); i++){
         cout << df->GetColumnNames()[i] << endl;
     }
 
-    auto data = df->Define("x", "cosA._cosA");
+    auto data = df->Define("x", "cosAngAll._cosAngAll");
     auto h = data.Histo1D({"Stats", "cos(a)", 300, -1, 1}, "x");
+    auto xaxis = h->GetXaxis();
+    xaxis->SetTitle("cos(\\theta)");
+    xaxis->CenterTitle();
+    c->SetLogy();
     h->DrawClone();
     c->Modified();
     c->Update();
@@ -82,7 +88,7 @@ void betaAlphaAngle(RDataFrame *df){
     gStyle->SetOptTitle(0);
     gStyle->SetOptStat(0);
 
-    int bins = 100;
+    int bins = 500;
     double xmin = -1;
     double xmax = 1;
 
@@ -133,16 +139,19 @@ void betaAlphaAngle(RDataFrame *df){
     yaxis->SetTitle("count");
     yaxis->CenterTitle();
     eff->SetLineColor(kRed);
+    eff->SetLineWidth(3);
     eff2->SetLineColor(kBlue);
+    eff2->SetLineWidth(3);
     h0->SetLineColor(kGreen);
+    h0->SetLineWidth(3);
     // h0->Divide(eff);
     cout << "Kolmogorov test: " << h0->KolmogorovTest(eff2) << endl;
     // h0->DrawClone("HIST");
     
-    eff2->DrawClone("HIST");
-    eff->DrawClone("HIST SAME");
+    eff2->DrawClone("HIST L");
+    // eff->DrawClone("HIST SAME L");
     // h0->Divide(eff);
-    h0->DrawClone("HIST SAME");
+    h0->DrawClone("HIST SAME L");
     // eff->DrawClone();
     c->Modified();
     c->Update();

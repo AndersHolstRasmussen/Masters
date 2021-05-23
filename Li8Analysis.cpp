@@ -51,6 +51,7 @@ public:
         v_angToBeam = make_unique<DynamicBranchVector<double>>(*tree, "angToBeam", "mulAlpha");
         v_ang = make_unique<DynamicBranchVector<double>>(*tree, "angle", "mulAlpha");
         cosA = make_unique<DynamicBranchVector<double>>(*tree, "cosA", "1");
+        v_cosAngAll = make_unique<DynamicBranchVector<double>>(*tree, "cosAngAll", "mul");
         v_dE = make_unique<DynamicBranchVector<double>>(*tree, "dE", "mulAlpha");
         v_F = make_unique<DynamicBranchVector<short>>(*tree, "FI", "mulAlpha");
         v_B = make_unique<DynamicBranchVector<short>>(*tree, "BI", "mulAlpha");
@@ -89,7 +90,7 @@ public:
         if (numberOfAlphas < 2) return;
         doAnalysis();
         if (moment > 40000) return;
-        if (mulBeta < 1) return;
+        // if (mulBeta < 1) return;
         if(cosang > -0.95) return;
         CLOCK = output.getScalerOutput("CLOCK").getValue();
         tree->Fill();
@@ -226,7 +227,7 @@ public:
         double len1 = sqrt(pow(x1, 2) + pow(y1, 2) + pow(z1, 2));
         double len2 = sqrt(pow(x2, 2) + pow(y2, 2) + pow(z2, 2));
         double cosa = dotprod / (len1 * len2);
-
+        
         return cosa;
     }
 
@@ -266,6 +267,7 @@ public:
         a1 = &hits[j];
         double cosAlphaAngle = angleBetweenTwoHits(a0, a1);
         cosang = cosAlphaAngle;
+        cosA->add(cosang);
 
         double momentumSum = (a0->lVector.Vect() + a1->lVector.Vect()).Mag();
         double energySum = a0->E + a1->E;
@@ -287,7 +289,10 @@ public:
         }
         double betaAng;
         for (int in = 0; in < hits.size(); in++) {
+            double kk = angleBetweenTwoHits(&hits[in], &hits[in+1]);
+            v_cosAngAll->add(kk);
             Hit *hit = &hits[in];
+            
             if (!hit->canBeBeta) continue;
             if (hit == a0) continue;
             if (hit == a1) continue;
@@ -330,7 +335,8 @@ public:
             *cosA,
             *v_ptot, *v_Etot,
             *v_betaAlpaAngle1, *v_betaAlpaAngle0,
-            *v_bPhi, *v_bTheta, *v_i
+            *v_bPhi, *v_bTheta, *v_i,
+            *v_cosAngAll
         );
 
 
@@ -345,7 +351,7 @@ public:
     UInt_t mul{}, CLOCK{}, mulAlpha{}, mulBeta{};
     int NUM;
     // unique_ptr<DynamicBranchVector<TVector3>> v_dir0, v_pos0, v_dir1, v_pos1;
-    unique_ptr<DynamicBranchVector<double>> v_E, v_Edep, v_dE, v_Ebeta, v_EPbeta, cosA, v_angToBeam, v_ang;
+    unique_ptr<DynamicBranchVector<double>> v_E, v_Edep, v_dE, v_Ebeta, v_EPbeta, cosA, v_angToBeam, v_ang, v_cosAngAll;
     unique_ptr<DynamicBranchVector<short>> v_F, v_B, v_i;
     unique_ptr<DynamicBranchVector<int>> v_ibeta;
     unique_ptr<DynamicBranchVector<double>> v_ptot, v_Etot, v_betaAlpaAngle0, v_betaAlpaAngle1, v_bTheta, v_bPhi;
@@ -389,5 +395,5 @@ int main(int argc, char *argv[]) {
 
     clock_t stop = clock();
     double elapsed = (double) (stop - start) / CLOCKS_PER_SEC;
-    printf("\n\x1b[96mTime elapsed: %.2f sec\n", elapsed);
+    printf("\n\x1b[96mTime elapsed: %.2f min\n", elapsed/60);
 }
