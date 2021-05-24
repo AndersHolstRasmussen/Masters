@@ -13,9 +13,23 @@ The first step ind identifying a hit, is to actually get a hit, and gather the d
 \subsection{Identifying a hit}
 After a hit has been has been detected, and all the relevant information has been extracted from the hit, we can start to analyze what type of particle has hit the detector. 
 
-A important distinction between an \al-particle and a \be-particle is the different interactions with a detector. An \al-particle will be compleatly stopped by a standard \SI{60}{\mu m} detector, while a \be-particle will pass through it, depositing only a small amount of energy. \\
+A important distinction between an \al-particle and a \be-particle is the different interactions with a detector. An \al-particle will be completely stopped by a standard \SI{60}{\mu m} detector, while a \be-particle will pass through it, depositing only a small amount of energy. \\
 This is the reason for the SSD's behind each DSSD. The idea is that only a \be-particle will be detected in the SSD's, so if a hit has some energy in a DSSD \textit{and} the corresponding SSD, it will be classified as a \be-particle.\\
 \\
+This approach however does not work as well as intended. Often what happens is that the thin DSSD will not pick up any energy deposited, and the hit will therefore not be counted. 
+But not all of the detectors are \SI{60}{\mu m}. We have two detectors that are around \SI{1000}{\mu m} thick. These detectors are much better at picking up a signal from a \be-particle, so one of the criteria for being a \be-particle in this setup is to have hit either Det2 or DetD.\\
+
+These two criteria are however not enough to uniquely determine that a hit was a \be-particle. We still have to consider the events where a detector has multiple hits. Since a SSD contains gives no usable information regarding where a particle has hit, we cannot say which particle was a \be-particle and which where a \al-particle. 
+
+Therefore if the \be-particle criteria are true, we mark the particle as a \textit{possible} \be. But since it might as well have been a \al-particle, we also mark it as such.\\
+Every hit that does not uphold to the \be-particle criteria are of course marked only as a possible \al-particle.
+\\
+When a particle is marked as a \al-particle, we also perform an energy correction, \textcolor{red}{MAYBE ENERGY CORRECTION HERE??}
+\\
+\\
+When all the particles have been identified, we impose the first cut to the data. A multiplicity cut that says we need at least two \al-particles. If there are less, we discard the event. 
+\\
+When we at least have two distinct particles that can be \al-particles, we look at their mutual difference in momentum. The particle pair with the least difference in momentum will be chosen as the only \al-particles that can be present in an event. When 
 
 
 
