@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019/Debian) (preloaded format=pdflatex 2021.4.29)  22 MAY 2021 18:15
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019/Debian) (preloaded format=pdflatex 2021.4.29)  24 MAY 2021 16:08
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -630,7 +630,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 6--8
 [2
 
 ]
-<../figures/opstilling.pdf, id=91, 597.50786pt x 845.04686pt>
+<../figures/opstilling.pdf, id=95, 597.50786pt x 845.04686pt>
 File: ../figures/opstilling.pdf Graphic file (type pdf)
 <use ../figures/opstilling.pdf>
 Package pdftex.def Info: ../figures/opstilling.pdf  used on input line 16.
@@ -688,13 +688,13 @@ Underfull \hbox (badness 10000) in paragraph at lines 20--21
 
  []
 
-<../figures/cali/det1f1-cropped.pdf, id=135, 484.72064pt x 256.93605pt>
+<../figures/cali/det1f1-cropped.pdf, id=139, 484.72064pt x 256.93605pt>
 File: ../figures/cali/det1f1-cropped.pdf Graphic file (type pdf)
 <use ../figures/cali/det1f1-cropped.pdf>
 Package pdftex.def Info: ../figures/cali/det1f1-cropped.pdf  used on input line
  25.
 (pdftex.def)             Requested size: 350.99762pt x 186.05234pt.
-<../figures/cali/det1f1PeakMostLeft-cropped.pdf, id=136, 517.83043pt x 258.4220
+<../figures/cali/det1f1PeakMostLeft-cropped.pdf, id=140, 517.83043pt x 258.4220
 7pt>
 File: ../figures/cali/det1f1PeakMostLeft-cropped.pdf Graphic file (type pdf)
 <use ../figures/cali/det1f1PeakMostLeft-cropped.pdf>
@@ -709,37 +709,38 @@ LaTeX Warning: `h' float specifier changed to `ht'.
 ] [10 <../figures/cali/det1f1-cropped.pdf, page is rotated 90 degrees> <../figu
 res/cali/det1f1PeakMostLeft-cropped.pdf, page is rotated 90 degrees>]
 Chapter 4.
-
-Underfull \hbox (badness 10000) in paragraph at lines 17--20
-
- []
-
 [11
 
 ]
-<../figures/cosang.pdf, id=242, 569.12625pt x 388.45125pt>
-File: ../figures/cosang.pdf Graphic file (type pdf)
-<use ../figures/cosang.pdf>
-Package pdftex.def Info: ../figures/cosang.pdf  used on input line 26.
-(pdftex.def)             Requested size: 390.0pt x 266.2001pt.
-
-Underfull \hbox (badness 10000) in paragraph at lines 39--41
+Underfull \hbox (badness 10000) in paragraph at lines 23--26
 
  []
 
-[12 <../figures/cosang.pdf, page is rotated 90 degrees>]
+<../figures/cosang.pdf, id=246, 569.12625pt x 388.45125pt>
+File: ../figures/cosang.pdf Graphic file (type pdf)
+<use ../figures/cosang.pdf>
+Package pdftex.def Info: ../figures/cosang.pdf  used on input line 32.
+(pdftex.def)             Requested size: 390.0pt x 266.2001pt.
 
-LaTeX Warning: Reference `fig:betaMul' on page 1 undefined on input line 42.
+LaTeX Warning: `h' float specifier changed to `ht'.
 
-) (./Conclution.tex)
+
+Underfull \hbox (badness 10000) in paragraph at lines 45--47
+
+ []
+
+
+LaTeX Warning: Reference `fig:betaMul' on page 1 undefined on input line 48.
+
+) (./Conclution.tex [12])
 Package atveryend Info: Empty hook `BeforeClearDocument' on input line 65.
- [13]
+ [13 <../figures/cosang.pdf, page is rotated 90 degrees>]
 Package atveryend Info: Empty hook `AfterLastShipout' on input line 65.
  (./Speciale.aux)
 Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 65.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 65.
 Package rerunfilecheck Info: File `Speciale.out' has not changed.
-(rerunfilecheck)             Checksum: D281F529DEC777A2C70027B51B60149B;1001.
+(rerunfilecheck)             Checksum: 90CDE63D95008B5A1B859D9F2D603BBA;1072.
 
 
 LaTeX Warning: There were undefined references.
@@ -747,10 +748,10 @@ LaTeX Warning: There were undefined references.
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 65.
  ) 
 Here is how much of TeX's memory you used:
- 15178 strings out of 481239
- 279354 string characters out of 5920377
+ 15180 strings out of 481239
+ 279388 string characters out of 5920377
  551874 words of memory out of 5000000
- 30166 multiletter control sequences out of 15000+600000
+ 30167 multiletter control sequences out of 15000+600000
  548325 words of font info for 87 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  48i,14n,46p,822b,728s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -766,10 +767,10 @@ sfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts
 /cm/cmsy8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmt
 i12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pf
 b></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt12.pfb>
-Output written on Speciale.pdf (14 pages, 223889 bytes).
+Output written on Speciale.pdf (14 pages, 224617 bytes).
 PDF statistics:
- 348 PDF objects out of 1000 (max. 8388607)
- 235 compressed objects within 3 object streams
- 35 named destinations out of 1000 (max. 500000)
- 157 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 352 PDF objects out of 1000 (max. 8388607)
+ 239 compressed objects within 3 object streams
+ 36 named destinations out of 1000 (max. 500000)
+ 165 words of extra memory for PDF output out of 10000 (max. 10000000)
 

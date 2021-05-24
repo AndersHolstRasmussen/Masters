@@ -156,7 +156,7 @@ public:
             hit->canBeAlpha = false;
             hit->canBeBeta = false;
             bool thickDetector = (hit->index == 1 || hit->index == 5);      // Thick detectors are the ones with id 1 or 5 (det2 and detD)
-            if(hit->paddeposited != 0 && thickDetector){                    // Can be a beta if it comes from a thick detector or a pad  
+            if(hit->paddeposited != 0 || thickDetector){                    // Can be a beta if it comes from a thick detector or a pad  
                 hit->canBeBeta = true;
                 numberOfBetas++;
                 hit->EBeta = hit->deposited + hit->paddeposited;

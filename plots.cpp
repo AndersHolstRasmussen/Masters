@@ -168,10 +168,10 @@ void individualDetectorsBetaAlphaAngle(RDataFrame *df){
     int detectorNr = 1;
     string x = to_string(detectorNr);
     string title = "Angle where beta hit in detector 1 or " + to_string(detectorNr);
-    auto d0 = df->Define("d0", "betaAlphaAngle0._betaAlphaAngle0").Filter("ibeta._ibeta[0] == " + x); // + "|| ibeta._ibeta[0] == 1"
+    auto d0 = df->Define("d0", "betaAlphaAngle0._betaAlphaAngle0").Filter("ibeta._ibeta[0] == 3" + x); // + "|| ibeta._ibeta[0] == 1"
     auto h0 = d0.Histo1D({"Stats", title.c_str() , bins, xmin, xmax}, "d0");
 
-    auto d1 = df->Define("d1", "betaAlphaAngle1._betaAlphaAngle1").Filter("ibeta._ibeta[0] == " + x); //  + "|| ibeta._ibeta[0] == 1"
+    auto d1 = df->Define("d1", "betaAlphaAngle1._betaAlphaAngle1").Filter("ibeta._ibeta[0] == 3" + x); //  + "|| ibeta._ibeta[0] == 1"
     auto h1 = d1.Histo1D({"Stats", "\\beta-\\alpha angle", bins, xmin, xmax}, "d1");
 
     auto eff = new TH1F("stats", "Angle efficiency", bins, xmin, xmax);
@@ -439,8 +439,8 @@ int main(int argc, char *argv[]) {
     // cosang(&df);
     // EEfigure(&df);
     // betaAlphaDifferentEnergies(&df);
-    betaAlphaAngle(&df);
-    // individualDetectorsBetaAlphaAngle(&df);
+    // betaAlphaAngle(&df);
+    individualDetectorsBetaAlphaAngle(&df);
     // betaSpec(&df);
     // angEDiff(&df);
     app->Run(); // show all canvas
