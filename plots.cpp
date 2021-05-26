@@ -88,7 +88,7 @@ void betaAlphaAngle(RDataFrame *df){
     gStyle->SetOptTitle(0);
     gStyle->SetOptStat(0);
 
-    int bins = 500;
+    int bins = 200;
     double xmin = -1;
     double xmax = 1;
 
@@ -127,6 +127,9 @@ void betaAlphaAngle(RDataFrame *df){
     
 
     Double_t factor = 1.;
+    // eff->Scale(factor/eff->Integral("width"));
+    // eff2->Scale(factor/eff2->Integral("width"));
+    // h0->Scale(factor/h0->Integral("width")); 
     eff->Scale(factor/eff->Integral(), "width");
     eff2->Scale(factor/eff2->Integral(), "width");
     h0->Scale(factor/h0->Integral(), "width"); 
@@ -144,14 +147,17 @@ void betaAlphaAngle(RDataFrame *df){
     eff2->SetLineWidth(3);
     h0->SetLineColor(kGreen);
     h0->SetLineWidth(3);
+    
+    
     // h0->Divide(eff);
     cout << "Kolmogorov test: " << h0->KolmogorovTest(eff2) << endl;
     // h0->DrawClone("HIST");
     
-    eff2->DrawClone("HIST L");
-    // eff->DrawClone("HIST SAME L");
+    eff2->DrawClone("HIST");
+    // eff2->DrawClone("HIST");
+    eff->DrawClone("HIST SAME");
     // h0->Divide(eff);
-    h0->DrawClone("HIST SAME L");
+    h0->DrawClone("HIST SAME");
     // eff->DrawClone();
     c->Modified();
     c->Update();
@@ -439,8 +445,8 @@ int main(int argc, char *argv[]) {
     // cosang(&df);
     // EEfigure(&df);
     // betaAlphaDifferentEnergies(&df);
-    // betaAlphaAngle(&df);
-    individualDetectorsBetaAlphaAngle(&df);
+    betaAlphaAngle(&df);
+    // individualDetectorsBetaAlphaAngle(&df);
     // betaSpec(&df);
     // angEDiff(&df);
     app->Run(); // show all canvas
