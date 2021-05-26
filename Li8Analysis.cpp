@@ -90,7 +90,7 @@ public:
         if (numberOfAlphas < 2) return;
         doAnalysis();
         if (moment > 40000) return;
-        // if (mulBeta < 1) return;
+        if (mulBeta < 1) return;
         if(cosang > -0.95) return;
         CLOCK = output.getScalerOutput("CLOCK").getValue();
         tree->Fill();
