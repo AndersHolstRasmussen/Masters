@@ -1,18 +1,23 @@
 \BOOKMARK [0][-]{chapter.1}{Introduction}{}% 1
-\BOOKMARK [0][-]{chapter.2}{Experimental Methods}{}% 2
-\BOOKMARK [1][-]{section.2.1}{Detector setup}{chapter.2}% 3
-\BOOKMARK [1][-]{section.2.2}{Experimental setup}{chapter.2}% 4
-\BOOKMARK [1][-]{section.2.3}{The detectors}{chapter.2}% 5
-\BOOKMARK [1][-]{section.2.4}{AUSAlib and ROOT}{chapter.2}% 6
-\BOOKMARK [2][-]{subsection.2.4.1}{Unpacker}{section.2.4}% 7
-\BOOKMARK [2][-]{subsection.2.4.2}{Calibrator}{section.2.4}% 8
-\BOOKMARK [2][-]{subsection.2.4.3}{Sorter}{section.2.4}% 9
-\BOOKMARK [0][-]{chapter.3}{Data Reduction}{}% 10
-\BOOKMARK [1][-]{section.3.1}{Calibration}{chapter.3}% 11
-\BOOKMARK [0][-]{chapter.4}{Analysis}{}% 12
-\BOOKMARK [1][-]{section.4.1}{Identifying the particles}{chapter.4}% 13
-\BOOKMARK [2][-]{subsection.4.1.1}{Finding a hit}{section.4.1}% 14
-\BOOKMARK [2][-]{subsection.4.1.2}{Identifying a hit}{section.4.1}% 15
-\BOOKMARK [1][-]{section.4.2}{Angular cut}{chapter.4}% 16
-\BOOKMARK [1][-]{section.4.3}{Momentum cut}{chapter.4}% 17
-\BOOKMARK [1][-]{section.4.4}{Multiplicity cut}{chapter.4}% 18
+\BOOKMARK [0][-]{chapter.2}{Theory}{}% 2
+\BOOKMARK [0][-]{chapter.3}{Experimental Methods}{}% 3
+\BOOKMARK [1][-]{section.3.1}{Detector setup}{chapter.3}% 4
+\BOOKMARK [1][-]{section.3.2}{Experimental setup}{chapter.3}% 5
+\BOOKMARK [1][-]{section.3.3}{The detectors}{chapter.3}% 6
+\BOOKMARK [1][-]{section.3.4}{AUSAlib and ROOT}{chapter.3}% 7
+\BOOKMARK [2][-]{subsection.3.4.1}{Unpacker}{section.3.4}% 8
+\BOOKMARK [2][-]{subsection.3.4.2}{Calibrator}{section.3.4}% 9
+\BOOKMARK [2][-]{subsection.3.4.3}{Sorter}{section.3.4}% 10
+\BOOKMARK [0][-]{chapter.4}{Data Reduction}{}% 11
+\BOOKMARK [1][-]{section.4.1}{Calibration}{chapter.4}% 12
+\BOOKMARK [0][-]{chapter.5}{Analysis}{}% 13
+\BOOKMARK [1][-]{section.5.1}{Identifying the particles}{chapter.5}% 14
+\BOOKMARK [2][-]{subsection.5.1.1}{Finding a hit}{section.5.1}% 15
+\BOOKMARK [2][-]{subsection.5.1.2}{Identifying a hit}{section.5.1}% 16
+\BOOKMARK [1][-]{section.5.2}{Angular cut}{chapter.5}% 17
+\BOOKMARK [1][-]{section.5.3}{Momentum cut}{chapter.5}% 18
+\BOOKMARK [1][-]{section.5.4}{Multiplicity cut}{chapter.5}% 19
+\BOOKMARK [1][-]{section.5.5}{The properties of the -particles}{chapter.5}% 20
+\BOOKMARK [1][-]{section.5.6}{Angular efficiency of the setup}{chapter.5}% 21
+\BOOKMARK [1][-]{section.5.7}{Angular correlations of -particles and -particles}{chapter.5}% 22
+\BOOKMARK [0][-]{chapter.6}{Conclusion}{}% 23
