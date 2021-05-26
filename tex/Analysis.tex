@@ -59,7 +59,7 @@ By taking a sharp cutoff at $\cos(\theta) \geq -0.99$, we will exclude a great d
 
 \section{Momentum cut}
 The second cut we perform on the data is a \textit{total} momentum cut. We see on \cref{fig:totalMomentum} the total momentum for the two identified \al-particles. 
-A prominent peak lies around \note{SOME VALUE}, and ends around 40.000 keV. \note{SPØRG HANS OM HVORFOR 40k er godt, og hvad unit er}. Since there is still a large tail of higher momentum, we cut those out, and only get the particles we are sure can actually be \al-particles. 
+A prominent peak lies around \note{SOME VALUE}, and ends around 40.000 keV. \note{SPØRG HANS OM HVORFOR 40k er godt, UNIT ER keV/c}. Since there is still a large tail of higher momentum, we cut those out, and only get the particles we are sure can actually be \al-particles. 
 
 \section{Multiplicity cut}
 The last cut that we want to impose on the data, is a multiplicity cut. This cut is just to ensure that we have the amount of particles that we expect. 
@@ -76,10 +76,14 @@ Since the detectors are unable to cover the entire solid angle, there will alway
 If we only look at one detector, a very large number of angles are not covered, but small mutual angles such as $\theta \approx 180\degree$, are very easy to measure, as it is just a measurement of two particles in the same pixel. 
 This effect becomes apparant on \cref{fig:oneDetEff}, where the angular efficiency is shown for Det??. \\
 In this setup however, we a cube of square detectors, who's normal vectors are all pointing in towards target at the center. This gives a much larger coverege of all mutual angles. 
-The placement of the detectors gives that angles around $\theta \approx 90 \degree$ are also very favored. This makes sense, almost no matter what pixel was hit, there is a corresponding pixel $90\degree$ to both sides. On the same way, will there always be a corresponding pixel $\approx 180\degree$ from each pixels. This effect can be seen on \cref{fig:effAllDet}. \\
+The placement of the detectors gives that angles around $\theta \approx 90 \degree$ are also very favored. This makes sense, almost no matter what pixel was hit, there is a corresponding pixel $90\degree$ to both sides. In the same way, will there always be a corresponding pixel $\approx 180\degree$ from each pixels. This effect can be seen on \cref{fig:effAllDet}. \\
 This histogram was created by using the spacial coordinates of the entire setup. First the positions of each pixel in each detector was found. Then two loops running over each pixel pair $i, j$, finds the angle between these pixels and saves it.\\
 
-
+\begin{figure}[h]
+	\includegraphics[width=\linewidth]{../figures/allDetEff.pdf}
+	\caption{Two normalized histograms of the angular efficiency of the entire setup. The red histogram does not account for the effective area of a pixel. The blue is the true angular efficiency.}
+	\label{fig:effAllDet}
+\end{figure}
 There is still a geometric effect that is not accounted for in the above analysis. We still need to consider that not all pixels in the detector has the same effective area. 
 A pixel furthest out in a detector will have a effective area smaller than the area of a pixel in the center. This effect can be seen on \cref{fig:MexiHatDetector}. Here we see that \note{blalalala}\\
 \\

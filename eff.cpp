@@ -35,12 +35,12 @@ double ys[len6];
 double zs[len6];
 TVector3 cords[len6];
 TVector3 norms[len6];
-double angs[len2times6];
-double weight[len2times6];
+double angs[len6squared];
+double weight[len6squared];
 double alphaAngs[len6];
 
 ofstream outputFile;
-std::string filename = "efficiencyOutput.csv";
+std::string filename = "efficiencyOutputAllDet.csv";
 
 
 double angFromXYZ(double x1, double y1, double z1, double x2, double y2, double z2){
@@ -69,7 +69,7 @@ double efficiency(double x, double y, double z, TVector3 norm){
     double yn = -norm.Y();
     double zn = -norm.Z();
     double costheta = angFromXYZ(x, y, z, xn, yn, zn);
-    return costheta / pow(len, 2);
+    return (costheta) / (pow(len, 2));
 }
 
 
@@ -104,7 +104,7 @@ int main(int argc, char **argv) {
 
     k = 0;
     for(int i = 0; i < len6; i++){
-        for(int j = 0; j < len2; j++){
+        for(int j = 0; j < len6; j++){
             angs[k] = angFromXYZ(xs[i], ys[i], zs[i], xs[j], ys[j], zs[j]);
             weight[k] = efficiency(xs[i], ys[i], zs[i], norms[i]) * efficiency(xs[j], ys[j], zs[j], norms[j]);
             k++;
@@ -119,7 +119,7 @@ int main(int argc, char **argv) {
     
 
     outputFile.open(filename);
-    for(int i = 0; i < len2times6; i++){
+    for(int i = 0; i < len6squared; i++){
         outputFile << angs[i] << "\t" << weight[i] << endl; // 
     }
     outputFile.close();

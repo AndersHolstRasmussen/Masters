@@ -27,6 +27,66 @@
 using namespace std;
 using namespace ROOT;
 
+void detectorEff(RDataFrame *df){
+    auto c = new TCanvas();
+    gStyle->SetOptTitle(0);
+    gStyle->SetOptStat(0);
+    int bins = 100;
+    double xmin = -1;
+    double xmax = 1;
+
+    auto eff = new TH1F("stats", "Angle efficiency", bins, xmin, xmax);
+    auto eff2 = new TH1F("stats", "Angle efficiency", bins, xmin, xmax);
+
+    ifstream ifile("/home/anders/i257/build/efficiencyOutputAllDet.csv");
+    if (!ifile.is_open()) {
+        std::cerr << "There was a problem opening the input file!\n";
+        exit(1);//exit or do additional error checking
+    }
+
+    double num = 0.0;
+
+
+
+    while (!ifile.eof())
+    {
+        double angle, weight;
+        ifile >> angle >> weight;
+        // cout << angle << "\t " << weight << endl;
+        eff->Fill(angle);
+        eff2->Fill(angle, weight);
+    }
+    auto xaxis = eff2->GetXaxis();
+    auto yaxis = eff2->GetYaxis();
+    xaxis->SetTitle("cos(a)");
+    xaxis->CenterTitle();
+    yaxis->SetTitle("count");
+    yaxis->CenterTitle();
+    eff->SetLineColor(kRed);
+    eff->SetLineWidth(3);
+    eff2->SetLineColor(kBlue);
+    eff2->SetLineWidth(3);
+
+    Double_t factor = 1.;
+    eff->Scale(factor/eff->Integral(), "width");
+    eff2->Scale(factor/eff2->Integral(), "width");
+
+    // eff2->DrawClone("HIST");
+    eff2->DrawClone("HIST");
+    eff->DrawClone("HIST SAME");
+
+   auto legend = new TLegend();
+   legend->AddEntry(eff,"Angular efficiency without individual pixel efficiency");
+   legend->AddEntry(eff2,"Angular efficiency");
+   legend->Draw();
+
+
+    c->SaveAs("/home/anders/i257/figures/allDetEff.pdf");
+    c->Modified();
+    c->Update();
+
+
+}
 
 void EEfigure(RDataFrame *df){
     // auto c = new TCanvas("c", "k", 200, 110, 800, 800);
@@ -440,12 +500,13 @@ int main(int argc, char *argv[]) {
     // start a ROOT application window such that the plots can actually be shown
     TApplication *app = new TApplication("ROOT window", 0, 0);
     // Call the drawing of spectrum method. Default detectorId = 0
-
+    
+    detectorEff(&df);
     // alphaEffeciency(&df);
     // cosang(&df);
     // EEfigure(&df);
     // betaAlphaDifferentEnergies(&df);
-    betaAlphaAngle(&df);
+    // betaAlphaAngle(&df);
     // individualDetectorsBetaAlphaAngle(&df);
     // betaSpec(&df);
     // angEDiff(&df);
