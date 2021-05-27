@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019/Debian) (preloaded format=pdflatex 2021.5.26)  27 MAY 2021 17:08
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019/Debian) (preloaded format=pdflatex 2021.4.29)  27 MAY 2021 21:41
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -497,7 +497,7 @@ Package: titlesec 2019/10/16 v2.13 Sectioning titles
 \titlewidthlast=\dimen190
 \titlewidthfirst=\dimen191
 )
-Package hyperref Info: Option `colorlinks' set `true' on input line 40.
+Package hyperref Info: Option `colorlinks' set `true' on input line 41.
 
 
 LaTeX Warning: Unused global option(s):
@@ -506,22 +506,22 @@ LaTeX Warning: Unused global option(s):
 (./Speciale.aux)
 \openout1 = `Speciale.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 54.
-LaTeX Font Info:    ... okay on input line 54.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 54.
-LaTeX Font Info:    ... okay on input line 54.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 54.
-LaTeX Font Info:    ... okay on input line 54.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 54.
-LaTeX Font Info:    ... okay on input line 54.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 54.
-LaTeX Font Info:    ... okay on input line 54.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 54.
-LaTeX Font Info:    ... okay on input line 54.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 54.
-LaTeX Font Info:    ... okay on input line 54.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 54.
-LaTeX Font Info:    ... okay on input line 54.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 55.
+LaTeX Font Info:    ... okay on input line 55.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 55.
+LaTeX Font Info:    ... okay on input line 55.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 55.
+LaTeX Font Info:    ... okay on input line 55.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 55.
+LaTeX Font Info:    ... okay on input line 55.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 55.
+LaTeX Font Info:    ... okay on input line 55.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 55.
+LaTeX Font Info:    ... okay on input line 55.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 55.
+LaTeX Font Info:    ... okay on input line 55.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 55.
+LaTeX Font Info:    ... okay on input line 55.
 
 (/usr/share/texlive/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
@@ -552,7 +552,7 @@ Package caption Info: listings package is loaded.
 Package caption Info: wrapfig package is loaded.
 Package caption Info: End \AtBeginDocument code.
 \AtBeginShipoutBox=\box65
-Package hyperref Info: Link coloring ON on input line 54.
+Package hyperref Info: Link coloring ON on input line 55.
 
 (/usr/share/texlive/texmf-dist/tex/latex/hyperref/nameref.sty
 Package: nameref 2019/09/16 v2.46 Cross-referencing by name of section
@@ -565,24 +565,24 @@ Package: gettitlestring 2019/12/15 v1.6 Cleanup title references (HO)
 )
 \c@section@level=\count314
 )
-LaTeX Info: Redefining \ref on input line 54.
-LaTeX Info: Redefining \pageref on input line 54.
-LaTeX Info: Redefining \nameref on input line 54.
+LaTeX Info: Redefining \ref on input line 55.
+LaTeX Info: Redefining \pageref on input line 55.
+LaTeX Info: Redefining \nameref on input line 55.
 
 (./Speciale.out) (./Speciale.out)
 \@outlinefile=\write3
 \openout3 = `Speciale.out'.
 
 \c@lstlisting=\count315
-LaTeX Info: Redefining \celsius on input line 54.
-Package gensymb Info: Faking symbols for \degree and \celsius on input line 54.
+LaTeX Info: Redefining \celsius on input line 55.
+Package gensymb Info: Faking symbols for \degree and \celsius on input line 55.
 
 
 
 Package gensymb Warning: Not defining \perthousand.
 
-LaTeX Info: Redefining \ohm on input line 54.
-Package gensymb Info: Using \Omega for \ohm on input line 54.
+LaTeX Info: Redefining \ohm on input line 55.
+Package gensymb Info: Using \Omega for \ohm on input line 55.
 
 Package gensymb Warning: Not defining \micro.
 
@@ -594,13 +594,13 @@ Dictionary: translator-basic-dictionary, Language: English
 (/usr/share/texlive/texmf-dist/tex/latex/siunitx/siunitx-abbreviations.cfg
 File: siunitx-abbreviations.cfg 2017/11/26 v2.7k siunitx: Abbreviated units
 )
-LaTeX Font Info:    Trying to load font information for U+msa on input line 54.
+LaTeX Font Info:    Trying to load font information for U+msa on input line 55.
 
 
 (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 54.
+LaTeX Font Info:    Trying to load font information for U+msb on input line 55.
 
 
 (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsb.fd
@@ -783,93 +783,87 @@ File: ../figures/allDetEff.pdf Graphic file (type pdf)
 <use ../figures/allDetEff.pdf>
 Package pdftex.def Info: ../figures/allDetEff.pdf  used on input line 88.
 (pdftex.def)             Requested size: 390.0pt x 266.2001pt.
-<../figures/mexihatDet1.pdf, id=382, 569.12625pt x 551.05875pt>
-File: ../figures/mexihatDet1.pdf Graphic file (type pdf)
-<use ../figures/mexihatDet1.pdf>
-Package pdftex.def Info: ../figures/mexihatDet1.pdf  used on input line 96.
-(pdftex.def)             Requested size: 390.0pt x 377.63272pt.
-<../figures/mexihatDet2THEORY.pdf, id=383, 569.12625pt x 388.45125pt>
+<../figures/mexihatDet2.pdf, id=382, 569.12625pt x 551.05875pt>
+File: ../figures/mexihatDet2.pdf Graphic file (type pdf)
+<use ../figures/mexihatDet2.pdf>
+Package pdftex.def Info: ../figures/mexihatDet2.pdf  used on input line 97.
+(pdftex.def)             Requested size: 195.0pt x 188.81215pt.
+<../figures/mexihatDet2THEORY.pdf, id=383, 569.12625pt x 551.05875pt>
 File: ../figures/mexihatDet2THEORY.pdf Graphic file (type pdf)
 <use ../figures/mexihatDet2THEORY.pdf>
 Package pdftex.def Info: ../figures/mexihatDet2THEORY.pdf  used on input line 1
-02.
-(pdftex.def)             Requested size: 390.0pt x 266.2001pt.
+03.
+(pdftex.def)             Requested size: 195.0pt x 188.81215pt.
 
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-
-LaTeX Warning: `h' float specifier changed to `ht'.
+Overfull \hbox (2.61108pt too wide) in paragraph at lines 95--107
+[][] [] 
+ []
 
 [17 <../figures/allDetEff.pdf, page is rotated 90 degrees>]
 
 LaTeX Warning: Reference `fig:EffGeometry' on page 1 undefined on input line 11
-1.
-
-[18 <../figures/mexihatDet1.pdf, page is rotated 90 degrees>]
-
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 118.
+4.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\alpha' on input line 118.
+(hyperref)                removing `math shift' on input line 121.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 118.
+(hyperref)                removing `\alpha' on input line 121.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 118.
+(hyperref)                removing `math shift' on input line 121.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\beta' on input line 118.
+(hyperref)                removing `math shift' on input line 121.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 118.
+(hyperref)                removing `\beta' on input line 121.
 
-<../figures/betaAngles/dataEffNormWithWeights.pdf, id=485, 569.12625pt x 388.45
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `math shift' on input line 121.
+
+<../figures/betaAngles/dataEffNormWithWeights.pdf, id=435, 569.12625pt x 388.45
 125pt>
 File: ../figures/betaAngles/dataEffNormWithWeights.pdf Graphic file (type pdf)
 <use ../figures/betaAngles/dataEffNormWithWeights.pdf>
 Package pdftex.def Info: ../figures/betaAngles/dataEffNormWithWeights.pdf  used
- on input line 124.
+ on input line 127.
 (pdftex.def)             Requested size: 390.0pt x 266.2001pt.
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-) (./Conclution.tex [19 <../figures/mexihatDet2THEORY.pdf, page is rotated 90 d
-egrees>] [20 <../figures/betaAngles/dataEffNormWithWeights.pdf, page is rotated
- 90 degrees>]
+[18 <../figures/mexihatDet2.pdf, page is rotated 90 degrees> <../figures/mexiha
+tDet2THEORY.pdf, page is rotated 90 degrees>]) (./Conclution.tex [19 <../figure
+s/betaAngles/dataEffNormWithWeights.pdf, page is rotated 90 degrees>]
 Chapter 6.
 )
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 65.
- [21
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 66.
+ [20
 
 ]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 65.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 66.
  (./Speciale.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 65.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 65.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 66.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 66.
 Package rerunfilecheck Info: File `Speciale.out' has not changed.
 (rerunfilecheck)             Checksum: AB8E286271386B285385BE735084A5F6;1413.
 
 
 LaTeX Warning: There were undefined references.
 
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 65.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 66.
  ) 
 Here is how much of TeX's memory you used:
- 15257 strings out of 481239
- 281157 string characters out of 5920377
- 551875 words of memory out of 5000000
- 30218 multiletter control sequences out of 15000+600000
+ 15259 strings out of 481239
+ 281256 string characters out of 5920377
+ 551874 words of memory out of 5000000
+ 30222 multiletter control sequences out of 15000+600000
  550047 words of font info for 94 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 48i,14n,46p,822b,748s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 48i,14n,46p,822b,736s stack positions out of 5000i,500n,10000p,200000b,80000s
 </usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></us
 r/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/shar
 e/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/share/texl
@@ -882,10 +876,10 @@ sfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts
 /cm/cmsy8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmt
 i12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pf
 b></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt12.pfb>
-Output written on Speciale.pdf (22 pages, 300394 bytes).
+Output written on Speciale.pdf (21 pages, 300629 bytes).
 PDF statistics:
- 643 PDF objects out of 1000 (max. 8388607)
- 391 compressed objects within 4 object streams
- 55 named destinations out of 1000 (max. 500000)
+ 637 PDF objects out of 1000 (max. 8388607)
+ 386 compressed objects within 4 object streams
+ 53 named destinations out of 1000 (max. 500000)
  230 words of extra memory for PDF output out of 10000 (max. 10000000)
 

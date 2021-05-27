@@ -67,7 +67,7 @@ void singleDetectorEff(RDataFrame *df){
 }
 
 void mexiHatTheory(RDataFrame *df){
-   auto c = new TCanvas();
+    auto c = new TCanvas("c", "k", 200, 110, 700, 700);
     gStyle->SetOptTitle(0);
     gStyle->SetOptStat(0);
     gStyle->SetPalette(kViridis);
@@ -613,8 +613,8 @@ int main(int argc, char *argv[]) {
     // Call the drawing of spectrum method. Default detectorId = 0
     
 
-    singleDetectorEff(&df);
-    // mexiHatTheory(&df);
+    // singleDetectorEff(&df);
+    mexiHatTheory(&df);
     // mexiHatDetector(&df);
     // detectorEff(&df);
     // alphaEffeciency(&df);

@@ -112,13 +112,13 @@ int main(int argc, char **argv) {
     }
 
     k = 0;
-    for (int i = 0; i < 256; i++){
-        for (int j = 0; j < 256; j++){
-            singleAng[k] = angFromXYZ(xs[i], ys[i], zs[i], xs[j], ys[j], zs[j]);
-            singleW[k] = efficiency(xs[i], ys[i], zs[i], norms[i]) * efficiency(xs[j], ys[j], zs[j], norms[j]);
-            k++;
-        }
-    }
+    // for (int i = 0; i < 256; i++){
+    //     for (int j = 0; j < 256; j++){
+    //         singleAng[k] = angFromXYZ(xs[i], ys[i], zs[i], xs[j], ys[j], zs[j]);
+    //         singleW[k] = efficiency(xs[i], ys[i], zs[i], norms[i]) * efficiency(xs[j], ys[j], zs[j], norms[j]);
+    //         k++;
+    //     }
+    // }
     
 
     k = 0;
@@ -136,11 +136,11 @@ int main(int argc, char **argv) {
     //     k++;
     // }
     
-    outputFile3.open(filename3);
-    for(int i = 0; i < 256*256; i++){
-        outputFile3 << singleAng[i] << "\t" << singleW[i] << endl;
-    }
-    outputFile3.close();
+    // outputFile3.open(filename3);
+    // for(int i = 0; i < 256*256; i++){
+    //     outputFile3 << singleAng[i] << "\t" << singleW[i] << endl;
+    // }
+    // outputFile3.close();
 
     outputFile2.open(filename2);
     for(int i = 0; i < 256; i++){

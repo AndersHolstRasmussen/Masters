@@ -90,19 +90,22 @@ This histogram was created by using the spacial coordinates of the entire setup.
 	\label{fig:effAllDet}
 \end{figure}
 There is still a geometric effect that is not accounted for in the above analysis. We still need to consider that not all pixels in the detector has the same effective area. 
-A pixel furthest out in a detector will have a effective area smaller than the area of a pixel in the center. This effect can be seen on \cref{fig:MexiHatDetector}. Here we see that 
+A pixel furthest out in a detector will have a effective area smaller than the area of a pixel in the center. This effect can be seen on \cref{fig:MexiHatDetector}. Here we see that there is a much higher count of particles hitting the center of the detector, and fewer hitting the edges. A white line crossing through the middle is a defect strip, which did not measure anything. Sadly, some of the detectors had defect strips, but on a large scale it was not very noticeable.
 \begin{figure}[h]
-	\centering
-	\includegraphics[width=\linewidth]{../figures/mexihatDet1.pdf}
-	\caption{A plot over the number of hits in each strip for Det1. }
-	\label{fig:MexiHatDetector}
+	\begin{subfigure}[t]{.5\linewidth}
+		\centering
+		\includegraphics[width=\linewidth]{../figures/mexihatDet2.pdf}
+		\caption{A plot over the number of hits in each strip for Det2. The white line in the middle is a defect strip, that did not measure anything. }
+		\label{fig:MexiHatDetector}
+	\end{subfigure}
+	\begin{subfigure}[t]{.5\linewidth}
+		\centering
+		\includegraphics[width=\linewidth]{../figures/mexihatDet2THEORY.pdf}
+		\caption{A theoretical intensity Det2. }
+		\label{fig:MexiHatDetectorTheory}
+	\end{subfigure}
 \end{figure}
-\begin{figure}[h]
-	\centering
-	\includegraphics[width=\linewidth]{../figures/mexihatDet2THEORY.pdf}
-	\caption{A theoretical intensity Det2.  }
-	\label{fig:MexiHatDetectorTheory}
-\end{figure}
+
 To account for this effect, each pixel will be associated with a corresponding area-efficiency $(\text{Eff}_A)$.
 This is calculated as 
 \begin{equation}
