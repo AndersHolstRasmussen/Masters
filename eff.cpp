@@ -38,9 +38,14 @@ TVector3 norms[len6];
 double angs[len6squared];
 double weight[len6squared];
 double alphaAngs[len6];
-
+double singleAng[256], singleW[256];
+double det1w[256];
 ofstream outputFile;
+ofstream outputFile2;
+ofstream outputFile3;
 std::string filename = "efficiencyOutputAllDet.csv";
+std::string filename2 = "effDet2.csv";
+std::string filename3 = "angEffDet2.csv";
 
 
 double angFromXYZ(double x1, double y1, double z1, double x2, double y2, double z2){
@@ -102,6 +107,20 @@ int main(int argc, char **argv) {
         }
     }
 
+    for(int i = 0; i < 256; i++){
+        det1w[i] = efficiency(xs[i], ys[i], zs[i], norms[i]);
+    }
+
+    k = 0;
+    for (int i = 0; i < 256; i++){
+        for (int j = 0; j < 256; j++){
+            singleAng[k] = angFromXYZ(xs[i], ys[i], zs[i], xs[j], ys[j], zs[j]);
+            singleW[k] = efficiency(xs[i], ys[i], zs[i], norms[i]) * efficiency(xs[j], ys[j], zs[j], norms[j]);
+            k++;
+        }
+    }
+    
+
     k = 0;
     for(int i = 0; i < len6; i++){
         for(int j = 0; j < len6; j++){
@@ -117,6 +136,17 @@ int main(int argc, char **argv) {
     //     k++;
     // }
     
+    outputFile3.open(filename3);
+    for(int i = 0; i < 256*256; i++){
+        outputFile3 << singleAng[i] << "\t" << singleW[i] << endl;
+    }
+    outputFile3.close();
+
+    outputFile2.open(filename2);
+    for(int i = 0; i < 256; i++){
+        outputFile2 << det1w[i] << endl;
+    }
+    outputFile2.close();
 
     outputFile.open(filename);
     for(int i = 0; i < len6squared; i++){

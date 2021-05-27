@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019/Debian) (preloaded format=pdflatex 2021.5.26)  26 MAY 2021 16:33
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019/Debian) (preloaded format=pdflatex 2021.5.26)  27 MAY 2021 16:35
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -749,95 +749,105 @@ Underfull \hbox (badness 10000) in paragraph at lines 65--67
 
  []
 
+<../figures/mulBeta.pdf, id=325, 569.12625pt x 388.45125pt>
+File: ../figures/mulBeta.pdf Graphic file (type pdf)
+<use ../figures/mulBeta.pdf>
+Package pdftex.def Info: ../figures/mulBeta.pdf  used on input line 71.
+(pdftex.def)             Requested size: 390.0pt x 266.2001pt.
 
-LaTeX Warning: Reference `fig:betaMul' on page 1 undefined on input line 68.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 71.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\alpha' on input line 71.
+LaTeX Warning: `h' float specifier changed to `ht'.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 71.
+(hyperref)                removing `math shift' on input line 76.
 
 
-LaTeX Warning: Reference `fig:oneDetEff' on page 1 undefined on input line 77.
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `\alpha' on input line 76.
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 75--81
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `math shift' on input line 76.
+
+
+LaTeX Warning: Reference `fig:oneDetEff' on page 1 undefined on input line 82.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 80--86
 
  []
 
-[15]
-<../figures/allDetEff.pdf, id=329, 569.12625pt x 388.45125pt>
+[15] [16 <../figures/mulBeta.pdf, page is rotated 90 degrees>]
+<../figures/allDetEff.pdf, id=380, 569.12625pt x 388.45125pt>
 File: ../figures/allDetEff.pdf Graphic file (type pdf)
 <use ../figures/allDetEff.pdf>
-Package pdftex.def Info: ../figures/allDetEff.pdf  used on input line 83.
+Package pdftex.def Info: ../figures/allDetEff.pdf  used on input line 88.
+(pdftex.def)             Requested size: 390.0pt x 266.2001pt.
+<../figures/mexihatDet1.pdf, id=382, 569.12625pt x 551.05875pt>
+File: ../figures/mexihatDet1.pdf Graphic file (type pdf)
+<use ../figures/mexihatDet1.pdf>
+Package pdftex.def Info: ../figures/mexihatDet1.pdf  used on input line 96.
+(pdftex.def)             Requested size: 390.0pt x 377.63272pt.
+<../figures/mexihatDet2THEORY.pdf, id=383, 569.12625pt x 388.45125pt>
+File: ../figures/mexihatDet2THEORY.pdf Graphic file (type pdf)
+<use ../figures/mexihatDet2THEORY.pdf>
+Package pdftex.def Info: ../figures/mexihatDet2THEORY.pdf  used on input line 1
+02.
 (pdftex.def)             Requested size: 390.0pt x 266.2001pt.
 
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
 
-LaTeX Warning: Reference `fig:MexiHatDetector' on page 1 undefined on input lin
-e 88.
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+[17 <../figures/allDetEff.pdf, page is rotated 90 degrees>]
+
+LaTeX Warning: Reference `fig:EffGeometry' on page 1 undefined on input line 11
+1.
+
+[18 <../figures/mexihatDet1.pdf, page is rotated 90 degrees>]
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `math shift' on input line 118.
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 87--92
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `\alpha' on input line 118.
 
- []
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `math shift' on input line 118.
 
 
-LaTeX Warning: Reference `fig:EffGeometry' on page 1 undefined on input line 95
-.
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `math shift' on input line 118.
 
-[16]
-<../figures/betaAngles/dataEffNormWithWeights.pdf, id=337, 569.12625pt x 388.45
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `\beta' on input line 118.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `math shift' on input line 118.
+
+<../figures/betaAngles/dataEffNormWithWeights.pdf, id=485, 569.12625pt x 388.45
 125pt>
 File: ../figures/betaAngles/dataEffNormWithWeights.pdf Graphic file (type pdf)
 <use ../figures/betaAngles/dataEffNormWithWeights.pdf>
 Package pdftex.def Info: ../figures/betaAngles/dataEffNormWithWeights.pdf  used
- on input line 100.
+ on input line 124.
 (pdftex.def)             Requested size: 390.0pt x 266.2001pt.
-
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 106.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\alpha' on input line 106.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 106.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 106.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\beta' on input line 106.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 106.
-
-) (./Conclution.tex [17 <../figures/allDetEff.pdf, page is rotated 90 degrees>]
-[18 <../figures/betaAngles/dataEffNormWithWeights.pdf, page is rotated 90 degre
-es>]
+) (./Conclution.tex [19 <../figures/mexihatDet2THEORY.pdf, page is rotated 90 d
+egrees>] [20 <../figures/betaAngles/dataEffNormWithWeights.pdf, page is rotated
+ 90 degrees>]
 Chapter 6.
 )
 Package atveryend Info: Empty hook `BeforeClearDocument' on input line 65.
- [19
+ [21
 
 ]
 Package atveryend Info: Empty hook `AfterLastShipout' on input line 65.
@@ -853,13 +863,13 @@ LaTeX Warning: There were undefined references.
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 65.
  ) 
 Here is how much of TeX's memory you used:
- 15228 strings out of 481239
- 280391 string characters out of 5920377
+ 15257 strings out of 481239
+ 281157 string characters out of 5920377
  551875 words of memory out of 5000000
- 30197 multiletter control sequences out of 15000+600000
+ 30218 multiletter control sequences out of 15000+600000
  550047 words of font info for 94 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 48i,14n,46p,822b,728s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 48i,14n,46p,822b,748s stack positions out of 5000i,500n,10000p,200000b,80000s
 </usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></us
 r/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/shar
 e/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/share/texl
@@ -872,10 +882,10 @@ sfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts
 /cm/cmsy8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmt
 i12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pf
 b></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt12.pfb>
-Output written on Speciale.pdf (20 pages, 262598 bytes).
+Output written on Speciale.pdf (22 pages, 300417 bytes).
 PDF statistics:
- 496 PDF objects out of 1000 (max. 8388607)
- 324 compressed objects within 4 object streams
- 50 named destinations out of 1000 (max. 500000)
- 215 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 643 PDF objects out of 1000 (max. 8388607)
+ 391 compressed objects within 4 object streams
+ 55 named destinations out of 1000 (max. 500000)
+ 230 words of extra memory for PDF output out of 10000 (max. 10000000)
 

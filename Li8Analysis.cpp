@@ -45,7 +45,15 @@ public:
         tree->Branch("clock", &CLOCK);
         // tree->Branch("cosang", &cosang);
 
-        // v_dir0 = make_unique<DynamicBranchVector<TVector3>>(*tree, "dir0");
+        
+        v_p0 = make_unique<DynamicBranchVector<TVector3>>(*tree, "p0");
+        v_p1 = make_unique<DynamicBranchVector<TVector3>>(*tree, "p1");
+        v_dir0 = make_unique<DynamicBranchVector<TVector3>>(*tree, "dir0");
+        v_pos0 = make_unique<DynamicBranchVector<TVector3>>(*tree, "pos0");
+        v_dir1 = make_unique<DynamicBranchVector<TVector3>>(*tree, "dir1");
+        v_pos1 = make_unique<DynamicBranchVector<TVector3>>(*tree, "pos1");
+        v_Ex = make_unique<DynamicBranchVector<double>>(*tree, "Ex", "1");
+
         v_Edep = make_unique<DynamicBranchVector<double>>(*tree, "Edep", "mulAlpha");
         v_E = make_unique<DynamicBranchVector<double>>(*tree, "E", "mulAlpha");
         v_angToBeam = make_unique<DynamicBranchVector<double>>(*tree, "angToBeam", "mulAlpha");
@@ -273,9 +281,18 @@ public:
         double energySum = a0->E + a1->E;
         v_ptot->add(momentumSum);
         v_Etot->add(energySum);
+        double Ex = energySum - Be8->mass + 2 * ALPHA_MASS;
+        v_Ex->add(Ex);
+
 
 
         vector<Hit *> orderedHits{a0, a1};
+        v_pos0->add(a0->position);
+        v_dir0->add(a0->direction);
+        v_p0->add(a0->lVector.Vect());
+        v_pos1->add(a1->position);
+        v_dir1->add(a1->direction);
+        v_p1->add(a1->lVector.Vect());
 
         for (auto &hit : orderedHits){
             v_E->add(hit->E);
@@ -286,6 +303,7 @@ public:
             v_dE->add(hit->dE);
             v_ang->add(hit->angle * TMath::RadToDeg());
             v_angToBeam->add(angleToBeam(hit));
+
         }
         double betaAng;
         for (int in = 0; in < hits.size(); in++) {
@@ -336,7 +354,8 @@ public:
             *v_ptot, *v_Etot,
             *v_betaAlpaAngle1, *v_betaAlpaAngle0,
             *v_bPhi, *v_bTheta, *v_i,
-            *v_cosAngAll
+            *v_cosAngAll,
+            *v_p0, *v_p1, *v_Ex, *v_dir0, *v_dir1, *v_pos0, *v_pos1
         );
 
 
@@ -350,8 +369,8 @@ public:
     TTree *tree;
     UInt_t mul{}, CLOCK{}, mulAlpha{}, mulBeta{};
     int NUM;
-    // unique_ptr<DynamicBranchVector<TVector3>> v_dir0, v_pos0, v_dir1, v_pos1;
-    unique_ptr<DynamicBranchVector<double>> v_E, v_Edep, v_dE, v_Ebeta, v_EPbeta, cosA, v_angToBeam, v_ang, v_cosAngAll;
+    unique_ptr<DynamicBranchVector<TVector3>> v_dir0, v_pos0, v_dir1, v_pos1, v_p0, v_p1;
+    unique_ptr<DynamicBranchVector<double>> v_E, v_Edep, v_dE, v_Ebeta, v_EPbeta, cosA, v_angToBeam, v_ang, v_cosAngAll, v_Ex;
     unique_ptr<DynamicBranchVector<short>> v_F, v_B, v_i;
     unique_ptr<DynamicBranchVector<int>> v_ibeta;
     unique_ptr<DynamicBranchVector<double>> v_ptot, v_Etot, v_betaAlpaAngle0, v_betaAlpaAngle1, v_bTheta, v_bPhi;

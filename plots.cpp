@@ -27,6 +27,116 @@
 using namespace std;
 using namespace ROOT;
 
+void singleDetectorEff(RDataFrame *df){
+    auto c = new TCanvas();
+    gStyle->SetOptTitle(0);
+    gStyle->SetOptStat(0);
+    gStyle->SetPalette(kViridis);
+    int bins = 200;
+    double xmin = -1;
+    double xmax = 1;
+
+    auto eff = new TH1F("stats", "Angle efficiency", bins, xmin, xmax);
+    auto eff2 = new TH1F("stats", "Angle efficiency", bins, xmin, xmax);
+
+    ifstream ifile("/home/anders/i257/build/angEffDet2.csv");
+    if (!ifile.is_open()) {
+        std::cerr << "There was a problem opening the input file!\n";
+        exit(1);//exit or do additional error checking
+    }
+    while (!ifile.eof())
+    {
+        double angle, weight;
+        ifile >> angle >> weight;
+        // cout << angle << "\t " << weight << endl;
+        eff->Fill(angle);
+        eff2->Fill(angle, weight);
+    }
+    // Double_t factor = 1.;
+    // eff->Scale(factor/eff->Integral(), "width");
+    // eff2->Scale(factor/eff2->Integral(), "width"); 
+
+    eff->SetLineColor(kRed);
+    eff->SetLineWidth(3);
+    eff2->SetLineColor(kBlue);
+    eff2->SetLineWidth(3);
+
+    // eff2->DrawClone("HIST");
+    eff->DrawClone("HIST");
+
+}
+
+void mexiHatTheory(RDataFrame *df){
+   auto c = new TCanvas();
+    gStyle->SetOptTitle(0);
+    gStyle->SetOptStat(0);
+    gStyle->SetPalette(kViridis);
+    int bins = 16;
+    double xmin = 0;
+    double xmax = 16;
+
+    auto eff = new TH1F("stats", "Angle efficiency", bins, xmin, xmax);
+    auto some = new TH2F("stats", "title", bins, xmin, xmax, bins, xmin, xmax);
+    ifstream ifile("/home/anders/i257/build/effDet2.csv");
+    if (!ifile.is_open()) {
+        std::cerr << "There was a problem opening the input file!\n";
+        exit(1);//exit or do additional error checking
+    }
+    double w[256];
+    int k = 0;
+    double num = 0.0;
+   
+    while (!ifile.eof())
+    {
+        double weight;
+        ifile >> weight;
+        w[k] = weight;
+        k++;
+    }
+
+    k=0;
+    double fi[16], bi[16];
+    for (int i = 0; i < 16; i++){
+        for (int j = 0; j < 16; j++){
+            fi[i] = i;
+            bi[j] = j;
+            some->Fill(fi[i], bi[j], w[k]);
+            k++;
+        }
+    }
+    
+
+    some->DrawClone("col");
+    c->Modified();
+    c->Update();
+    c->SaveAs("/home/anders/i257/figures/mexihatDet2THEORY.pdf");
+}
+
+void mexiHatDetector(RDataFrame *df){
+    auto c = new TCanvas("c", "k", 200, 110, 700, 700);
+    gStyle->SetOptTitle(0);
+    gStyle->SetOptStat(0);
+    gStyle->SetPalette(kViridis);
+    int bins = 16;
+    double xymin = 0;
+    double xymax = 17;
+
+    auto data = df->Define("x", "FI._FI[0]").Define("y", "BI._BI[0]").Filter("i._i[0] == 1 || i._i[1] == 1");
+    auto h = data.Histo2D({"stats", "title", bins, xymin, xymax, bins, xymin, xymax}, "x", "y");
+    auto xaxis = h->GetXaxis();
+    auto yaxis = h->GetYaxis();
+    auto zaxis = h->GetZaxis();
+    xaxis->SetTitle("Front strip index ");
+    xaxis->CenterTitle();
+    yaxis->CenterTitle();
+    yaxis->SetTitle(" Back strip index");
+    h->DrawClone("col");
+    c->Modified();
+    c->Update();
+    c->SaveAs("/home/anders/i257/figures/mexihatDet2.pdf");
+
+}
+
 void detectorEff(RDataFrame *df){
     auto c = new TCanvas();
     gStyle->SetOptTitle(0);
@@ -75,9 +185,10 @@ void detectorEff(RDataFrame *df){
     eff2->DrawClone("HIST");
     eff->DrawClone("HIST SAME");
 
-   auto legend = new TLegend();
-   legend->AddEntry(eff,"Angular efficiency without individual pixel efficiency");
+   auto legend = new TLegend(0.15, 0.8, 0.5, 0.9);
+   legend->AddEntry(eff,"Angular efficiency without effective pixel area", "L");
    legend->AddEntry(eff2,"Angular efficiency");
+   legend->SetTextSize(0.02);
    legend->Draw();
 
 
@@ -501,7 +612,11 @@ int main(int argc, char *argv[]) {
     TApplication *app = new TApplication("ROOT window", 0, 0);
     // Call the drawing of spectrum method. Default detectorId = 0
     
-    detectorEff(&df);
+
+    singleDetectorEff(&df);
+    // mexiHatTheory(&df);
+    // mexiHatDetector(&df);
+    // detectorEff(&df);
     // alphaEffeciency(&df);
     // cosang(&df);
     // EEfigure(&df);

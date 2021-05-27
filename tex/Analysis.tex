@@ -65,8 +65,13 @@ A prominent peak lies around \note{SOME VALUE}, and ends around 40.000 keV. \not
 The last cut that we want to impose on the data, is a multiplicity cut. This cut is just to ensure that we have the amount of particles that we expect. 
 Therefore a hard criteria is that there must be at least two distinctly identified \al-particles. \\
 
-With regards to the \be-particles, we are more loose. Here we say that there must at least be one, but more can occur. This is quite rare, but the we still take that event into account, as the \be-particles should have an isotropic distribution, and therefore should not in any case be affected by the other \al-particles. On \cref{fig:betaMul} we see the multiplicity of \be-particles, and it is quite rare that there are more than one in a given event, so most of the time, we are in the expected case with two \al-particle and one \be-particle. 
+With regards to the \be-particles, we are more loose. Here we say that there must at least be one, but more can occur. This is quite rare, but the we still take that event into account, as the \be-particles should have an isotropic distribution, and therefore should not in any case be affected by the other \al-particles. On \cref{fig:mulBeta} we see the multiplicity of \be-particles, and in most of the events, we have not detected any \be-particles, and when we do, there is a even fewer events with more than one beta. So most of the time, we are in the expected case with two \al-particle and one \be-particle. 
 
+\begin{figure}[h]
+	\includegraphics[width=\linewidth]{../figures/mulBeta.pdf}
+	\caption{The multiplicity of the \be-particles.}
+	\label{fig:mulBeta}
+\end{figure}
 
 \section{The properties of the \al-particles}
 
@@ -74,8 +79,8 @@ With regards to the \be-particles, we are more loose. Here we say that there mus
 \section{Angular efficiency of the setup}
 Since the detectors are unable to cover the entire solid angle, there will always be some mutual angles that are more likely to be measured. 
 If we only look at one detector, a very large number of angles are not covered, but small mutual angles such as $\theta \approx 180\degree$, are very easy to measure, as it is just a measurement of two particles in the same pixel. 
-This effect becomes apparant on \cref{fig:oneDetEff}, where the angular efficiency is shown for Det??. \\
-In this setup however, we a cube of square detectors, who's normal vectors are all pointing in towards target at the center. This gives a much larger coverege of all mutual angles. 
+This effect becomes apparent on \cref{fig:oneDetEff}, where the angular efficiency is shown for Det??. \\
+In this setup however, we a cube of square detectors, who's normal vectors are all pointing in towards target at the center. This gives a much larger coverage of all mutual angles. 
 The placement of the detectors gives that angles around $\theta \approx 90 \degree$ are also very favored. This makes sense, almost no matter what pixel was hit, there is a corresponding pixel $90\degree$ to both sides. In the same way, will there always be a corresponding pixel $\approx 180\degree$ from each pixels. This effect can be seen on \cref{fig:effAllDet}. \\
 This histogram was created by using the spacial coordinates of the entire setup. First the positions of each pixel in each detector was found. Then two loops running over each pixel pair $i, j$, finds the angle between these pixels and saves it.\\
 
@@ -85,8 +90,19 @@ This histogram was created by using the spacial coordinates of the entire setup.
 	\label{fig:effAllDet}
 \end{figure}
 There is still a geometric effect that is not accounted for in the above analysis. We still need to consider that not all pixels in the detector has the same effective area. 
-A pixel furthest out in a detector will have a effective area smaller than the area of a pixel in the center. This effect can be seen on \cref{fig:MexiHatDetector}. Here we see that \note{blalalala}\\
-\\
+A pixel furthest out in a detector will have a effective area smaller than the area of a pixel in the center. This effect can be seen on \cref{fig:MexiHatDetector}. Here we see that 
+\begin{figure}[h]
+	\centering
+	\includegraphics[width=\linewidth]{../figures/mexihatDet1.pdf}
+	\caption{A plot over the number of hits in each strip for Det1. }
+	\label{fig:MexiHatDetector}
+\end{figure}
+\begin{figure}[h]
+	\centering
+	\includegraphics[width=\linewidth]{../figures/mexihatDet2THEORY.pdf}
+	\caption{A plot over the number of hits in each strip for Det1. }
+	\label{fig:MexiHatDetectorTheory}
+\end{figure}
 To account for this effect, each pixel will be associated with a corresponding area-efficiency $(\text{Eff}_A)$.
 This is calculated as 
 \begin{equation}
@@ -94,15 +110,18 @@ This is calculated as
 \end{equation}
 where $r$ is the distance to the pixel and $\theta$ is the angle between the inverted normal vector of the pixel and the line from the center to the pixel. A illustration of the scenario can be seen on \cref{fig:EffGeometry}.
 
-On \cref{fig:effwithweight} two?? histograms can be seen. The red line represents the angular efficiency of the setup, without accounting for the relative area of the pixels, while the blue line is a weighted histogram for the same angles, with each pixels relative area accounted for. \\
-The form of the two histograms are quite \note{bla bal bal} 
+On \cref{fig:effwithweight} two histograms can be seen. The red line represents the angular efficiency of the setup, without accounting for the relative area of the pixels, while the blue line is a weighted histogram for the same angles, with each pixels relative area accounted for. \\
+The form of the two histograms are quite similar around 1, 0 and $-1$ but in between there is a rather prominent difference. Therefore it is important that the effective area of the pixel is accounted for, when we in \cref{sec:betaAngle} will look at the angular correlations of the \be-particle in the setup. 
+
+
+
+\section{Angular correlations of \al-particles and \be-particles}
+\label{sec:betaAngle}
+From what we know in \note{ref til beta = isotrop} the \be-particles must have an isotropic distribution from the \al-particles. 
+
 \begin{figure}[h]
+	\centering
 	\includegraphics[width=\linewidth]{../figures/betaAngles/dataEffNormWithWeights.pdf}
 	\caption{Some figure of the efficiency of the setup without efficiency of each pixel. }
 	\label{fig:effwithweight}
 \end{figure}
-
-
-\section{Angular correlations of \al-particles and \be-particles}
-From what we know in \note{ref til beta = isotrop} the \be-particles must have an isotropic distribution from the \al-particles. 
-
