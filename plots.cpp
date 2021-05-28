@@ -32,8 +32,8 @@ void singleDetectorEff(RDataFrame *df){
     gStyle->SetOptTitle(0);
     gStyle->SetOptStat(0);
     gStyle->SetPalette(kViridis);
-    int bins = 200;
-    double xmin = -1;
+    int bins = 100;
+    double xmin = 0;
     double xmax = 1;
 
     auto eff = new TH1F("stats", "Angle efficiency", bins, xmin, xmax);
@@ -48,7 +48,6 @@ void singleDetectorEff(RDataFrame *df){
     {
         double angle, weight;
         ifile >> angle >> weight;
-        // cout << angle << "\t " << weight << endl;
         eff->Fill(angle);
         eff2->Fill(angle, weight);
     }
@@ -60,9 +59,20 @@ void singleDetectorEff(RDataFrame *df){
     eff->SetLineWidth(3);
     eff2->SetLineColor(kBlue);
     eff2->SetLineWidth(3);
+    auto xaxis = eff2->GetXaxis();
+    auto yaxis = eff2->GetYaxis();
+    auto zaxis = eff2->GetZaxis();
+    // h->SetContour(1000);
+    c->SetLogz();
+    xaxis->SetTitle("cos(\\theta)");
+    xaxis->CenterTitle();
+    yaxis->CenterTitle();
+    yaxis->SetTitle("Count");
 
-    // eff2->DrawClone("HIST");
-    eff->DrawClone("HIST");
+    eff2->DrawClone("HIST");
+    // eff->DrawClone("HIST");
+
+    c->SaveAs("/home/anders/i257/figures/det2Eff.pdf");
 
 }
 
@@ -109,6 +119,8 @@ void mexiHatTheory(RDataFrame *df){
     some->DrawClone("col");
     c->Modified();
     c->Update();
+    c->WaitPrimitive();
+    c->Close();
     c->SaveAs("/home/anders/i257/figures/mexihatDet2THEORY.pdf");
 }
 
@@ -259,7 +271,7 @@ void betaAlphaAngle(RDataFrame *df){
     gStyle->SetOptTitle(0);
     gStyle->SetOptStat(0);
 
-    int bins = 200;
+    int bins = 300;
     double xmin = -1;
     double xmax = 1;
 
@@ -274,19 +286,11 @@ void betaAlphaAngle(RDataFrame *df){
     auto eff2 = new TH1F("stats", "Angle efficiency", bins, xmin, xmax);
     h0->Add(&h1.GetValue()); 
 
-    ifstream ifile("/home/anders/i257/build/efficiencyOutput.csv");
+    ifstream ifile("/home/anders/i257/build/effBetaDets.csv");
     if (!ifile.is_open()) {
         std::cerr << "There was a problem opening the input file!\n";
         exit(1);//exit or do additional error checking
     }
-
-    double num = 0.0;
-    //keep storing values from the text file so long as data exists:
-    // while (ifile >> num) {
-    //     eff->Fill(num);
-    // }
-
-
     while (!ifile.eof())
     {
         double angle, weight;
@@ -319,20 +323,18 @@ void betaAlphaAngle(RDataFrame *df){
     h0->SetLineColor(kGreen);
     h0->SetLineWidth(3);
     
-    
-    // h0->Divide(eff);
-    cout << "Kolmogorov test: " << h0->KolmogorovTest(eff2) << endl;
+    // h0->Divide(eff2);
+    cout << "Kolmogorov test: " << h0->KolmogorovTest(eff2, "N") << endl;
     // h0->DrawClone("HIST");
-    
     eff2->DrawClone("HIST");
-    // eff2->DrawClone("HIST");
-    eff->DrawClone("HIST SAME");
-    // h0->Divide(eff);
     h0->DrawClone("HIST SAME");
-    // eff->DrawClone();
+    // eff2->DrawClone("HIST");
+    // eff->DrawClone("HIST SAME");
     c->Modified();
     c->Update();
-    // c->SaveAs("/home/anders/i257/figures/dataDivEff.pdf");
+    c->WaitPrimitive();
+    c->Close();
+    c->SaveAs("/home/anders/i257/figures/betaAngles/betaAngle.pdf");
 
 }
 
@@ -587,6 +589,80 @@ void alphaEffeciency(RDataFrame *df){
 
 }
 
+void fixCenterPos(RDataFrame *df){
+    int i = 0;
+    for(int x = -3; x < 4; x+=3){
+    for(int y = -3; y < 4; y+=3){
+    for(int z = -3; z < 4; z+=3){
+
+    
+    auto *c = new TCanvas();
+    gStyle->SetOptTitle(0);
+    gStyle->SetOptStat(0);
+
+    int bins = 300;
+    double xmin = -1;
+    double xmax = 1;
+
+
+    auto d0 = df->Define("d0", "betaAlphaAngle0._betaAlphaAngle0");
+    auto h0 = d0.Histo1D({"Stats", "data / efficiency", bins, xmin, xmax}, "d0");
+
+    auto d1 = df->Define("d1", "betaAlphaAngle1._betaAlphaAngle1");
+    auto h1 = d1.Histo1D({"Stats", "\\beta-\\alpha angle", bins, xmin, xmax}, "d1");
+
+    
+    h0->Add(&h1.GetValue()); 
+    
+    auto eff = new TH1F("stats", "Angle efficiency", bins, xmin, xmax);
+    string filename = "try" + to_string(x) + to_string(y) + to_string(z);
+    ifstream ifile("/home/anders/i257/build/effFiles/" + filename + ".csv");
+    if (!ifile.is_open()) {
+        std::cerr << "There was a problem opening the input file!\n";
+        exit(1);//exit or do additional error checking
+    }
+    while (!ifile.eof())
+    {
+        double angle, weight;
+        ifile >> angle >> weight;
+        eff->Fill(angle, weight);
+    }
+
+    Double_t factor = 1.;
+    eff->Scale(factor/eff->Integral(), "width");
+    h0->Scale(factor/h0->Integral(), "width"); 
+
+    auto xaxis = h0->GetXaxis();
+    auto yaxis = h0->GetYaxis();
+    xaxis->SetTitle("cos(a)");
+    xaxis->CenterTitle();
+    yaxis->SetTitle("count");
+    yaxis->CenterTitle();
+    eff->SetLineColor(kBlue);
+    eff->SetLineWidth(3);
+    h0->SetLineColor(kGreen);
+    h0->SetLineWidth(3);
+    
+    h0->DrawClone("HIST"); 
+    eff->DrawClone("HIST SAME");
+    c->Modified();
+    c->Update();
+    auto hehehe = "/home/anders/i257/figures/centerCorrections/" + filename + ".png";
+    auto save = hehehe.c_str();
+    c->SaveAs(save);
+
+    cout << save << endl;
+    c->Close();
+    ifile.close();
+    i++;
+    }
+    }
+    }
+    
+
+}
+
+
 int main(int argc, char *argv[]) {
     ROOT::EnableImplicitMT(8);
     int detectorId;
@@ -612,9 +688,9 @@ int main(int argc, char *argv[]) {
     TApplication *app = new TApplication("ROOT window", 0, 0);
     // Call the drawing of spectrum method. Default detectorId = 0
     
-
+    fixCenterPos(&df);
     // singleDetectorEff(&df);
-    mexiHatTheory(&df);
+    // mexiHatTheory(&df);
     // mexiHatDetector(&df);
     // detectorEff(&df);
     // alphaEffeciency(&df);

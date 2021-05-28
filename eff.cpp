@@ -38,14 +38,18 @@ TVector3 norms[len6];
 double angs[len6squared];
 double weight[len6squared];
 double alphaAngs[len6];
-double singleAng[256], singleW[256];
+double singleAng[65536], singleW[65536];
+double betaAngs[len2times6], betaEff[len2times6];
 double det1w[256];
 ofstream outputFile;
 ofstream outputFile2;
 ofstream outputFile3;
+ofstream outputFile4;
+
 std::string filename = "efficiencyOutputAllDet.csv";
 std::string filename2 = "effDet2.csv";
 std::string filename3 = "angEffDet2.csv";
+std::string filename4 = "effBetaDets.csv";
 
 
 double angFromXYZ(double x1, double y1, double z1, double x2, double y2, double z2){
@@ -77,15 +81,36 @@ double efficiency(double x, double y, double z, TVector3 norm){
     return (costheta) / (pow(len, 2));
 }
 
+double  lowest ( double a[ ], int size ) // function accepts FLOAT array and returns a FLOAT
+{
+    double min; // min is of type FLOAT
+    min = a[0]; // min is the 0th element
+
+    for (int i=0; i <size;i++)
+    {
+        if( a[i] < min) // if i-th element is less than min
+        {
+            min = a[i]; // make that our new min
+        }
+    }
+    return min;
+}
 
 int main(int argc, char **argv) {
     // Read in setup configuration
     auto setup = JSON::readSetupFromJSON("/home/anders/i257/setup/setup.json");
     auto target = JSON::readTargetFromJSON("/home/anders/i257/setup/targets/target.json");
-    double IonRange = 166 * 1e-6;
-    double targetThickness = 226 * 1e-6;
+    for(double offsetx = -3; offsetx < 4; offsetx+=3){
+    for(double offsety = -3; offsety < 4; offsety+=3){
+    for(double offsetz = -3; offsetz < 4; offsetz+=3){
+    ofstream outputFileN;
+    double IonRange = 166 * 1e-6; // 166 is nm
+    double targetThickness = 226 * 1e-6; // 226 is nm
+    // double offsetx = -3; // mm 
+    // double offsety = 3;
+    // double offsetz = -3;
     auto beam  = TVector3(0, 0, IonRange).Unit();
-    auto tarPos = target.getCenter() - TVector3(0, 0, targetThickness / 2.) + TVector3(0, 0, IonRange);
+    auto tarPos = target.getCenter() - TVector3(0, 0, targetThickness / 2.) + TVector3(0, 0, IonRange) + TVector3(offsetx, offsety, offsetz);
 
  
     int k = 0;
@@ -95,6 +120,7 @@ int main(int argc, char **argv) {
             for(int j = 1; j < 17; j++){
                 auto pixPos = setup->getDSSD(d)->getPixelPosition(i, j);
                 auto direction = (pixPos - tarPos);
+                cords[k] = direction;
                 auto norm = setup->getDSSD(d)->getNormal();
                 auto theta = direction.Theta();
                 auto phi = direction.Phi(); 
@@ -107,11 +133,13 @@ int main(int argc, char **argv) {
         }
     }
 
-    for(int i = 0; i < 256; i++){
-        det1w[i] = efficiency(xs[i], ys[i], zs[i], norms[i]);
-    }
+    // // Single detector color map
+    // for(int i = 0; i < 256; i++){
+    //     det1w[i] = efficiency(xs[i], ys[i], zs[i], norms[i]);
+    // }
 
-    k = 0;
+    // // Single detector angular efficiency
+    // k = 0;
     // for (int i = 0; i < 256; i++){
     //     for (int j = 0; j < 256; j++){
     //         singleAng[k] = angFromXYZ(xs[i], ys[i], zs[i], xs[j], ys[j], zs[j]);
@@ -120,40 +148,62 @@ int main(int argc, char **argv) {
     //     }
     // }
     
-
+    // // All detectors angular efficiency
+    // k = 0;
+    // for(int i = 0; i < len6; i++){
+    //     for(int j = 0; j < len6; j++){
+    //         angs[k] = angFromXYZ(xs[i], ys[i], zs[i], xs[j], ys[j], zs[j]);
+    //         weight[k] = efficiency(xs[i], ys[i], zs[i], norms[i]) * efficiency(xs[j], ys[j], zs[j], norms[j]);
+    //         k++;
+    //     }
+    // }
+    
+    // All detectors and the two beta detectors
     k = 0;
-    for(int i = 0; i < len6; i++){
+    for(int i = 0; i < len2; i++){
         for(int j = 0; j < len6; j++){
-            angs[k] = angFromXYZ(xs[i], ys[i], zs[i], xs[j], ys[j], zs[j]);
-            weight[k] = efficiency(xs[i], ys[i], zs[i], norms[i]) * efficiency(xs[j], ys[j], zs[j], norms[j]);
+            betaAngs[k] = angFromXYZ(xs[i], ys[i], zs[i], xs[j], ys[j], zs[j]);
+            betaEff[k] = efficiency(xs[i], ys[i], zs[i], norms[i]) * efficiency(xs[j], ys[j], zs[j], norms[j]);
             k++;
         }
     }
 
-    // k = 0;
-    // for (int i = 0; i < len6; i++){
-    //     alphaAngs[k] = angFromXYZ(xs[i], ys[i], zs[i], beam.X(), beam.Y(), beam.Z());
-    //     k++;
+    std::string filenameN = "effFiles/try" + to_string(int(offsetx)) + to_string(int(offsety)) + to_string(int(offsetz)) + ".csv";
+    outputFileN.open(filenameN);
+    for(int i = 0; i < len2times6; i++){
+        outputFileN << betaAngs[i] << "\t" << betaEff[i] << endl;
+    }
+
+
+    // // All detectors and the two beta detectors
+    // outputFile4.open(filename4);
+    // for(int i = 0; i < len2times6; i++){
+    //     outputFile4 << betaAngs[i] << "\t" << betaEff[i] << endl;
     // }
-    
+
+    // // Single detector angular efficiency   
     // outputFile3.open(filename3);
-    // for(int i = 0; i < 256*256; i++){
+    // for(int i = 0; i < 65536; i++){
     //     outputFile3 << singleAng[i] << "\t" << singleW[i] << endl;
     // }
     // outputFile3.close();
 
-    outputFile2.open(filename2);
-    for(int i = 0; i < 256; i++){
-        outputFile2 << det1w[i] << endl;
-    }
-    outputFile2.close();
+    // // Single detector color map
+    // outputFile2.open(filename2);
+    // for(int i = 0; i < 256; i++){
+    //     outputFile2 << det1w[i] << endl;
+    // }
+    // outputFile2.close();
 
-    outputFile.open(filename);
-    for(int i = 0; i < len6squared; i++){
-        outputFile << angs[i] << "\t" << weight[i] << endl; // 
+    // // All detectors angular efficiency
+    // outputFile.open(filename);
+    // for(int i = 0; i < len6squared; i++){
+    //     outputFile << angs[i] << "\t" << weight[i] << endl; // 
+    // }
+    // outputFile.close();
     }
-    outputFile.close();
-
+    }
+    }
     return 0;
 }
 

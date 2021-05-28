@@ -78,8 +78,14 @@ With regards to the \be-particles, we are more loose. Here we say that there mus
 
 \section{Angular efficiency of the setup}
 Since the detectors are unable to cover the entire solid angle, there will always be some mutual angles that are more likely to be measured. 
-If we only look at one detector, a very large number of angles are not covered, but small mutual angles such as $\theta \approx 180\degree$, are very easy to measure, as it is just a measurement of two particles in the same pixel. 
-This effect becomes apparent on \cref{fig:oneDetEff}, where the angular efficiency is shown for Det??. \\
+If we only look at one detector, a very large number of angles are not covered, but small mutual angles such as $\theta \approx 0$, are very easy to measure, as it is just a measurement of two particles in the same pixel. 
+This effect becomes apparent on \cref{fig:oneDetEff}, where the angular efficiency is shown for Det2. For a single detector, there cannot be angles of $\theta = 90$ and higher, as the detector is flat. In this detector, the lowest angle found was $\cos(0.21) = 55\degree$.\\
+
+\begin{figure}[h]
+	\includegraphics[width=\linewidth]{../figures/det2Eff.pdf}
+	\caption{The angular efficiency of a single detector (Det2). For one flat detector, there can never be angles of $90\degree$ and higher.}
+	\label{fig:oneDetEff}
+\end{figure}
 In this setup however, we a cube of square detectors, who's normal vectors are all pointing in towards target at the center. This gives a much larger coverage of all mutual angles. 
 The placement of the detectors gives that angles around $\theta \approx 90 \degree$ are also very favored. This makes sense, almost no matter what pixel was hit, there is a corresponding pixel $90\degree$ to both sides. In the same way, will there always be a corresponding pixel $\approx 180\degree$ from each pixels. This effect can be seen on \cref{fig:effAllDet}. \\
 This histogram was created by using the spacial coordinates of the entire setup. First the positions of each pixel in each detector was found. Then two loops running over each pixel pair $i, j$, finds the angle between these pixels and saves it.\\
@@ -124,7 +130,7 @@ From what we know in \note{ref til beta = isotrop} the \be-particles must have a
 
 \begin{figure}[h]
 	\centering
-	\includegraphics[width=\linewidth]{../figures/betaAngles/dataEffNormWithWeights.pdf}
+	\includegraphics[width=\linewidth]{../figures/betaAngles/betaAngle.pdf}
 	\caption{Some figure of the efficiency of the setup without efficiency of each pixel. }
 	\label{fig:effwithweight}
 \end{figure}
