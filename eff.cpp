@@ -47,7 +47,7 @@ ofstream outputFile3;
 ofstream outputFile4;
 
 std::string filename = "efficiencyOutputAllDet.csv";
-std::string filename2 = "effDet2.csv";
+std::string filename2 = "effDet2Corrected.csv";
 std::string filename3 = "angEffDet2.csv";
 std::string filename4 = "effBetaDets.csv";
 
@@ -100,15 +100,15 @@ int main(int argc, char **argv) {
     // Read in setup configuration
     auto setup = JSON::readSetupFromJSON("/home/anders/i257/setup/setup.json");
     auto target = JSON::readTargetFromJSON("/home/anders/i257/setup/targets/target.json");
-    for(double offsetx = -3; offsetx < 4; offsetx+=1){
-    for(double offsety = -3; offsety < 4; offsety+=1){
-    for(double offsetz = -3; offsetz < 4; offsetz+=1){
+    // for(double offsetx = -3; offsetx < 4; offsetx+=1){
+    // for(double offsety = -3; offsety < 4; offsety+=1){
+    // for(double offsetz = -3; offsetz < 4; offsetz+=1){
     ofstream outputFileN;
     double IonRange = 166 * 1e-6; // 166 is nm
     double targetThickness = 226 * 1e-6; // 226 is nm
-    // double offsetx = -3; // mm 
-    // double offsety = 3;
-    // double offsetz = -3;
+    double offsetx = -3; // mm 
+    double offsety = -3;
+    double offsetz = 0;
     auto beam  = TVector3(0, 0, IonRange).Unit();
     auto tarPos = target.getCenter() - TVector3(0, 0, targetThickness / 2.) + TVector3(0, 0, IonRange) + TVector3(offsetx, offsety, offsetz);
 
@@ -133,10 +133,10 @@ int main(int argc, char **argv) {
         }
     }
 
-    // // Single detector color map
-    // for(int i = 0; i < 256; i++){
-    //     det1w[i] = efficiency(xs[i], ys[i], zs[i], norms[i]);
-    // }
+    // Single detector color map
+    for(int i = 0; i < 256; i++){
+        det1w[i] = efficiency(xs[i], ys[i], zs[i], norms[i]);
+    }
 
     // // Single detector angular efficiency
     // k = 0;
@@ -158,21 +158,21 @@ int main(int argc, char **argv) {
     //     }
     // }
     
-    // All detectors and the two beta detectors
-    k = 0;
-    for(int i = 0; i < len2; i++){
-        for(int j = 0; j < len6; j++){
-            betaAngs[k] = angFromXYZ(xs[i], ys[i], zs[i], xs[j], ys[j], zs[j]);
-            betaEff[k] = efficiency(xs[i], ys[i], zs[i], norms[i]) * efficiency(xs[j], ys[j], zs[j], norms[j]);
-            k++;
-        }
-    }
+    // // All detectors and the two beta detectors
+    // k = 0;
+    // for(int i = 0; i < len2; i++){
+    //     for(int j = 0; j < len6; j++){
+    //         betaAngs[k] = angFromXYZ(xs[i], ys[i], zs[i], xs[j], ys[j], zs[j]);
+    //         betaEff[k] = efficiency(xs[i], ys[i], zs[i], norms[i]) * efficiency(xs[j], ys[j], zs[j], norms[j]);
+    //         k++;
+    //     }
+    // }
 
-    std::string filenameN = "effFiles/try" + to_string(int(offsetx)) + to_string(int(offsety)) + to_string(int(offsetz)) + ".csv";
-    outputFileN.open(filenameN);
-    for(int i = 0; i < len2times6; i++){
-        outputFileN << betaAngs[i] << "\t" << betaEff[i] << endl;
-    }
+    // std::string filenameN = "effFiles/try" + to_string(int(offsetx)) + to_string(int(offsety)) + to_string(int(offsetz)) + ".csv";
+    // outputFileN.open(filenameN);
+    // for(int i = 0; i < len2times6; i++){
+    //     outputFileN << betaAngs[i] << "\t" << betaEff[i] << endl;
+    // }
 
 
     // // All detectors and the two beta detectors
@@ -188,12 +188,12 @@ int main(int argc, char **argv) {
     // }
     // outputFile3.close();
 
-    // // Single detector color map
-    // outputFile2.open(filename2);
-    // for(int i = 0; i < 256; i++){
-    //     outputFile2 << det1w[i] << endl;
-    // }
-    // outputFile2.close();
+    // Single detector color map
+    outputFile2.open(filename2);
+    for(int i = 0; i < 256; i++){
+        outputFile2 << det1w[i] << endl;
+    }
+    outputFile2.close();
 
     // // All detectors angular efficiency
     // outputFile.open(filename);
@@ -201,9 +201,10 @@ int main(int argc, char **argv) {
     //     outputFile << angs[i] << "\t" << weight[i] << endl; // 
     // }
     // outputFile.close();
-    }
-    }
-    }
+
+    // }
+    // }
+    // }
     return 0;
 }
 

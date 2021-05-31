@@ -23,6 +23,7 @@
 #include <TColorGradient.h>
 #include <ROOT/RCsvDS.hxx>
 #include <fstream>
+#include <TRatioPlot.h>
 
 using namespace std;
 using namespace ROOT;
@@ -87,7 +88,7 @@ void mexiHatTheory(RDataFrame *df){
 
     auto eff = new TH1F("stats", "Angle efficiency", bins, xmin, xmax);
     auto some = new TH2F("stats", "title", bins, xmin, xmax, bins, xmin, xmax);
-    ifstream ifile("/home/anders/i257/build/effDet2.csv");
+    ifstream ifile("/home/anders/i257/build/effDet2Corrected.csv");
     if (!ifile.is_open()) {
         std::cerr << "There was a problem opening the input file!\n";
         exit(1);//exit or do additional error checking
@@ -121,7 +122,7 @@ void mexiHatTheory(RDataFrame *df){
     c->Update();
     c->WaitPrimitive();
     c->Close();
-    c->SaveAs("/home/anders/i257/figures/mexihatDet2THEORY.pdf");
+    c->SaveAs("/home/anders/i257/figures/mexihatDet2Corrected.pdf");
 }
 
 void mexiHatDetector(RDataFrame *df){
@@ -153,7 +154,7 @@ void detectorEff(RDataFrame *df){
     auto c = new TCanvas();
     gStyle->SetOptTitle(0);
     gStyle->SetOptStat(0);
-    int bins = 100;
+    int bins = 300;
     double xmin = -1;
     double xmax = 1;
 
@@ -286,7 +287,7 @@ void betaAlphaAngle(RDataFrame *df){
     auto eff2 = new TH1F("stats", "Angle efficiency", bins, xmin, xmax);
     h0->Add(&h1.GetValue()); 
 
-    ifstream ifile("/home/anders/i257/build/effBetaDets.csv");
+    ifstream ifile("/home/anders/i257/build/effFiles/try-3-30.csv");
     if (!ifile.is_open()) {
         std::cerr << "There was a problem opening the input file!\n";
         exit(1);//exit or do additional error checking
@@ -295,16 +296,12 @@ void betaAlphaAngle(RDataFrame *df){
     {
         double angle, weight;
         ifile >> angle >> weight;
-        // cout << angle << "\t " << weight << endl;
         eff->Fill(angle);
         eff2->Fill(angle, weight);
     }
     
 
     Double_t factor = 1.;
-    // eff->Scale(factor/eff->Integral("width"));
-    // eff2->Scale(factor/eff2->Integral("width"));
-    // h0->Scale(factor/h0->Integral("width")); 
     eff->Scale(factor/eff->Integral(), "width");
     eff2->Scale(factor/eff2->Integral(), "width");
     h0->Scale(factor/h0->Integral(), "width"); 
@@ -322,19 +319,27 @@ void betaAlphaAngle(RDataFrame *df){
     eff2->SetLineWidth(3);
     h0->SetLineColor(kGreen);
     h0->SetLineWidth(3);
+
+    h0->Divide(eff2);
+
+
+
     
-    // h0->Divide(eff2);
     cout << "Kolmogorov test: " << h0->KolmogorovTest(eff2, "N") << endl;
-    // h0->DrawClone("HIST");
-    eff2->DrawClone("HIST");
-    h0->DrawClone("HIST SAME");
     // eff2->DrawClone("HIST");
-    // eff->DrawClone("HIST SAME");
+    h0->DrawClone("HIST");
+    
+    auto hclone = h0->Clone();
+    auto effclone = eff2->Clone();
+    
+    auto legend = new TLegend(0.15, 0.8, 0.3, 0.9);
+    legend->AddEntry(hclone, "Measured angle");
+    legend->AddEntry(eff2,"Angular efficiency");
+    legend->SetTextSize(0.02);
+    // legend->Draw();
     c->Modified();
     c->Update();
-    c->WaitPrimitive();
-    c->Close();
-    c->SaveAs("/home/anders/i257/figures/betaAngles/betaAngle.pdf");
+    c->SaveAs("/home/anders/i257/figures/betaAngles/dataDivEffCenterCorrected.pdf");
 
 }
 
@@ -662,6 +667,33 @@ void fixCenterPos(RDataFrame *df){
 
 }
 
+void momentumPlot(RDataFrame *df){
+    auto c = new TCanvas();
+    gStyle->SetOptTitle(0);
+    gStyle->SetOptStat(0);
+    gStyle->SetPalette(kViridis);
+    int bins = 300;
+    double xmin = 0;
+    double xmax = 100000;
+
+    auto d0 = df->Define("d0", "ptot._ptot");
+    auto h0 = d0.Histo1D({"Stats", "data / efficiency", bins, xmin, xmax}, "d0");
+
+    auto xaxis = h0->GetXaxis();
+    auto yaxis = h0->GetYaxis();
+    xaxis->SetTitle(" P_{total} [keV/c]");
+    xaxis->CenterTitle();
+    yaxis->SetTitle("count");
+    yaxis->CenterTitle();
+    h0->SetLineColor(kBlue);
+    h0->SetLineWidth(3);
+
+
+    h0->DrawClone();
+    c->Modified();
+    c->Update();
+    c->SaveAs("/home/anders/i257/figures/ptotNoCut.pdf");
+}
 
 int main(int argc, char *argv[]) {
     ROOT::EnableImplicitMT(8);
@@ -688,14 +720,15 @@ int main(int argc, char *argv[]) {
     TApplication *app = new TApplication("ROOT window", 0, 0);
     // Call the drawing of spectrum method. Default detectorId = 0
     
-    fixCenterPos(&df);
+    // momentumPlot(&df);
+    // fixCenterPos(&df);
     // singleDetectorEff(&df);
     // mexiHatTheory(&df);
     // mexiHatDetector(&df);
     // detectorEff(&df);
     // alphaEffeciency(&df);
     // cosang(&df);
-    // EEfigure(&df);
+    EEfigure(&df);
     // betaAlphaDifferentEnergies(&df);
     // betaAlphaAngle(&df);
     // individualDetectorsBetaAlphaAngle(&df);

@@ -58,8 +58,16 @@ By taking a sharp cutoff at $\cos(\theta) \geq -0.99$, we will exclude a great d
 
 
 \section{Momentum cut}
-The second cut we perform on the data is a \textit{total} momentum cut. We see on \cref{fig:totalMomentum} the total momentum for the two identified \al-particles. 
-A prominent peak lies around \note{SOME VALUE}, and ends around 40.000 keV. \note{SPØRG HANS OM HVORFOR 40k er godt, UNIT ER keV/c}. Since there is still a large tail of higher momentum, we cut those out, and only get the particles we are sure can actually be \al-particles. 
+The second cut we perform on the data is a \textit{total} momentum cut. On \cref{fig:totalMomentum} the total momentum for the two identified \al-particles are shown. 
+A prominent peak lies around \SI{13.000}{keV/c}, and ends around \SI{40.000 }{keV/c}. 
+We impose a cut of maximum \SI{40}{MeV/c}, as this will include the large amount of pairs lying in the peak, which must be \al-\al pairs. The reason this must be \al-\al pairs is \note{blabla}
+
+\begin{figure}[h]
+	\centering
+	\includegraphics[width=\linewidth]{../figures/ptotNoCut.pdf}
+	\caption{The total momentum of the two \al-particles.}
+	\label{fig:totalMomentum}
+\end{figure}
 
 \section{Multiplicity cut}
 The last cut that we want to impose on the data, is a multiplicity cut. This cut is just to ensure that we have the amount of particles that we expect. 
@@ -126,7 +134,12 @@ The form of the two histograms are quite similar around 1, 0 and $-1$ but in bet
 
 \section{Angular correlations of \al-particles and \be-particles}
 \label{sec:betaAngle}
-From what we know in \note{ref til beta = isotrop} the \be-particles must have an isotropic distribution from the \al-particles. 
+From what we know in \note{ref til beta = isotrop} the \be-particles must have an isotropic distribution. Since we only have two detectors in the setup that are capable of measuring \be-particles, we cannot measure the angle from one particle to something constant, i.e. the beam. Therefore we measure the angle between both \al-particles and the \be-particles.
+This is done by first finding the angle between the first \al-particle \al$_1$, and create a histogram of this. Then the angle between the second \al-particle \al$_2$ is measured, and a histogram is created. The two histograms are then added, to get the full picture of the mutual angles of the particles. 
+This can be seen on \cref{fig:effwithweight} as the green line.  
+
+The blue line is this figure is the angular efficiency for the specific case, where the \al-particles can hit in any given detector, but the \be-particles can only hit in the two specific detectors Det2 and DetD??. The two histograms has both been normalized, for a better comparison. By dividing the two histograms with each other, we get a better comparison. If they where to be close to equal, we would see a flat curve. But what we see on \cref{fig:dataDivEff} is not very flat. 
+There are small fluctuations in the line, which stems from the inaccuracy of calculated angular efficiency. But the main shape of the curve is at most time not around $y=1$.
 
 \begin{figure}[h]
 	\centering
@@ -134,3 +147,34 @@ From what we know in \note{ref til beta = isotrop} the \be-particles must have a
 	\caption{Some figure of the efficiency of the setup without efficiency of each pixel. }
 	\label{fig:effwithweight}
 \end{figure}
+
+\begin{figure}[h]
+	\centering
+	\includegraphics[width=\linewidth]{../figures/betaAngles/dataDivEff.pdf}
+	\caption{Data divided by the angular efficiency. }
+	\label{fig:dataDivEff}
+\end{figure}
+
+There are two different explanations as to why this might be.
+The first explanation is that the beam did not hit the target in the center. The calculated efficiency assumes that the beam hits precisely in the middle, but in any setup, there can be a few millimeters of errors. 
+
+By finding the angular efficiency of the setup, with different values for the center and comparing this to the measured angles, we have found a slight correction for the center of the beam. This can be seen on \cref{fig:centerCorrection}, where the beam has been moved to the coordinates $(-3, -3, 0)$, as opposed to the previous of $(0, 0, 0)$. The division fo the two histograms on \cref{fig:dataDivEffCenter} shows a more stable line from $\cos(-0.4)$ to $\cos(0.4)$, but the edges are still not very alike. Looking at $\cos(1)$, we see a rapid fall, which indicates that we have measured a lot fewer parallel \be-particles and \al-particles than the setup is designed to handle. 
+This can be due to the fact that some of the strips where defect. The calculated angular efficiency does not know which strips where defect, and and will therefore have a lot higher efficiency for parallel particles. The defect strips will therefore also play a role in the grand scheme, and is a possible explanation as to why there is a difference in the calculated and the measured data. 
+\begin{figure}[h]
+	\begin{subfigure}[]{.5\linewidth}
+		\centering
+		\includegraphics[width=\linewidth]{../figures/centerCorrections/try-3-30.png}
+		\caption{The angular efficiency and the data, with a correction for the center of the beam. }
+		\label{fig:centerCorrection}
+	\end{subfigure}
+	\begin{subfigure}[]{.5\linewidth}
+		\centering
+		\includegraphics[width=\linewidth]{../figures/betaAngles/dataDivEffCenterCorrected.pdf}
+		\caption{Measured \be- \al-particle angular distribution divided by the calculated angular efficiency of the setup, with a correction for position of the beam. }
+		\label{fig:dataDivEffCenter}
+	\end{subfigure}
+\end{figure}
+
+%A way to check if the coordinates $(-3, -3, 0)$ is a good fit, we can compare the distribution of particle hits, with the calculated distribution found with this new center. This has been done on \cref{fig:mexihatCompare}.
+
+
