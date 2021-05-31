@@ -100,9 +100,9 @@ int main(int argc, char **argv) {
     // Read in setup configuration
     auto setup = JSON::readSetupFromJSON("/home/anders/i257/setup/setup.json");
     auto target = JSON::readTargetFromJSON("/home/anders/i257/setup/targets/target.json");
-    for(double offsetx = -3; offsetx < 4; offsetx+=3){
-    for(double offsety = -3; offsety < 4; offsety+=3){
-    for(double offsetz = -3; offsetz < 4; offsetz+=3){
+    for(double offsetx = -3; offsetx < 4; offsetx+=1){
+    for(double offsety = -3; offsety < 4; offsety+=1){
+    for(double offsetz = -3; offsetz < 4; offsetz+=1){
     ofstream outputFileN;
     double IonRange = 166 * 1e-6; // 166 is nm
     double targetThickness = 226 * 1e-6; // 226 is nm

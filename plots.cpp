@@ -591,9 +591,9 @@ void alphaEffeciency(RDataFrame *df){
 
 void fixCenterPos(RDataFrame *df){
     int i = 0;
-    for(int x = -3; x < 4; x+=3){
-    for(int y = -3; y < 4; y+=3){
-    for(int z = -3; z < 4; z+=3){
+    for(int x = -3; x < 4; x+=1){
+    for(int y = -3; y < 4; y+=1){
+    for(int z = -3; z < 4; z+=1){
 
     
     auto *c = new TCanvas();
