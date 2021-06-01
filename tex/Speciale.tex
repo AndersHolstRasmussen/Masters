@@ -22,6 +22,7 @@
 \usepackage{setspace}
 \usepackage{mathtools}
 \usepackage{cleveref}
+\usepackage{xspace}
 \DeclarePairedDelimiter{\abs}{\lvert}{\rvert}
 \usepackage{titlesec}
 
@@ -29,6 +30,8 @@
 
 \newcommand{\be}{$\beta$}
 \newcommand{\al}{$\alpha$}
+\newcommand{\li}{\isotope[8]{Li}\xspace}
+\newcommand{\ber}{\isotope[8]{Be}\xspace}
 
 \titleformat{\chapter}[block]
 {\normalfont\huge\bfseries}{\thechapter}{20pt}{}
@@ -37,6 +40,7 @@
 
 \setcounter{tocdepth}{5}
 \setcounter{secnumdepth}{5}
+\bibliographystyle{unsrt}
 
 \hypersetup{colorlinks=true, linkcolor=blue, urlcolor=blue, citecolor=blue}
 \setlength{\parindent}{0pt}
@@ -61,6 +65,7 @@
 	\input{DataReduction.tex}
 	\input{Analysis.tex}
 	\input{Conclution.tex}
+	\bibliography{Bib}
 
 	
 \end{document}

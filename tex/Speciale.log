@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019/Debian) (preloaded format=pdflatex 2021.5.26)  31 MAY 2021 15:54
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019/Debian) (preloaded format=pdflatex 2021.5.26)  1 JUN 2021 16:04
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -485,6 +485,9 @@ LaTeX Info: Redefining \labelcref on input line 2370.
 LaTeX Info: Redefining \labelcpageref on input line 2370.
 Package cleveref Info: `listings' support loaded on input line 3131.
 )
+(/usr/share/texlive/texmf-dist/tex/latex/tools/xspace.sty
+Package: xspace 2014/10/28 v1.13 Space after command names (DPC,MH)
+)
 (/usr/share/texlive/texmf-dist/tex/latex/titlesec/titlesec.sty
 Package: titlesec 2019/10/16 v2.13 Sectioning titles
 \ttl@box=\box63
@@ -497,7 +500,7 @@ Package: titlesec 2019/10/16 v2.13 Sectioning titles
 \titlewidthlast=\dimen190
 \titlewidthfirst=\dimen191
 )
-Package hyperref Info: Option `colorlinks' set `true' on input line 41.
+Package hyperref Info: Option `colorlinks' set `true' on input line 45.
 
 
 LaTeX Warning: Unused global option(s):
@@ -506,22 +509,22 @@ LaTeX Warning: Unused global option(s):
 (./Speciale.aux)
 \openout1 = `Speciale.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 55.
-LaTeX Font Info:    ... okay on input line 55.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 55.
-LaTeX Font Info:    ... okay on input line 55.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 55.
-LaTeX Font Info:    ... okay on input line 55.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 55.
-LaTeX Font Info:    ... okay on input line 55.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 55.
-LaTeX Font Info:    ... okay on input line 55.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 55.
-LaTeX Font Info:    ... okay on input line 55.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 55.
-LaTeX Font Info:    ... okay on input line 55.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 55.
-LaTeX Font Info:    ... okay on input line 55.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 59.
+LaTeX Font Info:    ... okay on input line 59.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 59.
+LaTeX Font Info:    ... okay on input line 59.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 59.
+LaTeX Font Info:    ... okay on input line 59.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 59.
+LaTeX Font Info:    ... okay on input line 59.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 59.
+LaTeX Font Info:    ... okay on input line 59.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 59.
+LaTeX Font Info:    ... okay on input line 59.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 59.
+LaTeX Font Info:    ... okay on input line 59.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 59.
+LaTeX Font Info:    ... okay on input line 59.
 
 (/usr/share/texlive/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
@@ -552,7 +555,7 @@ Package caption Info: listings package is loaded.
 Package caption Info: wrapfig package is loaded.
 Package caption Info: End \AtBeginDocument code.
 \AtBeginShipoutBox=\box65
-Package hyperref Info: Link coloring ON on input line 55.
+Package hyperref Info: Link coloring ON on input line 59.
 
 (/usr/share/texlive/texmf-dist/tex/latex/hyperref/nameref.sty
 Package: nameref 2019/09/16 v2.46 Cross-referencing by name of section
@@ -565,24 +568,24 @@ Package: gettitlestring 2019/12/15 v1.6 Cleanup title references (HO)
 )
 \c@section@level=\count314
 )
-LaTeX Info: Redefining \ref on input line 55.
-LaTeX Info: Redefining \pageref on input line 55.
-LaTeX Info: Redefining \nameref on input line 55.
+LaTeX Info: Redefining \ref on input line 59.
+LaTeX Info: Redefining \pageref on input line 59.
+LaTeX Info: Redefining \nameref on input line 59.
 
 (./Speciale.out) (./Speciale.out)
 \@outlinefile=\write3
 \openout3 = `Speciale.out'.
 
 \c@lstlisting=\count315
-LaTeX Info: Redefining \celsius on input line 55.
-Package gensymb Info: Faking symbols for \degree and \celsius on input line 55.
+LaTeX Info: Redefining \celsius on input line 59.
+Package gensymb Info: Faking symbols for \degree and \celsius on input line 59.
 
 
 
 Package gensymb Warning: Not defining \perthousand.
 
-LaTeX Info: Redefining \ohm on input line 55.
-Package gensymb Info: Using \Omega for \ohm on input line 55.
+LaTeX Info: Redefining \ohm on input line 59.
+Package gensymb Info: Using \Omega for \ohm on input line 59.
 
 Package gensymb Warning: Not defining \micro.
 
@@ -594,13 +597,13 @@ Dictionary: translator-basic-dictionary, Language: English
 (/usr/share/texlive/texmf-dist/tex/latex/siunitx/siunitx-abbreviations.cfg
 File: siunitx-abbreviations.cfg 2017/11/26 v2.7k siunitx: Abbreviated units
 )
-LaTeX Font Info:    Trying to load font information for U+msa on input line 55.
+LaTeX Font Info:    Trying to load font information for U+msa on input line 59.
 
 
 (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 55.
+LaTeX Font Info:    Trying to load font information for U+msb on input line 59.
 
 
 (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsb.fd
@@ -609,16 +612,16 @@ File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 
 {/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}] (./Intro.tex
 Chapter 1.
-) (./Theory.texpdfTeX warning (ext4): destination with the same identifier (nam
-e{page.1}) has been already used, duplicate ignored
+pdfTeX warning (ext4): destination with the same identifier (name{page.1}) has 
+been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.1 \chapter
-            {Theory} [1
+l.21 \end{enumerate}
+                     [1
 
-]
+]) (./Theory.tex [2]
 Chapter 2.
-) (./ExperimentalMethods.tex [2
+) (./ExperimentalMethods.tex [3
 
 ]
 Chapter 3.
@@ -630,10 +633,10 @@ Underfull \hbox (badness 10000) in paragraph at lines 6--8
 
  []
 
-[3
+[4
 
 ]
-<../figures/opstilling.pdf, id=119, 597.50786pt x 845.04686pt>
+<../figures/opstilling.pdf, id=146, 597.50786pt x 845.04686pt>
 File: ../figures/opstilling.pdf Graphic file (type pdf)
 <use ../figures/opstilling.pdf>
 Package pdftex.def Info: ../figures/opstilling.pdf  used on input line 16.
@@ -659,22 +662,22 @@ Underfull \hbox (badness 10000) in paragraph at lines 22--34
 
  []
 
-[4]
+[5]
 Underfull \hbox (badness 10000) in paragraph at lines 39--42
 
  []
 
-[5]
-Underfull \hbox (badness 10000) in paragraph at lines 52--61
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 52--61
-
- []
-
 [6]
+Underfull \hbox (badness 10000) in paragraph at lines 52--61
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 52--61
+
+ []
+
+[7]
 Underfull \hbox (badness 10000) in paragraph at lines 63--70
 
  []
@@ -684,231 +687,247 @@ Underfull \hbox (badness 10000) in paragraph at lines 73--79
 
  []
 
-[7]) (./DataReduction.tex [8] [9 <../figures/opstilling.pdf>]
+[8]) (./DataReduction.tex [9] [10 <../figures/opstilling.pdf>]
 Chapter 4.
 
 Underfull \hbox (badness 10000) in paragraph at lines 20--21
 
  []
 
-<../figures/cali/det1f1-cropped.pdf, id=163, 484.72064pt x 256.93605pt>
+<../figures/cali/det1f1-cropped.pdf, id=190, 484.72064pt x 256.93605pt>
 File: ../figures/cali/det1f1-cropped.pdf Graphic file (type pdf)
 <use ../figures/cali/det1f1-cropped.pdf>
 Package pdftex.def Info: ../figures/cali/det1f1-cropped.pdf  used on input line
  25.
 (pdftex.def)             Requested size: 350.99762pt x 186.05234pt.
-<../figures/cali/det1f1PeakMostLeft-cropped.pdf, id=164, 517.83043pt x 258.4220
+<../figures/cali/det1f1PeakMostLeft-cropped.pdf, id=191, 517.83043pt x 258.4220
 7pt>
 File: ../figures/cali/det1f1PeakMostLeft-cropped.pdf Graphic file (type pdf)
 <use ../figures/cali/det1f1PeakMostLeft-cropped.pdf>
 Package pdftex.def Info: ../figures/cali/det1f1PeakMostLeft-cropped.pdf  used o
 n input line 31.
 (pdftex.def)             Requested size: 350.99762pt x 175.16869pt.
+[11
 
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-) (./Analysis.tex [10
-
-] [11 <../figures/cali/det1f1-cropped.pdf, page is rotated 90 degrees> <../figu
+] [12 <../figures/cali/det1f1-cropped.pdf, page is rotated 90 degrees> <../figu
 res/cali/det1f1PeakMostLeft-cropped.pdf, page is rotated 90 degrees>]
-Chapter 5.
-
-Underfull \hbox (badness 10000) in paragraph at lines 16--21
+Underfull \hbox (badness 10000) in paragraph at lines 55--60
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 16--21
-
- []
-
-[12
-
-]
-Underfull \hbox (badness 10000) in paragraph at lines 24--35
+Underfull \hbox (badness 10000) in paragraph at lines 55--60
 
  []
 
 [13]
-Underfull \hbox (badness 10000) in paragraph at lines 41--44
+Underfull \hbox (badness 10000) in paragraph at lines 63--74
 
  []
 
-<../figures/cosang.pdf, id=275, 569.12625pt x 388.45125pt>
+
+Underfull \hbox (badness 10000) in paragraph at lines 80--83
+
+ []
+
+[14]
+<../figures/cosang.pdf, id=301, 569.12625pt x 388.45125pt>
 File: ../figures/cosang.pdf Graphic file (type pdf)
 <use ../figures/cosang.pdf>
-Package pdftex.def Info: ../figures/cosang.pdf  used on input line 50.
+Package pdftex.def Info: ../figures/cosang.pdf  used on input line 89.
 (pdftex.def)             Requested size: 390.0pt x 266.2001pt.
-[14 <../figures/cosang.pdf, page is rotated 90 degrees>]
-<../figures/ptotNoCut.pdf, id=325, 569.12625pt x 388.45125pt>
+ [15 <../figures/cosang.pdf, page is rotated 90 degrees>]
+<../figures/ptotNoCut.pdf, id=352, 569.12625pt x 388.45125pt>
 File: ../figures/ptotNoCut.pdf Graphic file (type pdf)
 <use ../figures/ptotNoCut.pdf>
-Package pdftex.def Info: ../figures/ptotNoCut.pdf  used on input line 67.
+Package pdftex.def Info: ../figures/ptotNoCut.pdf  used on input line 106.
 (pdftex.def)             Requested size: 390.0pt x 266.2001pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 73--75
+Underfull \hbox (badness 10000) in paragraph at lines 112--114
 
  []
 
-[15 <../figures/ptotNoCut.pdf, page is rotated 90 degrees>]
-<../figures/mulBeta.pdf, id=376, 569.12625pt x 388.45125pt>
+[16 <../figures/ptotNoCut.pdf, page is rotated 90 degrees>]
+<../figures/mulBeta.pdf, id=402, 569.12625pt x 388.45125pt>
 File: ../figures/mulBeta.pdf Graphic file (type pdf)
 <use ../figures/mulBeta.pdf>
-Package pdftex.def Info: ../figures/mulBeta.pdf  used on input line 79.
+Package pdftex.def Info: ../figures/mulBeta.pdf  used on input line 118.
+(pdftex.def)             Requested size: 390.0pt x 266.2001pt.
+) (./Analysis.tex
+[17 <../figures/mulBeta.pdf, page is rotated 90 degrees>]
+Chapter 5.
+<../figures/EENoCuts.pdf, id=452, 569.12625pt x 388.45125pt>
+File: ../figures/EENoCuts.pdf Graphic file (type pdf)
+<use ../figures/EENoCuts.pdf>
+Package pdftex.def Info: ../figures/EENoCuts.pdf  used on input line 12.
 (pdftex.def)             Requested size: 390.0pt x 266.2001pt.
 
-
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 84.
+LaTeX Warning: `h' float specifier changed to `ht'.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\alpha' on input line 84.
+(hyperref)                removing `math shift' on input line 17.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 84.
+(hyperref)                removing `\alpha' on input line 17.
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 88--91
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `math shift' on input line 17.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 21--24
 
  []
 
-[16 <../figures/mulBeta.pdf, page is rotated 90 degrees>]
-<../figures/det2Eff.pdf, id=426, 569.12625pt x 388.45125pt>
+[18
+
+]
+<../figures/det2Eff.pdf, id=461, 569.12625pt x 388.45125pt>
 File: ../figures/det2Eff.pdf Graphic file (type pdf)
 <use ../figures/det2Eff.pdf>
-Package pdftex.def Info: ../figures/det2Eff.pdf  used on input line 93.
+Package pdftex.def Info: ../figures/det2Eff.pdf  used on input line 26.
 (pdftex.def)             Requested size: 390.0pt x 266.2001pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 97--100
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 30--33
 
  []
 
-[17 <../figures/det2Eff.pdf, page is rotated 90 degrees>]
-<../figures/allDetEff.pdf, id=476, 569.12625pt x 388.45125pt>
+<../figures/allDetEff.pdf, id=463, 569.12625pt x 388.45125pt>
 File: ../figures/allDetEff.pdf Graphic file (type pdf)
 <use ../figures/allDetEff.pdf>
-Package pdftex.def Info: ../figures/allDetEff.pdf  used on input line 102.
+Package pdftex.def Info: ../figures/allDetEff.pdf  used on input line 35.
 (pdftex.def)             Requested size: 390.0pt x 266.2001pt.
-<../figures/mexihatDet2.pdf, id=478, 569.12625pt x 551.05875pt>
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+<../figures/mexihatDet2.pdf, id=465, 569.12625pt x 551.05875pt>
 File: ../figures/mexihatDet2.pdf Graphic file (type pdf)
 <use ../figures/mexihatDet2.pdf>
-Package pdftex.def Info: ../figures/mexihatDet2.pdf  used on input line 111.
+Package pdftex.def Info: ../figures/mexihatDet2.pdf  used on input line 44.
 (pdftex.def)             Requested size: 195.0pt x 188.81215pt.
-<../figures/mexihatDet2THEORY.pdf, id=479, 569.12625pt x 551.05875pt>
+<../figures/mexihatDet2THEORY.pdf, id=466, 569.12625pt x 551.05875pt>
 File: ../figures/mexihatDet2THEORY.pdf Graphic file (type pdf)
 <use ../figures/mexihatDet2THEORY.pdf>
-Package pdftex.def Info: ../figures/mexihatDet2THEORY.pdf  used on input line 1
-17.
+Package pdftex.def Info: ../figures/mexihatDet2THEORY.pdf  used on input line 5
+0.
 (pdftex.def)             Requested size: 195.0pt x 188.81215pt.
 
-Overfull \hbox (2.61108pt too wide) in paragraph at lines 109--121
+Overfull \hbox (2.61108pt too wide) in paragraph at lines 42--54
 [][] [] 
  []
 
-[18 <../figures/allDetEff.pdf, page is rotated 90 degrees>]
+[19 <../figures/EENoCuts.pdf, page is rotated 90 degrees>]
 
-LaTeX Warning: Reference `fig:EffGeometry' on page 1 undefined on input line 12
-8.
+LaTeX Warning: `h' float specifier changed to `ht'.
 
-[19 <../figures/mexihatDet2.pdf, page is rotated 90 degrees> <../figures/mexiha
-tDet2THEORY.pdf, page is rotated 90 degrees>]
 
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 135.
+LaTeX Warning: Reference `fig:EffGeometry' on page 1 undefined on input line 61
+.
 
+[20 <../figures/det2Eff.pdf, page is rotated 90 degrees>]
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\alpha' on input line 135.
+(hyperref)                removing `math shift' on input line 68.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 135.
+(hyperref)                removing `\alpha' on input line 68.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 135.
+(hyperref)                removing `math shift' on input line 68.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\beta' on input line 135.
+(hyperref)                removing `math shift' on input line 68.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 135.
+(hyperref)                removing `\beta' on input line 68.
 
-<../figures/betaAngles/betaAngle.pdf, id=627, 569.12625pt x 388.45125pt>
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `math shift' on input line 68.
+
+[21 <../figures/allDetEff.pdf, page is rotated 90 degrees>] [22 <../figures/mex
+ihatDet2.pdf, page is rotated 90 degrees> <../figures/mexihatDet2THEORY.pdf, pa
+ge is rotated 90 degrees>]
+<../figures/betaAngles/betaAngle.pdf, id=707, 569.12625pt x 388.45125pt>
 File: ../figures/betaAngles/betaAngle.pdf Graphic file (type pdf)
 <use ../figures/betaAngles/betaAngle.pdf>
 Package pdftex.def Info: ../figures/betaAngles/betaAngle.pdf  used on input lin
-e 146.
+e 79.
 (pdftex.def)             Requested size: 390.0pt x 266.2001pt.
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-<../figures/betaAngles/dataDivEff.pdf, id=628, 569.12625pt x 388.45125pt>
+<../figures/betaAngles/dataDivEff.pdf, id=708, 569.12625pt x 388.45125pt>
 File: ../figures/betaAngles/dataDivEff.pdf Graphic file (type pdf)
 <use ../figures/betaAngles/dataDivEff.pdf>
 Package pdftex.def Info: ../figures/betaAngles/dataDivEff.pdf  used on input li
-ne 153.
+ne 86.
 (pdftex.def)             Requested size: 390.0pt x 266.2001pt.
+
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-<../figures/centerCorrections/try-3-30.png, id=631, 700.6175pt x 477.785pt>
+<../figures/centerCorrections/try-3-30.png, id=711, 700.6175pt x 477.785pt>
 File: ../figures/centerCorrections/try-3-30.png Graphic file (type png)
 <use ../figures/centerCorrections/try-3-30.png>
 Package pdftex.def Info: ../figures/centerCorrections/try-3-30.png  used on inp
-ut line 166.
+ut line 99.
 (pdftex.def)             Requested size: 195.0pt x 132.97694pt.
-<../figures/betaAngles/dataDivEffCenterCorrected.pdf, id=632, 569.12625pt x 388
+<../figures/betaAngles/dataDivEffCenterCorrected.pdf, id=712, 569.12625pt x 388
 .45125pt>
 File: ../figures/betaAngles/dataDivEffCenterCorrected.pdf Graphic file (type pd
 f)
 <use ../figures/betaAngles/dataDivEffCenterCorrected.pdf>
 Package pdftex.def Info: ../figures/betaAngles/dataDivEffCenterCorrected.pdf  u
-sed on input line 172.
+sed on input line 105.
 (pdftex.def)             Requested size: 195.0pt x 133.09709pt.
 
-Overfull \hbox (2.61108pt too wide) in paragraph at lines 164--176
+Overfull \hbox (2.61108pt too wide) in paragraph at lines 97--109
 []$[]$ $[]$ 
  []
 
-[20]
+[23 <../figures/betaAngles/betaAngle.pdf, page is rotated 90 degrees>]
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-) (./Conclution.tex [21 <../figures/betaAngles/betaAngle.pdf, page is rotated 9
-0 degrees>] [22 <../figures/betaAngles/dataDivEff.pdf, page is rotated 90 degre
-es> <../figures/centerCorrections/try-3-30.png> <../figures/betaAngles/dataDivE
-ffCenterCorrected.pdf, page is rotated 90 degrees>]
+) (./Conclution.tex [24 <../figures/betaAngles/dataDivEff.pdf, page is rotated 
+90 degrees>] [25 <../figures/centerCorrections/try-3-30.png> <../figures/betaAn
+gles/dataDivEffCenterCorrected.pdf, page is rotated 90 degrees>]
 Chapter 6.
-)
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 66.
- [23
+) (./Speciale.bbl [26
+
+])
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 71.
+ [27
 
 ]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 66.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 71.
  (./Speciale.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 66.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 66.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 71.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 71.
 Package rerunfilecheck Info: File `Speciale.out' has not changed.
-(rerunfilecheck)             Checksum: AB8E286271386B285385BE735084A5F6;1413.
+(rerunfilecheck)             Checksum: 3BA81F1D7A414344AD002C53BB605FDC;1555.
 
 
 LaTeX Warning: There were undefined references.
 
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 66.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 71.
  ) 
 Here is how much of TeX's memory you used:
- 15310 strings out of 481239
- 282722 string characters out of 5920377
- 552875 words of memory out of 5000000
- 30259 multiletter control sequences out of 15000+600000
+ 15379 strings out of 481239
+ 283770 string characters out of 5920377
+ 551875 words of memory out of 5000000
+ 30299 multiletter control sequences out of 15000+600000
  550047 words of font info for 94 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 48i,14n,46p,822b,728s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 48i,14n,46p,822b,839s stack positions out of 5000i,500n,10000p,200000b,80000s
 </usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></us
 r/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/shar
 e/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texl
@@ -922,10 +941,10 @@ amsfonts/cm/cmr8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts
 sy8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmti12.pf
 b></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb></us
 r/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt12.pfb>
-Output written on Speciale.pdf (24 pages, 399300 bytes).
+Output written on Speciale.pdf (28 pages, 1127197 bytes).
 PDF statistics:
- 842 PDF objects out of 1000 (max. 8388607)
- 481 compressed objects within 5 object streams
- 60 named destinations out of 1000 (max. 500000)
- 255 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 935 PDF objects out of 1000 (max. 8388607)
+ 543 compressed objects within 6 object streams
+ 83 named destinations out of 1000 (max. 500000)
+ 276 words of extra memory for PDF output out of 10000 (max. 10000000)
 

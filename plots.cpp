@@ -221,10 +221,12 @@ void EEfigure(RDataFrame *df){
     gStyle->SetPalette(kViridis);
     gStyle->SetOptTitle(0);
     gStyle->SetOptStat(0);
+    double min = 0, max = 8000;
+    int bins = 300;
 
     auto a1 = df->Define("a1", "E._E[0]").Define("a2", "E._E[1]");
 
-    auto h = a1.Histo2D({"stats", "Energy vs energy", 300, 0, 8000, 300, 0, 8000}, "a1", "a2");
+    auto h = a1.Histo2D({"stats", "Energy vs energy", bins, min, max, bins, min, max}, "a1", "a2");
     auto xaxis = h->GetXaxis();
     auto yaxis = h->GetYaxis();
     auto zaxis = h->GetZaxis();
@@ -239,7 +241,7 @@ void EEfigure(RDataFrame *df){
 
     c->Modified();
     c->Update();
-    c->SaveAs("/home/anders/i257/figures/EE.pdf");
+    c->SaveAs("/home/anders/i257/figures/EENoCuts.pdf");
     // // c->WaitPrimitive();
     // // c->Close();
     
@@ -707,7 +709,11 @@ int main(int argc, char *argv[]) {
     } 
 
     TChain chain("tree");
-    TString filename = "/home/anders/i257/data/Li8/225_N102mlio.root";
+    // TString filename = "/home/anders/i257/data/Li8/225_N102mlio.root";
+    TString filename = "/home/anders/i257/data/Li8/ONLY_2_ALPHAS_CUT_225_N102mlio.root";
+    // TString filename = "/home/anders/i257/data/Li8/ONLY_ ANGULAR_CUT_225_N102mlio.root";
+    // TString filename = "/home/anders/i257/data/Li8/ONLY_BETAMUL_CUT_225_N102mlio.root";
+    // TString filename = "/home/anders/i257/data/Li8/ONLY_EFF_CUT_225_N102mlio.root";
     //const char *input_file = argv[2];
     chain.Add(filename);
     RDataFrame df(chain);
