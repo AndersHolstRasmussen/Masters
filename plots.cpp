@@ -241,7 +241,7 @@ void EEfigure(RDataFrame *df){
 
     c->Modified();
     c->Update();
-    c->SaveAs("/home/anders/i257/figures/EENoCuts.pdf");
+    c->SaveAs("/home/anders/i257/figures/EEAngAndMoment.pdf");
     // // c->WaitPrimitive();
     // // c->Close();
     
@@ -710,9 +710,10 @@ int main(int argc, char *argv[]) {
 
     TChain chain("tree");
     // TString filename = "/home/anders/i257/data/Li8/225_N102mlio.root";
-    TString filename = "/home/anders/i257/data/Li8/ONLY_2_ALPHAS_CUT_225_N102mlio.root";
+    // TString filename = "/home/anders/i257/data/Li8/ONLY_2_ALPHAS_CUT_225_N102mlio.root";
     // TString filename = "/home/anders/i257/data/Li8/ONLY_ ANGULAR_CUT_225_N102mlio.root";
     // TString filename = "/home/anders/i257/data/Li8/ONLY_BETAMUL_CUT_225_N102mlio.root";
+    TString filename = "/home/anders/i257/data/Li8/ANG_AND_MOMENT_225_N102mlio.root";
     // TString filename = "/home/anders/i257/data/Li8/ONLY_EFF_CUT_225_N102mlio.root";
     //const char *input_file = argv[2];
     chain.Add(filename);

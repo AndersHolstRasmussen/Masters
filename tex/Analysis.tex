@@ -8,28 +8,67 @@ This means that there is a lot of particle pairs that have been identified as \a
 
 The lines occurring from E$_{\alpha2} \approx \SI{400}{keV}$ are a clear example of a \al-\be\ pair. In this line, \al1 has been identified correctly as a \al-particle, which will have energies ranging from 500-\SI{6000}{keV}, whereas the the other particle has a more constant energy, corresponding to the energy a \be-particle can deposit in a detector. So by doing no cuts at all, we are left with a lot of cases where we have no real control over what particle type we are dealing with. 
 
-\begin{figure}[h]
-	\includegraphics[width=\linewidth]{../figures/EENoCuts.pdf}
-	\caption{The energy of the first \al-particle (E$_{\alpha1}$) against the energy of the second \al-particle (E$_{\alpha2}$). The intensity scale is in logarithmic, to get a better view of all the different particle configurations.}
-	\label{fig:EENoCuts}
+\begin{figure}[H]
+	\begin{subfigure}[t]{0.5\linewidth}
+		\includegraphics[width=\linewidth]{../figures/EENoCuts.pdf}
+		\caption{No cuts on the data}
+		\label{fig:EENoCuts}
+	\end{subfigure}
+	\begin{subfigure}[t]{0.5\linewidth}
+		\includegraphics[width=\linewidth]{../figures/EEAngleCut.pdf}
+		\caption{An angular cut. The angle between the two partcles must be greater than $160\degree$.}
+		\label{fig:EEAngleCut}
+	\end{subfigure}
+	\begin{subfigure}[t]{0.5\linewidth}
+		\includegraphics[width=\linewidth]{../figures/EEMomentumCut.pdf}
+		\caption{A momentum cut. The total momentum of the particles must be less than \SI{40}{MeV/c}}
+		\label{fig:EEMomentumCut}
+	\end{subfigure}
+	\begin{subfigure}[t]{0.5\linewidth}
+		\includegraphics[width=\linewidth]{../figures/EEBetaMulCut.pdf}
+		\caption{A \be-multiplicity cut. There must exist at least one \be-particle in the entire event. }
+		\label{fig:EEBetaMulCut}
+	\end{subfigure}
+	\caption{A collection of the different effects the cuts impose on the energy of the \al-particles. On all the above figures, the energy of the first \al-particle (E$_{\alpha1}$) is plotted against the energy of the second \al-particle (E$_{\alpha2}$). The intensity scale is in logarithmic, to get a better view of all the different particle configurations.}
+\end{figure}
+
+\begin{figure}[H]
+	\begin{subfigure}[t]{0.5\linewidth}
+		\includegraphics[width=\linewidth]{../figures/EEMomentumCut.pdf}
+		\caption{Only moment}
+	\end{subfigure}
+	\begin{subfigure}[t]{0.5\linewidth}
+		\includegraphics[width=\linewidth]{../figures/EEAngAndMoment.pdf}
+		\caption{Ang and moment}
+	\end{subfigure}
+\caption{A comparison of the momentum cut with and without the angular cut.}
+\label{fig:AngAndMomentCompare}
 \end{figure}
 
 \subsection{The effect of the angular cut}
-By imposing the angular cut, we get the first real reduction in data. If the angle between the two \al-particles are less than $\cos(\theta) = -0.95 \approx 160\degree$, we sort away a lot of the noise \note{continue please}
+By imposing the angular cut, we get the first real reduction in data. If the angle between the two \al-particles are less than $\cos(\theta) = -0.95 \approx 160\degree$, we sort away a good part of the \be-\al pairs, as seen on \cref{fig:EEAngleCut}. But there are still a good portion of wrong pairs left, and we move on to impose cut on the momentum of the particles. 
+
 
 \subsection{The effect of the momentum cut}
-Again 
+Again the aim is to sort the data, so that we can identify the particles. On \cref{fig:EEMomentumCut} the total momentum of the two particles has been limited to a maximum of \SI{40}{MeV/c}. This cut sorts away all of the vertical and horizontal lines from a \be-\al pair. With this drastic cut, it looks like there is no use for the angular cut, which might be true. On figure \ref{fig:AngAndMomentCompare} we can see the comparison of the effect of the momentum cut, with and without an angular cut. There does not seem to be a very large difference. Since momentum already takes the direction of the particles into account, as well as their energies, we must 
+
+
+
 
 
 \subsection{The effect of the multiplicity cut}
-Only regards betas.
+The multiplicity of the \be-particles should not interfere so much with the \al-particles, but looking at \cref{fig:EEBetaMulCut}, we see a drastic change in the pairs with energies far from each other. This is due to a general reduction in data. With the requirement that there must be one \be-particle present in the event \textit{and} that it must have hit either Det2 or DetD, we are left with a lot fewer measurements, which in turn gives a lower probability of noisy pairs. 
+
+\begin{figure}[h]
+
+\end{figure}
 \section{The properties of the \al-particles}
 
 
 \section{Angular efficiency of the setup}
 Since the detectors are unable to cover the entire solid angle, there will always be some mutual angles that are more likely to be measured. 
 If we only look at one detector, a very large number of angles are not covered, but small mutual angles such as $\theta \approx 0$, are very easy to measure, as it is just a measurement of two particles in the same pixel. 
-This effect becomes apparent on \cref{fig:oneDetEff}, where the angular efficiency is shown for Det2. For a single detector, there cannot be angles of $\theta = 90$ and higher, as the detector is flat. In this detector, the lowest angle found was $\cos(0.21) = 55\degree$.\\
+This effect becomes apparent on \cref{fig:oneDetEff}, where the angular efficiency is shown for Det2. For a single detector, there cannot be angles of $\theta = 90$ and higher, as the detector is flat. In this detector, the lowest angle found was $\cos(\theta) = 0.21 = 77\degree$.\\
 
 \begin{figure}[h]
 	\includegraphics[width=\linewidth]{../figures/det2Eff.pdf}
