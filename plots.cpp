@@ -134,7 +134,7 @@ void mexiHatDetector(RDataFrame *df){
     double xymin = 0;
     double xymax = 17;
 
-    auto data = df->Define("x", "FI._FI[0]").Define("y", "BI._BI[0]").Filter("i._i[0] == 1 || i._i[1] == 1");
+    auto data = df->Define("x", "FI._FI[0]").Define("y", "BI._BI[0]").Filter("ibeta._ibeta[0] == 5 "); // || i._i[1] == 1
     auto h = data.Histo2D({"stats", "title", bins, xymin, xymax, bins, xymin, xymax}, "x", "y");
     auto xaxis = h->GetXaxis();
     auto yaxis = h->GetYaxis();
@@ -146,7 +146,7 @@ void mexiHatDetector(RDataFrame *df){
     h->DrawClone("col");
     c->Modified();
     c->Update();
-    c->SaveAs("/home/anders/i257/figures/mexihatDet2.pdf");
+    // c->SaveAs("/home/anders/i257/figures/mexihatDet2.pdf");
 
 }
 
@@ -386,14 +386,76 @@ void individualDetectorsBetaAlphaAngle(RDataFrame *df){
 
 void betaSpec(RDataFrame *df){
     auto c = new TCanvas();
-    auto data = df->Define("x", "EPbeta._EPbeta");
-    auto h = data.Histo1D({"Stats", "Beta spectrum (from pads)", 300, 1, 2000}, "x");
-    TAxis *xaxis = h->GetXaxis();
-    xaxis->SetTitle("name");
-    h->DrawClone();
+    gStyle->SetOptTitle(0);
+    gStyle->SetOptStat(0);
+    gStyle->SetPalette(kViridis);
+    auto dataD = df->Define("x", "Ebeta._Ebeta").Filter("ibeta._ibeta[0] == 5 "); // || ibeta._ibeta[1] == 5 || ibeta._ibeta[2] == 5 || ibeta._ibeta[3] == 5 || ibeta._ibeta[4] == 5 || ibeta._ibeta[5] == 5 || ibeta._ibeta[6] == 5
+    auto data2 = df->Define("x", "Ebeta._Ebeta").Filter("ibeta._ibeta[0] == 1 "); // || ibeta._ibeta[1] == 1 || ibeta._ibeta[2] == 1 || ibeta._ibeta[3] == 1 || ibeta._ibeta[4] == 1 || ibeta._ibeta[5] == 1 || ibeta._ibeta[6] == 1
+    auto datapadD = df->Define("x", "EPbeta._EPbeta").Filter("ibeta._ibeta[0] == 5").Filter("EPbeta._EPbeta[0] > 1");
+    auto datapad2 = df->Define("x", "EPbeta._EPbeta").Filter("ibeta._ibeta[0] == 1").Filter("EPbeta._EPbeta[0] > 1");
+    auto hD = dataD.Histo1D({"Stats", "Beta spectrum", 300, 1, 2000}, "x");
+    auto h2 = data2.Histo1D({"Stats", "Beta spectrum", 300, 1, 2000}, "x");
+    auto hpadD = datapadD.Histo1D({"Stats", "Beta spectrum", 300, 1, 2000}, "x");
+    auto hpad2 = datapad2.Histo1D({"Stats", "Beta spectrum", 300, 1, 2000}, "x");
+    TAxis *xaxis = hD->GetXaxis();
+    hD->SetLineColor(kRed);
+    hD->SetLineWidth(3);
+    h2->SetLineColor(kBlue);
+    h2->SetLineWidth(3);
+    hpadD->SetLineColor(kPink);
+    hpadD->SetLineWidth(3);
+    hpad2->SetLineColor(kGreen);
+    hpad2->SetLineWidth(3);
+    Double_t factor = 1.;
+    hD->Scale(factor/hD->Integral(), "width");
+    h2->Scale(factor/h2->Integral(), "width");
+    // hpadD->Scale(factor/hpadD->Integral(), "width");
+    hpad2->Scale(factor/hpad2->Integral(), "width");
+
+    xaxis->SetTitle("E_{\\beta} [keV]");
+    
+
+    hpad2->DrawClone("HIST");
+    hD->DrawClone("HIST SAME");
+    h2->DrawClone("HIST SAME");
+    // hpadD->DrawClone("HIST SAME");
+    
+
+
+    auto legend = new TLegend(0.78, 0.75, 0.88, 0.88);
+    legend->AddEntry(hD->Clone(),"DetD");
+    legend->AddEntry(h2->Clone(),"Det2");
+    // legend->AddEntry(hpadD->Clone(), "PadD");
+    legend->AddEntry(hpad2->Clone(), "Pad2");
+    legend->SetTextSize(0.03);
+    legend->Draw();
+
     c->Modified();
     c->Update();
     c->SaveAs("/home/anders/i257/figures/betaSpec.pdf");
+}
+
+void alphaAndBetaEnergy(RDataFrame *df){
+    auto c = new TCanvas();
+    gStyle->SetOptTitle(0);
+    gStyle->SetOptStat(0);
+    gStyle->SetPalette(kViridis);
+    auto data2 = df->Define("x", "Ebeta._Ebeta").Filter("ibeta._ibeta[0] == 1 ");
+    auto dataa = df->Define("x", "E._E[0]").Filter("i._i[0] == 1");
+    auto dataa2 = df->Define("x", "E._E[1]").Filter("i._i[1] == 1");
+    auto h2 = data2.Histo1D({"Stats", "Beta spectrum", 300, 1, 6000}, "x");
+    auto ha = dataa.Histo1D({"Stats", "Beta spectrum", 300, 1, 6000}, "x");
+    auto ha2 = dataa2.Histo1D({"Stats", "Beta spectrum", 300, 1, 6000}, "x");
+    ha->Add(&ha2.GetValue());
+    h2->SetLineColor(kBlue);
+    h2->SetLineWidth(3);
+    ha->SetLineColor(kRed);
+    ha->SetLineWidth(3);
+    Double_t factor = 1.;
+    // ha->Scale(factor/ha->Integral(), "width");
+    // h2->Scale(factor/h2->Integral(), "width");
+    h2->DrawClone("hist");
+    ha->DrawClone("hist same");
 }
 
 void angEDiff(RDataFrame *df){
@@ -697,6 +759,53 @@ void momentumPlot(RDataFrame *df){
     c->SaveAs("/home/anders/i257/figures/ptotNoCut.pdf");
 }
 
+void singleAlphaSpectre(RDataFrame *df){
+    auto c = new TCanvas();
+    gStyle->SetOptTitle(0);
+    gStyle->SetOptStat(0);
+    gStyle->SetPalette(kViridis);
+    auto data = df->Define("x", "E._E[0]");
+    auto h = data.Histo1D({"Stats", "title", 300, 1, 8000}, "x");
+    h->SetLineColor(kBlue);
+    h->SetLineWidth(3);
+    auto xaxis = h->GetXaxis();
+    xaxis->SetTitle("E [keV]");
+    xaxis->CenterTitle();
+    h->DrawClone("Hist");
+    c->SaveAs("/home/anders/i257/figures/singleAlpha.pdf");
+
+
+}
+
+void doubleAlphaSpectra(RDataFrame *df){
+    auto c = new TCanvas();
+    gStyle->SetOptTitle(0);
+    gStyle->SetOptStat(0);
+    gStyle->SetPalette(kViridis);
+    auto data = df->Define("x", "E._E[0] + E._E[1]");
+    auto data2 = df->Define("x", "E._E[1]");
+    auto h = data.Histo1D({"Stats", "title", 300, 1, 18000}, "x");
+    auto h2 = data2.Histo1D({"Stats", "title", 300, 1, 18000}, "x");
+
+    h->SetLineColor(kBlue);
+    h->SetLineWidth(3);
+    h2->SetLineColor(kRed);
+    h2->SetLineWidth(3);
+
+    auto xaxis = h->GetXaxis();
+    auto yaxis = h->GetYaxis();
+    c->SetLogy();
+    xaxis->SetTitle("E [keV]");
+    xaxis->CenterTitle();
+    
+    h->DrawClone("Hist");
+    h2->DrawClone("HIST SAME");
+
+    c->SaveAs("/home/anders/i257/figures/doubleAlpha.pdf");
+
+
+}
+
 int main(int argc, char *argv[]) {
     ROOT::EnableImplicitMT(8);
     int detectorId;
@@ -709,11 +818,11 @@ int main(int argc, char *argv[]) {
     } 
 
     TChain chain("tree");
-    // TString filename = "/home/anders/i257/data/Li8/225_N102mlio.root";
+    TString filename = "/home/anders/i257/data/Li8/225_N102mlio.root";
     // TString filename = "/home/anders/i257/data/Li8/ONLY_2_ALPHAS_CUT_225_N102mlio.root";
     // TString filename = "/home/anders/i257/data/Li8/ONLY_ ANGULAR_CUT_225_N102mlio.root";
     // TString filename = "/home/anders/i257/data/Li8/ONLY_BETAMUL_CUT_225_N102mlio.root";
-    TString filename = "/home/anders/i257/data/Li8/ANG_AND_MOMENT_225_N102mlio.root";
+    // TString filename = "/home/anders/i257/data/Li8/ANG_AND_MOMENT_225_N102mlio.root";
     // TString filename = "/home/anders/i257/data/Li8/ONLY_EFF_CUT_225_N102mlio.root";
     //const char *input_file = argv[2];
     chain.Add(filename);
@@ -735,12 +844,16 @@ int main(int argc, char *argv[]) {
     // detectorEff(&df);
     // alphaEffeciency(&df);
     // cosang(&df);
-    EEfigure(&df);
+    // EEfigure(&df);
     // betaAlphaDifferentEnergies(&df);
     // betaAlphaAngle(&df);
     // individualDetectorsBetaAlphaAngle(&df);
     // betaSpec(&df);
     // angEDiff(&df);
+    // alphaAndBetaEnergy(&df);
+    // singleAlphaSpectre(&df);
+    doubleAlphaSpectra(&df);
+
     app->Run(); // show all canvas
     return 0;
 }
