@@ -289,7 +289,7 @@ void betaAlphaAngle(RDataFrame *df){
     auto eff2 = new TH1F("stats", "Angle efficiency", bins, xmin, xmax);
     h0->Add(&h1.GetValue()); 
 
-    ifstream ifile("/home/anders/i257/build/effFiles/try-3-30.csv");
+    ifstream ifile("/home/anders/i257/build/effBetaDets.csv");
     if (!ifile.is_open()) {
         std::cerr << "There was a problem opening the input file!\n";
         exit(1);//exit or do additional error checking
@@ -322,14 +322,14 @@ void betaAlphaAngle(RDataFrame *df){
     h0->SetLineColor(kGreen);
     h0->SetLineWidth(3);
 
-    h0->Divide(eff2);
+    // h0->Divide(eff2);
 
 
 
     
     cout << "Kolmogorov test: " << h0->KolmogorovTest(eff2, "N") << endl;
-    // eff2->DrawClone("HIST");
-    h0->DrawClone("HIST");
+    eff2->DrawClone("HIST");
+    h0->DrawClone("HIST SAME");
     
     auto hclone = h0->Clone();
     auto effclone = eff2->Clone();
@@ -341,7 +341,7 @@ void betaAlphaAngle(RDataFrame *df){
     // legend->Draw();
     c->Modified();
     c->Update();
-    c->SaveAs("/home/anders/i257/figures/betaAngles/dataDivEffCenterCorrected.pdf");
+    // c->SaveAs("/home/anders/i257/figures/betaAngles/dataDivEffCenterCorrected.pdf");
 
 }
 
@@ -846,13 +846,13 @@ int main(int argc, char *argv[]) {
     // cosang(&df);
     // EEfigure(&df);
     // betaAlphaDifferentEnergies(&df);
-    // betaAlphaAngle(&df);
+    betaAlphaAngle(&df);
     // individualDetectorsBetaAlphaAngle(&df);
     // betaSpec(&df);
     // angEDiff(&df);
     // alphaAndBetaEnergy(&df);
     // singleAlphaSpectre(&df);
-    doubleAlphaSpectra(&df);
+    // doubleAlphaSpectra(&df);
 
     app->Run(); // show all canvas
     return 0;
