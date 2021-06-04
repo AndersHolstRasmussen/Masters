@@ -799,7 +799,7 @@ void doubleAlphaSpectra(RDataFrame *df){
     xaxis->CenterTitle();
     
     h->DrawClone("Hist");
-    h2->DrawClone("HIST SAME");
+    // h2->DrawClone("HIST SAME");
 
     c->SaveAs("/home/anders/i257/figures/doubleAlpha.pdf");
 
@@ -846,13 +846,13 @@ int main(int argc, char *argv[]) {
     // cosang(&df);
     // EEfigure(&df);
     // betaAlphaDifferentEnergies(&df);
-    betaAlphaAngle(&df);
+    // betaAlphaAngle(&df);
     // individualDetectorsBetaAlphaAngle(&df);
     // betaSpec(&df);
     // angEDiff(&df);
     // alphaAndBetaEnergy(&df);
     // singleAlphaSpectre(&df);
-    // doubleAlphaSpectra(&df);
+    doubleAlphaSpectra(&df);
 
     app->Run(); // show all canvas
     return 0;

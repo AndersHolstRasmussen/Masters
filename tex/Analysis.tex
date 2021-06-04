@@ -1,7 +1,7 @@
 \chapter{Analysis}
 \section{The effects of the cuts}
 How does the cuts imposed in the previous chapter affect the data then?
-First we need to look at how the data looks, without any cuts. On \cref{fig:EENoCuts} there are the energy of the first \al-particle (E$_{\alpha1}$) is plotted agains the energy of the second \al-particle (E$_{\alpha2}$).
+First we need to look at how the data looks, without any cuts. On \cref{fig:EENoCuts} the energy of the first \al-particle (E$_{\alpha1}$) is plotted against the energy of the second \al-particle (E$_{\alpha2}$).
 This gives us a nice view of what is considered \al-particle pairs. There is a prominent line going diagonally through the graph, where both particles have around the same energy. This line is expected, as the \al-particles will have close to equal energy, when decaying from \ber. 
 
 This means that there is a lot of particle pairs that have been identified as \al-\al, but properbly was \al-noise, noise-noise, \al-\be\ or \be-\be\ pairs. 
@@ -46,7 +46,7 @@ The lines occurring from E$_{\alpha2} \approx \SI{400}{keV}$ are a clear example
 \end{figure}
 
 \subsection{The effect of the angular cut}
-By imposing the angular cut, we get the first real reduction in data. If the angle between the two \al-particles are less than $\cos(\theta) = -0.95 \approx 160\degree$, we sort away a good part of the \be-\al pairs, as seen on \cref{fig:EEAngleCut}. But there are still a good portion of wrong pairs left, and we move on to impose a cut on the momentum of the particles. 
+By imposing the angular cut, we get the first real reduction in data. If the angle between the two \al-particles are less than $\cos(\theta) = -0.95 \approx 160\degree$, we sort away a good part of the \be-\al\ pairs, as seen on \cref{fig:EEAngleCut}. But there are still a good portion of wrong pairs left, and we move on to impose a cut on the momentum of the particles. 
 
 
 \subsection{The effect of the momentum cut}
@@ -76,7 +76,7 @@ So far we have only considered that the \al-particles are sorted correctly. But 
 On \cref{fig:beSpectrum} we see the energy deposited in the two detectors that are capable of measuring \be-particles, and the pad behind Det2.
 The energy from the pad and DetD, shows one peak around \SI{400}{keV} and \SI{300}{keV}, respectively. 
 Det2 shows two peaks, one close to \SI{400}{keV}, and one close to \SI{800}{keV}. This is rather interesting, as we do not expect \be-particles to deposit two different energies. Both detectors and the pad where \SI{1000}{\mu m} thick, so we expect that the energy deposited would be roughly the same. 
-\note{THIS IS A PROBLEM I DONT KNOW WHAT TO CONCLUDE??}
+
 
 
 \begin{figure}[h]
@@ -86,15 +86,17 @@ Det2 shows two peaks, one close to \SI{400}{keV}, and one close to \SI{800}{keV}
 	\label{fig:beSpectrum}
 \end{figure}
 
-\section{The properties of the \al-particles}
-Here is a spectra of one \al-particle \cref{fig:singleAlpha}
+\section{The exitation energy of \ber}
+With the \al-particles sorted correctly, we can start to look at the excitation energy of \ber. All products of this decay will hit our detectors, and the entire energy of the decay can be measured. On \cref{fig:doubleAlpha} the sum of both \al-particles energies are shown.
+ 
 
-\begin{figure}[h]
-	\centering
-	\includegraphics[width=\linewidth]{../figures/singleAlpha.pdf}
-	\caption{The energy spectra of a single \al-particle.}
-	\label{fig:singleAlpha}
-\end{figure}
+
+%\begin{figure}[h]
+%	\centering
+%	\includegraphics[width=\linewidth]{../figures/singleAlpha.pdf}
+%	\caption{The energy spectra of a single \al-particle.}
+%	\label{fig:singleAlpha}
+%\end{figure}
 on \cref{fig:doubleAlpha} is a spectra of the excitation energy of \isotope[8]{Be}. This looks like bataraajaajaajaaja
 \begin{figure}[h]
 	\centering
@@ -142,9 +144,16 @@ A pixel furthest out in a detector will have a effective area smaller than the a
 To account for this effect, each pixel will be associated with a corresponding area-efficiency $(\text{Eff}_A)$.
 This is calculated as 
 \begin{equation}
-\text{Eff}_A = \dfrac{\cos(\theta)}{r^2 },
+\text{Eff}_A = \dfrac{A\cos(\theta) }{ 4 \pi r^2},
 \end{equation}
-where $r$ is the distance to the pixel and $\theta$ is the angle between the inverted normal vector of the pixel and the line from the center to the pixel. A illustration of the scenario can be seen on \cref{fig:EffGeometry}.
+where $r$ is the distance to the pixel, $A$ is the area of the pixel and $\theta$ is the angle between the inverted normal vector of the pixel and the line from the center to the pixel. A illustration of the scenario can be seen on \cref{fig:EffGeometry}.
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=.7\linewidth]{../figures/detektorEffDrawing.pdf}
+	\caption{Geometry}
+	\label{fig:EffGeometry}
+\end{figure}
 
 On \cref{fig:effwithweight} two histograms can be seen. The red line represents the angular efficiency of the setup, without accounting for the relative area of the pixels, while the blue line is a weighted histogram for the same angles, with each pixels relative area accounted for. \\
 The form of the two histograms are quite similar around 1, 0 and $-1$ but in between there is a rather prominent difference. Therefore it is important that the effective area of the pixel is accounted for, when we in \cref{sec:betaAngle} will look at the angular correlations of the \be-particle in the setup. 
