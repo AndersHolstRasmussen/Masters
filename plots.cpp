@@ -806,6 +806,70 @@ void doubleAlphaSpectra(RDataFrame *df){
 
 }
 
+void compareCuts(RDataFrame *dfAllCuts, RDataFrame *dfNoCuts, RDataFrame *dfAng, RDataFrame *dfMoment, RDataFrame *dfBetaMul, RDataFrame *dfAngAndMoment){
+    auto c = new TCanvas();
+    gStyle->SetOptTitle(0);
+    gStyle->SetOptStat(0);
+    gStyle->SetPalette(kViridis);
+
+    auto all = dfAllCuts->Define("x", "E._E[0]");
+    auto no = dfNoCuts->Define("x", "E._E[0]");
+    auto ang = dfAng->Define("x", "E._E[0]");
+    auto moment = dfMoment->Define("x", "E._E[0]");
+    auto betaMul = dfBetaMul->Define("x", "E._E[0]");
+    auto angAndMoment = dfAngAndMoment->Define("x", "E._E[0]");
+
+    auto allH = all.Histo1D({"Stats", "titel", 300, 1, 8000}, "x");
+    auto noH = no.Histo1D({"Stats", "titel", 300, 1, 8000}, "x");
+    auto angH = ang.Histo1D({"Stats", "titel", 300, 1, 8000}, "x");
+    auto momentH = moment.Histo1D({"Stats", "titel", 300, 1, 8000}, "x");
+    auto betaMulH = betaMul.Histo1D({"Stats", "titel", 300, 1, 8000}, "x");
+    auto angAndMomentH = angAndMoment.Histo1D({"Stats", "titel", 300, 1, 8000}, "x");
+
+
+    allH->SetLineColor(kBlack);
+    allH->SetLineWidth(3);
+    noH->SetLineColor(kRed);
+    noH->SetLineWidth(3);
+    angH->SetLineColor(kGreen);
+    angH->SetLineWidth(3);
+    momentH->SetLineColor(kBlue);
+    momentH->SetLineWidth(3);
+    betaMulH->SetLineColor(kCyan);
+    betaMulH->SetLineWidth(3);
+    angAndMomentH->SetLineColor(kMagenta);
+    angAndMomentH->SetLineWidth(3);
+
+    auto xaxis = noH->GetXaxis();
+    auto yaxis = noH->GetYaxis();
+    yaxis->SetTitle("Counts");
+    yaxis->CenterTitle();
+    xaxis->SetTitle("E_{\\alpha 1} [keV]");
+    xaxis->CenterTitle();
+    yaxis->SetRange(0, 10);
+    noH->DrawClone("HIST");
+    allH->DrawClone("HIST SAME");
+    angH->DrawClone("HIST SAME");
+    momentH->DrawClone("HIST SAME");
+    betaMulH->DrawClone("HIST SAME");
+    angAndMomentH->DrawClone("HIST SAME");
+    
+    auto legend = new TLegend(0.55, 0.6, 0.88, 0.88);
+    legend->AddEntry(noH->Clone(),"No cuts");
+    legend->AddEntry(angH->Clone(),"Angular cut");
+    legend->AddEntry(momentH->Clone(), "Momentum cut");
+    legend->AddEntry(angAndMomentH->Clone(), "Angular and momentum cut");
+    legend->AddEntry(betaMulH->Clone(), "Beta multiplicity cut");
+    legend->AddEntry(allH->Clone(),"All cuts");
+    legend->SetTextSize(0.03);
+    legend->Draw();
+
+    c->SetLogy();
+    c->SaveAs("/home/anders/i257/figures/cutCompare.pdf");
+
+
+}
+
 int main(int argc, char *argv[]) {
     ROOT::EnableImplicitMT(8);
     int detectorId;
@@ -828,14 +892,55 @@ int main(int argc, char *argv[]) {
     chain.Add(filename);
     RDataFrame df(chain);
 
-    // TFile *file = TFile::Open("/home/anders/i257/data/Li8/225_03N10mlio.root", "READ");
-    // TTree *t; 
-    // file->GetObject("tvec", t);
+
+    // Mulige konfigurationer:
+    // No cut
+    // Angular cut
+    // Momentum cut (som en idiot åbenbart har kaldt eff??)
+    // Beta Mul cut
+    // Angular AND momentum cut
+    // All cuts
+
+    // No cut
+    TChain CNoCut("tree");
+    TString fileNoCut = "/home/anders/i257/data/Li8/ONLY_2_ALPHAS_CUT_225_N102mlio.root";
+    CNoCut.Add(fileNoCut);
+    RDataFrame dfNoCut(CNoCut);
+
+    // Angular cut  
+    TChain CAng("tree");
+    TString fileAng = "/home/anders/i257/data/Li8/ONLY_ ANGULAR_CUT_225_N102mlio.root";
+    CAng.Add(fileAng);
+    RDataFrame dfAng(CAng);
+
+    // Momentum cut (som en idiot åbenbart har kaldt eff??)
+    TChain CMoment("tree");
+    TString fileMoment = "/home/anders/i257/data/Li8/ONLY_EFF_CUT_225_N102mlio.root";
+    CMoment.Add(fileMoment);
+    RDataFrame dfMoment(CMoment);
+
+    // Beta Mul cut
+    TChain CBetaMul("tree");
+    TString fileBetaMul = "/home/anders/i257/data/Li8/ONLY_BETAMUL_CUT_225_N102mlio.root";
+    CBetaMul.Add(fileBetaMul);
+    RDataFrame dfBetaMul(CBetaMul);
+
+    // Angular AND momentum cut
+    TChain CAngAndMoment("tree");
+    TString fileAngAndMoment = "/home/anders/i257/data/Li8/ANG_AND_MOMENT_225_N102mlio.root";
+    CAngAndMoment.Add(fileAngAndMoment);
+    RDataFrame dfAngAndMoment(CAngAndMoment);
+
+    // For legacy reasons hedder all cuts's dataframe df!
+
+
+
 
     // start a ROOT application window such that the plots can actually be shown
     TApplication *app = new TApplication("ROOT window", 0, 0);
-    // Call the drawing of spectrum method. Default detectorId = 0
     
+    // Below here is all the plotting methods. Out comment the one you want to run. (Bad code dont judge!)
+
     // momentumPlot(&df);
     // fixCenterPos(&df);
     // singleDetectorEff(&df);
@@ -852,7 +957,8 @@ int main(int argc, char *argv[]) {
     // angEDiff(&df);
     // alphaAndBetaEnergy(&df);
     // singleAlphaSpectre(&df);
-    doubleAlphaSpectra(&df);
+    // doubleAlphaSpectra(&df);
+    compareCuts(&df, &dfNoCut, &dfAng, &dfMoment, &dfBetaMul, &dfAngAndMoment);
 
     app->Run(); // show all canvas
     return 0;

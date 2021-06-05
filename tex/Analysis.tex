@@ -50,7 +50,7 @@ By imposing the angular cut, we get the first real reduction in data. If the ang
 
 
 \subsection{The effect of the momentum cut}
-Again the aim is to sort the data, so that we can identify the particles. On \cref{fig:EEMomentumCut} the total momentum of the two particles has been limited to a maximum of \SI{40}{MeV/c}. This cut sorts away all of the vertical and horizontal lines from a \be-\al pair. With this drastic cut, it looks like there is no use for the angular cut, which might be true. On figure \ref{fig:AngAndMomentCompare} we can see the comparison of the effect of the momentum cut, with and without an angular cut. There does not seem to be a very large difference. Since momentum already takes the direction of the particles into account, as well as their energies, the angular cut will seem a bit redundant. However, we keep the angular cut on the data, as it will not take away any "good" measurements, but only some noise that slips through the multiplicity cut. 
+Again the aim is to sort the data, so that we can identify the particles. On \cref{fig:EEMomentumCut} the total momentum of the two particles has been limited to a maximum of \SI{40}{MeV/c}. This cut sorts away all of the vertical and horizontal lines from a \be-\al pair. With this drastic cut, it looks like there is no use for the angular cut, which might be true. On figure \ref{fig:AngAndMomentCompare} we can see the comparison of the effect of the momentum cut, with and without an angular cut. There does not seem to be a very large difference. Since momentum already takes the direction of the particles into account, as well as their energies, the angular cut will seem a bit redundant. However, we keep the angular cut on the data, as it will not take away any "good" measurements, but only some noise that slips through the multiplicity cut. Looking at \cref{fig:allCutsCompare}, we see the blue line as the momentum cut and the magenta line as the momentum and angular cut. The two histograms lie very close to each other, except in the low energy ranger. Here we see a slight reduction in the magenta line, indicating that the pure angular cut will sort some \be-particles from the data. It is therefor a justified cut to still impose on the data. 
  
 
 
@@ -63,13 +63,22 @@ On \cref{fig:EEAllCuts} we see the effect of all the cuts.
 There is a very prominent line of particles with roughly the same energy. 
 The line is thinner at higher energies, and widens as it goes towards lower energies. 
 The reason for the widening, is the recoil energy from the \be-decay.
-If the \al-particles have low energy, they are more susceptible to other forces around it, and the therefore are greater chance of having the exact same energy.\\
+If the \al-particles have low energy, they are more susceptible to other forces around it, and will lose a larger portion of their energy to the \be-particle recoil. \\
+\\
+On \cref{fig:allCutsCompare} all the cuts are shown as individually, highlighting the effect that each cut provides. Here it is worth noting that not all \be-particles have been successfully removed from the data. A slight peak at low energies still remain for the black line in the figure. This is also clear on \cref{fig:EEAllCuts}, where the there is a high intensity at the $\approx$ \SI{200}{keV} energy range. 
 
 \begin{figure}[h]
 	\centering
-	\includegraphics[width=\linewidth]{../figures/EE.png}
+	\includegraphics[width=\linewidth]{../figures/EE.pdf}
 	\caption{The energy of the first \al-particle plotted against the energy of the second \al-particle. All of the data reduction cuts are used here.}
 	\label{fig:EEAllCuts}
+\end{figure}
+
+\begin{figure}[h]
+	\centering
+	\includegraphics[width=\linewidth]{../figures/cutCompare.pdf}
+	\caption{A comparison of all the cut, where the energy of the first \al-particle is plotted. }
+	\label{fig:allCutsCompare}
 \end{figure}
 
 So far we have only considered that the \al-particles are sorted correctly. But there is still a question for weather the \be-particles will be clouded by wrong identifications. 
