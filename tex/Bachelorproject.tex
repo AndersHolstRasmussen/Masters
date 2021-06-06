@@ -1,0 +1,80 @@
+\documentclass[a4paper,12pt,oneside,article]{memoir}
+
+\usepackage[english]{babel}
+%\usepackage[utf8x]{inputenc}
+\usepackage[T1]{fontenc}	%extra characters
+\usepackage{xparse}         %extra document commands (LaTeX3)
+\usepackage{pdfpages}
+%\usepackage{wrapfig}        %the wrapfigure environment
+\usepackage{graphicx}		%the include graphics command
+\usepackage{float}		 	%using H,h etc. to position floats like tables and figures
+\usepackage[colorlinks = true, citecolor=blue]{hyperref} %references are coloured and correctly sends reader to label
+\usepackage{color}			%coloured text width fx. {\color{red} text}
+\usepackage{physics}		%physics package
+\usepackage{siunitx}	    %\SI{<tal>}{<enhed>}, \si{<enhed>}
+\usepackage{amsmath}
+\numberwithin{equation}{chapter}
+\usepackage{amssymb}
+\usepackage{bm}             %bold font in math \bm{}
+\usepackage{mathtools}      %extra maths
+\usepackage{cancel}         %\cancel{} crosses out parts of equation
+\usepackage{tensor}         %\indices{^a_b^{cd}_e} for tensor notation, * gives collapse
+\usepackage[font=small,labelfont=bf,textfont=it]{caption} %caption formatting
+
+\usepackage{cite}
+
+\usepackage{lipsum}         %Lorem ipsum dolor sit amet, consectetur...
+
+
+
+
+%------------------------------------
+%Preliminary settings
+%\settypeblocksize{190mm}{*}{0.707}
+\OnehalfSpacing
+\checkandfixthelayout
+
+\mathtoolsset{showonlyrefs = true}              %only numbers equations etc. if they are referenced to
+%\numberwithin{equation}{subsection}             %equations etc. are numbered as (section.subsection)
+%\renewcommand\thesection{\arabic{section}}      %removes chapter numbering of section
+
+%My shortcuts
+\newcommand{\colvec}[1]{\begin{pmatrix}#1\end{pmatrix}} %collumn vector \colvec{a\\b\\c\\d\\e}
+\newcommand{\half}{\frac{1}{2}}     %make \frac{1}{2} with \half
+\newcommand{\define}{\equiv}        %definition sign with \define
+
+%My environments
+\NewDocumentEnvironment{Tabular}{m O{6pt} O{1}}
+    {\def\tabcolsep{#2}\def\arraystretch{#3}\tabular{#1}}
+    {\endtabular}
+%makes table with OPTIONAL adjustable padding. First parameter is horizontal (size), second is vertical (stretch factor). Ex: \begin{Tabular}{|r|l|l|}[12pt][1.5]\end{Tabular}
+%------------------------------------
+
+
+
+\begin{document}
+\frontmatter
+\includepdf{titlepage.pdf}
+\begin{KeepFromToc}
+	\renewcommand{\contentsname}{Content}
+	{\hypersetup{linkcolor=black}
+		\tableofcontents}
+\end{KeepFromToc}
+\newpage
+\input{resume.tex}
+
+\mainmatter
+\input{Introduction.tex}
+\input{PotentialTheory.tex}
+\input{HoloTheory.tex}
+\input{AxiTheory.tex}
+\input{HoloAfsnit.tex}
+\input{AxiAfsnit.tex}
+\input{Conclusion.tex}
+
+\backmatter
+\newpage
+\bibliographystyle{unsrtnat} 
+\bibliography{ref}
+
+\end{document}

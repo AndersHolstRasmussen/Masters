@@ -25,6 +25,7 @@
 \usepackage{xspace}
 \DeclarePairedDelimiter{\abs}{\lvert}{\rvert}
 \usepackage{titlesec}
+\usepackage{pdfpages}
 
 \onehalfspacing
 
@@ -54,11 +55,22 @@
 \makeatother
 
 
+\pagenumbering{roman} % Start roman numbering
+
 \title{SPECIALE TITEL HER!}
 \author{Anders Holst Rasmussen}
 \begin{document}
-	\maketitle
+	
+	\includepdf[pages=-]{titlepage.pdf}
+	\newpage
+	\setcounter{page}{1}	
+{
+	\hypersetup{linkcolor=black}
 	\tableofcontents
+}
+	\newpage
+	
+	\pagenumbering{arabic} % Switch to normal numbers
 	\input{Intro.tex}
 	%\input{Theory.tex}
 	\input{ExperimentalMethods.tex}
