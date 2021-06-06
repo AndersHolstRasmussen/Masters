@@ -3,10 +3,10 @@
 \contentsline {section}{\numberline {2.1}Detector setup}{5}{section.2.1}%
 \contentsline {section}{\numberline {2.2}Experimental setup}{5}{section.2.2}%
 \contentsline {section}{\numberline {2.3}The detectors}{6}{section.2.3}%
-\contentsline {section}{\numberline {2.4}AUSAlib and ROOT}{7}{section.2.4}%
-\contentsline {subsection}{\numberline {2.4.1}Unpacker}{8}{subsection.2.4.1}%
-\contentsline {subsection}{\numberline {2.4.2}Calibrator}{8}{subsection.2.4.2}%
-\contentsline {subsection}{\numberline {2.4.3}Sorter}{9}{subsection.2.4.3}%
+\contentsline {section}{\numberline {2.4}AUSAlib and ROOT}{8}{section.2.4}%
+\contentsline {subsection}{\numberline {2.4.1}Unpacker}{9}{subsection.2.4.1}%
+\contentsline {subsection}{\numberline {2.4.2}Calibrator}{9}{subsection.2.4.2}%
+\contentsline {subsection}{\numberline {2.4.3}Sorter}{10}{subsection.2.4.3}%
 \contentsline {chapter}{\numberline {3}Data Reduction}{12}{chapter.3}%
 \contentsline {section}{\numberline {3.1}Calibration}{12}{section.3.1}%
 \contentsline {section}{\numberline {3.2}Identifying the particles}{13}{section.3.2}%
