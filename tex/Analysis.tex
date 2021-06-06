@@ -95,7 +95,7 @@ Det2 shows two peaks, one close to \SI{400}{keV}, and one close to \SI{800}{keV}
 	\label{fig:beSpectrum}
 \end{figure}
 
-\section{The exitation energy of \ber}
+\section{The excitation energy of $^8$Be}
 With the \al-particles sorted correctly, we can start to look at the excitation energy of \ber. All products of this decay will hit our detectors, and the entire energy of the decay can be measured. On \cref{fig:doubleAlpha} the sum of both \al-particles energies are shown.
  
 
@@ -106,7 +106,7 @@ With the \al-particles sorted correctly, we can start to look at the excitation 
 %	\caption{The energy spectra of a single \al-particle.}
 %	\label{fig:singleAlpha}
 %\end{figure}
-on \cref{fig:doubleAlpha} is a spectra of the excitation energy of \isotope[8]{Be}. This looks like bataraajaajaajaaja
+
 \begin{figure}[h]
 	\centering
 	\includegraphics[width=\linewidth]{../figures/doubleAlpha.pdf}
@@ -154,13 +154,15 @@ To account for this effect, each pixel will be associated with a corresponding a
 This is calculated as 
 \begin{equation}
 \text{Eff}_A = \dfrac{A\cos(\theta) }{ 4 \pi r^2},
+\label{eq:eff}
 \end{equation}
-where $r$ is the distance to the pixel, $A$ is the area of the pixel and $\theta$ is the angle between the inverted normal vector of the pixel and the line from the center to the pixel. A illustration of the scenario can be seen on \cref{fig:EffGeometry}.
+where $r$ is the distance to the pixel, $A$ is the area of the pixel and $\theta$ is the angle between the hit direction and the normal vector of the detector as shown on \cref{fig:EffGeometry}. The area of all pixel is the same for all detectors, so the constants $A$ and $4\pi$ can be ignored when comparing the efficiency. 
+
 
 \begin{figure}[H]
 	\centering
-	\includegraphics[width=.7\linewidth]{../figures/detektorEffDrawing.pdf}
-	\caption{Geometry}
+	\includegraphics[width=.7\linewidth]{../figures/detektorEffDrawingv2.pdf}
+	\caption{A illustration of two hits in different pixels. The blue hit will see a smaller effective area of the pixel by a factor determined by \cref{eq:eff}.}
 	\label{fig:EffGeometry}
 \end{figure}
 
@@ -175,7 +177,7 @@ From what we know in \note{ref til beta = isotrop} the \be-particles must have a
 This is done by first finding the angle between the first \al-particle \al$_1$, and create a histogram of this. Then the angle between the second \al-particle \al$_2$ is measured, and a histogram is created. The two histograms are then added, to get the full picture of the mutual angles of the particles. 
 This can be seen on \cref{fig:effwithweight} as the green line.  
 
-The blue line is this figure is the angular efficiency for the specific case, where the \al-particles can hit in any given detector, but the \be-particles can only hit in the two specific detectors Det2 and DetD??. The two histograms has both been normalized, for a better comparison. By dividing the two histograms with each other, we get a better comparison. If they where to be close to equal, we would see a flat curve. But what we see on \cref{fig:dataDivEff} is not very flat. 
+The blue line is this figure is the angular efficiency for the specific case, where the \al-particles can hit in any given detector, but the \be-particles can only hit in the two specific detectors Det2 and DetD. The two histograms has both been normalized, for a better comparison. By dividing the two histograms with each other, we get a better comparison. If they where to be close to equal, we would see a flat curve. But what we see on \cref{fig:dataDivEff} is not very flat. 
 There are small fluctuations in the line, which stems from the inaccuracy of calculated angular efficiency. But the main shape of the curve is at most time not around $y=1$.
 
 \begin{figure}[h]
@@ -195,8 +197,9 @@ There are small fluctuations in the line, which stems from the inaccuracy of cal
 There are two different explanations as to why this might be.
 The first explanation is that the beam did not hit the target in the center. The calculated efficiency assumes that the beam hits precisely in the middle, but in any setup, there can be a few millimeters of errors. 
 
-By finding the angular efficiency of the setup, with different values for the center and comparing this to the measured angles, we have found a slight correction for the center of the beam. This can be seen on \cref{fig:centerCorrection}, where the beam has been moved to the coordinates $(-3, -3, 0)$, as opposed to the previous of $(0, 0, 0)$. The division fo the two histograms on \cref{fig:dataDivEffCenter} shows a more stable line from $\cos(-0.4)$ to $\cos(0.4)$, but the edges are still not very alike. Looking at $\cos(1)$, we see a rapid fall, which indicates that we have measured a lot fewer parallel \be-particles and \al-particles than the setup is designed to handle. 
-This can be due to the fact that some of the strips where defect. The calculated angular efficiency does not know which strips where defect, and and will therefore have a lot higher efficiency for parallel particles. The defect strips will therefore also play a role in the grand scheme, and is a possible explanation as to why there is a difference in the calculated and the measured data. 
+By finding the angular efficiency of the setup, with different values for the center and comparing this to the measured angles, we have found a slight correction for the center of the beam. This can be seen on \cref{fig:centerCorrection}, where the beam has been moved to the coordinates $(-3, -3, 0)$, as opposed to the previous of $(0, 0, 0)$. The division fo the two histograms on \cref{fig:dataDivEffCenter} shows a more stable line from $\cos(-0.4)$ to $\cos(0.4)$, but the edges are still not very alike. Looking at $\cos(1)$, we see a rapid fall, which indicates that we have measured a lot fewer parallel \be\ and \al-particles than the setup is designed to handle. 
+This can be due to the fact that some of the strips where defect. The calculated angular efficiency does not know which strips where defect, and and will therefore have a lot higher efficiency for parallel particles. The defect strips will therefore also play a role in the grand scheme, and is a possible explanation as to why there is a difference in the calculated and the measured data. \\
+Another effect that will sway the data, is the target holder. This device will provide a shadow over the top and bottom detector, and since one of the \be-detectors are the bottom one, it will skew the data in a unforeseeable way. 
 \begin{figure}[h]
 	\begin{subfigure}[]{.5\linewidth}
 		\centering
@@ -211,7 +214,5 @@ This can be due to the fact that some of the strips where defect. The calculated
 		\label{fig:dataDivEffCenter}
 	\end{subfigure}
 \end{figure}
-
-%A way to check if the coordinates $(-3, -3, 0)$ is a good fit, we can compare the distribution of particle hits, with the calculated distribution found with this new center. This has been done on \cref{fig:mexihatCompare}.
 
 

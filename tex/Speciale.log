@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019/Debian) (preloaded format=pdflatex 2021.5.26)  5 JUN 2021 16:43
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019/Debian) (preloaded format=pdflatex 2021.5.26)  6 JUN 2021 16:32
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -762,7 +762,15 @@ LaTeX Warning: `h' float specifier changed to `ht'.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\isotope' on input line 98.
+(hyperref)                removing `math shift' on input line 98.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `superscript' on input line 98.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `math shift' on input line 98.
 
 <../figures/doubleAlpha.pdf, id=600, 569.12625pt x 388.45125pt>
 File: ../figures/doubleAlpha.pdf Graphic file (type pdf)
@@ -778,7 +786,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 118--121
  []
 
 [12 <../figures/EE.pdf, page is rotated 90 degrees>]
-<../figures/det2Eff.pdf, id=652, 569.12625pt x 388.45125pt>
+<../figures/det2Eff.pdf, id=651, 569.12625pt x 388.45125pt>
 File: ../figures/det2Eff.pdf Graphic file (type pdf)
 <use ../figures/det2Eff.pdf>
 Package pdftex.def Info: ../figures/det2Eff.pdf  used on input line 123.
@@ -793,7 +801,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 127--130
  []
 
 [13 <../figures/cutCompare.pdf, page is rotated 90 degrees>]
-<../figures/allDetEff.pdf, id=703, 569.12625pt x 388.45125pt>
+<../figures/allDetEff.pdf, id=702, 569.12625pt x 388.45125pt>
 File: ../figures/allDetEff.pdf Graphic file (type pdf)
 <use ../figures/allDetEff.pdf>
 Package pdftex.def Info: ../figures/allDetEff.pdf  used on input line 132.
@@ -802,12 +810,12 @@ Package pdftex.def Info: ../figures/allDetEff.pdf  used on input line 132.
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-<../figures/mexihatDet2.pdf, id=705, 569.12625pt x 551.05875pt>
+<../figures/mexihatDet2.pdf, id=704, 569.12625pt x 551.05875pt>
 File: ../figures/mexihatDet2.pdf Graphic file (type pdf)
 <use ../figures/mexihatDet2.pdf>
 Package pdftex.def Info: ../figures/mexihatDet2.pdf  used on input line 141.
 (pdftex.def)             Requested size: 195.0pt x 188.81215pt.
-<../figures/mexihatDet2THEORY.pdf, id=706, 569.12625pt x 551.05875pt>
+<../figures/mexihatDet2THEORY.pdf, id=705, 569.12625pt x 551.05875pt>
 File: ../figures/mexihatDet2THEORY.pdf Graphic file (type pdf)
 <use ../figures/mexihatDet2THEORY.pdf>
 Package pdftex.def Info: ../figures/mexihatDet2THEORY.pdf  used on input line 1
@@ -822,65 +830,62 @@ Overfull \hbox (2.61108pt too wide) in paragraph at lines 139--151
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-<../figures/detektorEffDrawing.pdf, id=757, 218.24142pt x 137.03618pt>
-File: ../figures/detektorEffDrawing.pdf Graphic file (type pdf)
-<use ../figures/detektorEffDrawing.pdf>
-Package pdftex.def Info: ../figures/detektorEffDrawing.pdf  used on input line 
-162.
-(pdftex.def)             Requested size: 272.99881pt x 171.43489pt.
+<../figures/detektorEffDrawingv2.pdf, id=756, 146.68134pt x 123.64084pt>
+File: ../figures/detektorEffDrawingv2.pdf Graphic file (type pdf)
+<use ../figures/detektorEffDrawingv2.pdf>
+Package pdftex.def Info: ../figures/detektorEffDrawingv2.pdf  used on input lin
+e 164.
+(pdftex.def)             Requested size: 272.99881pt x 230.15443pt.
 [15 <../figures/doubleAlpha.pdf, page is rotated 90 degrees>] [16 <../figures/d
-et2Eff.pdf, page is rotated 90 degrees> <../figures/detektorEffDrawing.pdf>]
+et2Eff.pdf, page is rotated 90 degrees> <../figures/detektorEffDrawingv2.pdf>]
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 172.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\alpha' on input line 172.
+(hyperref)                removing `math shift' on input line 174.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 172.
+(hyperref)                removing `\alpha' on input line 174.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 172.
+(hyperref)                removing `math shift' on input line 174.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\beta' on input line 172.
+(hyperref)                removing `math shift' on input line 174.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 172.
+(hyperref)                removing `\beta' on input line 174.
 
-[17 <../figures/allDetEff.pdf, page is rotated 90 degrees>]
-<../figures/betaAngles/betaAngle.pdf, id=922, 569.12625pt x 388.45125pt>
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `math shift' on input line 174.
+
+[17 <../figures/allDetEff.pdf, page is rotated 90 degrees>] [18 <../figures/mex
+ihatDet2.pdf, page is rotated 90 degrees> <../figures/mexihatDet2THEORY.pdf, pa
+ge is rotated 90 degrees>]
+<../figures/betaAngles/betaAngle.pdf, id=1013, 569.12625pt x 388.45125pt>
 File: ../figures/betaAngles/betaAngle.pdf Graphic file (type pdf)
 <use ../figures/betaAngles/betaAngle.pdf>
 Package pdftex.def Info: ../figures/betaAngles/betaAngle.pdf  used on input lin
-e 183.
+e 185.
 (pdftex.def)             Requested size: 390.0pt x 266.2001pt.
-
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-<../figures/betaAngles/dataDivEff.pdf, id=923, 569.12625pt x 388.45125pt>
+<../figures/betaAngles/dataDivEff.pdf, id=1014, 569.12625pt x 388.45125pt>
 File: ../figures/betaAngles/dataDivEff.pdf Graphic file (type pdf)
 <use ../figures/betaAngles/dataDivEff.pdf>
 Package pdftex.def Info: ../figures/betaAngles/dataDivEff.pdf  used on input li
-ne 190.
+ne 192.
 (pdftex.def)             Requested size: 390.0pt x 266.2001pt.
+
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-[18 <../figures/mexihatDet2.pdf, page is rotated 90 degrees> <../figures/mexiha
-tDet2THEORY.pdf, page is rotated 90 degrees>]
 <../figures/centerCorrections/try-3-30.png, id=1017, 700.6175pt x 477.785pt>
 File: ../figures/centerCorrections/try-3-30.png Graphic file (type png)
 <use ../figures/centerCorrections/try-3-30.png>
 Package pdftex.def Info: ../figures/centerCorrections/try-3-30.png  used on inp
-ut line 203.
+ut line 206.
 (pdftex.def)             Requested size: 195.0pt x 132.97694pt.
 <../figures/betaAngles/dataDivEffCenterCorrected.pdf, id=1018, 569.12625pt x 38
 8.45125pt>
@@ -888,35 +893,42 @@ File: ../figures/betaAngles/dataDivEffCenterCorrected.pdf Graphic file (type pd
 f)
 <use ../figures/betaAngles/dataDivEffCenterCorrected.pdf>
 Package pdftex.def Info: ../figures/betaAngles/dataDivEffCenterCorrected.pdf  u
-sed on input line 209.
+sed on input line 212.
 (pdftex.def)             Requested size: 195.0pt x 133.09709pt.
 
-Overfull \hbox (2.61108pt too wide) in paragraph at lines 201--213
+Overfull \hbox (2.61108pt too wide) in paragraph at lines 204--216
 []$[]$ $[]$ 
  []
 
+[19 <../figures/betaAngles/betaAngle.pdf, page is rotated 90 degrees>]
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
 )
 Package atveryend Info: Empty hook `BeforeClearDocument' on input line 71.
- [19 <../figures/betaAngles/betaAngle.pdf, page is rotated 90 degrees>]
-[20 <../figures/betaAngles/dataDivEff.pdf, page is rotated 90 degrees> <../figu
-res/centerCorrections/try-3-30.png> <../figures/betaAngles/dataDivEffCenterCorr
-ected.pdf, page is rotated 90 degrees>]
+ [20 <../figures/betaAngles/dataDivEff.pdf, page is rotated 90 degrees>]
+[21 <../figures/centerCorrections/try-3-30.png> <../figures/betaAngles/dataDivE
+ffCenterCorrected.pdf, page is rotated 90 degrees>]
 Package atveryend Info: Empty hook `AfterLastShipout' on input line 71.
  (./Speciale.aux)
 Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 71.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 71.
-Package rerunfilecheck Info: File `Speciale.out' has not changed.
-(rerunfilecheck)             Checksum: D01775B438FB9B691DF77A73F858227E;1130.
+
+
+Package rerunfilecheck Warning: File `Speciale.out' has changed.
+(rerunfilecheck)                Rerun to get outlines right
+(rerunfilecheck)                or use package `bookmark'.
+
+Package rerunfilecheck Info: Checksums for `Speciale.out':
+(rerunfilecheck)             Before: D01775B438FB9B691DF77A73F858227E;1130
+(rerunfilecheck)             After:  C35110E11BC9D948D46112DC8A7D5D3A;1128.
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 71.
  ) 
 Here is how much of TeX's memory you used:
- 15375 strings out of 481239
- 284956 string characters out of 5920377
+ 15377 strings out of 481239
+ 284985 string characters out of 5920377
  551875 words of memory out of 5000000
- 30329 multiletter control sequences out of 15000+600000
+ 30330 multiletter control sequences out of 15000+600000
  546911 words of font info for 81 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  48i,14n,51p,1336b,975s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -927,16 +939,15 @@ ive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/share/texlive/te
 xmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/share/texlive/texmf-dis
 t/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texlive/texmf-dist/fonts
 /type1/public/amsfonts/cm/cmr12.pfb></usr/share/texlive/texmf-dist/fonts/type1/
-public/amsfonts/cm/cmr17.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/
-amsfonts/cm/cmr8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts
-/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cm
-sy8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmti12.pf
-b></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb></us
-r/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt12.pfb>
-Output written on Speciale.pdf (20 pages, 3240506 bytes).
+public/amsfonts/cm/cmr8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/a
+msfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfont
+s/cm/cmsy8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cm
+ti12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.p
+fb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt12.pfb>
+Output written on Speciale.pdf (21 pages, 3233444 bytes).
 PDF statistics:
- 1220 PDF objects out of 1440 (max. 8388607)
- 625 compressed objects within 7 object streams
- 56 named destinations out of 1000 (max. 500000)
+ 1222 PDF objects out of 1440 (max. 8388607)
+ 626 compressed objects within 7 object streams
+ 57 named destinations out of 1000 (max. 500000)
  244 words of extra memory for PDF output out of 10000 (max. 10000000)
 

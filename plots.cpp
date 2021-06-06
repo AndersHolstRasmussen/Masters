@@ -870,6 +870,18 @@ void compareCuts(RDataFrame *dfAllCuts, RDataFrame *dfNoCuts, RDataFrame *dfAng,
 
 }
 
+void energyDifference(RDataFrame *df){
+    auto c = new TCanvas();
+    gStyle->SetOptTitle(0);
+    gStyle->SetOptStat(0);
+    gStyle->SetPalette(kViridis);
+    auto data = df->Define("x", "E._E[0] - E._E[1]");
+    auto h = data.Histo1D({"Stats", "Title", 300, -2000, 2000}, "x");
+    h->SetLineColor(kBlue);
+    h->SetLineWidth(3);
+    h->DrawClone("hist");
+}
+
 int main(int argc, char *argv[]) {
     ROOT::EnableImplicitMT(8);
     int detectorId;
@@ -958,8 +970,8 @@ int main(int argc, char *argv[]) {
     // alphaAndBetaEnergy(&df);
     // singleAlphaSpectre(&df);
     // doubleAlphaSpectra(&df);
-    compareCuts(&df, &dfNoCut, &dfAng, &dfMoment, &dfBetaMul, &dfAngAndMoment);
-
+    // compareCuts(&df, &dfNoCut, &dfAng, &dfMoment, &dfBetaMul, &dfAngAndMoment);
+    energyDifference(&df);
     app->Run(); // show all canvas
     return 0;
 }
