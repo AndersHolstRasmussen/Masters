@@ -1,3 +1,16 @@
-\begin{thebibliography}{}
+\begin{thebibliography}{1}
+
+\bibitem{isotrop}
+R.~E. Tribble and G.~T. Garvey.
+\newblock Induced weak currents and
+  ${\ensuremath{\beta}}^{\ifmmode\pm\else\textpm\fi{}}\ensuremath{-}\ensuremath{\alpha}$
+  angular correlations in $a=8$.
+\newblock {\em Phys. Rev. C}, 12:967--983, Sep 1975.
+
+\bibitem{TILLEY2004155}
+D.R. Tilley, J.H. Kelley, J.L. Godwin, D.J. Millener, J.E. Purcell, C.G. Sheu,
+  and H.R. Weller.
+\newblock Energy levels of light nuclei a=8,9,10.
+\newblock {\em Nuclear Physics A}, 745(3):155--362, 2004.
 
 \end{thebibliography}
