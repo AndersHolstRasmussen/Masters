@@ -75,16 +75,23 @@ where $G_V$ is weak vector coupling constant, $\tau_\mp$ is the isospin step ope
 The first term corresponds to the Fermi operator, and the second term to the Gamow-Teller operator. 
 This raises some selection rules, that dictate that for a Fermi decay, spin, isospin and parity must not be changed, and for a Gamow-Teller transitions, $\Delta J = 0, \pm1$, $\Delta T = 0, \pm 1$, and $\Delta \pi = 0$.
 
-The selection rules then enforces that only a subset of levels are allowed to be populated in the decay of \li. 
+The selection rules then enforces that not every energy level is populated in \ber. 
 
+\subsection{\al-decay}
+\al-decay is another type of radioactive decay, where the nucleus emits an \al-particle, and thereby decays into a different nucleus with the atomic number reduced by two.  
+It has a Q-value of:
+\begin{equation}
+Q_\alpha =  \left[ m (\isotope[A][Z]{X}) - m(\isotope[A-4][Z-2]{X'})  	- m_\alpha	 \right] c^2.
+\end{equation}
+Usually it is only elements heavier than nickel that can decay via this process, as the binding energy per nucleon decreases, and therefore becomes unstable towards spontaneous fission type processes. The only known exception to this rule is then \ber, which is the only light nuclei that decays by \al-decay. 
 
-
-
-
+\section{Structure of $^8$Be}
+\cref{fig:berStructure} shows the excitation spectrum for \ber, with values from \cite{TILLEY2004155}. The spin, parity and isospin are written as $J^\pi ; T$ for each level. 4 different states has been shown for \ber, where only the first excited state is the broad state at \SI{3.03}{MeV}. This state has conservation of spin and parity from \li and is the only state that is allowed for the decay of \li. Sittuated above is the broad state at \SI{11.35}{MeV}, which does not conserve spin. Above that is a \SI{16.626}{MeV} state, which conserves spin,parity and isospin, but lies energetically above \li, so we would not expect that to shown in the data. It is still a quite relevant state, as the mirror nucleus \isotope[8]{B} $(2^+; 1)$ lies just above the energy at \SI{17.979}{MeV}, and then has enough energy to populate this state, even though it is not very likely. Previous experiments made by the Aarhus subatomic group has examined the decay, and found only 5 counts populating this excitation level. But that should not show up when looking at the decay of \li.
 
 
 \begin{figure}
 	\centering
 	\includegraphics[width=\columnwidth]{../figures/DecayScheme.pdf}
 	\caption{The decay scheme of \li, and some notable excitation energies of \ber. Each level is labeld with the energy above the \ber ground state in MeV. Spin parity and isospin is noted as $J^\pi; T$. All information is from \cite{TILLEY2004155}.}
+	\label{fig:berStructure}
 \end{figure}
