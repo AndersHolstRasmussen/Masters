@@ -27,35 +27,35 @@
 
 \section{Motivation}
 When Henri Becquerel first discovered radioactivity in the 1890's, a new branch of atomic physics was born, namely nuclear physics, which is the study of the atomic nuclei, their constituents and interactions. 
-Over the years it has evolved quickly, first by the discovery of three different types of radiation by Curie and Rutherford, to the discovery of different nucleons, that the nucleus itself is made of. \\
+Over the years it has evolved quickly, first by the discovery of three different types of radiation by Curie and Rutherford, to the discovery of different nucleons, that the nucleus itself is made of. \note{måske ref til Curie and Rutherford?} \\
 \\
 The technological advancements has made the study even more precise over the years, as the development of radioactive beams allow for the creation of specific short lived isotopes.
 This technique is known as Isotope Separation On-Line (ISOL), which was first developed in 1951 for the Copenhagen Cyclotron. 
-Now the technology is available in many parts of the world, such as the IGISOL facility at the University of Jyväskylä in Finland.
+Now the technology is available in many parts of the world, such as the IGISOL facility at the University of Jyväskylä in Finland. \note{Måske link til hjemmeside eller noget}
 Another important advancement is the development of very precise detectors, such as the Double Sided Silicon Detector (DSSD), which allows for a very high energy and spacial resolution, which can give a detailed analysis of both coincidence and kinematics. \\
 \\
-This brings us onto the current experiment that i have analyzed in this thesis. At the IGISOL facility, the experiment I257 was carried out in august 2020. The objective of the experiment was to measure \be-decays from \li and \isotope[12]{B}, however, this thesis will only govern the \li decay. \\
-The \be-\al\ angular correlation is previously shown with high precision to be nearly isotropic \cite{isotrop}. The study of the \be-\al\ correlation in \li will therefore serve as a good indicator for the \be-\al\ correlation in \isotope[12]{B}, as the same setup will be used for both experiment. \\
-A former student has previously made an in depth analysis of the mirror nucleus \isotope[8]{B}, which can be used to compare the excitation energy of \ber. A comparison of the two is unfortunately out of scope for this thesis.
+This brings us onto the current experiment that I have analyzed in this thesis. At the IGISOL facility, the experiment I257 was carried out in august 2020. The objective of the experiment was to measure \be-decays from \li and \isotope[12]{B}, however, this thesis will only govern the \li decay. \\
+\note{Man ved måske ikke helt hvad beta-alfa er her} The \be-\al\ angular correlation is previously shown with high precision to be nearly isotropic \cite{isotrop}. The study of the \be-\al\ correlation in \li will therefore serve as a good indicator for the \be-\al\ correlation in \isotope[12]{B}, as the same setup will be used for both experiments. \\
+A former student has previously made an in depth analysis of the mirror nucleus \isotope[8]{B}, which can be used to compare the excitation energy of \ber. A comparison of the two is unfortunately out of scope for this thesis \note{Måske referer til former student - spørg Hans hvordan}.
 
 
 \section{Nuclear decays}
 Lithium normally occurs stable as \isotope[6]Li and \isotope[7]Li, with the latter being the more abundant with 92.5\% of all atoms. The longest living radioactive lithium isotope is \isotope[8]Li, with a half-life of \SI{839}{ms} \note{ref}. 
-When \li decays, it will do so under a \be-decay, immediately followed by the \al-\al\ breakup of an intermediate exited state in \ber, which has a half life of \SI{1e-16}{s}. \ber is a constituent in the triple-alpha process in stellar astrophysics, and creates a bottleneck for the creation of heavier elements, because of its very short lifespan.
+When \li decays, it will do so under a \note{by i stedet for under a?} \be-decay, immediately followed by the \al-\al\ breakup of an intermediate exited state in \ber, which has a half life of \SI{1e-16}{s}. \ber is a constituent in the triple-alpha process in stellar astrophysics, and creates a bottleneck for the creation of heavier elements, because of its very short lifespan.
 
 %\li will also decay into \ber at different energy levels, which will give a continuum of the 2+ state from \li. 
 
 \subsection{\be-decay}
 Most light unstable nuclei will decay by either proton/neutron emission, or by a \be-decay. Isotopes that lie close to the valley of stability will not decay by proton/neutron emission, but from a \be-decay.
 \\
-A \be-decay is a weak interaction, which allows a quark in a proton or neutron to change flavor, by emitting a W boson. This leads to the creation of either an electron/antineutrino pair or a positron/neutrino pair, shown as:
+A \be-decay is a weak interaction, which allows a quark in a proton or neutron to change flavor, by emitting a W boson. This leads to the creation of either an electron/antineutrino pair or a positron/neutrino pair, shown as \note{måske slet shown as?}:
 \begin{align}
 &\beta^+:\quad p\rightarrow n + e^+ + \nu_e\\
 &\beta^-:\quad n\rightarrow p + e^- + \bar{\nu_e}.
 \end{align}
 Nuclei below the valley of stability will decay by $\beta^-$, while nuclei above decays by $\beta ^+$.
 
-The energy for these decays are given by their Q-values, neglecting the very small neutrino mass and the binding energy of the electrons gives:
+The energy for \note{of these decays} these decays are given by their Q-values, neglecting the very small neutrino mass and the binding energy of the electrons gives:
 \begin{align}
 &Q_{\beta^+} = \left[ m (\isotope[A][Z]{X}) - m(\isotope[A][Z-1]{X'})  		 \right] c^2\\
 &Q_{\beta^-} = \left[ m (\isotope[A][Z]{X}) - m(\isotope[A][Z+1]{X'}) -2m_e  \right] c^2,
@@ -85,7 +85,7 @@ Q_\alpha =  \left[ m (\isotope[A][Z]{X}) - m(\isotope[A-4][Z-2]{X'})  	- m_\alph
 Usually it is only elements heavier than nickel that can decay via this process, as the binding energy per nucleon decreases, and therefore becomes unstable towards spontaneous fission type processes. The only known exception to this rule is then \ber, which is the only light nuclei that decays by \al-decay. 
 
 \section{Structure of $^8$Be}
-\cref{fig:berStructure} shows the excitation spectrum for \ber, with values from \cite{TILLEY2004155}. The spin, parity and isospin are written as $J^\pi ; T$ for each level. 4 different states has been shown for \ber, where only the first excited state is the broad state at \SI{3.03}{MeV}. This state has conservation of spin and parity from \li and is the only state that is allowed for the decay of \li. Sittuated above is the broad state at \SI{11.35}{MeV}, which does not conserve spin. Above that is a \SI{16.626}{MeV} state, which conserves spin,parity and isospin, but lies energetically above \li, so we would not expect that to shown in the data. It is still a quite relevant state, as the mirror nucleus \isotope[8]{B} $(2^+; 1)$ lies just above the energy at \SI{17.979}{MeV}, and then has enough energy to populate this state, even though it is not very likely. Previous experiments made by the Aarhus subatomic group has examined the decay, and found only 5 counts populating this excitation level. But that should not show up when looking at the decay of \li.
+\Cref{fig:berStructure} shows the excitation spectrum for \ber, with values from \cite{TILLEY2004155}. The spin, parity and isospin are written as $J^\pi ; T$ for each level. 4 different states has been shown for \ber, where only the first excited state is the broad state at \SI{3.03}{MeV}. This state has conservation of spin and parity from \li and is the only state that is allowed for the decay of \li. \note{Sittuated} above is the broad state at \SI{11.35}{MeV}, which does not conserve spin. Above that is a \SI{16.626}{MeV} state, which conserves spin, parity and isospin, but lies energetically above \li, so we would not expect that to shown in the data. It is still a quite relevant state, as the mirror nucleus \isotope[8]{B} $(2^+; 1)$ lies just above the energy at \SI{17.979}{MeV}, and then has enough energy to populate this state, even though it is not very likely. Previous experiments made by the Aarhus subatomic group has examined the decay, and found only 5 counts populating this excitation level. But that should not show up when looking at the decay of \li.
 
 
 \begin{figure}

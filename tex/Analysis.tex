@@ -77,7 +77,7 @@ On \cref{fig:allCutsCompare} all the cuts are shown as individually, highlightin
 \begin{figure}[h]
 	\centering
 	\includegraphics[width=\linewidth]{../figures/cutCompare.pdf}
-	\caption{A comparison of all the cut, where the energy of the first \al-particle is plotted. }
+	\caption{A comparison of all the cuts, where \note{with the energy...} the energy of the first \al-particle is plotted. }
 	\label{fig:allCutsCompare}
 \end{figure}
 
@@ -96,7 +96,7 @@ Det2 shows two peaks, one close to \SI{400}{keV}, and one close to \SI{800}{keV}
 \end{figure}
 
 \section{The excitation energy of $^8$Be}
-With the \al-particles sorted correctly, we can start to look at the excitation energy of \ber. All products of this decay will hit our detectors, and the entire energy of the decay can be measured. On \cref{fig:doubleAlpha} the sum of both \al-particles energies are shown.
+With the \al-particles sorted correctly, we can start to look at the excitation energy of \ber. All products of this decay will hit our detectors, and the entire energy of the decay can be measured. On \cref{fig:doubleAlpha} the sum of both \al-particles energies are shown \note{Er det et spektrum? Så kan de evt nævnes}.
  
 
 
@@ -110,36 +110,36 @@ With the \al-particles sorted correctly, we can start to look at the excitation 
 \begin{figure}[h]
 	\centering
 	\includegraphics[width=\linewidth]{../figures/doubleAlpha.pdf}
-	\caption{The energy spectra of both \al-particles, that is the exitation energy of \isotope[8]Be.}
+	\caption{The energy spectra of both \al-particles, that is the exitation energy of \isotope[8]Be. \note{Det forstår jeg ikke helt, skal det evt uddybes?}}
 	\label{fig:doubleAlpha}
 \end{figure}
 
 \section{Angular efficiency of the setup}
 Since the detectors are unable to cover the entire solid angle, there will always be some mutual angles that are more likely to be measured. 
 If we only look at one detector, a very large number of angles are not covered, but small mutual angles such as $\theta \approx 0$, are very easy to measure, as it is just a measurement of two particles in the same pixel. 
-This effect becomes apparent on \cref{fig:oneDetEff}, where the angular efficiency is shown for Det2. For a single detector, there cannot be angles of $\theta = 90$ and higher, as the detector is flat. In this detector, the lowest angle found was $\cos(\theta) = 0.21 = 77\degree$.\\
+This effect becomes apparent on \cref{fig:oneDetEff}, where the angular efficiency is shown for Det2. For a single detector, there cannot be angles of $\theta = 90$ and higher, as the detector is flat. In this detector, the lowest angle found was $\cos(\theta) = 0.21 = 77\degree$ \note{Det er vist ikke rigtig notation}.\\
 
 \begin{figure}[h]
 	\includegraphics[width=\linewidth]{../figures/det2Eff.pdf}
 	\caption{The angular efficiency of a single detector (Det2). For one flat detector, there can never be angles of $90\degree$ and higher.}
 	\label{fig:oneDetEff}
 \end{figure}
-In this setup however, we a cube of square detectors, who's normal vectors are all pointing in towards target at the center. This gives a much larger coverage of all mutual angles. 
+In this setup however, we \note{mangler et ord her} a cube of square detectors, who's normal vectors are all pointing in towards target at the center. This gives a much larger coverage of all mutual angles. 
 The placement of the detectors gives that angles around $\theta \approx 90 \degree$ are also very favored. This makes sense, almost no matter what pixel was hit, there is a corresponding pixel $90\degree$ to both sides. In the same way, will there always be a corresponding pixel $\approx 180\degree$ from each pixels. This effect can be seen on \cref{fig:effAllDet}. \\
-This histogram was created by using the spacial coordinates of the entire setup. First the positions of each pixel in each detector was found. Then two loops running over each pixel pair $i, j$, finds the angle between these pixels and saves it.\\
+This histogram was created by using the spacial coordinates of the entire setup. First the positions of each pixel in each detector was found. Then two loops running over each pixel pair $i, j$, finds the angle between these pixels and saves it \note{jeg ved ikke om man forstår dette hvis man ikke har været med til dette, så måske uddyb}.\\
 
 \begin{figure}[h]
 	\includegraphics[width=\linewidth]{../figures/allDetEff.pdf}
 	\caption{Two normalized histograms of the angular efficiency of the entire setup. The red histogram does not account for the effective area of a pixel. The blue is the true angular efficiency.}
 	\label{fig:effAllDet}
 \end{figure}
-There is still a geometric effect that is not accounted for in the above analysis. We still need to consider that not all pixels in the detector has the same effective area. 
-A pixel furthest out in a detector will have a effective area smaller than the area of a pixel in the center. This effect can be seen on \cref{fig:MexiHatDetector}. Here we see that there is a much higher count of particles hitting the center of the detector, and fewer hitting the edges. A white line crossing through the middle is a defect strip, which did not measure anything. Sadly, some of the detectors had defect strips, but on a large scale it was not very noticeable.
+There is still a geometric effect that is not accounted for in the above analysis. We  \note{måske slet still - gentagelse}still need to consider that not all pixels in the detector has the same effective area. 
+The pixel furthest out in a detector will have a effective area smaller than the area of a pixel in the center. This effect can be seen on \cref{fig:MexiHatDetector}. Here we see that there is a much higher count of particles hitting the center of the detector, and fewer hitting the edges. A white line crossing through the middle is a defect strip, which did not measure anything. Sadly, some of the detectors had defect strips, but on a large scale it was not very noticeable \note{måske lidt vagt}.
 \begin{figure}[h]
 	\begin{subfigure}[t]{.5\linewidth}
 		\centering
 		\includegraphics[width=\linewidth]{../figures/mexihatDet2.pdf}
-		\caption{A plot over the number of hits in each strip for Det2. The white line in the middle is a defect strip, that did not measure anything. }
+		\caption{A plot over the number of hits in each strip for Det2. The white line in the middle is a defect strip, that did not measure anything.}
 		\label{fig:MexiHatDetector}
 	\end{subfigure}
 	\begin{subfigure}[t]{.5\linewidth}
@@ -148,9 +148,10 @@ A pixel furthest out in a detector will have a effective area smaller than the a
 		\caption{A theoretical intensity Det2. }
 		\label{fig:MexiHatDetectorTheory}
 	\end{subfigure}
+\caption{}
 \end{figure}
 
-To account for this effect, each pixel will be associated with a corresponding area-efficiency $(\text{Eff}_A)$.
+To account for this effect \note{det lyder som om der referes til effekten af de døde strips}, each pixel will be associated with a corresponding area-efficiency $(\text{Eff}_A)$.
 This is calculated as 
 \begin{equation}
 \text{Eff}_A = \dfrac{A\cos(\theta) }{ 4 \pi r^2},
@@ -162,11 +163,11 @@ where $r$ is the distance to the pixel, $A$ is the area of the pixel and $\theta
 \begin{figure}[H]
 	\centering
 	\includegraphics[width=.7\linewidth]{../figures/detektorEffDrawingv2.pdf}
-	\caption{A illustration of two hits in different pixels. The blue hit will see a smaller effective area of the pixel by a factor determined by \cref{eq:eff}.}
+	\caption{A illustration of two hits in different pixels. The blue hit will see a smaller effective area of the pixel by a factor determined by \cref{eq:eff} \note{Måske tilføj "den blå retnmingsvektor projiceret på den stiplede linje bliver minder for større theta eller noget´}. \note{Denne figur er kommet i forkert rækkefølge}}
 	\label{fig:EffGeometry}
 \end{figure}
 
-On \cref{fig:effwithweight} two histograms can be seen. The red line represents the angular efficiency of the setup, without accounting for the relative area of the pixels, while the blue line is a weighted histogram for the same angles, with each pixels relative area accounted for. \\
+On \cref{fig:effAllDet} two histograms can be seen. The red line represents the angular efficiency of the setup, without accounting for the relative area of the pixels, while the blue line is a weighted histogram for the same angles, with each pixels relative area accounted for. \\
 The form of the two histograms are quite similar around 1, 0 and $-1$ but in between there is a rather prominent difference. Therefore it is important that the effective area of the pixel is accounted for, when we in \cref{sec:betaAngle} will look at the angular correlations of the \be-particle in the setup. 
 
 
@@ -174,16 +175,16 @@ The form of the two histograms are quite similar around 1, 0 and $-1$ but in bet
 \section{Angular correlations of \al-particles and \be-particles}
 \label{sec:betaAngle}
 From what we know in \note{ref til beta = isotrop} the \be-particles must have an isotropic distribution. Since we only have two detectors in the setup that are capable of measuring \be-particles, we cannot measure the angle from one particle to something constant, i.e. the beam. Therefore we measure the angle between both \al-particles and the \be-particles.
-This is done by first finding the angle between the first \al-particle \al$_1$, and create a histogram of this. Then the angle between the second \al-particle \al$_2$ is measured, and a histogram is created. The two histograms are then added, to get the full picture of the mutual angles of the particles. 
+This is done by first finding the angle between the first \al-particle \al$_1$ \note{vinkel mellem alfa og hvad?}, and create a histogram of this. Then the angle between the second \al-particle \al$_2$ is measured \note{vinkel mellem alfa og hvad?}, and a histogram is created. The two histograms are then added, to get the full picture of the mutual angles of the particles. 
 This can be seen on \cref{fig:effwithweight} as the green line.  
 
-The blue line is this figure is the angular efficiency for the specific case, where the \al-particles can hit in any given detector, but the \be-particles can only hit in the two specific detectors Det2 and DetD. The two histograms has both been normalized, for a better comparison. By dividing the two histograms with each other, we get a better comparison. If they where to be close to equal, we would see a flat curve. But what we see on \cref{fig:dataDivEff} is not very flat. 
+The blue line in this figure is the angular efficiency for the specific case, where the \al-particles can hit in any given detector, but the \be-particles can only hit in the two specific detectors Det2 and DetD. The two histograms has both been normalized, for a better comparison. By dividing the two histograms with each other, we get a better comparison. If they where to be close to equal, we would see a flat curve. But what we see on \cref{fig:dataDivEff} is not very flat. 
 There are small fluctuations in the line, which stems from the inaccuracy of calculated angular efficiency. But the main shape of the curve is at most time not around $y=1$.
 
 \begin{figure}[h]
 	\centering
 	\includegraphics[width=\linewidth]{../figures/betaAngles/betaAngle.pdf}
-	\caption{Some figure of the efficiency of the setup without efficiency of each pixel. }
+	\caption{Some figure of the efficiency of the setup without efficiency of each pixel. \note{anden figurtekst?}}
 	\label{fig:effwithweight}
 \end{figure}
 
@@ -197,7 +198,7 @@ There are small fluctuations in the line, which stems from the inaccuracy of cal
 There are two different explanations as to why this might be.
 The first explanation is that the beam did not hit the target in the center. The calculated efficiency assumes that the beam hits precisely in the middle, but in any setup, there can be a few millimeters of errors. 
 
-By finding the angular efficiency of the setup, with different values for the center and comparing this to the measured angles, we have found a slight correction for the center of the beam. This can be seen on \cref{fig:centerCorrection}, where the beam has been moved to the coordinates $(-3, -3, 0)$, as opposed to the previous of $(0, 0, 0)$. The division fo the two histograms on \cref{fig:dataDivEffCenter} shows a more stable line from $\cos(-0.4)$ to $\cos(0.4)$, but the edges are still not very alike. Looking at $\cos(1)$, we see a rapid fall, which indicates that we have measured a lot fewer parallel \be\ and \al-particles than the setup is designed to handle. 
+By finding the angular efficiency of the setup, with different values for the center and comparing this to the measured angles, we have found a slight correction for the center of the beam. This can be seen on \cref{fig:centerCorrection}, where the beam has been moved to the coordinates $(-3, -3, 0)$, as opposed to the previous of $(0, 0, 0)$. The division fo the two histograms on \cref{fig:dataDivEffCenter} shows a more stable line from $\cos(-0.4)$ to $\cos(0.4)$ \note{cos(a) = -0.4}, but the edges are still not very alike. Looking at $\cos(1)$\note{cos(a) = 1}, we see a rapid fall, which indicates that we have measured a lot fewer parallel \be\ and \al-particles than the setup is designed to handle. 
 This can be due to the fact that some of the strips where defect. The calculated angular efficiency does not know which strips where defect, and and will therefore have a lot higher efficiency for parallel particles. The defect strips will therefore also play a role in the grand scheme, and is a possible explanation as to why there is a difference in the calculated and the measured data. \\
 Another effect that will sway the data, is the target holder. This device will provide a shadow over the top and bottom detector, and since one of the \be-detectors are the bottom one, it will skew the data in a unforeseeable way. 
 \begin{figure}[h]
@@ -210,7 +211,7 @@ Another effect that will sway the data, is the target holder. This device will p
 	\begin{subfigure}[]{.5\linewidth}
 		\centering
 		\includegraphics[width=\linewidth]{../figures/betaAngles/dataDivEffCenterCorrected.pdf}
-		\caption{Measured \be- \al-particle angular distribution divided by the calculated angular efficiency of the setup, with a correction for position of the beam. }
+		\caption{Measured \be-\al-particle angular distribution divided by the calculated angular efficiency of the setup, with a correction for position of the beam. }
 		\label{fig:dataDivEffCenter}
 	\end{subfigure}
 \end{figure}
