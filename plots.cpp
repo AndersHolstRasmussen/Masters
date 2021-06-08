@@ -28,6 +28,28 @@
 using namespace std;
 using namespace ROOT;
 
+void betaMul(RDataFrame *df){
+    auto c = new TCanvas();
+    gStyle->SetOptTitle(0);
+    gStyle->SetOptStat(0);
+    gStyle->SetPalette(kViridis);
+    int bins = 10;
+    double xmin = 0;
+    double xmax = 10;
+
+    auto data = df->Define("x", "mulBeta");
+    auto h = data.Histo1D({"Stats", "data / efficiency", bins, xmin, xmax}, "x");
+    h->SetLineColor(kBlue);
+    h->SetLineWidth(3);
+    auto xaxis = h->GetXaxis();
+    xaxis->SetTitle("\\beta multiplicity");
+    xaxis->CenterTitle();
+    
+    c->SetLogy();
+    h->DrawClone();
+    c->SaveAs("/home/anders/i257/figures/betaMul.pdf");
+}
+
 void singleDetectorEff(RDataFrame *df){
     auto c = new TCanvas();
     gStyle->SetOptTitle(0);
@@ -134,7 +156,7 @@ void mexiHatDetector(RDataFrame *df){
     double xymin = 0;
     double xymax = 17;
 
-    auto data = df->Define("x", "FI._FI[0]").Define("y", "BI._BI[0]").Filter("ibeta._ibeta[0] == 5 "); // || i._i[1] == 1
+    auto data = df->Define("x", "FI._FI[0]").Define("y", "BI._BI[0]").Filter(" i._i[0] == 1"); // || i._i[1] == 1 ibeta._ibeta[0] == 1 
     auto h = data.Histo2D({"stats", "title", bins, xymin, xymax, bins, xymin, xymax}, "x", "y");
     auto xaxis = h->GetXaxis();
     auto yaxis = h->GetYaxis();
@@ -257,9 +279,14 @@ void cosang(RDataFrame *df){
 
     auto data = df->Define("x", "cosAngAll._cosAngAll");
     auto h = data.Histo1D({"Stats", "cos(a)", 300, -1, 1}, "x");
+    h->SetLineWidth(3);
+    h->SetLineColor(kBlue);
     auto xaxis = h->GetXaxis();
+    auto yaxis = h->GetYaxis();
     xaxis->SetTitle("cos(\\theta)");
     xaxis->CenterTitle();
+    yaxis->SetTitle("Counts");
+    yaxis->CenterTitle();
     c->SetLogy();
     h->DrawClone();
     c->Modified();
@@ -397,7 +424,8 @@ void betaSpec(RDataFrame *df){
     auto h2 = data2.Histo1D({"Stats", "Beta spectrum", 300, 1, 2000}, "x");
     auto hpadD = datapadD.Histo1D({"Stats", "Beta spectrum", 300, 1, 2000}, "x");
     auto hpad2 = datapad2.Histo1D({"Stats", "Beta spectrum", 300, 1, 2000}, "x");
-    TAxis *xaxis = hD->GetXaxis();
+    TAxis *xaxis = hpad2->GetXaxis();
+    TAxis *yaxis = hpad2->GetYaxis();
     hD->SetLineColor(kRed);
     hD->SetLineWidth(3);
     h2->SetLineColor(kBlue);
@@ -413,6 +441,9 @@ void betaSpec(RDataFrame *df){
     hpad2->Scale(factor/hpad2->Integral(), "width");
 
     xaxis->SetTitle("E_{\\beta} [keV]");
+    xaxis->CenterTitle();
+    yaxis->SetTitle("Counts");
+    yaxis->CenterTitle();
     
 
     hpad2->DrawClone("HIST");
@@ -953,6 +984,7 @@ int main(int argc, char *argv[]) {
     
     // Below here is all the plotting methods. Out comment the one you want to run. (Bad code dont judge!)
 
+    // betaMul(&dfNoCut);
     // momentumPlot(&df);
     // fixCenterPos(&df);
     // singleDetectorEff(&df);
@@ -960,7 +992,7 @@ int main(int argc, char *argv[]) {
     // mexiHatDetector(&df);
     // detectorEff(&df);
     // alphaEffeciency(&df);
-    // cosang(&df);
+    cosang(&dfNoCut);
     // EEfigure(&df);
     // betaAlphaDifferentEnergies(&df);
     // betaAlphaAngle(&df);
@@ -971,7 +1003,7 @@ int main(int argc, char *argv[]) {
     // singleAlphaSpectre(&df);
     // doubleAlphaSpectra(&df);
     // compareCuts(&df, &dfNoCut, &dfAng, &dfMoment, &dfBetaMul, &dfAngAndMoment);
-    energyDifference(&df);
+    // energyDifference(&df);
     app->Run(); // show all canvas
     return 0;
 }

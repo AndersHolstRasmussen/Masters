@@ -13,4 +13,26 @@ D.R. Tilley, J.H. Kelley, J.L. Godwin, D.J. Millener, J.E. Purcell, C.G. Sheu,
 \newblock Energy levels of light nuclei a=8,9,10.
 \newblock {\em Nuclear Physics A}, 745(3):155--362, 2004.
 
+\bibitem{ROOT}
+{CERN. ROOT}.
+\newblock \url{https://root.cern/}.
+\newblock 2021.
+
+\bibitem{AUSA}
+M.~Munch, J.~Halkjær, and O.~S. Kirsebom.
+\newblock Ausalib - aarhus subatomic library.
+\newblock \url{https://git.kern.phys.au.dk/ausa/ausalib/wikis/home}, 2017.
+
+\bibitem{ucesb}
+ucesb.
+\newblock \url{fy.chalmers.se/~f96hajo/ucesb/}.
+\newblock Accessed \today.
+
+\bibitem{ZIEGLER20101818}
+James~F. Ziegler, M.D. Ziegler, and J.P. Biersack.
+\newblock Srim – the stopping and range of ions in matter (2010).
+\newblock {\em Nuclear Instruments and Methods in Physics Research Section B:
+  Beam Interactions with Materials and Atoms}, 268(11):1818--1823, 2010.
+\newblock 19th International Conference on Ion Beam Analysis.
+
 \end{thebibliography}
