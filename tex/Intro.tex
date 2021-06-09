@@ -36,7 +36,7 @@ Another important advancement is the development of very precise detectors, such
 \\
 This brings us onto the current experiment that I have analyzed in this thesis. At the IGISOL facility, the experiment I257 was carried out in august 2020. The objective of the experiment was to measure \be-decays from \li and \isotope[12]{B}, however, this thesis will only govern the \li decay. \\
 In precious studies, it has been shown that angle between the \be-particle and the \al-particles are very close to isotropic \cite{isotrop}. The study of the \be-\al\ correlation in \li will therefore serve as a good indicator for the \be-\al\ correlation in \isotope[12]{B}, as the same setup will be used for both experiments. \\
-A former student has previously made an in depth analysis of the mirror nucleus \isotope[8]{B}, which can be used to compare the excitation energy of \ber \cite{andreas}. A comparison of the two is unfortunately out of scope for this thesis.
+A former student has previously made an in depth analysis of the mirror nucleus \isotope[8]{B}, which can be used to compare the excitation energy of \ber \cite{andreas}. 
 
 
 \section{Nuclear decays}
@@ -46,6 +46,7 @@ When \li decays, it will do so by a \be-decay, immediately followed by the \al-\
 %\li will also decay into \ber at different energy levels, which will give a continuum of the 2+ state from \li. 
 
 \subsection{\be-decay}
+\label{sec:beta}
 Most light unstable nuclei will decay by either proton/neutron emission, or by a \be-decay. Isotopes that lie close to the valley of stability will not decay by proton/neutron emission, but from a \be-decay.
 \\
 A \be-decay is a weak interaction, which allows a quark in a proton or neutron to change flavor, by emitting a W boson. This leads to the creation of either an electron/antineutrino pair or a positron/neutrino pair:
@@ -81,7 +82,7 @@ The ground state of \li has spin, parity and isospin of $2^+; 1$, and a mass of 
 Looking at the states in \ber, there are only 3 states below the threshold of \SI{16.005}{MeV}, that is the ground state, first and second excited state. 
 The ground state is a $0^+; 0$ state, with $\Delta J = 2$, which is forbidden given the selection rules. 
 
-The first excited state is a broad state at \SI{3.03}{MeV} and $2^+; 0$, which gives $\Delta J = 0, \Delta pi = 0$ and $\Delta T = 1$. This transition is valid within the selection rules, and is in fact the only state that will be populated in the decay.
+The first excited state is a broad state at \SI{3.03}{MeV} and $2^+; 0$, which gives $\Delta J = 0, \Delta \pi = 0$ and $\Delta T = 1$. This transition is valid within the selection rules, and is in fact the only state that will be populated in the decay.
 
 The second excited state at \SI{11.35}{MeV} is a  $4^+; 0$, where $\Delta J = 2$, so the state will not be populated either.
 The energy levels and properties can be seen on \cref{fig:berStructure}.
@@ -93,6 +94,10 @@ Q_\alpha =  \left[ m (\isotope[A][Z]{X}) - m(\isotope[A-4][Z-2]{X'})  	- m_\alph
 \end{equation}
 Usually it is only elements heavier than nickel that can decay via this process, as the binding energy per nucleon decreases, and therefore becomes unstable towards spontaneous fission type processes. 
 One of the only exceptions to this, is \ber, which is one of the only light nuclei that decays by \al-decay.
+
+\subsection{Production of \li}
+The production of \li is rather crucial to the existance of the experiment, which is why the experiment had to be conducted at IGISOL \note{HEJ SKRIV JYV}. This facility is specialized in creating near stable isotopes of many elements. \\
+In simple steps, the stable \isotope[7]{Li} is hit by a deuteron, where the neutron will stick to the the nucleus of \isotope[7]Li, and create ionized \li. When it becomes ionized, it can be acellerated into a beam and shot at the target. The target is a thin carbon foil, where the ionized \li will be stopped and lie. The target will transfer an electron to \li, making it not ionized, and we are left with pure \li just where we want it.  
 
 \section{Structure of $^8$Be}
 \Cref{fig:berStructure} shows the excitation spectrum for \ber, with values from \cite{TILLEY2004155}. The spin, parity and isospin are written as $J^\pi ; T$ for each level. 4 different states has been shown for \ber, where only the first excited state is the broad state at \SI{3.03}{MeV}. This state has conservation of spin and parity from \li and is the only state that is allowed for the decay of \li. Situated above is the broad state at \SI{11.35}{MeV}, which does not conserve spin. Above that is a \SI{16.626}{MeV} state, which conserves spin, parity and isospin, but lies energetically above \li, so we would not expect that to shown in the data. It is still a quite relevant state, as the mirror nucleus \isotope[8]{B} $(2^+; 1)$ lies just above the energy at \SI{17.979}{MeV}, and then has enough energy to populate this state, even though it is not very likely. Previous experiments made by the Aarhus subatomic group has examined the decay, and found only 5 counts populating this excitation level. But that should not show up when looking at the decay of \li.

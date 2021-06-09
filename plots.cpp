@@ -922,7 +922,7 @@ void batara(RDataFrame *df){
 
     int bins = 300;
     double xmin = 0;
-    double xmax = 17;
+    double xmax = 16;
 
 
     auto data = df->Define("x", "(E._E[0] + E._E[1])/1000");
@@ -961,8 +961,9 @@ void batara(RDataFrame *df){
     h->SetLineColor(kBlue);
     bat->SetLineColor(kGreen);
     bat->SetLineWidth(3);
+    h->DrawClone("HIST SAME");
     bat->Draw("AC");
-    h->DrawClone("SAME HIST");
+    
 
     auto legend = new TLegend(0.78, 0.78, 0.88, 0.88);
     legend->AddEntry(h->Clone(), "Our data");
@@ -1097,8 +1098,8 @@ int main(int argc, char *argv[]) {
     // doubleAlphaSpectra(&df);
     // compareCuts(&df, &dfNoCut, &dfAng, &dfMoment, &dfBetaMul, &dfAngAndMoment);
     // energyDifference(&df);
-    // batara(&df);
-    recoil(&df);
+    batara(&df);
+    // recoil(&df);
     app->Run(); // show all canvas
     return 0;
 }

@@ -64,8 +64,6 @@ There is a very prominent line of particles with roughly the same energy.
 The line is thinner at higher energies, and widens as it goes towards lower energies. 
 The reason for the widening, is the recoil energy from the \be-decay.
 If the \al-particles have low energy, they are more susceptible to other forces around it, and will lose a larger portion of their energy to the \be-particle recoil. \\
-\\
-On \cref{fig:allCutsCompare} all the cuts are shown as individually, highlighting the effect that each cut provides. Here it is worth noting that not all \be-particles have been successfully removed from the data. A slight peak at low energies still remain for the black line in the figure. This is also clear on \cref{fig:EEAllCuts}, where the there is a high intensity at the $\approx$ \SI{200}{keV} energy range. 
 
 \begin{figure}[h]
 	\centering
@@ -73,6 +71,12 @@ On \cref{fig:allCutsCompare} all the cuts are shown as individually, highlightin
 	\caption{The energy of the first \al-particle plotted against the energy of the second \al-particle. All of the data reduction cuts are used here.}
 	\label{fig:EEAllCuts}
 \end{figure}
+On \cref{fig:allCutsCompare} all the cuts are shown as individually, highlighting the effect that each cut provides. Here it is worth noting that not all \be-particles have been successfully removed from the data. A slight peak at low energies still remain for the black line in the figure. This is also clear on \cref{fig:EEAllCuts}, where the there is a high intensity at the $\approx$ \SI{200}{keV} energy range. 
+
+An interesting effect that can be seen on the data, is the importance of the momentum cut. Looking the red and green line, we see a soft reduction in counts, different from the more rapid fall around \SI{7}{MeV}. This is because there can be events where a particle will hit the detector, triggering it to measure, and before it turns completely off for detecting, another particle hits, and some of the the energies from both particles are measured as one particle. \\
+So the momentum cut will also cut bad detection events away from the data in the high energy regime. 
+
+
 
 \begin{figure}[h]
 	\centering
@@ -86,8 +90,6 @@ On \cref{fig:beSpectrum} we see the energy deposited in the two detectors that a
 The energy from the pad and DetD, shows one peak around \SI{400}{keV} and \SI{300}{keV}, respectively. 
 Det2 shows two peaks, one close to \SI{400}{keV}, and one close to \SI{800}{keV}. This is rather interesting, as we do not expect \be-particles to deposit two different energies. Both detectors and the pad where \SI{1000}{\mu m} thick, so we expect that the energy deposited would be roughly the same. 
 
-
-
 \begin{figure}[h]
 	\centering
 	\includegraphics[width=\linewidth]{../figures/betaSpec.pdf}
@@ -96,22 +98,24 @@ Det2 shows two peaks, one close to \SI{400}{keV}, and one close to \SI{800}{keV}
 \end{figure}
 
 \section{The excitation energy of $^8$Be}
-With the \al-particles sorted correctly, we can start to look at the excitation energy of \ber. All products of this decay will hit our detectors, and the entire energy of the decay can be measured. On \cref{fig:doubleAlpha} the sum of both \al-particles energies are shown \note{Er det et spektrum? Så kan de evt nævnes}.
- 
+With the \al-particles sorted correctly, we can start to look at the excitation energy of \ber. As mentioned in \cref{sec:beta} the \be-decay of \li will populate a broad exited state of \ber. This will give a more wide peak than we normally see in \al-decays. On \cref{fig:bata} the energy sum of the \al-particles has been plotted as the blue line. The peak lies closely to the mean energy of the exited state of \SI{3.03}{MeV}, and then has a long tail all the way up to the around \SI{16}{MeV}.
 
+At the low end of the spectra, there is a small peak just before the beginning of the main peak. This is the reminiscence of low energy \be-\be\ pairs that have not been sorted in the data. We will not worry too much about this, as the interesting properties of the spectra lies at higher energies than the main peak.
+
+The green line is a fit made to another experiment by Bhattacharya \cite{bata}. The fitted green line has been multiplied by 70 as to better compare the two plots. 
+The plots differ a lot in the low energy range, as the \be-particle contribution is rather prominent. But around the peak and at higher energy, the fit and our data follows nicely. At the very end, they differ again, as there seem to be some noise in our data, since the counts are too low to be considered otherwise. 
 
 %\begin{figure}[h]
 %	\centering
-%	\includegraphics[width=\linewidth]{../figures/singleAlpha.pdf}
-%	\caption{The energy spectra of a single \al-particle.}
-%	\label{fig:singleAlpha}
+%	\includegraphics[width=\linewidth]{../figures/doubleAlpha.pdf}
+%	\caption{The energy spectra of both \al-particles, that is the exitation energy of \isotope[8]Be. \note{Det forstår jeg ikke helt, skal det evt uddybes?}}
+%	\label{fig:doubleAlpha}
 %\end{figure}
-
 \begin{figure}[h]
 	\centering
-	\includegraphics[width=\linewidth]{../figures/doubleAlpha.pdf}
-	\caption{The energy spectra of both \al-particles, that is the exitation energy of \isotope[8]Be. \note{Det forstår jeg ikke helt, skal det evt uddybes?}}
-	\label{fig:doubleAlpha}
+	\includegraphics[width=\linewidth]{../figures/bataraCompare.pdf}
+	\caption{A comparison between the spectra of the excited state in \ber from this experiment(blue), and a fit found by Bhattacharya \cite{bata} (green).}
+	\label{fig:bata}
 \end{figure}
 
 \section{Angular efficiency of the setup}
