@@ -2,7 +2,7 @@
 \contentsline {section}{\numberline {1.1}Motivation}{1}{section.1.1}%
 \contentsline {section}{\numberline {1.2}Nuclear decays}{2}{section.1.2}%
 \contentsline {subsection}{\numberline {1.2.1}$\beta $-decay}{2}{subsection.1.2.1}%
-\contentsline {subsection}{\numberline {1.2.2}$\alpha $-decay}{3}{subsection.1.2.2}%
+\contentsline {subsection}{\numberline {1.2.2}$\alpha $-decay}{4}{subsection.1.2.2}%
 \contentsline {section}{\numberline {1.3}Structure of $^8$Be}{4}{section.1.3}%
 \contentsline {chapter}{\numberline {2}Experimental Methods}{6}{chapter.2}%
 \contentsline {section}{\numberline {2.1}Detector setup}{6}{section.2.1}%
@@ -27,5 +27,5 @@
 \contentsline {subsection}{\numberline {4.1.4}The combined effect of all the cuts}{24}{subsection.4.1.4}%
 \contentsline {section}{\numberline {4.2}The excitation energy of $^8$Be}{25}{section.4.2}%
 \contentsline {section}{\numberline {4.3}Angular efficiency of the setup}{26}{section.4.3}%
-\contentsline {section}{\numberline {4.4}Angular correlations of $\alpha $-particles and $\beta $-particles}{31}{section.4.4}%
+\contentsline {section}{\numberline {4.4}Angular correlations of $\alpha $-particles and $\beta $-particles}{29}{section.4.4}%
 \contentsline {chapter}{\numberline {5}Conclusion}{35}{chapter.5}%

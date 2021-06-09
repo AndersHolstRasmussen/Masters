@@ -1,13 +1,13 @@
 \chapter{Experimental Methods}
-The main goal of the experiment was to determine the \be-\al\ angular correlation. This\note{The experiment/It} was done at the IGISOL facility, at the University of Jyväskylä, where beams of all elements can be produced. The experiment took place in august 2020, due to a delay caused \note{delayed by the...} by the ongoing corona pandemic. This chapter will be concerning the experimental setup, a discussion of the detectors and an overview of the software used to extract and analyze the data. 
+The main goal of the experiment was to determine the \be-\al\ angular correlation. The experiment was done at the IGISOL facility, at the University of Jyväskylä, where beams of all elements can be produced. The experiment took place in august 2020, delayed by the ongoing corona pandemic. This chapter will be concerning the experimental setup, a discussion of the detectors and an overview of the software used to extract and analyze the data. 
 
 \section{Detector setup}
-The detection setup consists of 6 double sided silicon detectors (DSSD), and 6 single sided silicon detectors (SSD). 
-The detectors are $\SI{5}{cm} \times \SI{5}{cm}$ and placed in a cube around the a target in the center, as shown on figure \cref{fig:opstilling}. The setup is designed with measuring the opening angle of the $\beta$ \note{beta-hvad? partikel?} in mind, and therefore the detectors covers 51\% of the solid angle. \\
+%The detection setup consists of 6 double sided silicon detectors (DSSD), and 6 single sided silicon detectors (SSD). 
+%The detectors are $\SI{5}{cm} \times \SI{5}{cm}$ and placed in a cube around the a target in the center, as shown on figure \cref{fig:opstilling}. The setup is designed with measuring the opening angle of the $\beta$ \note{beta-hvad? partikel?} in mind, and therefore the detectors covers 51\% of the solid angle. \\
 
-
+The setup is designed mainly for the decay of 12B measured in the same experiment. In that decay three-alpha particles are emitted in less than 1\% of the decays and the setup should therefore have a high efficiency and be able to measure \al-particles in an environment with many beta-particles. 
 \section{Experimental setup}
-The setup is designed to measure $\beta-\alpha$ angular correlations in the $\beta$-delayed particle decay of \isotope[8][]{Li}. When measuring multiple particles, the setup is highly dependent on the coverage of the solid angle. Therefore the setup is designed to have a large solid angle coverage, with high $\alpha$-particle resolution, while still being able to measure $\beta$-particles. \note{Skal det eventuelt forklares ?}\\
+The setup is able to measure $\beta-\alpha$ angular correlations in the $\beta$-delayed particle decay of \isotope[8][]{Li}. When measuring multiple particles, the setup is highly dependent on the coverage of the solid angle. Therefore the setup is designed to have a large solid angle coverage, with high $\alpha$-particle resolution, while still being able to measure $\beta$-particles.\\
 This is has been achieved by creating a cube of six double sided silicon detectors (DSSD) \note{Jeg tror bare du kan bruge DSSD her}, all backed by a unsegmented silicon detectors (PAD). To gain the largest solid angle, the detectors where placed as close to one another as possible. A 3D printed case was designed to hold the detectors in place, and achieved a solid angle coverage of 51\% for the DSSD's, which can be seen on \cref{fig:cubepic}. An illustration of the setup, together with the different detectors' thickness can be seen on \cref{fig:opstilling}. 
 Even though the setup was designed to hold 12 detectors in total, there where only 11 detectors in the actual experiment. The PAD behind Det1 was defect, and was therefore removed. 
 
@@ -44,7 +44,7 @@ As the name suggests, it consists of two sides, a front layer and a back layer. 
 The strips on the front side are p-doped, while the back side are n-doped. When a charged particle hits the detector, it will ionize the atoms in the semi-conductor, and produce a electron-hole pair. The number of electron-hole pairs is proportional to the energy of the charged particle. 
 The bias voltage on the detector collects the electrons and holes on opposite sites of the strip, where the charge is collected on aluminum contacts and a signal is measured. Energy is not deposited in these contacts, and therefore they constitute to a so called dead layer. \\
 The detectors are square $5\times 5$ \SI{}{cm} and with their $16\times 16$ strips, they have an effective gird of  256 pixels of \SI{9}{mm}. 
-4 of the 6 detectors have a thickness of \SI{60}{\mu m} and a dead layer of \SI{100}{nm} \note{dead layer}. These detectors are the ones called Det1, Det3, Det4 and DetU in the setup seen on \cref{fig:opstilling}. The other 2 detectors (Det2 and DetD) where both \SI{1000}{\mu m}.
+4 of the 6 detectors have a thickness of \SI{60}{\mu m} and a \SI{100}{nm} dead layer. These detectors are the ones called Det1, Det3, Det4 and DetU in the setup seen on \cref{fig:opstilling}. The other 2 detectors (Det2 and DetD) where both \SI{1000}{\mu m}.
 \\
 \\
 The other type of detector is the PAD. They are different from the DSSD's, in that they do not have sides, and no strips. Therefore they do not contain a grid, the same way the DSSD's do, and will not provide any information as to where a particle has hit. But they are included in the setup to detect excess energy of particles not stopped by the DSSD. This makes them good at detecting \be-particles, as they will not be stopped by a DSSD.
@@ -56,7 +56,7 @@ The other type of detector is the PAD. They are different from the DSSD's, in th
 	\label{fig:W1}
 \end{figure}
 
-An $\alpha$-particle will deposit all of its energy into the first DSSD it encoutner, and be effectively stopped completely by it, and a $\beta$-particle will deposit almost no energy in a thin DSSD, and travel through it, ending up depositing some energy in the PAD. \\
+An $\alpha$-particle will deposit all of its energy into the first DSSD it encounters, and be effectively stopped completely by it, and a $\beta$-particle will deposit almost no energy in a thin DSSD, and travel through it, ending up depositing some energy in the PAD. \\
 Therefore one can roughly distinguish the $\alpha$-particles from the $\beta$-particles, by observing whether a particle has hit the DSSD and the PAD. \\
 \\
 Since there are also two thick DSSD's in the setup, one can also get some information from a $\beta$-particle from these thicker detectors, as it will deposit more energy in these detectors. 
@@ -67,7 +67,7 @@ Since there are also two thick DSSD's in the setup, one can also get some inform
 \section{AUSAlib and ROOT}
 ROOT \cite{ROOT} is an object oriented C++ framework that is designed primarily for data analysis in high-energy and nuclear physics. It was created at CERN in 1995, and has since grown and become the dominant analysis software at both CERN and many other nuclear and particle physics laboratories. 
 ROOT was designed to handle large amounts of data with high computing efficiency. \\
-ROOT makes an intelligent data structure by creating a "Tree" with the class \texttt{TTree}. This tree will then have "branches" which corresponds to some variable of the given detection event, such as the energy of the front strip or identity of the detector. This TTree \note{skal det være texttt?} then allows for reading of an individual branch, while ROOT takes care of the memory management. One can also store a TTree\note{skal det være texttt?} to the disk in the form a .root file. \\
+ROOT makes an intelligent data structure by creating a "Tree" with the class \texttt{TTree}. This tree will then have "branches" which corresponds to some variable of the given detection event, such as the energy of the front strip or identity of the detector. This \texttt{TTree} then allows for reading of an individual branch, while ROOT takes care of the memory management. One can also store a \texttt{TTree} to the disk in the form a .root file. \\
 
 ASUALib \cite{AUSA} is a tool that build on top of ROOT. It was created by the subatomic group at Aarhus University.
 Before this tool was created, everyone in the group had to more or less create their own tools to get data from the detectors into a useful data structure. This meant that a lot of time was wasted just trying to access data from experiments. AUSAlib was therefore created, so the basic tasks of data extraction was automated. \\

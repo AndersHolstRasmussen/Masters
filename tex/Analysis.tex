@@ -77,7 +77,7 @@ On \cref{fig:allCutsCompare} all the cuts are shown as individually, highlightin
 \begin{figure}[h]
 	\centering
 	\includegraphics[width=\linewidth]{../figures/cutCompare.pdf}
-	\caption{A comparison of all the cuts, where \note{with the energy...} the energy of the first \al-particle is plotted. }
+	\caption{A comparison of all the cuts, with the energy of one \al-particle shown. }
 	\label{fig:allCutsCompare}
 \end{figure}
 
@@ -117,14 +117,14 @@ With the \al-particles sorted correctly, we can start to look at the excitation 
 \section{Angular efficiency of the setup}
 Since the detectors are unable to cover the entire solid angle, there will always be some mutual angles that are more likely to be measured. 
 If we only look at one detector, a very large number of angles are not covered, but small mutual angles such as $\theta \approx 0$, are very easy to measure, as it is just a measurement of two particles in the same pixel. 
-This effect becomes apparent on \cref{fig:oneDetEff}, where the angular efficiency is shown for Det2. For a single detector, there cannot be angles of $\theta = 90$ and higher, as the detector is flat. In this detector, the lowest angle found was $\cos(\theta) = 0.21 = 77\degree$ \note{Det er vist ikke rigtig notation}.\\
+This effect becomes apparent on \cref{fig:oneDetEff}, where the angular efficiency is shown for Det2. For a single detector, there cannot be angles of $\theta = 90$ and higher, as the detector is flat. In this detector, the lowest angle found was $\theta = 77\degree$.\\
 
 \begin{figure}[h]
 	\includegraphics[width=\linewidth]{../figures/det2Eff.pdf}
 	\caption{The angular efficiency of a single detector (Det2). For one flat detector, there can never be angles of $90\degree$ and higher.}
 	\label{fig:oneDetEff}
 \end{figure}
-In this setup however, we \note{mangler et ord her} a cube of square detectors, who's normal vectors are all pointing in towards target at the center. This gives a much larger coverage of all mutual angles. 
+In this setup however, we have a cube of square detectors, who's normal vectors are all pointing in towards target at the center. This gives a much larger coverage of all mutual angles. 
 The placement of the detectors gives that angles around $\theta \approx 90 \degree$ are also very favored. This makes sense, almost no matter what pixel was hit, there is a corresponding pixel $90\degree$ to both sides. In the same way, will there always be a corresponding pixel $\approx 180\degree$ from each pixels. This effect can be seen on \cref{fig:effAllDet}. \\
 This histogram was created by using the spacial coordinates of the entire setup. First the positions of each pixel in each detector was found. Then two loops running over each pixel pair $i, j$, finds the angle between these pixels and saves it \note{jeg ved ikke om man forstår dette hvis man ikke har været med til dette, så måske uddyb}.\\
 
@@ -133,7 +133,7 @@ This histogram was created by using the spacial coordinates of the entire setup.
 	\caption{Two normalized histograms of the angular efficiency of the entire setup. The red histogram does not account for the effective area of a pixel. The blue is the true angular efficiency.}
 	\label{fig:effAllDet}
 \end{figure}
-There is still a geometric effect that is not accounted for in the above analysis. We  \note{måske slet still - gentagelse}still need to consider that not all pixels in the detector has the same effective area. 
+There is still a geometric effect that is not accounted for in the above analysis. We need to consider that not all pixels in the detector has the same effective area. 
 The pixel furthest out in a detector will have a effective area smaller than the area of a pixel in the center. This effect can be seen on \cref{fig:MexiHatDetector}. Here we see that there is a much higher count of particles hitting the center of the detector, and fewer hitting the edges. A white line crossing through the middle is a defect strip, which did not measure anything. Sadly, some of the detectors had defect strips, but on a large scale it was not very noticeable \note{måske lidt vagt}.
 \begin{figure}[h]
 	\begin{subfigure}[t]{.5\linewidth}
@@ -160,7 +160,7 @@ This is calculated as
 where $r$ is the distance to the pixel, $A$ is the area of the pixel and $\theta$ is the angle between the hit direction and the normal vector of the detector as shown on \cref{fig:EffGeometry}. The area of all pixel is the same for all detectors, so the constants $A$ and $4\pi$ can be ignored when comparing the efficiency. 
 
 
-\begin{figure}[H]
+\begin{figure}[h]
 	\centering
 	\includegraphics[width=.7\linewidth]{../figures/detektorEffDrawingv2.pdf}
 	\caption{A illustration of two hits in different pixels. The blue hit will see a smaller effective area of the pixel by a factor determined by \cref{eq:eff} \note{Måske tilføj "den blå retnmingsvektor projiceret på den stiplede linje bliver minder for større theta eller noget´}. \note{Denne figur er kommet i forkert rækkefølge}}
@@ -198,7 +198,7 @@ There are small fluctuations in the line, which stems from the inaccuracy of cal
 There are two different explanations as to why this might be.
 The first explanation is that the beam did not hit the target in the center. The calculated efficiency assumes that the beam hits precisely in the middle, but in any setup, there can be a few millimeters of errors. 
 
-By finding the angular efficiency of the setup, with different values for the center and comparing this to the measured angles, we have found a slight correction for the center of the beam. This can be seen on \cref{fig:centerCorrection}, where the beam has been moved to the coordinates $(-3, -3, 0)$, as opposed to the previous of $(0, 0, 0)$. The division fo the two histograms on \cref{fig:dataDivEffCenter} shows a more stable line from $\cos(-0.4)$ to $\cos(0.4)$ \note{cos(a) = -0.4}, but the edges are still not very alike. Looking at $\cos(1)$\note{cos(a) = 1}, we see a rapid fall, which indicates that we have measured a lot fewer parallel \be\ and \al-particles than the setup is designed to handle. 
+By finding the angular efficiency of the setup, with different values for the center and comparing this to the measured angles, we have found a slight correction for the center of the beam. This can be seen on \cref{fig:centerCorrection}, where the beam has been moved to the coordinates $(-3, -3, 0)$, as opposed to the previous of $(0, 0, 0)$. The division fo the two histograms on \cref{fig:dataDivEffCenter} shows a more stable line from $\cos(\theta)= -0.4$ to $\cos(\theta) = 0.4$, but the edges are still not very alike. Looking at $\cos(\theta) = 1$, we see a rapid fall, which indicates that we have measured a lot fewer parallel \be\ and \al-particles than the setup is designed to handle. 
 This can be due to the fact that some of the strips where defect. The calculated angular efficiency does not know which strips where defect, and and will therefore have a lot higher efficiency for parallel particles. The defect strips will therefore also play a role in the grand scheme, and is a possible explanation as to why there is a difference in the calculated and the measured data. \\
 Another effect that will sway the data, is the target holder. This device will provide a shadow over the top and bottom detector, and since one of the \be-detectors are the bottom one, it will skew the data in a unforeseeable way. 
 \begin{figure}[h]

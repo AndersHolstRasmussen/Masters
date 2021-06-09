@@ -3,44 +3,47 @@ Capacity: max_strings=200000, hash_size=200000, hash_prime=170003
 The top-level auxiliary file: Speciale.aux
 The style file: unsrt.bst
 Database file #1: Bib.bib
-You've used 6 entries,
+Warning--entry type for "andreas" isn't style-file defined
+--line 85 of file Bib.bib
+You've used 8 entries,
             1791 wiz_defined-function locations,
-            486 strings with 4515 characters,
-and the built_in function-call counts, 1200 in all, are:
-= -- 102
-> -- 55
+            494 strings with 4807 characters,
+and the built_in function-call counts, 1429 in all, are:
+= -- 121
+> -- 60
 < -- 0
-+ -- 21
-- -- 15
-* -- 78
-:= -- 188
-add.period$ -- 19
-call.type$ -- 6
-change.case$ -- 6
++ -- 24
+- -- 16
+* -- 79
+:= -- 217
+add.period$ -- 24
+call.type$ -- 8
+change.case$ -- 8
 chr.to.int$ -- 0
-cite$ -- 6
-duplicate$ -- 42
-empty$ -- 128
-format.name$ -- 15
-if$ -- 269
+cite$ -- 8
+duplicate$ -- 52
+empty$ -- 164
+format.name$ -- 16
+if$ -- 327
 int.to.chr$ -- 0
-int.to.str$ -- 6
+int.to.str$ -- 8
 missing$ -- 3
-newline$ -- 34
-num.names$ -- 4
-pop$ -- 24
+newline$ -- 43
+num.names$ -- 5
+pop$ -- 36
 preamble$ -- 1
 purify$ -- 0
 quote$ -- 0
-skip$ -- 19
+skip$ -- 28
 stack$ -- 0
 substring$ -- 73
-swap$ -- 6
+swap$ -- 8
 text.length$ -- 0
 text.prefix$ -- 0
 top$ -- 0
 type$ -- 0
 warning$ -- 0
-while$ -- 8
-width$ -- 7
-write$ -- 65
+while$ -- 9
+width$ -- 9
+write$ -- 82
+(There was 1 warning)

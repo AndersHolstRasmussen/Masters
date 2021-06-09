@@ -1,11 +1,22 @@
 \begin{thebibliography}{1}
 
+\bibitem{igisol}
+Igisol.
+\newblock
+  \url{https://www.jyu.fi/science/en/physics/research/infrastructures/accelerator-laboratory/nuclear-physics-facilities/the-exotic-nuclei-and-beams}.
+
 \bibitem{isotrop}
 R.~E. Tribble and G.~T. Garvey.
 \newblock Induced weak currents and
   ${\ensuremath{\beta}}^{\ifmmode\pm\else\textpm\fi{}}\ensuremath{-}\ensuremath{\alpha}$
   angular correlations in $a=8$.
 \newblock {\em Phys. Rev. C}, 12:967--983, Sep 1975.
+
+\bibitem{andreas}
+Andreas Gad.
+\newblock {An experimental study of $^8$B beta decay}.
+\newblock Master Thesis. Aarhus University, Department of Physics and
+  Astronomy, 2018.
 
 \bibitem{TILLEY2004155}
 D.R. Tilley, J.H. Kelley, J.L. Godwin, D.J. Millener, J.E. Purcell, C.G. Sheu,

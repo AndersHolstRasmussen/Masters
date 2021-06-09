@@ -31,31 +31,31 @@ Over the years it has evolved quickly, first by the discovery of three different
 \\
 The technological advancements has made the study even more precise over the years, as the development of radioactive beams allow for the creation of specific short lived isotopes.
 This technique is known as Isotope Separation On-Line (ISOL), which was first developed in 1951 for the Copenhagen Cyclotron. 
-Now the technology is available in many parts of the world, such as the IGISOL facility at the University of Jyväskylä in Finland. \note{Måske link til hjemmeside eller noget}
+Now the technology is available in many parts of the world, such as the IGISOL facility at the University of Jyväskylä in Finland \cite{igisol}. 
 Another important advancement is the development of very precise detectors, such as the Double Sided Silicon Detector (DSSD), which allows for a very high energy and spacial resolution, which can give a detailed analysis of both coincidence and kinematics. \\
 \\
 This brings us onto the current experiment that I have analyzed in this thesis. At the IGISOL facility, the experiment I257 was carried out in august 2020. The objective of the experiment was to measure \be-decays from \li and \isotope[12]{B}, however, this thesis will only govern the \li decay. \\
-\note{Man ved måske ikke helt hvad beta-alfa er her} The \be-\al\ angular correlation is previously shown with high precision to be nearly isotropic \cite{isotrop}. The study of the \be-\al\ correlation in \li will therefore serve as a good indicator for the \be-\al\ correlation in \isotope[12]{B}, as the same setup will be used for both experiments. \\
-A former student has previously made an in depth analysis of the mirror nucleus \isotope[8]{B}, which can be used to compare the excitation energy of \ber. A comparison of the two is unfortunately out of scope for this thesis \note{Måske referer til former student - spørg Hans hvordan}.
+In precious studies, it has been shown that angle between the \be-particle and the \al-particles are very close to isotropic \cite{isotrop}. The study of the \be-\al\ correlation in \li will therefore serve as a good indicator for the \be-\al\ correlation in \isotope[12]{B}, as the same setup will be used for both experiments. \\
+A former student has previously made an in depth analysis of the mirror nucleus \isotope[8]{B}, which can be used to compare the excitation energy of \ber \cite{andreas}. A comparison of the two is unfortunately out of scope for this thesis.
 
 
 \section{Nuclear decays}
-Lithium normally occurs stable as \isotope[6]Li and \isotope[7]Li, with the latter being the more abundant with 92.5\% of all atoms. The longest living radioactive lithium isotope is \isotope[8]Li, with a half-life of \SI{839}{ms} \note{ref}. 
-When \li decays, it will do so under a \note{by i stedet for under a?} \be-decay, immediately followed by the \al-\al\ breakup of an intermediate exited state in \ber, which has a half life of \SI{1e-16}{s}. \ber is a constituent in the triple-alpha process in stellar astrophysics, and creates a bottleneck for the creation of heavier elements, because of its very short lifespan.
+Lithium normally occurs stable as \isotope[6]Li and \isotope[7]Li, with the latter being the more abundant with 92.5\% of all atoms. The longest living radioactive lithium isotope is \isotope[8]Li, with a half-life of \SI{839}{ms} \cite{TILLEY2004155}. 
+When \li decays, it will do so by a \be-decay, immediately followed by the \al-\al\ breakup of an intermediate exited state in \ber, which has a half life of \SI{1e-16}{s}. \ber is a constituent in the triple-alpha process in stellar astrophysics, and creates a bottleneck for the creation of heavier elements, because of its very short lifespan.
 
 %\li will also decay into \ber at different energy levels, which will give a continuum of the 2+ state from \li. 
 
 \subsection{\be-decay}
 Most light unstable nuclei will decay by either proton/neutron emission, or by a \be-decay. Isotopes that lie close to the valley of stability will not decay by proton/neutron emission, but from a \be-decay.
 \\
-A \be-decay is a weak interaction, which allows a quark in a proton or neutron to change flavor, by emitting a W boson. This leads to the creation of either an electron/antineutrino pair or a positron/neutrino pair, shown as \note{måske slet shown as?}:
+A \be-decay is a weak interaction, which allows a quark in a proton or neutron to change flavor, by emitting a W boson. This leads to the creation of either an electron/antineutrino pair or a positron/neutrino pair:
 \begin{align}
 &\beta^+:\quad p\rightarrow n + e^+ + \nu_e\\
 &\beta^-:\quad n\rightarrow p + e^- + \bar{\nu_e}.
 \end{align}
 Nuclei below the valley of stability will decay by $\beta^-$, while nuclei above decays by $\beta ^+$.
 
-The energy for \note{of these decays} these decays are given by their Q-values, neglecting the very small neutrino mass and the binding energy of the electrons gives:
+The energy of these decays are given by their Q-values, neglecting the very small neutrino mass and the binding energy of the electrons gives:
 \begin{align}
 &Q_{\beta^+} = \left[ m (\isotope[A][Z]{X}) - m(\isotope[A][Z-1]{X'})  		 \right] c^2\\
 &Q_{\beta^-} = \left[ m (\isotope[A][Z]{X}) - m(\isotope[A][Z+1]{X'}) -2m_e  \right] c^2,
@@ -64,33 +64,43 @@ where $m$ is the mass of an atom with $Z$ protons and $A$ nucleons.
 The Q-values indicates the mass difference between the initial and final product., which can be either excitation energy or kinetic energy. 
 
 Not all \be-decays are allowed. If the spin is unchanged, it is a Fermi transition, and if it changes it is a Gamow-Teller transition. 
-An allowed decay is a transition with the orbital angular moment $L = 0$, and forbidden transitions is $L > 0$.
+An allowed decay is a transition with the change in orbital angular moment $\Delta L = 0$, and forbidden transitions have $\Delta L > 0$.
 
 The nuclear part of the \be-decay operator for an allowed decay is:
 \begin{equation}
 	\mathcal{O} (\beta^\pm) = g_V \sum_{A}^{j=1}\tau_\mp (j) + g_A \sum_{A}^{j=1}\sigma(j)\tau_\mp(j),
 \end{equation}
-where $g_V$ is weak vector coupling constant, $\tau_\mp$ is the isospin step operator, $g_A$ is the weak axial coupling constant and $\sigma$ is the Pauli spin matrices.
+where $g_V$ is the weak vector coupling constant, $\tau_\mp$ is the isospin step operator, $g_A$ is the weak axial coupling constant and $\sigma$ is the Pauli spin matrices.
 The first term corresponds to the Fermi operator, and the second term to the Gamow-Teller operator. 
 This raises some selection rules, that dictate that for a Fermi decay, spin, isospin and parity must not be changed, and for a Gamow-Teller transitions, $\Delta J = 0, \pm1$, $\Delta T = 0, \pm 1$, and $\Delta \pi = 0$.
 
 The selection rules then enforces that not every energy level is populated in \ber. 
+\\
+\\
+The ground state of \li has spin, parity and isospin of $2^+; 1$, and a mass of \SI{16.005}{MeV/c^2} more than the ground state of \ber, so it will only be able to populate states with lower energy than \SI{16.005}{MeV}, and states where the transition rules applies.\\
+Looking at the states in \ber, there are only 3 states below the threshold of \SI{16.005}{MeV}, that is the ground state, first and second excited state. 
+The ground state is a $0^+; 0$ state, with $\Delta J = 2$, which is forbidden given the selection rules. 
 
+The first excited state is a broad state at \SI{3.03}{MeV} and $2^+; 0$, which gives $\Delta J = 0, \Delta pi = 0$ and $\Delta T = 1$. This transition is valid within the selection rules, and is in fact the only state that will be populated in the decay.
+
+The second excited state at \SI{11.35}{MeV} is a  $4^+; 0$, where $\Delta J = 2$, so the state will not be populated either.
+The energy levels and properties can be seen on \cref{fig:berStructure}.
 \subsection{\al-decay}
 \al-decay is another type of radioactive decay, where the nucleus emits an \al-particle, and thereby decays into a different nucleus with the atomic number reduced by two.  
 It has a Q-value of:
 \begin{equation}
 Q_\alpha =  \left[ m (\isotope[A][Z]{X}) - m(\isotope[A-4][Z-2]{X'})  	- m_\alpha	 \right] c^2.
 \end{equation}
-Usually it is only elements heavier than nickel that can decay via this process, as the binding energy per nucleon decreases, and therefore becomes unstable towards spontaneous fission type processes. The only known exception to this rule is then \ber, which is the only light nuclei that decays by \al-decay. 
+Usually it is only elements heavier than nickel that can decay via this process, as the binding energy per nucleon decreases, and therefore becomes unstable towards spontaneous fission type processes. 
+One of the only exceptions to this, is \ber, which is one of the only light nuclei that decays by \al-decay.
 
 \section{Structure of $^8$Be}
-\Cref{fig:berStructure} shows the excitation spectrum for \ber, with values from \cite{TILLEY2004155}. The spin, parity and isospin are written as $J^\pi ; T$ for each level. 4 different states has been shown for \ber, where only the first excited state is the broad state at \SI{3.03}{MeV}. This state has conservation of spin and parity from \li and is the only state that is allowed for the decay of \li. \note{Sittuated} above is the broad state at \SI{11.35}{MeV}, which does not conserve spin. Above that is a \SI{16.626}{MeV} state, which conserves spin, parity and isospin, but lies energetically above \li, so we would not expect that to shown in the data. It is still a quite relevant state, as the mirror nucleus \isotope[8]{B} $(2^+; 1)$ lies just above the energy at \SI{17.979}{MeV}, and then has enough energy to populate this state, even though it is not very likely. Previous experiments made by the Aarhus subatomic group has examined the decay, and found only 5 counts populating this excitation level. But that should not show up when looking at the decay of \li.
+\Cref{fig:berStructure} shows the excitation spectrum for \ber, with values from \cite{TILLEY2004155}. The spin, parity and isospin are written as $J^\pi ; T$ for each level. 4 different states has been shown for \ber, where only the first excited state is the broad state at \SI{3.03}{MeV}. This state has conservation of spin and parity from \li and is the only state that is allowed for the decay of \li. Situated above is the broad state at \SI{11.35}{MeV}, which does not conserve spin. Above that is a \SI{16.626}{MeV} state, which conserves spin, parity and isospin, but lies energetically above \li, so we would not expect that to shown in the data. It is still a quite relevant state, as the mirror nucleus \isotope[8]{B} $(2^+; 1)$ lies just above the energy at \SI{17.979}{MeV}, and then has enough energy to populate this state, even though it is not very likely. Previous experiments made by the Aarhus subatomic group has examined the decay, and found only 5 counts populating this excitation level. But that should not show up when looking at the decay of \li.
 
 
 \begin{figure}
 	\centering
 	\includegraphics[width=\columnwidth]{../figures/DecayScheme.pdf}
-	\caption{The decay scheme of \li, and some notable excitation energies of \ber. Each level is labeld with the energy above the \ber ground state in MeV. Spin parity and isospin is noted as $J^\pi; T$. All information is from \cite{TILLEY2004155}.}
+	\caption{The decay scheme of \li, and some notable excitation energies of \ber. Each level is labeled with the energy above the \ber ground state in MeV. Spin parity and isospin is noted as $J^\pi; T$. All information is from \cite{TILLEY2004155}.}
 	\label{fig:berStructure}
 \end{figure}

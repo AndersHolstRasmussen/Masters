@@ -24,6 +24,7 @@
 #include <ROOT/RCsvDS.hxx>
 #include <fstream>
 #include <TRatioPlot.h>
+#include <TMultiGraph.h>
 
 using namespace std;
 using namespace ROOT;
@@ -913,6 +914,98 @@ void energyDifference(RDataFrame *df){
     h->DrawClone("hist");
 }
 
+void batara(RDataFrame *df){
+    // auto c = new TCanvas();
+    
+    gStyle->SetOptTitle(0);
+    gStyle->SetOptStat(0);
+
+    int bins = 300;
+    double xmin = 0;
+    double xmax = 17;
+
+
+    auto data = df->Define("x", "(E._E[0] + E._E[1])/1000");
+    auto h = data.Histo1D({"Stats", "title", 300, 0, 17}, "x");
+    // auto bata = new TH1F("stats", "Angle efficiency", bins, xmin, xmax); 
+    
+
+    ifstream ifile("/home/anders/i257/build/batara_ftp.txt");
+    if (!ifile.is_open()) {
+        std::cerr << "There was a problem opening the input file!\n";
+        exit(1);//exit or do additional error checking
+    }
+
+    int i = 0;
+    const int n = 856;
+    double x[n], y[n];
+    double x2[n], y2[n];
+
+    while (!ifile.eof())
+    {
+        double Ex, f, dfe, dfr;
+        ifile >> Ex >> f >> dfe >> dfr;
+        x[i] = Ex;
+        y[i] = f*70;
+        i++;
+    }
+    ifile.close();
+    TGraph *bat = new TGraph(n, x, y);
+    TCanvas *c1 = new TCanvas("c1","I",200,10,600,400);
+    auto xaxis = bat->GetXaxis();
+    xaxis->SetTitle("E_{x} [MeV]");
+    xaxis->CenterTitle();
+    c1->SetLogy();
+ 
+    h->SetLineWidth(3);
+    h->SetLineColor(kBlue);
+    bat->SetLineColor(kGreen);
+    bat->SetLineWidth(3);
+    bat->Draw("AC");
+    h->DrawClone("SAME HIST");
+
+    auto legend = new TLegend(0.78, 0.78, 0.88, 0.88);
+    legend->AddEntry(h->Clone(), "Our data");
+    legend->AddEntry(bat,"Bhattacharya");
+    legend->SetTextSize(0.02);
+    legend->Draw();
+
+    c1->SaveAs("/home/anders/i257/figures/bataraCompare.pdf");
+}
+
+void recoil(RDataFrame *df){
+    auto c = new TCanvas();
+    gStyle->SetOptTitle(0);
+    gStyle->SetOptStat(0);
+
+    int bins = 300;
+    double xmin = 1000;
+    double xmax = 4000;
+
+    auto data2 = df->Define("x", "(E._E[0] + E._E[1])");
+    auto data0 = df->Define("x", "(E._E[0] + E._E[0])");
+    auto data1 = df->Define("x", "(E._E[1] + E._E[1])");
+
+    auto h2 = data2.Histo1D({"Stats", "title", bins, xmin, xmax}, "x");
+    auto h0 = data0.Histo1D({"Stats", "title", bins, xmin, xmax}, "x");
+    auto h1 = data1.Histo1D({"Stats", "title", bins, xmin, xmax}, "x");
+    c->SetLogy();
+
+    h2->SetLineWidth(3);
+    h1->SetLineWidth(3);
+    h0->SetLineWidth(3);
+    
+    h2->SetLineColor(kRed);
+    h1->SetLineColor(kBlue);
+    h0->SetLineColor(kGreen);
+
+
+    h2->DrawClone("HIST");
+    h1->DrawClone("HIST SAME");
+    // h0->DrawClone("HIST SAME");
+
+}
+
 int main(int argc, char *argv[]) {
     ROOT::EnableImplicitMT(8);
     int detectorId;
@@ -992,7 +1085,7 @@ int main(int argc, char *argv[]) {
     // mexiHatDetector(&df);
     // detectorEff(&df);
     // alphaEffeciency(&df);
-    cosang(&dfNoCut);
+    // cosang(&dfNoCut);
     // EEfigure(&df);
     // betaAlphaDifferentEnergies(&df);
     // betaAlphaAngle(&df);
@@ -1004,6 +1097,8 @@ int main(int argc, char *argv[]) {
     // doubleAlphaSpectra(&df);
     // compareCuts(&df, &dfNoCut, &dfAng, &dfMoment, &dfBetaMul, &dfAngAndMoment);
     // energyDifference(&df);
+    // batara(&df);
+    recoil(&df);
     app->Run(); // show all canvas
     return 0;
 }
