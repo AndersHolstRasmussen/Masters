@@ -157,7 +157,7 @@ void mexiHatDetector(RDataFrame *df){
     double xymin = 0;
     double xymax = 17;
 
-    auto data = df->Define("x", "FI._FI[0]").Define("y", "BI._BI[0]").Filter(" i._i[0] == 1"); // || i._i[1] == 1 ibeta._ibeta[0] == 1 
+    auto data = df->Define("x", "FI._FI[0]").Define("y", "BI._BI[0]").Filter(" i._i[0] == 4"); // || i._i[1] == 1 ibeta._ibeta[0] == 1 
     auto h = data.Histo2D({"stats", "title", bins, xymin, xymax, bins, xymin, xymax}, "x", "y");
     auto xaxis = h->GetXaxis();
     auto yaxis = h->GetYaxis();
@@ -169,7 +169,7 @@ void mexiHatDetector(RDataFrame *df){
     h->DrawClone("col");
     c->Modified();
     c->Update();
-    // c->SaveAs("/home/anders/i257/figures/mexihatDet2.pdf");
+    c->SaveAs("/home/anders/i257/figures/mexihatDet4.pdf");
 
 }
 
@@ -1215,7 +1215,7 @@ int main(int argc, char *argv[]) {
     // fixCenterPos(&df);
     // singleDetectorEff(&df);
     // mexiHatTheory(&df);
-    // mexiHatDetector(&df);
+    mexiHatDetector(&df);
     // detectorEff(&df);
     // alphaEffeciency(&df);
     // cosang(&dfNoCut);
@@ -1232,7 +1232,7 @@ int main(int argc, char *argv[]) {
     // energyDifference(&df);
     // batara(&df);
     // recoil(&df);
-    recoilGauss(&df);
+    // recoilGauss(&df);
     // centerCorrected(&df);
     app->Run(); // show all canvas
     return 0;

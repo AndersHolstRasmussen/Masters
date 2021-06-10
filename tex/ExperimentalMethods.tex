@@ -1,14 +1,12 @@
 \chapter{Experimental Methods}
-The main goal of the experiment was to determine the \be-\al\ angular correlation. The experiment was done at the IGISOL facility, at the University of Jyväskylä, where beams of all elements can be produced. The experiment took place in august 2020, delayed by the ongoing corona pandemic. This chapter will be concerning the experimental setup, a discussion of the detectors and an overview of the software used to extract and analyze the data. 
+The main goal of the experiment is to determine the \be-\al\ angular correlation. The experiment was done at the IGISOL facility, at the University of Jyväskylä \cite{igisol}. The experiment took place in august 2020, delayed by the ongoing corona pandemic. This chapter will be concerning the experimental setup, a discussion of the detectors and an overview of the software used to extract and analyze the data. 
 
-\section{Detector setup}
-%The detection setup consists of 6 double sided silicon detectors (DSSD), and 6 single sided silicon detectors (SSD). 
-%The detectors are $\SI{5}{cm} \times \SI{5}{cm}$ and placed in a cube around the a target in the center, as shown on figure \cref{fig:opstilling}. The setup is designed with measuring the opening angle of the $\beta$ \note{beta-hvad? partikel?} in mind, and therefore the detectors covers 51\% of the solid angle. \\
 
-The setup is designed mainly for the decay of 12B measured in the same experiment. In that decay three-alpha particles are emitted in less than 1\% of the decays and the setup should therefore have a high efficiency and be able to measure \al-particles in an environment with many beta-particles. 
 \section{Experimental setup}
-The setup is able to measure $\beta-\alpha$ angular correlations in the $\beta$-delayed particle decay of \isotope[8][]{Li}. When measuring multiple particles, the setup is highly dependent on the coverage of the solid angle. Therefore the setup is designed to have a large solid angle coverage, with high $\alpha$-particle resolution, while still being able to measure $\beta$-particles.\\
-This is has been achieved by creating a cube of six double sided silicon detectors (DSSD), all backed by a unsegmented silicon detectors (PAD). To gain the largest solid angle, the detectors where placed as close to one another as possible. A 3D printed case was designed to hold the detectors in place, and achieved a solid angle coverage of 51\% for the DSSD's, which can be seen on \cref{fig:cubepic}. An illustration of the setup, together with the different detectors' thickness can be seen on \cref{fig:opstilling}. 
+The setup is designed mainly for the decay of \isotope[12]{B} measured in the same experiment. In that decay three-alpha particles are emitted in less than 1\% of the decays and the setup should therefore have a high efficiency and be able to measure \al-particles in an environment with many beta-particles. \\
+
+The setup is able to measure \be-\al\ angular correlations in the $\beta$-delayed particle decay of \isotope[8][]{Li}. When measuring multiple particles, the setup is highly dependent on the coverage of the solid angle. Therefore the setup is designed to have a large solid angle coverage, with high $\alpha$-particle resolution, while still being able to measure $\beta$-particles.\\
+This is has been achieved by creating a cube of six double sided silicon detectors (DSSD), all backed by a unsegmented silicon detectors (PAD). To attain the largest solid angle, the detectors where placed as close to one another as possible. A 3D printed case was designed to hold the detectors in place, and achieved a solid angle coverage of 51\% for the DSSD's, which can be seen on \cref{fig:cubepic}. An illustration of the setup, together with the different detectors' thickness can be seen on \cref{fig:opstilling}. 
 Even though the setup was designed to hold 12 detectors in total, there where only 11 detectors in the actual experiment. The PAD behind Det1 was defect, and was therefore removed. 
 
 \begin{table}[H]
@@ -27,7 +25,7 @@ Even though the setup was designed to hold 12 detectors in total, there where on
 \begin{figure}[h]
 	\centering
 	\includegraphics[width=.6\linewidth]{../figures/cubepic.pdf}
-	\caption{A picture of the 3D printed cube used to hold all detectors in place. The placement of the detectors have been shown, with exception of DetD, which was at the bottom of the cube. The beam enters the metal ring between Det1 and Det4}
+	\caption{A picture of the 3D printed cube used to hold all detectors in place. The placement of the detectors have been shown, with exception of DetD, which was at the bottom of the cube. The beam enters through the metal ring between Det1 and Det4}
 	\label{fig:cubepic}
 \end{figure}
 
@@ -40,11 +38,11 @@ Even though the setup was designed to hold 12 detectors in total, there where on
 
 \section{The detectors}
 As mentioned above, there where two types of detectors present in the setup. The first type is the Double sided silicon detector. 
-As the name suggests, it consists of two sides, a front layer and a back layer. Each layer consists of 16 strips, that are placed in rows next to each other. The two layers are then arranged so each side are mutually orthogonal, which effectively makes pixels where each strip intersects a strip on the other side. An illustration of the detector can be seen on \cref{fig:W1}.\\
+As the name suggests, it consists of two sides, a front layer and a back layer. Each layer consists of 16 strips, that are placed in rows next to each other. The two layers are then arranged so each side are mutually orthogonal, which effectively makes pixels where each strip intersects a strip on the other side \cite{TENGBLAD2004458}. An illustration of the detector can be seen on \cref{fig:W1}.\\
 The strips on the front side are p-doped, while the back side are n-doped. When a charged particle hits the detector, it will ionize the atoms in the semi-conductor, and produce a electron-hole pair. The number of electron-hole pairs is proportional to the energy of the charged particle. 
 The bias voltage on the detector collects the electrons and holes on opposite sites of the strip, where the charge is collected on aluminum contacts and a signal is measured. Energy is not deposited in these contacts, and therefore they constitute to a so called dead layer. \\
 The detectors are square $5\times 5$ \SI{}{cm} and with their $16\times 16$ strips, they have an effective gird of  256 pixels of \SI{9}{mm}. 
-4 of the 6 detectors have a thickness of \SI{60}{\mu m} and a \SI{100}{nm} dead layer. These detectors are the ones called Det1, Det3, Det4 and DetU in the setup seen on \cref{fig:opstilling}. The other 2 detectors (Det2 and DetD) where both \SI{1000}{\mu m}.
+4 of the 6 detectors have a thickness of \SI{60}{\mu m} and a \SI{100}{nm} dead layer. These  are Det1, Det3, Det4 and DetU in the setup seen on \cref{fig:opstilling}. The other 2 detectors (Det2 and DetD) are both \SI{1000}{\mu m}.
 \\
 \\
 The other type of detector is the PAD. They are different from the DSSD's, in that they do not have sides, and no strips. Therefore they do not contain a grid, the same way the DSSD's do, and will not provide any information as to where a particle has hit. But they are included in the setup to detect excess energy of particles not stopped by the DSSD. This makes them good at detecting \be-particles, as they will not be stopped by a DSSD.
@@ -52,7 +50,7 @@ The other type of detector is the PAD. They are different from the DSSD's, in th
 \begin{figure}[h]
 	\centering
 	\includegraphics[width=\columnwidth]{../figures/W1.jpg}
-	\caption{An illustration of the DSSD type used in this experiment. The detector has 16 p-doped strips, and 16 n-doped strips perpendicular to these. This gives 256 pixels for the detector. Image courtesy of Micron Semiconductor Ltd}
+	\caption{An illustration of the DSSD type used in this experiment. The detector has 16 p-doped strips, and 16 n-doped strips perpendicular on the other side. This gives 256 pixels on the detector in total. Image courtesy of Micron Semiconductor Ltd \cite{detector}.}
 	\label{fig:W1}
 \end{figure}
 
@@ -74,8 +72,8 @@ Before this tool was created, everyone in the group had to more or less create t
 AUSAlib has a lot of functionalities, but the two main tools that was used to extract data was the \textit{Sorter} and \textit{Calibrator}.
 
 \subsection{Unpacker}
-The \texttt{Unpacker} converts raw data from the detectors into a ROOT TTree. This is done by using the unpacking program \texttt{ucesb} \cite{ucesb}. This will setup the branch structure of the data. Some of these branches are \texttt{FT} and \texttt{BT}, which is a vector of the  \texttt{TDC} (time) values for each event, for the front and backside of the detector. They are vectors because they contain information for each particle hits in a given time slot, for which there can be multiple. 
-There are also the branches \texttt{FE} and \texttt{BE}, which is the \texttt{ADC} (energy) associated with the events. 
+The \texttt{Unpacker} converts raw data from the detectors into a ROOT \texttt{TTree}. This is done by using the unpacking program \texttt{ucesb} \cite{ucesb}. This will setup the branch structure of the data. Some of these branches are \texttt{FT} and \texttt{BT}, which is a vector of the time (\texttt{TDC}) values for each event, for the front and backside of the detector. They are vectors because they contain information for each particle hits in a given time slot, for which there can be multiple. 
+There are also the branches \texttt{FE} and \texttt{BE}, which is the energy (\texttt{ADC}) (energy) associated with the events. 
 
 \subsection{Calibrator}
 Since the detectors work, by measuring an electrical charge that comes from the charged particle, the detectors needs to translate a specific charge to energy deposited. \\
@@ -103,7 +101,7 @@ The sorter is used after a successful calibration. It generates a ROOT file base
 It is also responsible for matching and combining events from the front-side to the back-side of the detector. If there where one hit in the front side and one in the back, the mathcing is fairly trivial. If there however where multiple hits in both front and back, the \texttt{Sorter} will run a matching algorithm, which pairs the hits with the lowest energy differences. \\
 \\
 When the events have been matched, the hits on the individual sides of each detector are merged into a single event. 
-Therefore each event can now be considered a multiple of particle hits. This makes it possible to to associate physical properties with each particle, such as direction and energy. 
+Therefore each event can now be considered a multiple of particle hits. This makes it possible to associate physical properties with each particle, such as direction and energy. 
 There has still not been done any filtering of the data, which is what we will discuss in  \cref{cha:dataReduction}.
 
 

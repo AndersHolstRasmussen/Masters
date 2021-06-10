@@ -24,6 +24,21 @@ D.R. Tilley, J.H. Kelley, J.L. Godwin, D.J. Millener, J.E. Purcell, C.G. Sheu,
 \newblock Energy levels of light nuclei a=8,9,10.
 \newblock {\em Nuclear Physics A}, 745(3):155--362, 2004.
 
+\bibitem{doi:https://doi.org/10.1002/9783527693610.ch24}
+V.~Zelevinsky and A.~Volya.
+\newblock {\em Physics of Atomic Nuclei}, chapter~24, pages 585--625.
+\newblock John Wiley \& Sons, Ltd, 2017.
+
+\bibitem{TENGBLAD2004458}
+O.~Tengblad, U.C. Bergmann, L.M. Fraile, H.O.U. Fynbo, and S.~Walsh.
+\newblock Novel thin window design for a large-area silicon strip detector.
+\newblock {\em Nuclear Instruments and Methods in Physics Research Section A:
+  Accelerators, Spectrometers, Detectors and Associated Equipment},
+  525(3):458--464, 2004.
+
+\bibitem{detector}
+\url{http://www.micronsemiconductor.co.uk/strip-detectors-double-sided/}.
+
 \bibitem{ROOT}
 {CERN. ROOT}.
 \newblock \url{https://root.cern/}.

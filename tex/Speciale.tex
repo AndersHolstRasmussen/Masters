@@ -3,6 +3,7 @@
 \usepackage{graphicx}
 %\usepackage[demo]{graphicx}
 \usepackage{subcaption}
+\usepackage{caption}
 \usepackage{float}
 \usepackage[hidelinks]{hyperref}
 \usepackage{listings}
@@ -64,6 +65,8 @@
 	\newpage
 	\setcounter{page}{1}	
 {
+	\input{abstract.tex}
+	\input{ack.tex}
 	\hypersetup{linkcolor=black}
 	\tableofcontents
 }

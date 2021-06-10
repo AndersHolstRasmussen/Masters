@@ -17,7 +17,7 @@ The radioactive source used to calibrate this setup contained \isotope[148][]{Gd
 	\caption{Decay energies for each isotope used in the calibration.}
 	\label{tab:cali}
 \end{table}
-A typical single strip spectrum is shown on \cref{fig:singleStripExample}, where the calibrator has given an estimate of where the peaks are, illustrated by the red triangles. \cref{fig:peakExample} shows a closer look at the \isotope[244][]{Cm} peak, where the red line shows the \texttt{Calibrator}-fit over both the main peak and the sub peak. \\
+A typical single strip spectrum is shown on \cref{fig:singleStripExample}, where the calibrator has given an estimate of where the peaks are, illustrated by the red triangles. \cref{fig:peakExample} shows a closer look at the \isotope[244][]{Cm} peaks, where the red line shows the \texttt{Calibrator}-fit over both the main peak and the sub peak. \\
 
 \begin{figure}[H]
 	\begin{subfigure}{\linewidth}
@@ -39,7 +39,7 @@ A typical single strip spectrum is shown on \cref{fig:singleStripExample}, where
 
 \section{Identifying the particles}
 After utilizing the AUSAlib tools, the data is ready to be analyzed. Even though the theory dictates that a decay will consist of two \al-particles and one \be-particles, it is not realistic to just assume that each detected event will consist only of this configuration of particles. \\
-Therefore we need some cut on what events we will allow through to the analysis. Specifically we are going to impose 3 cuts on the data, a angular cut, a momentum cut and a multiplicity cut.
+Therefore we need some cut on what events we will allow through to the analysis. Specifically we are going to impose 3 cuts on the data, an angular cut, a momentum cut and a multiplicity cut.
 
 
 
@@ -52,7 +52,7 @@ This is the reason for the PAD's behind each DSSD. The idea is that only a \be-p
 This approach however does not work as well as intended. Often what happens is that the thin DSSD will not pick up any energy deposited, and the hit will therefore not be counted. 
 But not all of the detectors are \SI{60}{\mu m}. We have two detectors that are around \SI{1000}{\mu m} thick. These detectors are much better at picking up a signal from a \be-particle, so one of the criteria for being a \be-particle in this setup is to have hit either Det2 or DetD.\\
 
-These two criteria are however not enough to uniquely determine that a hit was a \be-particle. We still have to consider the events where a detector has multiple hits. Since a PAD gives no usable information regarding where a particle has hit, we cannot say which particle was a \be-particle and which where an \al-particle. 
+These two criteria are however not enough to uniquely determine that a hit was a \be-particle. We still have to consider the events where a detector has multiple hits. Since a PAD gives no usable information regarding where a particle has hit, we cannot say which particle was a \be-particle and which were an \al-particle. 
 
 Therefore if the \be-particle criteria are true, we mark the particle as a \textit{possible} \be. But since it might as well have been a \al-particle, we also mark it as such.\\
 Every hit that does not uphold to the \be-particle criteria are of course marked only as a possible \al-particle.
@@ -61,7 +61,7 @@ Every hit that does not uphold to the \be-particle criteria are of course marked
 %
 When all the particles have been identified, we impose the first cut to the data. A multiplicity cut that says we need at least two \al-particles. If there are less, we discard the event. 
 \\
-When we at least have two distinct particles that can be \al-particles, we look at their mutual difference in momentum. The particle pair with the least difference in momentum will be chosen as the only \al-particles that can be present in an event. Then we have assured that every other particle we see in the event, is possible \be-particle candidates. 
+When we at least have two distinct particles that can be \al-particles, we look at their mutual difference in momentum. The particle pair with the least difference in momentum will be chosen as the only \al-particles that can be present in an event. Then we have assured that every other particle we see in the event, are possible \be-particle candidates. 
 \\
 When each particle has been identified or discarded, all remaining particle-specific information is stored to the given particle for easy analysis henceforth.
 
@@ -85,7 +85,7 @@ By taking a sharp cutoff at $\cos(\theta) \geq -0.99$, we will exclude a great d
 
 \section{Momentum cut}
 The second cut we perform on the data is a \textit{total} momentum cut. On \cref{fig:totalMomentum} the total momentum for the two identified \al-particles are shown. 
-A prominent peak lies around \SI{13.000}{keV/c}, and ends around \SI{40.000 }{keV/c}. 
+A prominent peak lies around \SI{13}{MeV/c}, and ends around \SI{40}{MeV/c }. 
 We impose a cut of maximum \SI{40}{MeV/c}, as this will include the large amount of pairs lying in the peak, which must be \al-\al pairs. A \al-particle with energy \SI{1500}{keV} will have a momentum of \SI{105}{MeV/c}, and a free electron of \SI{3000}{keV} will have a momentum of \SI{1.7}{MeV/c}. 
 The majority of particles lies around these energies, and no matter where the \be-particle will hit, the total momentum is still much larger than the \SI{40}{MeV/c} cutoff. 
 \begin{figure}[h]
@@ -99,7 +99,8 @@ The majority of particles lies around these energies, and no matter where the \b
 The last cut that we want to impose on the data, is a multiplicity cut. This cut is just to ensure that we have the amount of particles that we expect. 
 Therefore a hard criteria is that there must be at least two distinctly identified \al-particles. \\
 
-With regards to the \be-particles, we are more loose. Here we say that there must at least be one, but more can occur. This is quite rare, but the we still take that event into account, as the \be-particles should have an isotropic distribution, and therefore should not in any case be affected by the other \al-particles. On \cref{fig:mulBeta} we see the multiplicity of \be-particles, and in most of the events, we have not detected any \be-particles, and when we do, there is a even fewer events with more than one beta. So most of the time, we are in the expected case with two \al-particle and one \be-particle. \note{add that beta spreads around in the setup}
+With regards to the \be-particles, we are more loose. Here we say that there must at least be one, but more can occur. This is quite rare, but we still take that event into account, as the \be-particles should have an isotropic distribution, and therefore should not in any case be affected by the other \al-particles. Often what happens is, that the \be-particles scatter around in the setup, so the same \be-particle will be measured more than once. On \cref{fig:mulBeta} we see the multiplicity of \be-particles, and in most of the events, we have not detected any \be-particles, and when we do, there is a even fewer events with more than one beta. So most of the time, we are in the expected case with two \al-particle and one \be-particle. 
+
 
 \begin{figure}[h]
 	\includegraphics[width=\linewidth]{../figures/betaMul.pdf}

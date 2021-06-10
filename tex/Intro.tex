@@ -41,7 +41,7 @@ A former student has previously made an in depth analysis of the mirror nucleus 
 
 \section{Nuclear decays}
 Lithium normally occurs stable as \isotope[6]Li and \isotope[7]Li, with the latter being the more abundant with 92.5\% of all atoms. The longest living radioactive lithium isotope is \isotope[8]Li, with a half-life of \SI{839}{ms} \cite{TILLEY2004155}. 
-When \li decays, it will do so by a \be-decay, immediately followed by the \al-\al\ breakup of an intermediate exited state in \ber, which has a half life of \SI{1e-16}{s}. \ber is a constituent in the triple-alpha process in stellar astrophysics, and creates a bottleneck for the creation of heavier elements, because of its very short lifespan.
+When \li decays, it will do so by a \be-decay, immediately followed by the \al-\al\ breakup of an intermediate exited state in \ber, which has a half life of \SI{1e-16}{s} \cite{TILLEY2004155}. \ber is a constituent in the triple-alpha process in stellar astrophysics, and creates a bottleneck for the creation of heavier elements, because of its very short lifespan.
 
 %\li will also decay into \ber at different energy levels, which will give a continuum of the 2+ state from \li. 
 
@@ -62,7 +62,7 @@ The energy of these decays are given by their Q-values, neglecting the very smal
 &Q_{\beta^-} = \left[ m (\isotope[A][Z]{X}) - m(\isotope[A][Z+1]{X'}) -2m_e  \right] c^2,
 \end{align}
 where $m$ is the mass of an atom with $Z$ protons and $A$ nucleons.
-The Q-values indicates the mass difference between the initial and final product., which can be either excitation energy or kinetic energy. 
+The Q-values is the mass difference between the initial and final product, which can become either excitation energy or kinetic energy for the final product. 
 
 Not all \be-decays are allowed. If the spin is unchanged, it is a Fermi transition, and if it changes it is a Gamow-Teller transition. 
 An allowed decay is a transition with the change in orbital angular moment $\Delta L = 0$, and forbidden transitions have $\Delta L > 0$.
@@ -73,14 +73,17 @@ The nuclear part of the \be-decay operator for an allowed decay is:
 \end{equation}
 where $g_V$ is the weak vector coupling constant, $\tau_\mp$ is the isospin step operator, $g_A$ is the weak axial coupling constant and $\sigma$ is the Pauli spin matrices.
 The first term corresponds to the Fermi operator, and the second term to the Gamow-Teller operator. 
-This raises some selection rules, that dictate that for a Fermi decay, spin, isospin and parity must not be changed, and for a Gamow-Teller transitions, $\Delta J = 0, \pm1$, $\Delta T = 0, \pm 1$, and $\Delta \pi = 0$.
-
-The selection rules then enforces that not every energy level is populated in \ber. 
+This raises some selection rules, that dictate that for a Fermi decay, spin, isospin and parity must not be changed, and for a Gamow-Teller transitions:
+\begin{equation}
+\Delta J = 0, \pm1, \Delta T = 0, \pm 1, and \Delta \pi = 0.
+\label{eq:selection}
+\end{equation}
+These selection rules \cite{doi:https://doi.org/10.1002/9783527693610.ch24} then enforces that not every energy level is populated in \ber. 
 \\
 \\
 The ground state of \li has spin, parity and isospin of $2^+; 1$, and a mass of \SI{16.005}{MeV/c^2} more than the ground state of \ber, so it will only be able to populate states with lower energy than \SI{16.005}{MeV}, and states where the transition rules applies.\\
 Looking at the states in \ber, there are only 3 states below the threshold of \SI{16.005}{MeV}, that is the ground state, first and second excited state. 
-The ground state is a $0^+; 0$ state, with $\Delta J = 2$, which is forbidden given the selection rules. 
+The ground state is a $0^+; 0$ state and $\Delta J = 2$, this is forbidden given the selection rules from \cref{eq:selection}. 
 
 The first excited state is a broad state at \SI{3.03}{MeV} and $2^+; 0$, which gives $\Delta J = 0, \Delta \pi = 0$ and $\Delta T = 1$. This transition is valid within the selection rules, and is in fact the only state that will be populated in the decay.
 
@@ -96,7 +99,7 @@ Usually it is only elements heavier than nickel that can decay via this process,
 One of the only exceptions to this, is \ber, which is one of the only light nuclei that decays by \al-decay.
 
 \subsection{Production of \li}
-The production of \li is rather crucial to the existence of the experiment, which is why the experiment had to be conducted at IGISOL in Jyväskylä, Finland. This facility is specialized in creating near stable isotopes of many elements and make them into a beam. \\
+The production of \li is rather crucial to the existence of the experiment, which is why the experiment had to be conducted at IGISOL in Jyväskylä, Finland. This facility is specialized in creating near stable isotopes of many elements and turn them into a beam. \\
 In simple steps, the stable \isotope[7]{Li} is hit by a deuteron, where the neutron will stick to the the nucleus of \isotope[7]Li, and create ionized \li. When it becomes ionized, it can be accelerated into a beam and shot at the target. The target is a thin carbon foil, where the ionized \li will be stopped and lie. The target will transfer an electron to \li, making it not ionized, and we are left with pure \li just where we want it.  
 
 \section{Structure of $^8$Be}

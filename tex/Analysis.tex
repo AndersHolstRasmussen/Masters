@@ -2,9 +2,9 @@
 \section{The effects of the cuts}
 How does the cuts imposed in the previous chapter affect the data then?
 First we need to look at how the data looks, without any cuts. On \cref{fig:EENoCuts} the energy of the first \al-particle (E$_{\alpha1}$) is plotted against the energy of the second \al-particle (E$_{\alpha2}$).
-This gives us a nice view of what is considered \al-particle pairs. There is a prominent line going diagonally through the graph, where both particles have around the same energy. This line is expected, as the \al-particles will have close to equal energy, when decaying from \ber. 
+This gives us a nice view of what is considered \al-particle pairs. There is a prominent line going diagonally through the graph, where both particles have approximately the same energy. This line is expected, as the \al-particles will have close to equal energy, when decaying from \ber. 
 
-This means that there is a lot of particle pairs that have been identified as \al-\al, but properbly was \al-noise, noise-noise, \al-\be\ or \be-\be\ pairs. 
+This means that there is a lot of particle pairs that have been identified as \al-\al, but probably was \al-noise, noise-noise, \al-\be\ or \be-\be\ pairs. 
 
 The lines occurring from E$_{\alpha2} \approx \SI{400}{keV}$ are a clear example of a \al-\be\ pair. In this line, \al1 has been identified correctly as a \al-particle, which will have energies ranging from 500-\SI{6000}{keV}, whereas the the other particle has a more constant energy, corresponding to the energy a \be-particle can deposit in a detector. So by doing no cuts at all, we are left with a lot of cases where we have no real control over what particle type we are dealing with. 
 
@@ -35,18 +35,18 @@ The lines occurring from E$_{\alpha2} \approx \SI{400}{keV}$ are a clear example
 \begin{figure}[H]
 	\begin{subfigure}[t]{0.5\linewidth}
 		\includegraphics[width=\linewidth]{../figures/EEMomentumCut.pdf}
-		\caption{Only moment}
+		\caption{This cut shows only the momentum cut imposed on the data.}
 	\end{subfigure}
 	\begin{subfigure}[t]{0.5\linewidth}
 		\includegraphics[width=\linewidth]{../figures/EEAngAndMoment.pdf}
-		\caption{Ang and moment}
+		\caption{This cut shows the momentum \textit{and} the angular cut imposed on the data.}
 	\end{subfigure}
 \caption{A comparison of the momentum cut with and without the angular cut.}
 \label{fig:AngAndMomentCompare}
 \end{figure}
 
 \subsection{The effect of the angular cut}
-By imposing the angular cut, we get the first real reduction in data. If the angle between the two \al-particles are less than $\cos(\theta) = -0.95 \approx 160\degree$, we sort away a good part of the \be-\al\ pairs, as seen on \cref{fig:EEAngleCut}. But there are still a good portion of wrong pairs left, and we move on to impose a cut on the momentum of the particles. 
+By imposing the angular cut, we get the first real reduction in data. If the angle between the two \al-particles are less than $\theta \approx 160\degree$, we sort away a good part of the \be-\al\ pairs, as seen on \cref{fig:EEAngleCut}. But there are still a good portion of wrong pairs left, and we move on to impose a cut on the momentum of the particles. 
 
 
 \subsection{The effect of the momentum cut}
@@ -64,33 +64,31 @@ There is a very prominent line of particles with roughly the same energy.
 The line is thinner at higher energies, and widens as it goes towards lower energies. 
 The reason for the widening, is the recoil energy from the \be-decay.
 If the \al-particles have low energy, they are more susceptible to other forces around it, and will lose a larger portion of their energy to the \be-particle recoil. \\
-
-\begin{figure}[h]
-	\centering
-	\includegraphics[width=\linewidth]{../figures/EE.pdf}
-	\caption{The energy of the first \al-particle plotted against the energy of the second \al-particle. All of the data reduction cuts are used here.}
-	\label{fig:EEAllCuts}
-\end{figure}
-On \cref{fig:allCutsCompare} all the cuts are shown as individually, highlighting the effect that each cut provides. Here it is worth noting that not all \be-particles have been successfully removed from the data. A slight peak at low energies still remain for the black line in the figure. This is also clear on \cref{fig:EEAllCuts}, where the there is a high intensity at the $\approx$ \SI{200}{keV} energy range. 
-
-An interesting effect that can be seen on the data, is the importance of the momentum cut. Looking the red and green line, we see a soft reduction in counts, different from the more rapid fall around \SI{7}{MeV}. This is because there can be events where a particle will hit the detector, triggering it to measure, and before it turns completely off for detecting, another particle hits, and some of the the energies from both particles are measured as one particle. \\
-So the momentum cut will also cut bad detection events away from the data in the high energy regime. 
-
-
-
 \begin{figure}[h]
 	\centering
 	\includegraphics[width=\linewidth]{../figures/cutCompare.pdf}
 	\caption{A comparison of all the cuts, with the energy of one \al-particle shown. }
 	\label{fig:allCutsCompare}
 \end{figure}
+\begin{figure}[h]
+	\centering
+	\includegraphics[width=\linewidth]{../figures/EE.pdf}
+	\caption{The energy of the first \al-particle plotted against the energy of the second \al-particle. All of the data reduction cuts are used here.}
+	\label{fig:EEAllCuts}
+\end{figure}
+On \cref{fig:allCutsCompare} all the cuts are shown as individual histograms, highlighting the effect that each cut provides. Here it is worth noting that not all \be-particles have been successfully removed from the data. A slight peak at low energies still remain for the black line in the figure. This is also clear on \cref{fig:EEAllCuts}, where the there is a high intensity at the $\approx$ \SI{200}{keV} energy range. 
 
-So far we have only considered that the \al-particles are sorted correctly. But there is still a question for weather the \be-particles will be clouded by wrong identifications. 
+An interesting effect that can be seen on the data, is the importance of the momentum cut. Looking the red and green line, we see a soft reduction in counts, different from the more rapid fall around \SI{6}{MeV} for the magenta line. This is because there can be events where a particle will hit the detector, triggering it to measure, and before it turns completely off for detecting, another particle hits, and some of the the energies from both particles are measured as one particle. 
+So the momentum cut will also cut bad detection events away from the data in the high energy regime. 
+
+
+
+So far we have considered that only the \al-particles are sorted correctly. But there is still a question about whether the \be-particles will be clouded by wrong identifications. 
 On \cref{fig:beSpectrum} we see the energy deposited in the two detectors that are capable of measuring \be-particles, and the pad behind Det2.
 The energy from the pad and DetD, shows one peak around \SI{400}{keV} and \SI{300}{keV}, respectively. 
 Det2 shows two peaks, one close to \SI{400}{keV}, and one close to \SI{800}{keV}. This is rather interesting, as we do not expect \be-particles to deposit two different energies. Both detectors and the pad where \SI{1000}{\mu m} thick, so we expect that the energy deposited would be roughly the same. The stopping power of silicon predicts an electron will deposit around \SI{300}{keV} - \SI{500}{keV} in \SI{1000}{\mu m} silicon \cite{NIST_ASD}, depending on the actual energy of the \be-particle. So the first peak of the blue line is most likely the "real" \be-energy. 
-An explanation as to why we see the secondary peak, is could be that this detector was part of the trigger system, that detects when a particle has been hit anywhere in the setup. There is a lower bound on what energies that can trigger the system, and it is placed at \SI{500}{keV}. 
-So this peak most likely stems from false \note{SOMETHING?}.
+An explanation as to why we see the secondary peak, could be that this detector was part of the trigger system, that detects when a particle has been hit anywhere in the setup. There is a lower bound on what energies that can trigger the system, and it is placed at \SI{500}{keV}. 
+So this peak most likely stems from false detection caused by the triggering, since DetD was not part of the trigger, and did not produce two peaks.
 
 \begin{figure}[h]
 	\centering
@@ -101,37 +99,36 @@ So this peak most likely stems from false \note{SOMETHING?}.
 
 \section{The excitation energy of $^8$Be}
 With the \al-particles sorted correctly, we can start to look at the excitation energy of \ber. As mentioned in \cref{sec:beta} the \be-decay of \li will populate a broad exited state of \ber. This will give a more wide peak than we normally see in \al-decays. On \cref{fig:bata} the energy sum of the \al-particles has been plotted as the blue line. The peak lies closely to the mean energy of the exited state of \SI{3.03}{MeV}, and then has a long tail all the way up to the around \SI{16}{MeV}.
-
+\begin{figure}[h]
+	\centering
+	\includegraphics[width=\linewidth]{../figures/bataraCompare.pdf}
+	\caption{A comparison between the spectra of the excited state in \ber from this experiment(blue), and a fit found by Bhattacharya \cite{bata} (green).}
+	\label{fig:bata}
+\end{figure}
 At the low end of the spectra, there is a small peak just before the beginning of the main peak. This is the reminiscence of low energy \be-\be\ pairs that have not been sorted in the data. We will not worry too much about this, as the interesting properties of the spectra lies at higher energies than the main peak.
 
-The green line is a fit made to another experiment by Bhattacharya \cite{bata}. The fitted green line has been multiplied by 70 as to better compare the two plots. 
+The green line is a fit made to another experiment by Bhattacharya \cite{bata}. The fitted green line has been scaled accordingly,for a better comparison between the two plots. 
 The plots differ a lot in the low energy range, as the \be-particle contribution is rather prominent. But around the peak and at higher energy, the fit and our data follows nicely. At the very end, they differ again, as there seem to be some noise in our data, since the counts are too low to be considered otherwise. 
 
 \subsection{Lepton recoil}
 E. K. Warburton \cite{PhysRevC.33.303} argues that the lepton recoil will be significantly small, and can be neglected, when observing the exitation spectra of \ber. This means that measuring one \al-particle and multiplying the energy with 2, will be just as good a measurement as measuring both, and adding their energies. 
 As Bhattacharya finds \cite{Bhattacharya:2002gc}, it cannot be neglected, and as we have shown in \cref{fig:recoil} and \cref{fig:recoilGauss}, the leptons will have a noticeable impact on the excitation of \ber, as it seems that the red line peaks at lower energies than the blue. The fit on \cref{fig:beSpectrum} from \cite{bata} also takes this effect into account. 
 
-\begin{figure}
-	\begin{subfigure}[t]{.5\linewidth}
-		\centering
-		\includegraphics[width=\linewidth]{../figures/recoil.pdf}
+
+\begin{figure}[h]
+	\begin{subfigure}[t]{.48\linewidth}
+		
+		\includegraphics[width=\textwidth]{../figures/recoil.pdf}
 		\caption{Difference between twice the energy of one \al-particle and the sum of two \al-particles. The red line indicates the sum of both \al-particles in coincidence. The blue line shows the double energy of a single \al-particle.}
 		\label{fig:recoil}
-	\end{subfigure}
-	\begin{subfigure}[t]{.5\linewidth}
-		\centering
+	\end{subfigure}\hfill
+	\begin{subfigure}[t]{.48\textwidth}
+		
 		\includegraphics[width=\linewidth]{../figures/recoilGauss.pdf}
 		\caption{A plot of the difference in energy in the range \SI{2}{MeV} to \SI{4}{MeV}. The recoil of the leptons will have a notable difference in energies in this range.}
 		\label{fig:recoilGauss}
 	\end{subfigure}
-\caption{}
-\end{figure}
-
-\begin{figure}[h]
-	\centering
-	\includegraphics[width=\linewidth]{../figures/bataraCompare.pdf}
-	\caption{A comparison between the spectra of the excited state in \ber from this experiment(blue), and a fit found by Bhattacharya \cite{bata} (green).}
-	\label{fig:bata}
+	\caption{}
 \end{figure}
 
 \section{Angular efficiency of the setup}
@@ -145,8 +142,8 @@ This effect becomes apparent on \cref{fig:oneDetEff}, where the angular efficien
 	\label{fig:oneDetEff}
 \end{figure}
 In this setup however, we have a cube of square detectors, who's normal vectors are all pointing in towards target at the center. This gives a much larger coverage of all mutual angles. 
-The placement of the detectors gives that angles around $\theta \approx 90 \degree$ are also very favored. This makes sense, almost no matter what pixel was hit, there is a corresponding pixel $90\degree$ to both sides. In the same way, will there always be a corresponding pixel $\approx 180\degree$ from each pixels. This effect can be seen on \cref{fig:effAllDet}. \\
-This histogram was created using the spacial coordinates of each pixel in the setup. A list of all pixel position was gathered. The mutual angle between every pixel was found, that is $(16\cdot 16 \cdot 6)^2 =$ \num[group-separator={,}]{2359296} possible angles in the setup. 
+The placement of the detectors gives that angles around $\theta \approx 90 \degree$ are also very favored. This makes sense, almost no matter what pixel was hit, there is a corresponding pixel $90\degree$ to both sides, up and down. In the same way, will there always be a corresponding pixel $\approx 180\degree$ from each pixels. This effect can be seen on \cref{fig:effAllDet}. \\
+This histogram was created using the spacial coordinates of each pixel in the setup. A list of all pixel positions was gathered. The mutual angle between every pixel was found, that is $(16\cdot 16 \cdot 6)^2 =$ \num[group-separator={,}]{2359296} possible angles in the setup. 
 
 
 \begin{figure}[h]
@@ -179,13 +176,13 @@ This is calculated as
 \label{eq:eff}
 \end{equation}
 where $r$ is the distance to the pixel, $A$ is the area of the pixel and $\theta$ is the angle between the hit direction and the normal vector of the detector as shown on \cref{fig:EffGeometry}. As the angle becomes greater, the effective area of the pixel decreases. 
-The area of all pixel is the same for all detectors, so the constants $A$ and $4\pi$ can be ignored when comparing the efficiency. 
+The area of all pixels are the same for all detectors, so the constants $A$ and $4\pi$ can be ignored when comparing the efficiency. 
 
 
 \begin{figure}[h]
 	\centering
 	\includegraphics[width=.7\linewidth]{../figures/detektorEffDrawingv2.pdf}
-	\caption{A illustration of two hits in different pixels. The blue hit will see a smaller effective area of the pixel by a factor determined by \cref{eq:eff}, as the projection of the blue line onto the dashed line decreases as $\theta$ increases.}
+	\caption{An illustration of two hits in different pixels. The blue hit will see a smaller effective area of the pixel by a factor determined by \cref{eq:eff}, as the projection of the blue line onto the dashed line decreases as $\theta$ increases.}
 	\label{fig:EffGeometry}
 \end{figure}
 
@@ -194,14 +191,14 @@ The form of the two histograms are quite similar around 1, 0 and $-1$ but in bet
 
 
 
-\section{Angular correlations of \al-particles and \be-particles}
+\section{Angular correlations of \be-\al\ particles}
 \label{sec:betaAngle}
-From what we know in \cite{isotrop} the \be-particles must have an isotropic distribution to the \al-particles. 
+From what we know from \cite{isotrop} the \be-particles must have an isotropic distribution to the \al-particles. 
 This is done by first finding the angle between the first \al-particle \al$_1$ and the \be-particle, and create a histogram of this. Then the angle between the second \al-particle \al$_2$ and the same \be-particle is measured, and a histogram is created. The two histograms are then added, to get the full picture of the mutual angles of the particles. 
 This can be seen on \cref{fig:effwithweight} as the green line.  
 
 The blue line in this figure is the angular efficiency for the specific case, where the \al-particles can hit in any given detector, but the \be-particles can only hit in the two specific detectors Det2 and DetD. The two histograms has both been normalized, for a better comparison. By dividing the two histograms with each other, we get a better comparison. If they where to be close to equal, we would see a flat curve. But what we see on \cref{fig:dataDivEff} is not very flat. 
-There are small fluctuations in the line, which stems from the inaccuracy of calculated angular efficiency. But the main shape of the curve is at most time not around $y=1$.
+There are small fluctuations in the line, which stems from the inaccuracy of calculated angular efficiency. But the main shape of the curve is at most time not constant.
 
 \begin{figure}[h]
 	\centering
@@ -222,21 +219,28 @@ The first explanation is that the beam did not hit the target in the center. The
 
 By finding the angular efficiency of the setup, with different values for the center and comparing this to the measured angles, we have found a slight correction for the center of the beam. This can be seen on \cref{fig:centerCorrection}, where the beam has been moved to the coordinates $(-3, -3, 0)$, as opposed to the previous of $(0, 0, 0)$. The division fo the two histograms on \cref{fig:dataDivEffCenter} shows a more stable line from $\cos(\theta)= -0.4$ to $\cos(\theta) = 0.4$, but the edges are still not very alike. Looking at $\cos(\theta) = 1$, we see a rapid fall, which indicates that we have measured a lot fewer parallel \be\ and \al-particles than the setup is designed to handle. 
 This can be due to the fact that some of the strips where defect. The calculated angular efficiency does not know which strips where defect, and and will therefore have a lot higher efficiency for parallel particles. The defect strips will therefore also play a role in the grand scheme, and is a possible explanation as to why there is a difference in the calculated and the measured data. \\
-Another effect that will sway the data, is the target holder. This device will provide a shadow over the top and bottom detector, and since one of the \be-detectors are the bottom one, it will skew the data in a unforeseeable way. 
+Another effect that will sway the data, is the target holder. This device will provide a shadow over the top and bottom detector, and since one of the \be-detectors are the bottom one, it will skew the data in a unforeseeable way. An example of this can be seen on \ref{fig:mexihatDet4}, where the shadow can be seen going from $(0,0)$ to $(16,16)$. This detector also has two dead strips, which is the white lines.  
 \begin{figure}[h]
-	\begin{subfigure}[t]{.5\linewidth}
+	\begin{subfigure}[t]{.48\linewidth}
 		\centering
 		\includegraphics[width=\linewidth]{../figures/betaAngles/centerCorrectedAndData.pdf}
 		\caption{The angular efficiency and the data, with a correction for the center of the beam. }
 		\label{fig:centerCorrection}
-	\end{subfigure}
-	\begin{subfigure}[t]{.5\linewidth}
+	\end{subfigure}\hfill
+	\begin{subfigure}[t]{.48\linewidth}
 		\centering
 		\includegraphics[width=\linewidth]{../figures/betaAngles/dataDivEffCenterCorrected.pdf}
 		\caption{Measured \be-\al-particle angular distribution divided by the calculated angular efficiency of the setup, with a correction for position of the beam. }
 		\label{fig:dataDivEffCenter}
 	\end{subfigure}
 \caption{}
+\end{figure}
+
+\begin{figure}[h]
+	\centering
+	\includegraphics[width=.7\linewidth]{../figures/mexihatDet4.pdf}
+	\caption{A plot over the number of hits in Det4. A shadow from the target holder is visible as a diagonal from $(0,0)$ to $(16,16)$.}
+	\label{fig:mexihatDet4}
 \end{figure}
 
 
