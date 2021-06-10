@@ -98,7 +98,7 @@ double  lowest ( double a[ ], int size ) // function accepts FLOAT array and ret
 
 int main(int argc, char **argv) {
     // Read in setup configuration
-    auto setup = JSON::readSetupFromJSON("/home/anders/i257/setup/setupCorrect.json");
+    auto setup = JSON::readSetupFromJSON("/home/anders/i257/setup/setup.json");
     auto target = JSON::readTargetFromJSON("/home/anders/i257/setup/targets/target.json");
     // for(double offsetx = -3; offsetx < 4; offsetx+=1){
     // for(double offsety = -3; offsety < 4; offsety+=1){

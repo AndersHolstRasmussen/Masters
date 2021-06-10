@@ -1,4 +1,4 @@
-\begin{thebibliography}{1}
+\begin{thebibliography}{10}
 
 \bibitem{igisol}
 Igisol.
@@ -24,10 +24,51 @@ D.R. Tilley, J.H. Kelley, J.L. Godwin, D.J. Millener, J.E. Purcell, C.G. Sheu,
 \newblock Energy levels of light nuclei a=8,9,10.
 \newblock {\em Nuclear Physics A}, 745(3):155--362, 2004.
 
+\bibitem{ROOT}
+{CERN. ROOT}.
+\newblock \url{https://root.cern/}.
+\newblock 2021.
+
+\bibitem{AUSA}
+M.~Munch, J.~Halkjær, and O.~S. Kirsebom.
+\newblock Ausalib - aarhus subatomic library.
+\newblock \url{https://git.kern.phys.au.dk/ausa/ausalib/wikis/home}, 2017.
+
+\bibitem{ucesb}
+ucesb.
+\newblock \url{fy.chalmers.se/~f96hajo/ucesb/}.
+\newblock Accessed \today.
+
+\bibitem{ZIEGLER20101818}
+James~F. Ziegler, M.D. Ziegler, and J.P. Biersack.
+\newblock Srim – the stopping and range of ions in matter (2010).
+\newblock {\em Nuclear Instruments and Methods in Physics Research Section B:
+  Beam Interactions with Materials and Atoms}, 268(11):1818--1823, 2010.
+\newblock 19th International Conference on Ion Beam Analysis.
+
+\bibitem{NIST_ASD}
+A.~Kramida, {Yu.~Ralchenko}, J.~Reader, and {and NIST ASD Team}.
+\newblock {NIST Atomic Spectra Database (ver. 5.8), [Online]. Available:
+  {\tt{https://physics.nist.gov/asd}} [2017, April 9]. National Institute of
+  Standards and Technology, Gaithersburg, MD.}, 2020.
+
 \bibitem{bata}
 M.~Bhattacharya, E.~G. Adelberger, and H.~E. Swanson.
 \newblock Precise study of the final-state continua in $^{8}\mathrm{Li}$ and
   $^{8}\mathrm{B}$ decays.
 \newblock {\em Phys. Rev. C}, 73:055802, May 2006.
+
+\bibitem{PhysRevC.33.303}
+E.~K. Warburton.
+\newblock R-matrix analysis of the
+  ${\ensuremath{\beta}}^{\ensuremath{\mp}}$-delayed alpha spectra from the
+  decay of $^{8}\mathrm{Li}$ and $^{8}\mathrm{B}$.
+\newblock {\em Phys. Rev. C}, 33:303--313, Jan 1986.
+
+\bibitem{Bhattacharya:2002gc}
+M.~Bhattacharya and E.~G. Adelberger.
+\newblock {Reanalysis of alpha + alpha scattering and the beta delayed alpha
+  spectra from Li-8 and B-8 decays}.
+\newblock {\em Phys. Rev. C}, 65:055502, 2002.
 
 \end{thebibliography}

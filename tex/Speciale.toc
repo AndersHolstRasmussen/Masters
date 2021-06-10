@@ -5,12 +5,29 @@
 \contentsline {subsection}{\numberline {1.2.2}$\alpha $-decay}{4}{subsection.1.2.2}%
 \contentsline {subsection}{\numberline {1.2.3}Production of \isotope [8]{Li}\xspace }{4}{subsection.1.2.3}%
 \contentsline {section}{\numberline {1.3}Structure of $^8$Be}{4}{section.1.3}%
-\contentsline {chapter}{\numberline {2}Analysis}{6}{chapter.2}%
-\contentsline {section}{\numberline {2.1}The effects of the cuts}{6}{section.2.1}%
-\contentsline {subsection}{\numberline {2.1.1}The effect of the angular cut}{8}{subsection.2.1.1}%
-\contentsline {subsection}{\numberline {2.1.2}The effect of the momentum cut}{8}{subsection.2.1.2}%
-\contentsline {subsection}{\numberline {2.1.3}The effect of the multiplicity cut}{9}{subsection.2.1.3}%
-\contentsline {subsection}{\numberline {2.1.4}The combined effect of all the cuts}{9}{subsection.2.1.4}%
-\contentsline {section}{\numberline {2.2}The excitation energy of $^8$Be}{11}{section.2.2}%
-\contentsline {section}{\numberline {2.3}Angular efficiency of the setup}{12}{section.2.3}%
-\contentsline {section}{\numberline {2.4}Angular correlations of $\alpha $-particles and $\beta $-particles}{16}{section.2.4}%
+\contentsline {chapter}{\numberline {2}Experimental Methods}{6}{chapter.2}%
+\contentsline {section}{\numberline {2.1}Detector setup}{6}{section.2.1}%
+\contentsline {section}{\numberline {2.2}Experimental setup}{6}{section.2.2}%
+\contentsline {section}{\numberline {2.3}The detectors}{8}{section.2.3}%
+\contentsline {section}{\numberline {2.4}AUSAlib and ROOT}{10}{section.2.4}%
+\contentsline {subsection}{\numberline {2.4.1}Unpacker}{11}{subsection.2.4.1}%
+\contentsline {subsection}{\numberline {2.4.2}Calibrator}{11}{subsection.2.4.2}%
+\contentsline {subsection}{\numberline {2.4.3}Sorter}{13}{subsection.2.4.3}%
+\contentsline {chapter}{\numberline {3}Data Reduction}{14}{chapter.3}%
+\contentsline {section}{\numberline {3.1}Calibration}{14}{section.3.1}%
+\contentsline {section}{\numberline {3.2}Identifying the particles}{15}{section.3.2}%
+\contentsline {subsection}{\numberline {3.2.1}Identifying a hit}{16}{subsection.3.2.1}%
+\contentsline {section}{\numberline {3.3}Angular cut}{17}{section.3.3}%
+\contentsline {section}{\numberline {3.4}Momentum cut}{18}{section.3.4}%
+\contentsline {section}{\numberline {3.5}Multiplicity cut}{19}{section.3.5}%
+\contentsline {chapter}{\numberline {4}Analysis}{21}{chapter.4}%
+\contentsline {section}{\numberline {4.1}The effects of the cuts}{21}{section.4.1}%
+\contentsline {subsection}{\numberline {4.1.1}The effect of the angular cut}{23}{subsection.4.1.1}%
+\contentsline {subsection}{\numberline {4.1.2}The effect of the momentum cut}{23}{subsection.4.1.2}%
+\contentsline {subsection}{\numberline {4.1.3}The effect of the multiplicity cut}{24}{subsection.4.1.3}%
+\contentsline {subsection}{\numberline {4.1.4}The combined effect of all the cuts}{24}{subsection.4.1.4}%
+\contentsline {section}{\numberline {4.2}The excitation energy of $^8$Be}{26}{section.4.2}%
+\contentsline {subsection}{\numberline {4.2.1}Lepton recoil}{28}{subsection.4.2.1}%
+\contentsline {section}{\numberline {4.3}Angular efficiency of the setup}{28}{section.4.3}%
+\contentsline {section}{\numberline {4.4}Angular correlations of $\alpha $-particles and $\beta $-particles}{32}{section.4.4}%
+\contentsline {chapter}{\numberline {5}Conclusion}{36}{chapter.5}%

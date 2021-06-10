@@ -91,7 +91,7 @@ void singleDetectorEff(RDataFrame *df){
     xaxis->SetTitle("cos(\\theta)");
     xaxis->CenterTitle();
     yaxis->CenterTitle();
-    yaxis->SetTitle("Count");
+    yaxis->SetTitle("");
 
     eff2->DrawClone("HIST");
     // eff->DrawClone("HIST");
@@ -204,7 +204,7 @@ void detectorEff(RDataFrame *df){
     }
     auto xaxis = eff2->GetXaxis();
     auto yaxis = eff2->GetYaxis();
-    xaxis->SetTitle("cos(a)");
+    xaxis->SetTitle("cos(\\theta)");
     xaxis->CenterTitle();
     yaxis->SetTitle("count");
     yaxis->CenterTitle();
@@ -221,7 +221,7 @@ void detectorEff(RDataFrame *df){
     eff2->DrawClone("HIST");
     eff->DrawClone("HIST SAME");
 
-   auto legend = new TLegend(0.15, 0.8, 0.5, 0.9);
+   auto legend = new TLegend(0.54, 0.75, 0.89, 0.85);
    legend->AddEntry(eff,"Angular efficiency without effective pixel area", "L");
    legend->AddEntry(eff2,"Angular efficiency");
    legend->SetTextSize(0.02);
@@ -339,9 +339,9 @@ void betaAlphaAngle(RDataFrame *df){
     // h0->Divide(eff);
     auto xaxis = h0->GetXaxis();
     auto yaxis = h0->GetYaxis();
-    xaxis->SetTitle("cos(a)");
+    xaxis->SetTitle("cos(\\theta)");
     xaxis->CenterTitle();
-    yaxis->SetTitle("count");
+    // yaxis->SetTitle("count");
     yaxis->CenterTitle();
     eff->SetLineColor(kRed);
     eff->SetLineWidth(3);
@@ -350,26 +350,27 @@ void betaAlphaAngle(RDataFrame *df){
     h0->SetLineColor(kGreen);
     h0->SetLineWidth(3);
 
-    // h0->Divide(eff2);
+    h0->Divide(eff2);
 
 
 
     
     cout << "Kolmogorov test: " << h0->KolmogorovTest(eff2, "N") << endl;
-    eff2->DrawClone("HIST");
-    h0->DrawClone("HIST SAME");
+    // eff2->DrawClone("HIST");
+    h0->DrawClone("HIST");
     
     auto hclone = h0->Clone();
     auto effclone = eff2->Clone();
     
-    auto legend = new TLegend(0.15, 0.8, 0.3, 0.9);
+    auto legend = new TLegend(0.68, 0.78, 0.88, 0.88);  
     legend->AddEntry(hclone, "Measured angle");
     legend->AddEntry(eff2,"Angular efficiency");
-    legend->SetTextSize(0.02);
+    legend->SetTextSize(0.03);
     // legend->Draw();
     c->Modified();
     c->Update();
-    // c->SaveAs("/home/anders/i257/figures/betaAngles/dataDivEffCenterCorrected.pdf");
+    c->SaveAs("/home/anders/i257/figures/betaAngles/dataDivEff.pdf");
+    // c->SaveAs("/home/anders/i257/figures/betaAngles/betaAngle.pdf");
 
 }
 
@@ -955,14 +956,16 @@ void batara(RDataFrame *df){
     auto xaxis = bat->GetXaxis();
     xaxis->SetTitle("E_{x} [MeV]");
     xaxis->CenterTitle();
+    auto yaxis = bat->GetYaxis();
     c1->SetLogy();
+
  
     h->SetLineWidth(3);
     h->SetLineColor(kBlue);
     bat->SetLineColor(kGreen);
     bat->SetLineWidth(3);
-    h->DrawClone("HIST SAME");
     bat->Draw("AC");
+    h->DrawClone("HIST SAME");
     
 
     auto legend = new TLegend(0.78, 0.78, 0.88, 0.88);
@@ -980,7 +983,7 @@ void recoil(RDataFrame *df){
     gStyle->SetOptStat(0);
 
     int bins = 300;
-    double xmin = 1000;
+    double xmin = 2000;
     double xmax = 4000;
 
     auto data2 = df->Define("x", "(E._E[0] + E._E[1])");
@@ -990,7 +993,7 @@ void recoil(RDataFrame *df){
     auto h2 = data2.Histo1D({"Stats", "title", bins, xmin, xmax}, "x");
     auto h0 = data0.Histo1D({"Stats", "title", bins, xmin, xmax}, "x");
     auto h1 = data1.Histo1D({"Stats", "title", bins, xmin, xmax}, "x");
-    c->SetLogy();
+    // c->SetLogy();
 
     h2->SetLineWidth(3);
     h1->SetLineWidth(3);
@@ -1000,10 +1003,139 @@ void recoil(RDataFrame *df){
     h1->SetLineColor(kBlue);
     h0->SetLineColor(kGreen);
 
+    auto xaxis = h2->GetXaxis();
+    auto yaxis = h2->GetYaxis();
+    xaxis->SetTitle("E_{x} [keV]");
+    xaxis->CenterTitle();
+    yaxis->SetTitle("Counts");
+    yaxis->CenterTitle();
+
 
     h2->DrawClone("HIST");
     h1->DrawClone("HIST SAME");
     // h0->DrawClone("HIST SAME");
+
+    auto legend = new TLegend(0.68, 0.78, 0.88, 0.88);  
+    legend->AddEntry(h2->Clone(), "Both \\alpha-particles");
+    legend->AddEntry(h1->Clone(), "Single \\alpha-particle");
+    legend->SetTextSize(0.03);
+    legend->Draw();
+
+    c->SaveAs("/home/anders/i257/figures/recoil.pdf");
+}
+
+void recoilGauss(RDataFrame *df){
+    auto c = new TCanvas();
+    gStyle->SetOptTitle(0);
+    gStyle->SetOptStat(0);
+
+    int bins = 300;
+    double xmin = -1000;
+    double xmax = 1000;
+
+    auto data2 = df->Define("x", "(E._E[0] - E._E[1])").Filter("E._E[0] + E._E[1] < 4000 && E._E[0] + E._E[1] > 2000");
+
+    auto h2 = data2.Histo1D({"Stats", "title", bins, xmin, xmax}, "x");
+    // c->SetLogy();
+
+    h2->SetLineWidth(3);
+
+    
+    h2->SetLineColor(kBlue);
+
+
+    auto xaxis = h2->GetXaxis();
+    auto yaxis = h2->GetYaxis();
+    xaxis->SetTitle("\\delta E [keV]");
+    xaxis->CenterTitle();
+    yaxis->SetTitle("Counts");
+    yaxis->CenterTitle();
+
+
+    h2->DrawClone("HIST");
+
+
+    auto legend = new TLegend(0.68, 0.78, 0.88, 0.88);  
+    legend->AddEntry(h2->Clone(), "Both \\alpha-particles");
+    legend->SetTextSize(0.03);
+    // legend->Draw();
+
+    c->SaveAs("/home/anders/i257/figures/recoilGauss.pdf");
+}
+
+void centerCorrected(RDataFrame *df){
+    auto c = new TCanvas();
+    gStyle->SetOptTitle(0);
+    gStyle->SetOptStat(0);
+
+    int bins = 300;
+    double xmin = -1;
+    double xmax = 1;
+
+
+    auto d0 = df->Define("d0", "betaAlphaAngle0._betaAlphaAngle0");
+    auto h0 = d0.Histo1D({"Stats", "data / efficiency", bins, xmin, xmax}, "d0");
+
+    auto d1 = df->Define("d1", "betaAlphaAngle1._betaAlphaAngle1");
+    auto h1 = d1.Histo1D({"Stats", "\\beta-\\alpha angle", bins, xmin, xmax}, "d1");
+
+    auto eff = new TH1F("stats", "Angle efficiency", bins, xmin, xmax);
+    auto eff2 = new TH1F("stats", "Angle efficiency", bins, xmin, xmax);
+    h0->Add(&h1.GetValue()); 
+
+    ifstream ifile("/home/anders/i257/build/effFiles/try-3-30.csv");
+    if (!ifile.is_open()) {
+        std::cerr << "There was a problem opening the input file!\n";
+        exit(1);//exit or do additional error checking
+    }
+    while (!ifile.eof())
+    {
+        double angle, weight;
+        ifile >> angle >> weight;
+        eff->Fill(angle);
+        eff2->Fill(angle, weight);
+    }
+    Double_t factor = 1.;
+    eff->Scale(factor/eff->Integral(), "width");
+    eff2->Scale(factor/eff2->Integral(), "width");
+    h0->Scale(factor/h0->Integral(), "width"); 
+
+    // h0->Divide(eff);
+    auto xaxis = h0->GetXaxis();
+    auto yaxis = h0->GetYaxis();
+    xaxis->SetTitle("cos(\\theta)");
+    xaxis->CenterTitle();
+    // yaxis->SetTitle("count");
+    yaxis->CenterTitle();
+    eff->SetLineColor(kRed);
+    eff->SetLineWidth(3);
+    eff2->SetLineColor(kBlue);
+    eff2->SetLineWidth(3);
+    h0->SetLineColor(kGreen);
+    h0->SetLineWidth(3);
+
+    h0->Divide(eff2);
+
+
+
+    
+    cout << "Kolmogorov test: " << h0->KolmogorovTest(eff2, "N") << endl;
+    // eff2->DrawClone("HIST");
+    h0->DrawClone("HIST");
+    
+    auto hclone = h0->Clone();
+    auto effclone = eff2->Clone();
+    
+    auto legend = new TLegend(0.68, 0.78, 0.88, 0.88);  
+    legend->AddEntry(hclone, "Measured angle");
+    legend->AddEntry(eff2,"Angular efficiency");
+    legend->SetTextSize(0.03);
+    // legend->Draw();
+    c->Modified();
+    c->Update();
+    c->SaveAs("/home/anders/i257/figures/betaAngles/dataDivEffCenterCorrected.pdf");
+    // c->SaveAs("/home/anders/i257/figures/betaAngles/centerCorrectedAndData.pdf");
+
 
 }
 
@@ -1098,8 +1230,10 @@ int main(int argc, char *argv[]) {
     // doubleAlphaSpectra(&df);
     // compareCuts(&df, &dfNoCut, &dfAng, &dfMoment, &dfBetaMul, &dfAngAndMoment);
     // energyDifference(&df);
-    batara(&df);
+    // batara(&df);
     // recoil(&df);
+    recoilGauss(&df);
+    // centerCorrected(&df);
     app->Run(); // show all canvas
     return 0;
 }
