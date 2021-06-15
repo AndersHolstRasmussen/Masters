@@ -7,7 +7,7 @@ Warning--entry type for "andreas" isn't style-file defined
 --line 85 of file Bib.bib
 You've used 15 entries,
             1791 wiz_defined-function locations,
-            535 strings with 6149 characters,
+            535 strings with 6151 characters,
 and the built_in function-call counts, 2968 in all, are:
 = -- 253
 > -- 123

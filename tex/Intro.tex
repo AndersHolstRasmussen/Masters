@@ -41,15 +41,19 @@ A former student has previously made an in depth analysis of the mirror nucleus 
 
 \section{Nuclear decays}
 Lithium normally occurs stable as \isotope[6]Li and \isotope[7]Li, with the latter being the more abundant with 92.5\% of all atoms. The longest living radioactive lithium isotope is \isotope[8]Li, with a half-life of \SI{839}{ms} \cite{TILLEY2004155}. 
-When \li decays, it will do so by a \be-decay, immediately followed by the \al-\al\ breakup of an intermediate exited state in \ber, which has a half life of \SI{1e-16}{s} \cite{TILLEY2004155}. \ber is a constituent in the triple-alpha process in stellar astrophysics, and creates a bottleneck for the creation of heavier elements, because of its very short lifespan.
-
+When \li decays, it will do so by a \be-decay, immediately followed by the \al-\al\ breakup of an intermediate exited state in \ber, which has a half life of \SI{1e-16}{s} \cite{TILLEY2004155}. The decay then becomes:
+\begin{align*}
+&\isotope[8]{Li} \rightarrow \isotope[8]{Be} + e^- + \bar{\nu_e} \\
+&\isotope[8]{Be} \rightarrow \isotope[4]{He} + \isotope[4]{He}. \label{eq:reaction}
+\end{align*}
+\ber is a constituent in the triple-alpha process in stellar astrophysics, and creates a bottleneck for the creation of heavier elements, because of its very short lifespan. 
 %\li will also decay into \ber at different energy levels, which will give a continuum of the 2+ state from \li. 
 
 \subsection{\be-decay}
 \label{sec:beta}
 Most light unstable nuclei will decay by either proton/neutron emission, or by a \be-decay. Isotopes that lie close to the valley of stability will not decay by proton/neutron emission, but from a \be-decay.
 \\
-A \be-decay is a weak interaction, which allows a quark in a proton or neutron to change flavor, by emitting a W boson. This leads to the creation of either an electron/antineutrino pair or a positron/neutrino pair:
+A \be-decay is a weak interaction, which allows a quark in a proton or neutron to change flavor, by emitting a virtual W boson. This leads to the creation of either an electron/antineutrino pair or a positron/neutrino pair:
 \begin{align}
 &\beta^+:\quad p\rightarrow n + e^+ + \nu_e\\
 &\beta^-:\quad n\rightarrow p + e^- + \bar{\nu_e}.
@@ -75,7 +79,7 @@ where $g_V$ is the weak vector coupling constant, $\tau_\mp$ is the isospin step
 The first term corresponds to the Fermi operator, and the second term to the Gamow-Teller operator. 
 This raises some selection rules, that dictate that for a Fermi decay, spin, isospin and parity must not be changed, and for a Gamow-Teller transitions:
 \begin{equation}
-\Delta J = 0, \pm1, \Delta T = 0, \pm 1, and \Delta \pi = 0.
+\Delta J = 0, \pm1,\quad \Delta T = 0, \pm 1,\quad \text{and}\quad \Delta \pi = 0.
 \label{eq:selection}
 \end{equation}
 These selection rules \cite{doi:https://doi.org/10.1002/9783527693610.ch24} then enforces that not every energy level is populated in \ber. 
@@ -100,7 +104,7 @@ One of the only exceptions to this, is \ber, which is one of the only light nucl
 
 \subsection{Production of \li}
 The production of \li is rather crucial to the existence of the experiment, which is why the experiment had to be conducted at IGISOL in Jyväskylä, Finland. This facility is specialized in creating near stable isotopes of many elements and turn them into a beam. \\
-In simple steps, the stable \isotope[7]{Li} is hit by a deuteron, where the neutron will stick to the the nucleus of \isotope[7]Li, and create ionized \li. When it becomes ionized, it can be accelerated into a beam and shot at the target. The target is a thin carbon foil, where the ionized \li will be stopped and lie. The target will transfer an electron to \li, making it not ionized, and we are left with pure \li just where we want it.  
+In simple steps, the stable \isotope[7]{Li} is hit by a deuteron, where the neutron will stick to the the nucleus of \isotope[7]Li, and create ionized \li. When it becomes ionized, it can be accelerated into a beam and shot at the target. The target is a thin carbon foil, where the ionized \li will be stopped and lie until they eventually decays. The target will transfer an electron to \li, making it not ionized, and we are left with pure \li just where we want it.  
 
 \section{Structure of $^8$Be}
 \Cref{fig:berStructure} shows the excitation spectrum for \ber, with values from \cite{TILLEY2004155}. The spin, parity and isospin are written as $J^\pi ; T$ for each level. 4 different states has been shown for \ber, where only the first excited state is the broad state at \SI{3.03}{MeV}. This state has conservation of spin and parity from \li and is the only state that is allowed for the decay of \li. Situated above is the broad state at \SI{11.35}{MeV}, which does not conserve spin. Above that is a \SI{16.626}{MeV} state, which conserves spin, parity and isospin, but lies energetically above \li, so we would not expect that to shown in the data. It is still a quite relevant state, as the mirror nucleus \isotope[8]{B} $(2^+; 1)$ lies just above the energy at \SI{17.979}{MeV}, and then has enough energy to populate this state, even though it is not very likely. Previous experiments made by the Aarhus subatomic group has examined the decay, and found only 5 counts populating this excitation level. But that should not show up when looking at the decay of \li.

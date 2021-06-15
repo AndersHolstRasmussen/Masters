@@ -9,22 +9,22 @@ This means that there is a lot of particle pairs that have been identified as \a
 The lines occurring from E$_{\alpha2} \approx \SI{400}{keV}$ are a clear example of a \al-\be\ pair. In this line, \al1 has been identified correctly as a \al-particle, which will have energies ranging from 500-\SI{6000}{keV}, whereas the the other particle has a more constant energy, corresponding to the energy a \be-particle can deposit in a detector. So by doing no cuts at all, we are left with a lot of cases where we have no real control over what particle type we are dealing with. 
 
 \begin{figure}[H]
-	\begin{subfigure}[t]{0.5\linewidth}
+	\begin{subfigure}[t]{0.49\linewidth}
 		\includegraphics[width=\linewidth]{../figures/EENoCuts.pdf}
 		\caption{No cuts on the data}
 		\label{fig:EENoCuts}
-	\end{subfigure}
-	\begin{subfigure}[t]{0.5\linewidth}
+	\end{subfigure}\hfill
+	\begin{subfigure}[t]{0.49\linewidth}
 		\includegraphics[width=\linewidth]{../figures/EEAngleCut.pdf}
 		\caption{An angular cut. The angle between the two partcles must be greater than $160\degree$.}
 		\label{fig:EEAngleCut}
 	\end{subfigure}
-	\begin{subfigure}[t]{0.5\linewidth}
+	\begin{subfigure}[t]{0.49\linewidth}
 		\includegraphics[width=\linewidth]{../figures/EEMomentumCut.pdf}
 		\caption{A momentum cut. The total momentum of the particles must be less than \SI{40}{MeV/c}}
 		\label{fig:EEMomentumCut}
-	\end{subfigure}
-	\begin{subfigure}[t]{0.5\linewidth}
+	\end{subfigure}\hfill
+	\begin{subfigure}[t]{0.49\linewidth}
 		\includegraphics[width=\linewidth]{../figures/EEBetaMulCut.pdf}
 		\caption{A \be-multiplicity cut. There must exist at least one \be-particle and two \al-particles in the event. }
 		\label{fig:EEBetaMulCut}
@@ -33,11 +33,11 @@ The lines occurring from E$_{\alpha2} \approx \SI{400}{keV}$ are a clear example
 \end{figure}
 
 \begin{figure}[H]
-	\begin{subfigure}[t]{0.5\linewidth}
+	\begin{subfigure}[t]{0.49\linewidth}
 		\includegraphics[width=\linewidth]{../figures/EEMomentumCut.pdf}
 		\caption{This cut shows only the momentum cut imposed on the data.}
-	\end{subfigure}
-	\begin{subfigure}[t]{0.5\linewidth}
+	\end{subfigure}\hfill
+	\begin{subfigure}[t]{0.49\linewidth}
 		\includegraphics[width=\linewidth]{../figures/EEAngAndMoment.pdf}
 		\caption{This cut shows the momentum \textit{and} the angular cut imposed on the data.}
 	\end{subfigure}
@@ -50,7 +50,7 @@ By imposing the angular cut, we get the first real reduction in data. If the ang
 
 
 \subsection{The effect of the momentum cut}
-Again the aim is to sort the data, so that we can identify the particles. On \cref{fig:EEMomentumCut} the total momentum of the two particles has been limited to a maximum of \SI{40}{MeV/c}. This cut sorts away all of the vertical and horizontal lines from a \be-\al pair. With this drastic cut, it looks like there is no use for the angular cut, which might be true. On figure \ref{fig:AngAndMomentCompare} we can see the comparison of the effect of the momentum cut, with and without an angular cut. There does not seem to be a very large difference. Since momentum already takes the direction of the particles into account, as well as their energies, the angular cut will seem a bit redundant. However, we keep the angular cut on the data, as it will not take away any "good" measurements, but only some noise that slips through the multiplicity cut. Looking at \cref{fig:allCutsCompare}, we see the blue line as the momentum cut and the magenta line as the momentum and angular cut. The two histograms lie very close to each other, except in the low energy ranger. Here we see a slight reduction in the magenta line, indicating that the pure angular cut will sort some \be-particles from the data. It is therefor a justified cut to still impose on the data. 
+Again the aim is to sort the data, so that we can identify the particles. On \cref{fig:EEMomentumCut} the total momentum of the two particles has been limited to a maximum of \SI{40}{MeV/c}. This cut sorts away all of the vertical and horizontal lines from a \be-\al\ pair. With this drastic cut, it looks like there is no use for the angular cut, which might be true. On figure \ref{fig:AngAndMomentCompare} we can see the comparison of the effect of the momentum cut, with and without an angular cut. There does not seem to be a very large difference. Since momentum already takes the direction of the particles into account, as well as their energies, the angular cut will seem a bit redundant. However, we keep the angular cut on the data, as it will not take away any "good" measurements, but only some noise that slips through the multiplicity cut. Looking at \cref{fig:allCutsCompare}, we see the blue line as the momentum cut and the magenta line as the momentum and angular cut. The two histograms lie very close to each other, except in the low energy ranger. Here we see a slight reduction in the magenta line, indicating that the pure angular cut will sort some \be-particles from the data. It is therefor a justified cut to still impose on the data. 
  
 
 
@@ -87,9 +87,7 @@ So far we have considered that only the \al-particles are sorted correctly. But 
 On \cref{fig:beSpectrum} we see the energy deposited in the two detectors that are capable of measuring \be-particles, and the pad behind Det2.
 The energy from the pad and DetD, shows one peak around \SI{400}{keV} and \SI{300}{keV}, respectively. 
 Det2 shows two peaks, one close to \SI{400}{keV}, and one close to \SI{800}{keV}. This is rather interesting, as we do not expect \be-particles to deposit two different energies. Both detectors and the pad where \SI{1000}{\mu m} thick, so we expect that the energy deposited would be roughly the same. The stopping power of silicon predicts an electron will deposit around \SI{300}{keV} - \SI{500}{keV} in \SI{1000}{\mu m} silicon \cite{NIST_ASD}, depending on the actual energy of the \be-particle. So the first peak of the blue line is most likely the "real" \be-energy. 
-An explanation as to why we see the secondary peak, could be that this detector was part of the trigger system, that detects when a particle has been hit anywhere in the setup. There is a lower bound on what energies that can trigger the system, and it is placed at \SI{500}{keV}. 
-So this peak most likely stems from false detection caused by the triggering, since DetD was not part of the trigger, and did not produce two peaks.
-
+An explanation as to why we see the secondary peak, could be that this detector is part of the trigger system, that detects when a particle has been hit anywhere in the setup. There is a lower bound on what energies that can trigger the system, and it is at \SI{500}{keV}. This makes it hard to detect energies around the trigger, and what most likely happens here is that the two peaks are part of the same peak, that has a maximum around \SI{500}{keV}.
 \begin{figure}[h]
 	\centering
 	\includegraphics[width=\linewidth]{../figures/betaSpec.pdf}
@@ -108,7 +106,7 @@ With the \al-particles sorted correctly, we can start to look at the excitation 
 At the low end of the spectra, there is a small peak just before the beginning of the main peak. This is the reminiscence of low energy \be-\be\ pairs that have not been sorted in the data. We will not worry too much about this, as the interesting properties of the spectra lies at higher energies than the main peak.
 
 The green line is a fit made to another experiment by Bhattacharya \cite{bata}. The fitted green line has been scaled accordingly,for a better comparison between the two plots. 
-The plots differ a lot in the low energy range, as the \be-particle contribution is rather prominent. But around the peak and at higher energy, the fit and our data follows nicely. At the very end, they differ again, as there seem to be some noise in our data, since the counts are too low to be considered otherwise. 
+The plots differ a lot in the low energy range, as the \be-particle contribution is rather prominent. But around the peak and at higher energy, the fit and our data goes together nicely. At the very end, they differ again, as there seem to be some noise in our data, since the counts are too low to be considered otherwise. 
 
 \subsection{Lepton recoil}
 E. K. Warburton \cite{PhysRevC.33.303} argues that the lepton recoil will be significantly small, and can be neglected, when observing the exitation spectra of \ber. This means that measuring one \al-particle and multiplying the energy with 2, will be just as good a measurement as measuring both, and adding their energies. 
