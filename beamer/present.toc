@@ -1,0 +1,2 @@
+\beamer@sectionintoc {1}{Introduktion}{2}{0}{1}
+\beamer@sectionintoc {2}{Opsætning}{8}{0}{2}

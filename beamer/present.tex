@@ -1,0 +1,45 @@
+\documentclass{beamer}
+
+\beamertemplatenavigationsymbolsempty
+
+\usepackage[utf8]{inputenc}
+\usepackage{bm}
+\graphicspath{ {./graphics/} }
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{color}
+\usepackage{isotope}
+
+\newcommand{\be}{$\beta$}
+\newcommand{\al}{$\alpha$}
+\newcommand{\li}{\isotope[8]{Li}\xspace}
+\newcommand{\ber}{\isotope[8]{Be}\xspace}
+
+
+%Information to be included in the title page:
+\title{TITEL}
+\subtitle{En anden fin titel}
+\author{Anders Holst Rasmussen}
+\date{28. Juni, 2021}
+
+\mode<presentation> {
+	\usetheme{CambridgeUS}
+	\usecolortheme{seahorse}
+	%\setbeamercovered{transparent}
+}
+
+\AtBeginSection[]
+{
+	\begin{frame}
+		\frametitle{Oversigt}
+		\tableofcontents[currentsection]
+	\end{frame}
+}
+
+\begin{document}
+\frame\titlepage
+\input{into.tex}
+\input{setup.tex}
+
+\end{document}
