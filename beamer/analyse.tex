@@ -77,5 +77,52 @@
 \end{frame}
 
 \begin{frame}{Vinkel korrelationer mellem \al\ og \be}
-	Her er et plot lolleren
+\begin{columns}
+	\column{0.4\textwidth}
+	\begin{itemize}
+		\onslide<1->{\item Vinkel mellem $\alpha_1$ og \be\\}
+		\onslide<2->{\item Vinkel mellem $\alpha_2$ og \be\\}
+		\onslide<3->{\item Giver komplet billede sammenlagt}
+		%\onslide<4->{\item Sammenligning med setup effektivitet}
+	\end{itemize}
+	\column{0.6\textwidth}
+	\begin{overprint}
+	\onslide<1>\includegraphics[width=\columnwidth]{../figures/justAl1.pdf}
+	\onslide<2>\includegraphics[width=\columnwidth]{../figures/justAl2.pdf}
+	\onslide<3>\includegraphics[width=\columnwidth]{../figures/justData.pdf}
+	%\onslide<4->\includegraphics[width=\columnwidth]{../figures/betaAngles/betaAngle.pdf}
+	\end{overprint}	
+\end{columns}
+\end{frame}
+
+\begin{frame}{Setup effektivitet}
+	\begin{columns}
+		\column[]{.6\textwidth}
+		\begin{itemize}
+			\onslide<1->{\item Setup har større sandsynlighed for at måle nogle individuelle vinkler\\}
+			\onslide<2->{\item Der vil altid være \textcolor{blue}{$180\degree$} mellem en pixel og sig selv\\}
+			\onslide<3->{\item Ofte en pixel \textcolor{mypurple}{$90\degree$} eller \textcolor{mypurple}{$180\degree$} fra en given pixel\\}
+			\onslide<4->{\item Ikke altid en pixel \textcolor{red}{$45\degree$} eller \textcolor{red}{$135\degree$} fra en pixel}
+		\end{itemize}
+		
+		\column[]{.4\textwidth}
+		\begin{overprint}
+			\onslide<2>\includegraphics[width=\columnwidth]{../figures/showAngles/opstilling_show_angles_1.pdf}
+			\includegraphics[width=\columnwidth]{../figures/showAngles/data_1.pdf}
+			\onslide<3>\includegraphics[width=\columnwidth]{../figures/showAngles/opstilling_show_angles_2.pdf}
+			\includegraphics[width=\columnwidth]{../figures/showAngles/data_2.pdf}
+			\onslide<4->\includegraphics[width=\columnwidth]{../figures/showAngles/opstilling_show_angles_3.pdf}
+			\includegraphics[width=\columnwidth]{../figures/showAngles/data_3.pdf}
+		\end{overprint}
+	\end{columns}
+\end{frame}
+
+\begin{frame}{Setup effektivitet}
+	\begin{itemize}
+		\item Udregn den forventede vinkelfordeling
+		\item Vinklen mellem en pixel $i$ i en hvilken som helst detektor, og en anden pixel $j$ i en given detektor
+	\end{itemize}
+	\begin{figure}
+		\includegraphics[width=0.7\columnwidth]{../figures/betaAngles/betaAngle.pdf}
+	\end{figure}
 \end{frame}

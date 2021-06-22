@@ -350,7 +350,7 @@ void betaAlphaAngle(RDataFrame *df){
     h0->SetLineColor(kGreen);
     h0->SetLineWidth(3);
 
-    h0->Divide(eff2);
+    // h0->Divide(eff2);
 
 
 
@@ -369,7 +369,7 @@ void betaAlphaAngle(RDataFrame *df){
     // legend->Draw();
     c->Modified();
     c->Update();
-    c->SaveAs("/home/anders/i257/figures/betaAngles/dataDivEff.pdf");
+    // c->SaveAs("/home/anders/i257/figures/betaAngles/dataDivEff.pdf");
     // c->SaveAs("/home/anders/i257/figures/betaAngles/betaAngle.pdf");
 
 }
@@ -1215,13 +1215,13 @@ int main(int argc, char *argv[]) {
     // fixCenterPos(&df);
     // singleDetectorEff(&df);
     // mexiHatTheory(&df);
-    mexiHatDetector(&df);
+    // mexiHatDetector(&df);
     // detectorEff(&df);
     // alphaEffeciency(&df);
     // cosang(&dfNoCut);
     // EEfigure(&df);
     // betaAlphaDifferentEnergies(&df);
-    // betaAlphaAngle(&df);
+    betaAlphaAngle(&df);
     // individualDetectorsBetaAlphaAngle(&df);
     // betaSpec(&df);
     // angEDiff(&df);
