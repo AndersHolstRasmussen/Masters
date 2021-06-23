@@ -56,11 +56,24 @@
 	\end{columns}
 \end{frame}
 
-\begin{frame}{AUSA}
-	ROOT:\\
-	Unpacker:\\
-	Calibrator:\\
-	Sorter:\\
+\begin{frame}{Software}
+	\begin{columns}
+		\column[]{0.6\textwidth}
+	\begin{itemize}
+		\onslide<2->{\item ROOT}
+		\begin{itemize}
+			\onslide<3->{\item C++ framework}
+		\end{itemize}
+		\onslide<4->{\item AUSA}
+		\begin{itemize}
+			\onslide<5->{\item Unpacker: Rå data til ROOT \texttt{Tree}}
+			\onslide<6->{\item Calibrator: Detektor kalibrering}
+			\onslide<7->{\item Sorter: Konvertere strip signaler til pixel hit}
+		\end{itemize}
+	\end{itemize}
+	\column[]{0.4\textwidth}
+	\onslide<7->\includegraphics[width=\columnwidth]{../figures/sorter.pdf}
+\end{columns}
 \end{frame}
 
 \begin{frame}{Kalibrering}

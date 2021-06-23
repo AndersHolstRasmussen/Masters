@@ -119,10 +119,47 @@
 
 \begin{frame}{Setup effektivitet}
 	\begin{itemize}
-		\item Udregn den forventede vinkelfordeling
-		\item Vinklen mellem en pixel $i$ i en hvilken som helst detektor, og en anden pixel $j$ i en given detektor
+		\onslide<1->{\item Udregn den forventede vinkelfordeling}
+		\onslide<2->{\item Vinklen mellem en pixel $i$ i en hvilken som helst detektor, og en anden pixel $j$ i en given detektor}
 	\end{itemize}
-	\begin{figure}
-		\includegraphics[width=0.7\columnwidth]{../figures/betaAngles/betaAngle.pdf}
-	\end{figure}
+	\begin{columns}
+		\column[]{.5\textwidth}
+		\onslide<3->
+		\includegraphics[width=\columnwidth]{../figures/betaAngles/betaAngle.pdf}
+		\column[]{.5\textwidth}
+		\onslide<4->
+		\includegraphics[width=\columnwidth]{../figures/betaAngles/dataDivEff.pdf}
+	\end{columns}
+\end{frame}
+
+\begin{frame}{Geometriske forskydninger}
+	Hvad kan gå galt?
+	\begin{itemize}
+		\onslide<2->{\item Beam rammer ikke lige i center af target}
+		\onslide<3->{\item Detektorene står anderledes end antaget}
+		\onslide<4->{\item Target-holderen skygger for data}
+		\onslide<5->{\item Døde strips}
+	\end{itemize}
+\end{frame}
+
+\begin{frame}{Center forskydning}
+	\begin{itemize}
+		\item Ryk på hvor beam rammer i effektivitetsudregningen
+		\item Se hvad der passer bedst
+		\item 3 dimensioner der kan være forkerte
+		\item Bedste match fundet ved at rykke center $(-3, -3, 0)$
+	\end{itemize}
+\begin{columns}
+	\column[]{.5\textwidth}
+	\includegraphics[width=\columnwidth]{../figures/betaAngles/centerCorrectedAndData.pdf}
+	\column[]{.5\textwidth}
+	\includegraphics[width=\columnwidth]{../figures/betaAngles/dataDivEffCenterCorrected.pdf}
+\end{columns}
+\end{frame}
+
+\begin{frame}{Døde strips og skygger}
+	\begin{itemize}
+		\item Targetholderen kaster skygge på øvre og nedre detektor
+		\item Døde strips 
+	\end{itemize}
 \end{frame}
