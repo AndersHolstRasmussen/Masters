@@ -111,7 +111,7 @@ void mexiHatTheory(RDataFrame *df){
 
     auto eff = new TH1F("stats", "Angle efficiency", bins, xmin, xmax);
     auto some = new TH2F("stats", "title", bins, xmin, xmax, bins, xmin, xmax);
-    ifstream ifile("/home/anders/i257/build/effDet2Corrected.csv");
+    ifstream ifile("/home/anders/i257/build/effDet4.csv");
     if (!ifile.is_open()) {
         std::cerr << "There was a problem opening the input file!\n";
         exit(1);//exit or do additional error checking
@@ -143,9 +143,7 @@ void mexiHatTheory(RDataFrame *df){
     some->DrawClone("col");
     c->Modified();
     c->Update();
-    c->WaitPrimitive();
-    c->Close();
-    c->SaveAs("/home/anders/i257/figures/mexihatDet2Corrected.pdf");
+    c->SaveAs("/home/anders/i257/figures/mexihatDet4Theory.pdf");
 }
 
 void mexiHatDetector(RDataFrame *df){
@@ -1214,14 +1212,14 @@ int main(int argc, char *argv[]) {
     // momentumPlot(&df);
     // fixCenterPos(&df);
     // singleDetectorEff(&df);
-    // mexiHatTheory(&df);
+    mexiHatTheory(&df);
     // mexiHatDetector(&df);
     // detectorEff(&df);
     // alphaEffeciency(&df);
     // cosang(&dfNoCut);
     // EEfigure(&df);
     // betaAlphaDifferentEnergies(&df);
-    betaAlphaAngle(&df);
+    // betaAlphaAngle(&df);
     // individualDetectorsBetaAlphaAngle(&df);
     // betaSpec(&df);
     // angEDiff(&df);

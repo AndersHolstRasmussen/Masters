@@ -100,7 +100,7 @@
 		\column[]{.6\textwidth}
 		\begin{itemize}
 			\onslide<1->{\item Setup har større sandsynlighed for at måle nogle individuelle vinkler\\}
-			\onslide<2->{\item Der vil altid være \textcolor{blue}{$180\degree$} mellem en pixel og sig selv\\}
+			\onslide<2->{\item Der vil altid være \textcolor{blue}{$0\degree$} mellem en pixel og sig selv\\}
 			\onslide<3->{\item Ofte en pixel \textcolor{mypurple}{$90\degree$} eller \textcolor{mypurple}{$180\degree$} fra en given pixel\\}
 			\onslide<4->{\item Ikke altid en pixel \textcolor{red}{$45\degree$} eller \textcolor{red}{$135\degree$} fra en pixel}
 		\end{itemize}
@@ -133,10 +133,10 @@
 \end{frame}
 
 \begin{frame}{Geometriske forskydninger}
-	Hvad kan gå galt?
+	Mulige fejlkilder
 	\begin{itemize}
 		\onslide<2->{\item Beam rammer ikke lige i center af target}
-		\onslide<3->{\item Detektorene står anderledes end antaget}
+		\onslide<3->{\item Detektorerne står anderledes end antaget}
 		\onslide<4->{\item Target-holderen skygger for data}
 		\onslide<5->{\item Døde strips}
 	\end{itemize}
@@ -157,9 +157,20 @@
 \end{columns}
 \end{frame}
 
-\begin{frame}{Døde strips og skygger}
+\begin{frame}{Døde strips, skygger og placering}
 	\begin{itemize}
 		\item Targetholderen kaster skygge på øvre og nedre detektor
 		\item Døde strips 
+		\item Koncentration af hits forskellig fra hvad vi forventer
 	\end{itemize}
+	\begin{columns}
+		\column[]{.5\textwidth}
+		\centering
+		\includegraphics[width=\columnwidth]{../figures/mexihatDet4.pdf}
+		\tiny Data
+		\column[]{.5\textwidth}
+		\centering
+		\includegraphics[width=\columnwidth]{../figures/mexihatDet4Theory.pdf}
+		\tiny Udregnet effektivitet
+	\end{columns}
 \end{frame}
