@@ -54,7 +54,7 @@
 	Energi for summen af to \al-partikler\\
 	Sammenligning med tidligere målinger \\
 	God overensstemmelse for peak \\
-	Lav niveau divagere meget fra hinanden
+	Lav energiniveau divagere meget fra hinanden
 	\begin{figure}
 		\includegraphics[width=.8\columnwidth]{../figures/bataraCompare.pdf}
 	\end{figure}	
@@ -144,15 +144,22 @@
 
 \begin{frame}{Center forskydning}
 	\begin{itemize}
-		\item Ryk på hvor beam rammer i effektivitetsudregningen
-		\item Se hvad der passer bedst
-		\item 3 dimensioner der kan være forkerte
-		\item Bedste match fundet ved at rykke center $(-3, -3, 0)$
+		\onslide<2->{\item Ryk på hvor beam rammer i effektivitetsudregningen }
+		\onslide<3->{\item Se hvad der passer bedst}
+		\onslide<4->{\item Alle 3 dimensioner der kan være forkerte}
+		\onslide<5->{\item Bedste match fundet ved at rykke center $(-3, -3, 0)$ (mm)}
 	\end{itemize}
 \begin{columns}
 	\column[]{.5\textwidth}
-	\includegraphics[width=\columnwidth]{../figures/betaAngles/centerCorrectedAndData.pdf}
+	\begin{overprint}
+		\onslide<3-4>
+		\includegraphics[width=\columnwidth]{../figures/centerCorrections/try33-3.png}
+		\onslide<5->
+		\includegraphics[width=\columnwidth]{../figures/betaAngles/centerCorrectedAndData.pdf}
+	\end{overprint}
+	
 	\column[]{.5\textwidth}
+	\onslide<5->
 	\includegraphics[width=\columnwidth]{../figures/betaAngles/dataDivEffCenterCorrected.pdf}
 \end{columns}
 \end{frame}
