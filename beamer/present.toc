@@ -1,6 +1,5 @@
 \beamer@sectionintoc {1}{Introduktion}{2}{0}{1}
 \beamer@sectionintoc {2}{Eksperimentel opsætning}{17}{0}{2}
 \beamer@sectionintoc {3}{Data reduktion}{29}{0}{3}
-\beamer@sectionintoc {4}{Effektivitet af cuts}{44}{0}{4}
-\beamer@sectionintoc {5}{Data analyse}{52}{0}{5}
-\beamer@sectionintoc {6}{Konklusion}{77}{0}{6}
+\beamer@sectionintoc {4}{Data analyse}{46}{0}{4}
+\beamer@sectionintoc {5}{Konklusion}{75}{0}{5}
