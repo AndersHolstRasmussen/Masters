@@ -34,9 +34,9 @@ void betaMul(RDataFrame *df){
     gStyle->SetOptTitle(0);
     gStyle->SetOptStat(0);
     gStyle->SetPalette(kViridis);
-    int bins = 10;
+    int bins = 7;
     double xmin = 0;
-    double xmax = 10;
+    double xmax = 7;
 
     auto data = df->Define("x", "mulBeta");
     auto h = data.Histo1D({"Stats", "data / efficiency", bins, xmin, xmax}, "x");
@@ -1208,11 +1208,11 @@ int main(int argc, char *argv[]) {
     
     // Below here is all the plotting methods. Out comment the one you want to run. (Bad code dont judge!)
 
-    // betaMul(&dfNoCut);
+    betaMul(&dfNoCut);
     // momentumPlot(&df);
     // fixCenterPos(&df);
     // singleDetectorEff(&df);
-    mexiHatTheory(&df);
+    // mexiHatTheory(&df);
     // mexiHatDetector(&df);
     // detectorEff(&df);
     // alphaEffeciency(&df);

@@ -1,5 +1,5 @@
 \beamer@sectionintoc {1}{Introduktion}{2}{0}{1}
-\beamer@sectionintoc {2}{Eksperimentel opsætning}{17}{0}{2}
-\beamer@sectionintoc {3}{Data reduktion}{29}{0}{3}
-\beamer@sectionintoc {4}{Data analyse}{46}{0}{4}
-\beamer@sectionintoc {5}{Konklusion}{75}{0}{5}
+\beamer@sectionintoc {2}{Eksperimentel opsætning}{15}{0}{2}
+\beamer@sectionintoc {3}{Data reduktion}{30}{0}{3}
+\beamer@sectionintoc {4}{Data analyse}{54}{0}{4}
+\beamer@sectionintoc {5}{Konklusion}{85}{0}{5}

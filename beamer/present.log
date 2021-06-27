@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019/Debian) (preloaded format=pdflatex 2021.5.26)  26 JUN 2021 14:28
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019/Debian) (preloaded format=pdflatex 2021.5.26)  27 JUN 2021 12:37
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -989,53 +989,62 @@ thkerncmss.
 <../../Pictures/Finland.png, id=73, 685.56125pt x 678.535pt>
 File: ../../Pictures/Finland.png Graphic file (type png)
 <use ../../Pictures/Finland.png>
-Package pdftex.def Info: ../../Pictures/Finland.png  used on input line 16.
+Package pdftex.def Info: ../../Pictures/Finland.png  used on input line 18.
 (pdftex.def)             Requested size: 102.68962pt x 101.6309pt.
  [3
 
  <../../Pictures/finland.png>]
 File: ../../Pictures/Finland.png Graphic file (type png)
 <use ../../Pictures/Finland.png>
-Package pdftex.def Info: ../../Pictures/Finland.png  used on input line 16.
+Package pdftex.def Info: ../../Pictures/Finland.png  used on input line 18.
 (pdftex.def)             Requested size: 102.68962pt x 101.6309pt.
  [4
 
 ]
 File: ../../Pictures/Finland.png Graphic file (type png)
 <use ../../Pictures/Finland.png>
-Package pdftex.def Info: ../../Pictures/Finland.png  used on input line 16.
+Package pdftex.def Info: ../../Pictures/Finland.png  used on input line 18.
 (pdftex.def)             Requested size: 102.68962pt x 101.6309pt.
  [5
 
 ]
 File: ../../Pictures/Finland.png Graphic file (type png)
 <use ../../Pictures/Finland.png>
-Package pdftex.def Info: ../../Pictures/Finland.png  used on input line 16.
+Package pdftex.def Info: ../../Pictures/Finland.png  used on input line 18.
 (pdftex.def)             Requested size: 102.68962pt x 101.6309pt.
  [6
 
 ]
 File: ../../Pictures/Finland.png Graphic file (type png)
 <use ../../Pictures/Finland.png>
-Package pdftex.def Info: ../../Pictures/Finland.png  used on input line 16.
+Package pdftex.def Info: ../../Pictures/Finland.png  used on input line 18.
 (pdftex.def)             Requested size: 102.68962pt x 101.6309pt.
  [7
 
 ]
-<../figures/Beta-minus_Decay.pdf, id=114, 188.20313pt x 127.97812pt>
+<../figures/Beta-minus_Decay.pdf, id=118, 188.20313pt x 127.97812pt>
 File: ../figures/Beta-minus_Decay.pdf Graphic file (type pdf)
 <use ../figures/Beta-minus_Decay.pdf>
 Package pdftex.def Info: ../figures/Beta-minus_Decay.pdf  used on input line 38
 .
 (pdftex.def)             Requested size: 136.91603pt x 93.10884pt.
+<../../Pictures/aal.png, id=120, 1100.11pt x 723.70375pt>
+File: ../../Pictures/aal.png Graphic file (type png)
+<use ../../Pictures/aal.png>
+Package pdftex.def Info: ../../Pictures/aal.png  used on input line 38.
+(pdftex.def)             Requested size: 136.91603pt x 90.0652pt.
  [8
 
- <../figures/Beta-minus_Decay.pdf>]
+ <../figures/Beta-minus_Decay.pdf> <../../Pictures/aal.png>]
 File: ../figures/Beta-minus_Decay.pdf Graphic file (type pdf)
 <use ../figures/Beta-minus_Decay.pdf>
 Package pdftex.def Info: ../figures/Beta-minus_Decay.pdf  used on input line 38
 .
 (pdftex.def)             Requested size: 136.91603pt x 93.10884pt.
+File: ../../Pictures/aal.png Graphic file (type png)
+<use ../../Pictures/aal.png>
+Package pdftex.def Info: ../../Pictures/aal.png  used on input line 38.
+(pdftex.def)             Requested size: 136.91603pt x 90.0652pt.
  [9
 
 ]
@@ -1044,335 +1053,387 @@ File: ../figures/Beta-minus_Decay.pdf Graphic file (type pdf)
 Package pdftex.def Info: ../figures/Beta-minus_Decay.pdf  used on input line 38
 .
 (pdftex.def)             Requested size: 136.91603pt x 93.10884pt.
+File: ../../Pictures/aal.png Graphic file (type png)
+<use ../../Pictures/aal.png>
+Package pdftex.def Info: ../../Pictures/aal.png  used on input line 38.
+(pdftex.def)             Requested size: 136.91603pt x 90.0652pt.
  [10
 
 ]
-File: ../figures/Beta-minus_Decay.pdf Graphic file (type pdf)
-<use ../figures/Beta-minus_Decay.pdf>
-Package pdftex.def Info: ../figures/Beta-minus_Decay.pdf  used on input line 38
-.
-(pdftex.def)             Requested size: 136.91603pt x 93.10884pt.
- [11
-
-]
-<../figures/DecayScheme.pdf, id=1258, 406.7341pt x 226.95363pt>
+<../figures/DecayScheme.pdf, id=1251, 406.7341pt x 226.95363pt>
 File: ../figures/DecayScheme.pdf Graphic file (type pdf)
 <use ../figures/DecayScheme.pdf>
-Package pdftex.def Info: ../figures/DecayScheme.pdf  used on input line 52.
+Package pdftex.def Info: ../figures/DecayScheme.pdf  used on input line 51.
 (pdftex.def)             Requested size: 205.37926pt x 114.602pt.
- [12
+ [11
 
  <../figures/DecayScheme.pdf>]
 File: ../figures/DecayScheme.pdf Graphic file (type pdf)
 <use ../figures/DecayScheme.pdf>
-Package pdftex.def Info: ../figures/DecayScheme.pdf  used on input line 52.
+Package pdftex.def Info: ../figures/DecayScheme.pdf  used on input line 51.
 (pdftex.def)             Requested size: 205.37926pt x 114.602pt.
-
-[13
+ [12
 
 ]
 File: ../figures/DecayScheme.pdf Graphic file (type pdf)
 <use ../figures/DecayScheme.pdf>
-Package pdftex.def Info: ../figures/DecayScheme.pdf  used on input line 52.
+Package pdftex.def Info: ../figures/DecayScheme.pdf  used on input line 51.
+(pdftex.def)             Requested size: 205.37926pt x 114.602pt.
+ [13
+
+]
+File: ../figures/DecayScheme.pdf Graphic file (type pdf)
+<use ../figures/DecayScheme.pdf>
+Package pdftex.def Info: ../figures/DecayScheme.pdf  used on input line 51.
 (pdftex.def)             Requested size: 205.37926pt x 114.602pt.
  [14
 
-]
-File: ../figures/DecayScheme.pdf Graphic file (type pdf)
-<use ../figures/DecayScheme.pdf>
-Package pdftex.def Info: ../figures/DecayScheme.pdf  used on input line 52.
-(pdftex.def)             Requested size: 205.37926pt x 114.602pt.
- [15
+]) (./setup.tex (./present.toc) [15
 
 ]
-<../../Pictures/aal.png, id=1303, 1100.11pt x 723.70375pt>
-File: ../../Pictures/aal.png Graphic file (type png)
-<use ../../Pictures/aal.png>
-Package pdftex.def Info: ../../Pictures/aal.png  used on input line 68.
-(pdftex.def)             Requested size: 136.91603pt x 90.0652pt.
+<../figures/cubepic.pdf, id=1308, 936.49875pt x 937.25156pt>
+File: ../figures/cubepic.pdf Graphic file (type pdf)
+<use ../figures/cubepic.pdf>
+Package pdftex.def Info: ../figures/cubepic.pdf  used on input line 14.
+(pdftex.def)             Requested size: 167.72658pt x 167.85422pt.
+<../figures/targetHolder.jpg, id=1309, 3468.96pt x 4625.28pt>
+File: ../figures/targetHolder.jpg Graphic file (type jpg)
+<use ../figures/targetHolder.jpg>
+Package pdftex.def Info: ../figures/targetHolder.jpg  used on input line 14.
+(pdftex.def)             Requested size: 150.9529pt x 201.21217pt.
  [16
 
- <../../Pictures/aal.png>]) (./setup.tex (./present.toc)
-[17
-
-]
-<../figures/opstilling_better.pdf, id=1324, 233.82336pt x 283.83781pt>
+ <../figures/cubepic.pdf> <../figures/targetHolder.jpg>]
+<../figures/opstilling_better.pdf, id=1327, 233.82336pt x 283.83781pt>
 File: ../figures/opstilling_better.pdf Graphic file (type pdf)
 <use ../figures/opstilling_better.pdf>
-Package pdftex.def Info: ../figures/opstilling_better.pdf  used on input line 2
-6.
+Package pdftex.def Info: ../figures/opstilling_better.pdf  used on input line 3
+9.
 (pdftex.def)             Requested size: 136.91603pt x 166.20686pt.
 
-Overfull \hbox (12.04427pt too wide) in paragraph at lines 26--26
+Overfull \hbox (12.04427pt too wide) in paragraph at lines 39--39
  [] 
  []
 
-[18
+[17
 
  <../figures/opstilling_better.pdf>]
-<../figures/cubepic.pdf, id=1340, 936.49875pt x 937.25156pt>
-File: ../figures/cubepic.pdf Graphic file (type pdf)
-<use ../figures/cubepic.pdf>
-Package pdftex.def Info: ../figures/cubepic.pdf  used on input line 40.
-(pdftex.def)             Requested size: 167.72658pt x 167.85422pt.
-<../figures/targetHolder.jpg, id=1341, 3468.96pt x 4625.28pt>
-File: ../figures/targetHolder.jpg Graphic file (type jpg)
-<use ../figures/targetHolder.jpg>
-Package pdftex.def Info: ../figures/targetHolder.jpg  used on input line 40.
-(pdftex.def)             Requested size: 150.9529pt x 201.21217pt.
- [19
-
- <../figures/cubepic.pdf> <../figures/targetHolder.jpg>]
-<../figures/W1.jpg, id=1361, 758.835pt x 554.07pt>
+<../figures/W1.jpg, id=1343, 758.835pt x 554.07pt>
 File: ../figures/W1.jpg Graphic file (type jpg)
 <use ../figures/W1.jpg>
-Package pdftex.def Info: ../figures/W1.jpg  used on input line 57.
-(pdftex.def)             Requested size: 136.91603pt x 99.96501pt.
-<../figures/dope.png, id=1362, 834.11626pt x 393.47pt>
-File: ../figures/dope.png Graphic file (type png)
-<use ../figures/dope.png>
-Package pdftex.def Info: ../figures/dope.png  used on input line 57.
-(pdftex.def)             Requested size: 205.37926pt x 96.8783pt.
- [20
+Package pdftex.def Info: ../figures/W1.jpg  used on input line 51.
+(pdftex.def)             Requested size: 171.14764pt x 124.96472pt.
+ [18
 
- <../figures/W1.jpg> <../figures/dope.png>]
-<../figures/sorter.pdf, id=1373, 152.91943pt x 146.43439pt>
+ <../figures/W1.jpg>]
+<../figures/sorter.pdf, id=1353, 152.91943pt x 146.43439pt>
 File: ../figures/sorter.pdf Graphic file (type pdf)
 <use ../figures/sorter.pdf>
-Package pdftex.def Info: ../figures/sorter.pdf  used on input line 77.
+Package pdftex.def Info: ../figures/sorter.pdf  used on input line 74.
 (pdftex.def)             Requested size: 136.91603pt x 131.1194pt.
- [21
+ [19
 
  <../figures/sorter.pdf>]
 File: ../figures/sorter.pdf Graphic file (type pdf)
 <use ../figures/sorter.pdf>
-Package pdftex.def Info: ../figures/sorter.pdf  used on input line 77.
+Package pdftex.def Info: ../figures/sorter.pdf  used on input line 74.
+(pdftex.def)             Requested size: 136.91603pt x 131.1194pt.
+ [20
+
+]
+File: ../figures/sorter.pdf Graphic file (type pdf)
+<use ../figures/sorter.pdf>
+Package pdftex.def Info: ../figures/sorter.pdf  used on input line 74.
+(pdftex.def)             Requested size: 136.91603pt x 131.1194pt.
+ [21
+
+]
+File: ../figures/sorter.pdf Graphic file (type pdf)
+<use ../figures/sorter.pdf>
+Package pdftex.def Info: ../figures/sorter.pdf  used on input line 74.
 (pdftex.def)             Requested size: 136.91603pt x 131.1194pt.
  [22
 
 ]
 File: ../figures/sorter.pdf Graphic file (type pdf)
 <use ../figures/sorter.pdf>
-Package pdftex.def Info: ../figures/sorter.pdf  used on input line 77.
+Package pdftex.def Info: ../figures/sorter.pdf  used on input line 74.
 (pdftex.def)             Requested size: 136.91603pt x 131.1194pt.
  [23
 
 ]
 File: ../figures/sorter.pdf Graphic file (type pdf)
 <use ../figures/sorter.pdf>
-Package pdftex.def Info: ../figures/sorter.pdf  used on input line 77.
+Package pdftex.def Info: ../figures/sorter.pdf  used on input line 74.
 (pdftex.def)             Requested size: 136.91603pt x 131.1194pt.
  [24
 
 ]
 File: ../figures/sorter.pdf Graphic file (type pdf)
 <use ../figures/sorter.pdf>
-Package pdftex.def Info: ../figures/sorter.pdf  used on input line 77.
+Package pdftex.def Info: ../figures/sorter.pdf  used on input line 74.
 (pdftex.def)             Requested size: 136.91603pt x 131.1194pt.
  [25
 
 ]
 File: ../figures/sorter.pdf Graphic file (type pdf)
 <use ../figures/sorter.pdf>
-Package pdftex.def Info: ../figures/sorter.pdf  used on input line 77.
+Package pdftex.def Info: ../figures/sorter.pdf  used on input line 74.
 (pdftex.def)             Requested size: 136.91603pt x 131.1194pt.
  [26
 
 ]
 File: ../figures/sorter.pdf Graphic file (type pdf)
 <use ../figures/sorter.pdf>
-Package pdftex.def Info: ../figures/sorter.pdf  used on input line 77.
+Package pdftex.def Info: ../figures/sorter.pdf  used on input line 74.
 (pdftex.def)             Requested size: 136.91603pt x 131.1194pt.
  [27
 
 ]
-<../figures/cali/det1f1-cropped-Mia.pdf, id=1427, 484.209pt x 256.5585pt>
+File: ../figures/sorter.pdf Graphic file (type pdf)
+<use ../figures/sorter.pdf>
+Package pdftex.def Info: ../figures/sorter.pdf  used on input line 74.
+(pdftex.def)             Requested size: 136.91603pt x 131.1194pt.
+ [28
+
+]
+<../figures/cali/det1f1-cropped-Mia.pdf, id=1430, 484.209pt x 256.5585pt>
 File: ../figures/cali/det1f1-cropped-Mia.pdf Graphic file (type pdf)
 <use ../figures/cali/det1f1-cropped-Mia.pdf>
 Package pdftex.def Info: ../figures/cali/det1f1-cropped-Mia.pdf  used on input 
-line 107.
+line 104.
 (pdftex.def)             Requested size: 171.14764pt x 90.68155pt.
-<../figures/cali/det1f1PeakMostLeft-cropped.pdf, id=1428, 517.83043pt x 258.422
+<../figures/cali/det1f1PeakMostLeft-cropped.pdf, id=1431, 517.83043pt x 258.422
 07pt>
 File: ../figures/cali/det1f1PeakMostLeft-cropped.pdf Graphic file (type pdf)
 <use ../figures/cali/det1f1PeakMostLeft-cropped.pdf>
 Package pdftex.def Info: ../figures/cali/det1f1PeakMostLeft-cropped.pdf  used o
-n input line 107.
+n input line 104.
 (pdftex.def)             Requested size: 171.14764pt x 85.40967pt.
- [28
+ [29
 
  <../figures/cali/det1f1-cropped-Mia.pdf> <../figures/cali/det1f1PeakMostLeft-c
-ropped.pdf, page is rotated 90 degrees>]) (./reduktion.tex (./present.toc) [29
-
-] [30
+ropped.pdf, page is rotated 90 degrees>]) (./reduktion.tex (./present.toc) [30
 
 ] [31
 
 ] [32
 
-] [33
-
 ]
-[34
+[33
+
+] [34
 
 ] [35
 
+] [36
+
 ]
-<../figures/cosang.pdf, id=1541, 569.12625pt x 388.45125pt>
+<../figures/cosang.pdf, id=1544, 569.12625pt x 388.45125pt>
 File: ../figures/cosang.pdf Graphic file (type pdf)
 <use ../figures/cosang.pdf>
-Package pdftex.def Info: ../figures/cosang.pdf  used on input line 31.
+Package pdftex.def Info: ../figures/cosang.pdf  used on input line 32.
 (pdftex.def)             Requested size: 239.60567pt x 163.5396pt.
 
-Overfull \vbox (7.93564pt too high) detected at line 31
+Overfull \vbox (0.93564pt too high) detected at line 32
  []
 
-[36
+[37
 
  <../figures/cosang.pdf, page is rotated 90 degrees>]
-<../figures/ptotNoCut.pdf, id=1592, 569.12625pt x 388.45125pt>
+File: ../figures/cosang.pdf Graphic file (type pdf)
+<use ../figures/cosang.pdf>
+Package pdftex.def Info: ../figures/cosang.pdf  used on input line 32.
+(pdftex.def)             Requested size: 239.60567pt x 163.5396pt.
+
+Overfull \vbox (0.93564pt too high) detected at line 32
+ []
+
+[38
+
+]
+File: ../figures/cosang.pdf Graphic file (type pdf)
+<use ../figures/cosang.pdf>
+Package pdftex.def Info: ../figures/cosang.pdf  used on input line 32.
+(pdftex.def)             Requested size: 239.60567pt x 163.5396pt.
+
+Overfull \vbox (0.93564pt too high) detected at line 32
+ []
+
+[39
+
+]
+File: ../figures/cosang.pdf Graphic file (type pdf)
+<use ../figures/cosang.pdf>
+Package pdftex.def Info: ../figures/cosang.pdf  used on input line 32.
+(pdftex.def)             Requested size: 239.60567pt x 163.5396pt.
+
+Overfull \vbox (0.93564pt too high) detected at line 32
+ []
+
+[40
+
+]
+File: ../figures/cosang.pdf Graphic file (type pdf)
+<use ../figures/cosang.pdf>
+Package pdftex.def Info: ../figures/cosang.pdf  used on input line 32.
+(pdftex.def)             Requested size: 239.60567pt x 163.5396pt.
+
+Overfull \vbox (0.93564pt too high) detected at line 32
+ []
+
+[41
+
+]
+<../figures/ptotNoCut.pdf, id=1624, 569.12625pt x 388.45125pt>
 File: ../figures/ptotNoCut.pdf Graphic file (type pdf)
 <use ../figures/ptotNoCut.pdf>
-Package pdftex.def Info: ../figures/ptotNoCut.pdf  used on input line 41.
+Package pdftex.def Info: ../figures/ptotNoCut.pdf  used on input line 43.
 (pdftex.def)             Requested size: 239.60567pt x 163.5396pt.
- [37
+ [42
 
  <../figures/ptotNoCut.pdf, page is rotated 90 degrees>]
-<../figures/betaMul.pdf, id=1644, 569.12625pt x 388.45125pt>
+File: ../figures/ptotNoCut.pdf Graphic file (type pdf)
+<use ../figures/ptotNoCut.pdf>
+Package pdftex.def Info: ../figures/ptotNoCut.pdf  used on input line 43.
+(pdftex.def)             Requested size: 239.60567pt x 163.5396pt.
+ [43
+
+]
+File: ../figures/ptotNoCut.pdf Graphic file (type pdf)
+<use ../figures/ptotNoCut.pdf>
+Package pdftex.def Info: ../figures/ptotNoCut.pdf  used on input line 43.
+(pdftex.def)             Requested size: 239.60567pt x 163.5396pt.
+ [44
+
+]
+File: ../figures/ptotNoCut.pdf Graphic file (type pdf)
+<use ../figures/ptotNoCut.pdf>
+Package pdftex.def Info: ../figures/ptotNoCut.pdf  used on input line 43.
+(pdftex.def)             Requested size: 239.60567pt x 163.5396pt.
+
+[45
+
+]
+<../figures/betaMul.pdf, id=1698, 569.12625pt x 388.45125pt>
 File: ../figures/betaMul.pdf Graphic file (type pdf)
 <use ../figures/betaMul.pdf>
-Package pdftex.def Info: ../figures/betaMul.pdf  used on input line 50.
+Package pdftex.def Info: ../figures/betaMul.pdf  used on input line 52.
 (pdftex.def)             Requested size: 239.60567pt x 163.5396pt.
- [38
+ [46
 
  <../figures/betaMul.pdf, page is rotated 90 degrees>]) (./analyse.tex
-<../figures/EENoCuts.pdf, id=1696, 569.12625pt x 388.45125pt>
+<../figures/EENoCuts.pdf, id=1750, 569.12625pt x 388.45125pt>
 File: ../figures/EENoCuts.pdf Graphic file (type pdf)
 <use ../figures/EENoCuts.pdf>
 Package pdftex.def Info: ../figures/EENoCuts.pdf  used on input line 7.
 (pdftex.def)             Requested size: 239.60567pt x 163.5396pt.
- [39
+
+[47
 
  <../figures/EENoCuts.pdf, page is rotated 90 degrees>]
-<../figures/EEAngleCut.pdf, id=1747, 569.12625pt x 388.45125pt>
+<../figures/EEAngleCut.pdf, id=1801, 569.12625pt x 388.45125pt>
 File: ../figures/EEAngleCut.pdf Graphic file (type pdf)
 <use ../figures/EEAngleCut.pdf>
 Package pdftex.def Info: ../figures/EEAngleCut.pdf  used on input line 14.
 (pdftex.def)             Requested size: 239.60567pt x 163.5396pt.
- [40
+ [48
 
  <../figures/EEAngleCut.pdf, page is rotated 90 degrees>]
-<../figures/EEMomentumCut.pdf, id=1798, 569.12625pt x 388.45125pt>
+<../figures/EEMomentumCut.pdf, id=1852, 569.12625pt x 388.45125pt>
 File: ../figures/EEMomentumCut.pdf Graphic file (type pdf)
 <use ../figures/EEMomentumCut.pdf>
 Package pdftex.def Info: ../figures/EEMomentumCut.pdf  used on input line 21.
 (pdftex.def)             Requested size: 239.60567pt x 163.5396pt.
-
-[41
+ [49
 
  <../figures/EEMomentumCut.pdf, page is rotated 90 degrees>]
-<../figures/EEBetaMulCut.pdf, id=1849, 569.12625pt x 388.45125pt>
+<../figures/EEBetaMulCut.pdf, id=1905, 569.12625pt x 388.45125pt>
 File: ../figures/EEBetaMulCut.pdf Graphic file (type pdf)
 <use ../figures/EEBetaMulCut.pdf>
 Package pdftex.def Info: ../figures/EEBetaMulCut.pdf  used on input line 28.
 (pdftex.def)             Requested size: 239.60567pt x 163.5396pt.
- [42
+ [50
 
  <../figures/EEBetaMulCut.pdf, page is rotated 90 degrees>]
-<../figures/EE.pdf, id=1900, 569.12625pt x 388.45125pt>
+<../figures/EE.pdf, id=1956, 569.12625pt x 388.45125pt>
 File: ../figures/EE.pdf Graphic file (type pdf)
 <use ../figures/EE.pdf>
 Package pdftex.def Info: ../figures/EE.pdf  used on input line 35.
 (pdftex.def)             Requested size: 239.60567pt x 163.5396pt.
- [43
+ [51
 
  <../figures/EE.pdf, page is rotated 90 degrees>]
-<../figures/cutCompare.pdf, id=1953, 569.12625pt x 388.45125pt>
+<../figures/cutCompare.pdf, id=2007, 569.12625pt x 388.45125pt>
 File: ../figures/cutCompare.pdf Graphic file (type pdf)
 <use ../figures/cutCompare.pdf>
 Package pdftex.def Info: ../figures/cutCompare.pdf  used on input line 42.
 (pdftex.def)             Requested size: 239.60567pt x 163.5396pt.
- [44
+ [52
 
  <../figures/cutCompare.pdf, page is rotated 90 degrees>]
-<../figures/betaSpec.pdf, id=2004, 569.12625pt x 388.45125pt>
+<../figures/betaSpec.pdf, id=2058, 569.12625pt x 388.45125pt>
 File: ../figures/betaSpec.pdf Graphic file (type pdf)
 <use ../figures/betaSpec.pdf>
 Package pdftex.def Info: ../figures/betaSpec.pdf  used on input line 49.
 (pdftex.def)             Requested size: 239.60567pt x 163.5396pt.
- [45
+ [53
 
- <../figures/betaSpec.pdf, page is rotated 90 degrees>] (./present.toc)
-[46
+ <../figures/betaSpec.pdf, page is rotated 90 degrees>] (./present.toc) [54
 
 ]
-<../figures/bataraCompare.pdf, id=2066, 569.12625pt x 306.14375pt>
+<../figures/bataraCompare.pdf, id=2121, 569.12625pt x 306.14375pt>
 File: ../figures/bataraCompare.pdf Graphic file (type pdf)
 <use ../figures/bataraCompare.pdf>
 Package pdftex.def Info: ../figures/bataraCompare.pdf  used on input line 64.
 (pdftex.def)             Requested size: 273.83728pt x 147.30702pt.
- [47
+ [55
 
  <../figures/bataraCompare.pdf, page is rotated 90 degrees>]
 File: ../figures/bataraCompare.pdf Graphic file (type pdf)
 <use ../figures/bataraCompare.pdf>
 Package pdftex.def Info: ../figures/bataraCompare.pdf  used on input line 64.
 (pdftex.def)             Requested size: 273.83728pt x 147.30702pt.
- [48
+ [56
 
 ]
 File: ../figures/bataraCompare.pdf Graphic file (type pdf)
 <use ../figures/bataraCompare.pdf>
 Package pdftex.def Info: ../figures/bataraCompare.pdf  used on input line 64.
 (pdftex.def)             Requested size: 273.83728pt x 147.30702pt.
-
-[49
-
-]
-File: ../figures/bataraCompare.pdf Graphic file (type pdf)
-<use ../figures/bataraCompare.pdf>
-Package pdftex.def Info: ../figures/bataraCompare.pdf  used on input line 64.
-(pdftex.def)             Requested size: 273.83728pt x 147.30702pt.
- [50
+ [57
 
 ]
 File: ../figures/bataraCompare.pdf Graphic file (type pdf)
 <use ../figures/bataraCompare.pdf>
 Package pdftex.def Info: ../figures/bataraCompare.pdf  used on input line 64.
 (pdftex.def)             Requested size: 273.83728pt x 147.30702pt.
- [51
+ [58
 
 ]
-<../figures/recoil.pdf, id=2147, 569.12625pt x 388.45125pt>
-File: ../figures/recoil.pdf Graphic file (type pdf)
-<use ../figures/recoil.pdf>
-Package pdftex.def Info: ../figures/recoil.pdf  used on input line 80.
-(pdftex.def)             Requested size: 171.14764pt x 116.81485pt.
-<../figures/recoilGauss.pdf, id=2148, 569.12625pt x 388.45125pt>
-File: ../figures/recoilGauss.pdf Graphic file (type pdf)
-<use ../figures/recoilGauss.pdf>
-Package pdftex.def Info: ../figures/recoilGauss.pdf  used on input line 80.
-(pdftex.def)             Requested size: 171.14764pt x 116.81485pt.
- [52
+File: ../figures/bataraCompare.pdf Graphic file (type pdf)
+<use ../figures/bataraCompare.pdf>
+Package pdftex.def Info: ../figures/bataraCompare.pdf  used on input line 64.
+(pdftex.def)             Requested size: 273.83728pt x 147.30702pt.
+ [59
 
- <../figures/recoil.pdf, page is rotated 90 degrees> <../figures/recoilGauss.pd
-f, page is rotated 90 degrees>]
-<../figures/justAl1.pdf, id=2242, 569.12625pt x 388.45125pt>
+]
+<../figures/justAl1.pdf, id=2201, 569.12625pt x 388.45125pt>
 File: ../figures/justAl1.pdf Graphic file (type pdf)
 <use ../figures/justAl1.pdf>
 Package pdftex.def Info: ../figures/justAl1.pdf  used on input line 99.
 (pdftex.def)             Requested size: 205.37926pt x 140.18019pt.
-<../figures/justAl2.pdf, id=2243, 569.12625pt x 388.45125pt>
+<../figures/justAl2.pdf, id=2202, 569.12625pt x 388.45125pt>
 File: ../figures/justAl2.pdf Graphic file (type pdf)
 <use ../figures/justAl2.pdf>
 Package pdftex.def Info: ../figures/justAl2.pdf  used on input line 99.
 (pdftex.def)             Requested size: 205.37926pt x 140.18019pt.
-<../figures/justData.pdf, id=2244, 569.12625pt x 388.45125pt>
+<../figures/justData.pdf, id=2203, 569.12625pt x 388.45125pt>
 File: ../figures/justData.pdf Graphic file (type pdf)
 <use ../figures/justData.pdf>
 Package pdftex.def Info: ../figures/justData.pdf  used on input line 99.
 (pdftex.def)             Requested size: 205.37926pt x 140.18019pt.
- [53
+ [60
 
  <../figures/justAl1.pdf, page is rotated 90 degrees>]
 File: ../figures/justAl1.pdf Graphic file (type pdf)
@@ -1387,7 +1448,7 @@ File: ../figures/justData.pdf Graphic file (type pdf)
 <use ../figures/justData.pdf>
 Package pdftex.def Info: ../figures/justData.pdf  used on input line 99.
 (pdftex.def)             Requested size: 205.37926pt x 140.18019pt.
- [54
+ [61
 
  <../figures/justAl2.pdf, page is rotated 90 degrees>]
 File: ../figures/justAl1.pdf Graphic file (type pdf)
@@ -1402,10 +1463,10 @@ File: ../figures/justData.pdf Graphic file (type pdf)
 <use ../figures/justData.pdf>
 Package pdftex.def Info: ../figures/justData.pdf  used on input line 99.
 (pdftex.def)             Requested size: 205.37926pt x 140.18019pt.
- [55
+ [62
 
  <../figures/justData.pdf, page is rotated 90 degrees>]
-<../figures/showAngles/opstilling_show_angles_1.pdf, id=2397, 223.61052pt x 198
+<../figures/showAngles/opstilling_show_angles_1.pdf, id=2356, 223.61052pt x 198
 .98161pt>
 File: ../figures/showAngles/opstilling_show_angles_1.pdf Graphic file (type pdf
 )
@@ -1413,13 +1474,13 @@ File: ../figures/showAngles/opstilling_show_angles_1.pdf Graphic file (type pdf
 Package pdftex.def Info: ../figures/showAngles/opstilling_show_angles_1.pdf  us
 ed on input line 121.
 (pdftex.def)             Requested size: 136.91603pt x 121.83401pt.
-<../figures/showAngles/data_1.pdf, id=2398, 569.12625pt x 388.45125pt>
+<../figures/showAngles/data_1.pdf, id=2357, 569.12625pt x 388.45125pt>
 File: ../figures/showAngles/data_1.pdf Graphic file (type pdf)
 <use ../figures/showAngles/data_1.pdf>
 Package pdftex.def Info: ../figures/showAngles/data_1.pdf  used on input line 1
 21.
 (pdftex.def)             Requested size: 136.91603pt x 93.44951pt.
-<../figures/showAngles/opstilling_show_angles_2.pdf, id=2399, 223.61052pt x 198
+<../figures/showAngles/opstilling_show_angles_2.pdf, id=2358, 223.61052pt x 198
 .98161pt>
 File: ../figures/showAngles/opstilling_show_angles_2.pdf Graphic file (type pdf
 )
@@ -1427,13 +1488,13 @@ File: ../figures/showAngles/opstilling_show_angles_2.pdf Graphic file (type pdf
 Package pdftex.def Info: ../figures/showAngles/opstilling_show_angles_2.pdf  us
 ed on input line 121.
 (pdftex.def)             Requested size: 136.91603pt x 121.83401pt.
-<../figures/showAngles/data_2.pdf, id=2400, 569.12625pt x 388.45125pt>
+<../figures/showAngles/data_2.pdf, id=2359, 569.12625pt x 388.45125pt>
 File: ../figures/showAngles/data_2.pdf Graphic file (type pdf)
 <use ../figures/showAngles/data_2.pdf>
 Package pdftex.def Info: ../figures/showAngles/data_2.pdf  used on input line 1
 21.
 (pdftex.def)             Requested size: 136.91603pt x 93.44951pt.
-<../figures/showAngles/opstilling_show_angles_3.pdf, id=2401, 223.61052pt x 198
+<../figures/showAngles/opstilling_show_angles_3.pdf, id=2360, 223.61052pt x 198
 .98161pt>
 File: ../figures/showAngles/opstilling_show_angles_3.pdf Graphic file (type pdf
 )
@@ -1441,13 +1502,13 @@ File: ../figures/showAngles/opstilling_show_angles_3.pdf Graphic file (type pdf
 Package pdftex.def Info: ../figures/showAngles/opstilling_show_angles_3.pdf  us
 ed on input line 121.
 (pdftex.def)             Requested size: 136.91603pt x 121.83401pt.
-<../figures/showAngles/data_3.pdf, id=2402, 569.12625pt x 388.45125pt>
+<../figures/showAngles/data_3.pdf, id=2361, 569.12625pt x 388.45125pt>
 File: ../figures/showAngles/data_3.pdf Graphic file (type pdf)
 <use ../figures/showAngles/data_3.pdf>
 Package pdftex.def Info: ../figures/showAngles/data_3.pdf  used on input line 1
 21.
 (pdftex.def)             Requested size: 136.91603pt x 93.44951pt.
- [56
+ [63
 
 ]
 File: ../figures/showAngles/opstilling_show_angles_1.pdf Graphic file (type pdf
@@ -1484,7 +1545,7 @@ Package pdftex.def Info: ../figures/showAngles/data_3.pdf  used on input line 1
 21.
 (pdftex.def)             Requested size: 136.91603pt x 93.44951pt.
 
-[57
+[64
 
  <../figures/showAngles/opstilling_show_angles_1.pdf> <../figures/showAngles/da
 ta_1.pdf
@@ -1525,7 +1586,7 @@ File: ../figures/showAngles/data_3.pdf Graphic file (type pdf)
 Package pdftex.def Info: ../figures/showAngles/data_3.pdf  used on input line 1
 21.
 (pdftex.def)             Requested size: 136.91603pt x 93.44951pt.
- [58
+ [65
 
  <../figures/showAngles/opstilling_show_angles_2.pdf> <../figures/showAngles/da
 ta_2.pdf
@@ -1566,7 +1627,7 @@ File: ../figures/showAngles/data_3.pdf Graphic file (type pdf)
 Package pdftex.def Info: ../figures/showAngles/data_3.pdf  used on input line 1
 21.
 (pdftex.def)             Requested size: 136.91603pt x 93.44951pt.
- [59
+ [66
 
  <../figures/showAngles/opstilling_show_angles_3.pdf> <../figures/showAngles/da
 ta_3.pdf
@@ -1574,19 +1635,19 @@ ta_3.pdf
 pdfTeX warning: /usr/bin/pdflatex (file ../figures/showAngles/data_3.pdf): PDF 
 inclusion: multiple pdfs with page group included in a single page
 >]
-<../figures/betaAngles/betaAngle.pdf, id=2724, 569.12625pt x 388.45125pt>
+<../figures/betaAngles/betaAngle.pdf, id=2683, 569.12625pt x 388.45125pt>
 File: ../figures/betaAngles/betaAngle.pdf Graphic file (type pdf)
 <use ../figures/betaAngles/betaAngle.pdf>
 Package pdftex.def Info: ../figures/betaAngles/betaAngle.pdf  used on input lin
 e 136.
 (pdftex.def)             Requested size: 171.14764pt x 116.81485pt.
-<../figures/betaAngles/dataDivEff.pdf, id=2725, 569.12625pt x 388.45125pt>
+<../figures/betaAngles/dataDivEff.pdf, id=2684, 569.12625pt x 388.45125pt>
 File: ../figures/betaAngles/dataDivEff.pdf Graphic file (type pdf)
 <use ../figures/betaAngles/dataDivEff.pdf>
 Package pdftex.def Info: ../figures/betaAngles/dataDivEff.pdf  used on input li
 ne 136.
 (pdftex.def)             Requested size: 171.14764pt x 116.81485pt.
- [60
+ [67
 
  <../figures/betaAngles/betaAngle.pdf, page is rotated 90 degrees> <../figures/
 betaAngles/dataDivEff.pdf, page is rotated 90 degrees>]
@@ -1600,7 +1661,7 @@ File: ../figures/betaAngles/dataDivEff.pdf Graphic file (type pdf)
 Package pdftex.def Info: ../figures/betaAngles/dataDivEff.pdf  used on input li
 ne 136.
 (pdftex.def)             Requested size: 171.14764pt x 116.81485pt.
- [61
+ [68
 
 ]
 File: ../figures/betaAngles/betaAngle.pdf Graphic file (type pdf)
@@ -1613,7 +1674,7 @@ File: ../figures/betaAngles/dataDivEff.pdf Graphic file (type pdf)
 Package pdftex.def Info: ../figures/betaAngles/dataDivEff.pdf  used on input li
 ne 136.
 (pdftex.def)             Requested size: 171.14764pt x 116.81485pt.
- [62
+ [69
 
 ]
 File: ../figures/betaAngles/betaAngle.pdf Graphic file (type pdf)
@@ -1627,33 +1688,33 @@ Package pdftex.def Info: ../figures/betaAngles/dataDivEff.pdf  used on input li
 ne 136.
 (pdftex.def)             Requested size: 171.14764pt x 116.81485pt.
 
-[63
+[70
 
-] [64
+] [71
 
-] [65
+] [72
 
-] [66
+] [73
 
-] [67
+] [74
 
-] [68
+] [75
 
 ]
-<../figures/centerCorrections/try33-3.png, id=2878, 700.6175pt x 477.785pt>
+<../figures/centerCorrections/try33-3.png, id=2837, 700.6175pt x 477.785pt>
 File: ../figures/centerCorrections/try33-3.png Graphic file (type png)
 <use ../figures/centerCorrections/try33-3.png>
 Package pdftex.def Info: ../figures/centerCorrections/try33-3.png  used on inpu
 t line 168.
 (pdftex.def)             Requested size: 171.14764pt x 116.71205pt.
-<../figures/betaAngles/centerCorrectedAndData.pdf, id=2879, 569.12625pt x 388.4
+<../figures/betaAngles/centerCorrectedAndData.pdf, id=2838, 569.12625pt x 388.4
 5125pt>
 File: ../figures/betaAngles/centerCorrectedAndData.pdf Graphic file (type pdf)
 <use ../figures/betaAngles/centerCorrectedAndData.pdf>
 Package pdftex.def Info: ../figures/betaAngles/centerCorrectedAndData.pdf  used
  on input line 168.
 (pdftex.def)             Requested size: 171.14764pt x 116.81485pt.
-<../figures/betaAngles/dataDivEffCenterCorrected.pdf, id=2880, 569.12625pt x 38
+<../figures/betaAngles/dataDivEffCenterCorrected.pdf, id=2839, 569.12625pt x 38
 8.45125pt>
 File: ../figures/betaAngles/dataDivEffCenterCorrected.pdf Graphic file (type pd
 f)
@@ -1661,7 +1722,7 @@ f)
 Package pdftex.def Info: ../figures/betaAngles/dataDivEffCenterCorrected.pdf  u
 sed on input line 168.
 (pdftex.def)             Requested size: 171.14764pt x 116.81485pt.
- [69
+ [76
 
  <../figures/betaAngles/dataDivEffCenterCorrected.pdf, page is rotated 90 degre
 es>]
@@ -1681,7 +1742,7 @@ f)
 Package pdftex.def Info: ../figures/betaAngles/dataDivEffCenterCorrected.pdf  u
 sed on input line 168.
 (pdftex.def)             Requested size: 171.14764pt x 116.81485pt.
- [70
+ [77
 
 ]
 File: ../figures/centerCorrections/try33-3.png Graphic file (type png)
@@ -1700,7 +1761,7 @@ f)
 Package pdftex.def Info: ../figures/betaAngles/dataDivEffCenterCorrected.pdf  u
 sed on input line 168.
 (pdftex.def)             Requested size: 171.14764pt x 116.81485pt.
- [71
+ [78
 
  <../figures/centerCorrections/try33-3.png>]
 File: ../figures/centerCorrections/try33-3.png Graphic file (type png)
@@ -1719,7 +1780,7 @@ f)
 Package pdftex.def Info: ../figures/betaAngles/dataDivEffCenterCorrected.pdf  u
 sed on input line 168.
 (pdftex.def)             Requested size: 171.14764pt x 116.81485pt.
- [72
+ [79
 
 ]
 File: ../figures/centerCorrections/try33-3.png Graphic file (type png)
@@ -1738,38 +1799,75 @@ f)
 Package pdftex.def Info: ../figures/betaAngles/dataDivEffCenterCorrected.pdf  u
 sed on input line 168.
 (pdftex.def)             Requested size: 171.14764pt x 116.81485pt.
- [73
+ [80
 
  <../figures/betaAngles/centerCorrectedAndData.pdf, page is rotated 90 degrees>
 ]
-<../figures/mexihatDet4.pdf, id=3004, 569.12625pt x 551.05875pt>
+<../figures/mexihatDet4.pdf, id=2963, 569.12625pt x 551.05875pt>
 File: ../figures/mexihatDet4.pdf Graphic file (type pdf)
 <use ../figures/mexihatDet4.pdf>
 Package pdftex.def Info: ../figures/mexihatDet4.pdf  used on input line 186.
 (pdftex.def)             Requested size: 171.14764pt x 165.7141pt.
-<../figures/mexihatDet4Theory.pdf, id=3005, 569.12625pt x 551.05875pt>
+<../figures/mexihatDet4Theory.pdf, id=2964, 569.12625pt x 551.05875pt>
 File: ../figures/mexihatDet4Theory.pdf Graphic file (type pdf)
 <use ../figures/mexihatDet4Theory.pdf>
 Package pdftex.def Info: ../figures/mexihatDet4Theory.pdf  used on input line 1
 86.
 (pdftex.def)             Requested size: 171.14764pt x 165.7141pt.
- [74
+ [81
 
  <../figures/mexihatDet4.pdf, page is rotated 90 degrees> <../figures/mexihatDe
-t4Theory.pdf, page is rotated 90 degrees>])
-(./konklusion.tex (./present.toc) [75
+t4Theory.pdf, page is rotated 90 degrees>]
+File: ../figures/mexihatDet4.pdf Graphic file (type pdf)
+<use ../figures/mexihatDet4.pdf>
+Package pdftex.def Info: ../figures/mexihatDet4.pdf  used on input line 186.
+(pdftex.def)             Requested size: 171.14764pt x 165.7141pt.
+File: ../figures/mexihatDet4Theory.pdf Graphic file (type pdf)
+<use ../figures/mexihatDet4Theory.pdf>
+Package pdftex.def Info: ../figures/mexihatDet4Theory.pdf  used on input line 1
+86.
+(pdftex.def)             Requested size: 171.14764pt x 165.7141pt.
+ [82
 
-] [76
+]
+File: ../figures/mexihatDet4.pdf Graphic file (type pdf)
+<use ../figures/mexihatDet4.pdf>
+Package pdftex.def Info: ../figures/mexihatDet4.pdf  used on input line 186.
+(pdftex.def)             Requested size: 171.14764pt x 165.7141pt.
+File: ../figures/mexihatDet4Theory.pdf Graphic file (type pdf)
+<use ../figures/mexihatDet4Theory.pdf>
+Package pdftex.def Info: ../figures/mexihatDet4Theory.pdf  used on input line 1
+86.
+(pdftex.def)             Requested size: 171.14764pt x 165.7141pt.
 
-] [77
+[83
 
-] [78
+]
+File: ../figures/mexihatDet4.pdf Graphic file (type pdf)
+<use ../figures/mexihatDet4.pdf>
+Package pdftex.def Info: ../figures/mexihatDet4.pdf  used on input line 186.
+(pdftex.def)             Requested size: 171.14764pt x 165.7141pt.
+File: ../figures/mexihatDet4Theory.pdf Graphic file (type pdf)
+<use ../figures/mexihatDet4Theory.pdf>
+Package pdftex.def Info: ../figures/mexihatDet4Theory.pdf  used on input line 1
+86.
+(pdftex.def)             Requested size: 171.14764pt x 165.7141pt.
+ [84
 
-] [79
+]) (./konklusion.tex (./present.toc) [85
 
-] [80
+] [86
 
-] [81
+] [87
+
+] [88
+
+] [89
+
+] [90
+
+]
+[91
 
 ])
 \tf@nav=\write6
@@ -1783,39 +1881,36 @@ t4Theory.pdf, page is rotated 90 degrees>])
 
 Package atveryend Info: Empty hook `BeforeClearDocument' on input line 52.
 Package atveryend Info: Empty hook `AfterLastShipout' on input line 52.
-
-(./present.aux)
+ (./present.aux)
 Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 52.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 52.
 Package rerunfilecheck Info: File `present.out' has not changed.
 (rerunfilecheck)             Checksum: AF27857E805C540DCA2BC405E69CCFCC;249.
  ) 
 Here is how much of TeX's memory you used:
- 21428 strings out of 481239
- 438941 string characters out of 5920377
- 659305 words of memory out of 5000000
- 35949 multiletter control sequences out of 15000+600000
+ 21426 strings out of 481239
+ 438631 string characters out of 5920377
+ 658305 words of memory out of 5000000
+ 35930 multiletter control sequences out of 15000+600000
  558105 words of font info for 106 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 58i,16n,68p,774b,850s stack positions out of 5000i,500n,10000p,200000b,80000s
-</usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></us
-r/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/shar
-e/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/share/texl
-ive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/share/texlive/tex
-mf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texlive/texmf-dist
-/fonts/type1/public/amsfonts/cm/cmss10.pfb></usr/share/texlive/texmf-dist/fonts
-/type1/public/amsfonts/cm/cmss12.pfb></usr/share/texlive/texmf-dist/fonts/type1
-/public/amsfonts/cm/cmss8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public
-/amsfonts/cm/cmssi10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsf
-onts/cm/cmssi8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/c
-m/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy
-6.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb><
-/usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb></usr/s
-hare/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt8.pfb>
-Output written on present.pdf (81 pages, 8538358 bytes).
+ 58i,15n,68p,774b,850s stack positions out of 5000i,500n,10000p,200000b,80000s
+</usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></us
+r/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/shar
+e/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/share/texli
+ve/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texlive/texm
+f-dist/fonts/type1/public/amsfonts/cm/cmss10.pfb></usr/share/texlive/texmf-dist
+/fonts/type1/public/amsfonts/cm/cmss12.pfb></usr/share/texlive/texmf-dist/fonts
+/type1/public/amsfonts/cm/cmss8.pfb></usr/share/texlive/texmf-dist/fonts/type1/
+public/amsfonts/cm/cmssi10.pfb></usr/share/texlive/texmf-dist/fonts/type1/publi
+c/amsfonts/cm/cmssi8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsf
+onts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/c
+m/cmsy8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt1
+0.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt8.pfb>
+Output written on present.pdf (91 pages, 8419314 bytes).
 PDF statistics:
- 3241 PDF objects out of 3580 (max. 8388607)
- 1920 compressed objects within 20 object streams
- 168 named destinations out of 1000 (max. 500000)
- 330 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 3221 PDF objects out of 3580 (max. 8388607)
+ 1946 compressed objects within 20 object streams
+ 188 named destinations out of 1000 (max. 500000)
+ 315 words of extra memory for PDF output out of 10000 (max. 10000000)
 

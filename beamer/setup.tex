@@ -1,4 +1,17 @@
 \section{Eksperimentel opsætning}
+\begin{frame}{Eksperimentel opsætning}
+	\begin{columns}
+		\column{0.49\textwidth}
+		\begin{figure}
+			\centering
+			\includegraphics[width=\columnwidth]{../figures/cubepic.pdf}
+		\end{figure}
+		\column{0.49\textwidth}
+		\begin{figure}
+			\includegraphics[width=.9\columnwidth]{../figures/targetHolder.jpg}
+		\end{figure}
+	\end{columns}
+\end{frame}
 
 \begin{frame}{Eksperimentel opsætning}
 	\begin{columns}
@@ -25,34 +38,15 @@
 
 \end{frame}
 
-\begin{frame}{Eksperimentel opsætning}
-	\begin{columns}
-		\column{0.49\textwidth}
-		\begin{figure}
-			\centering
-			\includegraphics[width=\columnwidth]{../figures/cubepic.pdf}
-		\end{figure}
-		\column{0.49\textwidth}
-		\begin{figure}
-			\includegraphics[width=.9\columnwidth]{../figures/targetHolder.jpg}
-		\end{figure}
-	\end{columns}
-\end{frame}
-
 \begin{frame}{Detektorerne}
 	\begin{columns}
-		\column{0.4\textwidth}
+		\column{1\textwidth}
 		\begin{figure}
 			\centering
-			\includegraphics[width=\columnwidth]{../figures/W1.jpg}
+			\includegraphics[width=.5\columnwidth]{../figures/W1.jpg}
 		\end{figure}
 		$16\times16$ strips\\
 		256 pixels 
-		\column{0.6\textwidth}
-		\begin{figure}
-			\centering
-			\includegraphics[width=\columnwidth]{../figures/dope.png}
-		\end{figure}
 	\end{columns}
 \end{frame}
 
@@ -62,17 +56,20 @@
 	\begin{itemize}
 		\onslide<2->{\item ROOT}
 		\begin{itemize}
-			\onslide<3->{\item C++ framework}
+			\onslide<3->{\item C++ framework til data processing}
+			\onslide<4->{\item Bygget til højenergi fysik}
 		\end{itemize}
-		\onslide<4->{\item AUSA}
+		\onslide<5->{\item AUSA}
 		\begin{itemize}
-			\onslide<5->{\item Unpacker: Rå data til ROOT \texttt{Tree}}
-			\onslide<6->{\item Calibrator: Detektor kalibrering}
-			\onslide<7->{\item Sorter: Konvertere strip signaler til pixel hit}
+			\onslide<6->{\item Lavet på AU}
+			\onslide<7->{\item Gentagende dataanalyse}
+			\onslide<8->{\item Unpacker: Rå data til ROOT \texttt{Tree}}
+			\onslide<9->{\item Calibrator: Detektor kalibrering}
+			\onslide<10->{\item Sorter: Konvertere strip signaler til pixel hit}
 		\end{itemize}
 	\end{itemize}
 	\column[]{0.4\textwidth}
-	\onslide<7->\includegraphics[width=\columnwidth]{../figures/sorter.pdf}
+	\onslide<10->\includegraphics[width=\columnwidth]{../figures/sorter.pdf}
 \end{columns}
 \end{frame}
 
